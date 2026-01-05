@@ -656,26 +656,43 @@
       const entries = document.querySelectorAll('.entry');
       const isMobile = window.innerWidth <= 768;
       
-      // Scroll Listener für aktiven Eintrag
+      // Throttle-Funktion
+      const throttle = (func, limit) => {
+        let inThrottle;
+        return function(...args) {
+          if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+          }
+        };
+      };
+      
+      // Scroll Listener für aktiven Eintrag (optimiert)
       const updateActiveEntry = () => {
         if (isJumping) return;
         
         const containerRect = rightSide.getBoundingClientRect();
         const containerCenter = containerRect.top + containerRect.height / 2;
         
+        // Nur Einträge in der Nähe des aktiven prüfen (±20)
+        const startIndex = Math.max(0, activeEntryIndex - 20);
+        const endIndex = Math.min(entries.length, activeEntryIndex + 20);
+        
         let closestEntry = null;
         let closestDistance = Infinity;
         
-        entries.forEach((entry, index) => {
+        for (let i = startIndex; i < endIndex; i++) {
+          const entry = entries[i];
           const rect = entry.getBoundingClientRect();
           const entryCenter = rect.top + rect.height / 2;
           const distance = Math.abs(entryCenter - containerCenter);
           
           if (distance < closestDistance) {
             closestDistance = distance;
-            closestEntry = index;
+            closestEntry = i;
           }
-        });
+        }
         
         if (closestEntry !== null && activeEntryIndex !== closestEntry) {
           activeEntryIndex = closestEntry;
@@ -683,9 +700,11 @@
         }
       };
       
-      rightSide.addEventListener('scroll', updateActiveEntry, { passive: true });
+      // Throttled Version (50ms auf Mobile, 16ms auf Desktop)
+      const throttledUpdateActive = throttle(updateActiveEntry, isMobile ? 50 : 16);
+      rightSide.addEventListener('scroll', throttledUpdateActive, { passive: true });
       
-      // Fade-Effekt mit Scroll-Event
+      // Fade-Effekt mit Scroll-Event (optimiert)
       const fadeDistanceTop = isMobile ? 300 : 150;
       const fadeDistanceBottom = isMobile ? 300 : 150;
       
@@ -694,7 +713,12 @@
         const containerTop = containerRect.top;
         const containerBottom = containerRect.bottom;
         
-        entries.forEach(entry => {
+        // Nur sichtbare Einträge + Puffer prüfen
+        const startIndex = Math.max(0, activeEntryIndex - 15);
+        const endIndex = Math.min(entries.length, activeEntryIndex + 15);
+        
+        for (let i = startIndex; i < endIndex; i++) {
+          const entry = entries[i];
           const rect = entry.getBoundingClientRect();
           const entryMiddle = rect.top + rect.height / 2;
           
@@ -711,10 +735,12 @@
           }
           
           entry.style.opacity = opacity;
-        });
+        }
       };
       
-      rightSide.addEventListener('scroll', updateOpacity, { passive: true });
+      // Throttled Version für Opacity
+      const throttledUpdateOpacity = throttle(updateOpacity, isMobile ? 50 : 16);
+      rightSide.addEventListener('scroll', throttledUpdateOpacity, { passive: true });
       updateOpacity();
     }
     
