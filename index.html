@@ -656,28 +656,36 @@
       const entries = document.querySelectorAll('.entry');
       const isMobile = window.innerWidth <= 768;
       
-      // Observer für aktiven Eintrag (Mitte des Containers)
-      const activeObserver = new IntersectionObserver((observerEntries) => {
+      // Scroll Listener für aktiven Eintrag
+      const updateActiveEntry = () => {
         if (isJumping) return;
         
-        observerEntries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const index = parseInt(entry.target.dataset.index);
-            if (activeEntryIndex !== index) {
-              activeEntryIndex = index;
-              updateActiveEntry();
-            }
+        const containerRect = rightSide.getBoundingClientRect();
+        const containerCenter = containerRect.top + containerRect.height / 2;
+        
+        let closestEntry = null;
+        let closestDistance = Infinity;
+        
+        entries.forEach((entry, index) => {
+          const rect = entry.getBoundingClientRect();
+          const entryCenter = rect.top + rect.height / 2;
+          const distance = Math.abs(entryCenter - containerCenter);
+          
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestEntry = index;
           }
         });
-      }, {
-        root: rightSide,
-        rootMargin: '-46% 0px -46% 0px',
-        threshold: 0
-      });
+        
+        if (closestEntry !== null && activeEntryIndex !== closestEntry) {
+          activeEntryIndex = closestEntry;
+          updateActiveEntryUI();
+        }
+      };
       
-      entries.forEach(entry => activeObserver.observe(entry));
+      rightSide.addEventListener('scroll', updateActiveEntry, { passive: true });
       
-      // Fade-Effekt mit Scroll-Event (Intersection Observer kann keine graduellen Opacity-Werte)
+      // Fade-Effekt mit Scroll-Event
       const fadeDistanceTop = isMobile ? 300 : 150;
       const fadeDistanceBottom = isMobile ? 300 : 150;
       
@@ -833,7 +841,7 @@
       if (yearEntries.length > 0) {
         const firstEntry = yearEntries[0]; // Erster = ältester wegen Sort
         activeEntryIndex = allEntries.indexOf(firstEntry);
-        updateActiveEntry();
+        updateActiveEntryUI();
         scrollToActiveEntry();
       }
     }
@@ -846,7 +854,7 @@
       if (monthEntries.length > 0) {
         const firstEntry = monthEntries[0]; // Erster = ältester wegen Sort
         activeEntryIndex = allEntries.indexOf(firstEntry);
-        updateActiveEntry();
+        updateActiveEntryUI();
         scrollToActiveEntry();
       }
     }
@@ -860,7 +868,7 @@
     }
     
     // Update aktiver Eintrag
-    function updateActiveEntry() {
+    function updateActiveEntryUI() {
       document.querySelectorAll('.entry').forEach((el, i) => {
         el.classList.toggle('active', i === activeEntryIndex);
       });
