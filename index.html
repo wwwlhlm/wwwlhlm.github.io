@@ -969,13 +969,8 @@
         // Prüfe URL-Hash für spezifisches Datum
         const hash = window.location.hash.substring(1);
         
-        console.log('Hash:', hash);
-        console.log('Erster Eintrag:', allEntries[0]?.date);
-        console.log('Letzter Eintrag:', allEntries[allEntries.length-1]?.date);
-        
         if (hash) {
           const dateIndex = allEntries.findIndex(e => e.date === hash);
-          console.log('Gefundener Index:', dateIndex);
           if (dateIndex !== -1) {
             activeEntryIndex = dateIndex;
           } else {
