@@ -134,6 +134,12 @@
       transition: color 0.3s ease, opacity 0.15s ease;
       position: relative;
       opacity: 1;
+      cursor: pointer;
+      will-change: opacity;
+    }
+    
+    .entry:hover {
+      color: var(--active);
     }
     
     .entry.month-start {
@@ -644,10 +650,23 @@
       attachHoverListeners();
       attachObservers();
       attachScrollResistance();
+      attachEntryClickListeners();
       
       // Scroll-Toggle Listener
       window.addEventListener('scroll', updateScrollToggle, { passive: true });
       updateScrollToggle();
+    }
+    
+    // Klick-Listener für Einträge
+    function attachEntryClickListeners() {
+      const entries = document.querySelectorAll('.entry');
+      entries.forEach((entry, index) => {
+        entry.addEventListener('click', () => {
+          activeEntryIndex = index;
+          updateActiveEntryUI();
+          scrollToActiveEntry();
+        });
+      });
     }
     
     // Intersection Observers für aktiven Eintrag und Fade-Effekt
@@ -950,8 +969,13 @@
         // Prüfe URL-Hash für spezifisches Datum
         const hash = window.location.hash.substring(1);
         
+        console.log('Hash:', hash);
+        console.log('Erster Eintrag:', allEntries[0]?.date);
+        console.log('Letzter Eintrag:', allEntries[allEntries.length-1]?.date);
+        
         if (hash) {
           const dateIndex = allEntries.findIndex(e => e.date === hash);
+          console.log('Gefundener Index:', dateIndex);
           if (dateIndex !== -1) {
             activeEntryIndex = dateIndex;
           } else {
