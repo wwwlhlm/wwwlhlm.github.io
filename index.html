@@ -660,11 +660,32 @@
     // Klick-Listener für Einträge
     function attachEntryClickListeners() {
       const entries = document.querySelectorAll('.entry');
+      let isHoveringEntry = false;
+      
       entries.forEach((entry, index) => {
         entry.addEventListener('click', () => {
           activeEntryIndex = index;
           updateActiveEntryUI();
           scrollToActiveEntry();
+        });
+        
+        entry.addEventListener('mouseenter', () => {
+          isHoveringEntry = true;
+          // Zeige Konsum des gehovertenEintrags
+          const hoveredEntry = allEntries[index];
+          document.querySelectorAll('.consumption-value')[0].textContent = hoveredEntry.data.apples || 0;
+          document.querySelectorAll('.consumption-value')[1].textContent = hoveredEntry.data.bananas || 0;
+          document.querySelectorAll('.consumption-value')[2].textContent = hoveredEntry.data.coffee || 0;
+        });
+        
+        entry.addEventListener('mouseleave', () => {
+          isHoveringEntry = false;
+          setTimeout(() => {
+            if (!isHoveringEntry) {
+              // Zurück zum Konsum des aktiven Eintrags
+              updateConsumption();
+            }
+          }, 10);
         });
       });
     }
