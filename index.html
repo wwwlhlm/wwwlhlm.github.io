@@ -1201,8 +1201,8 @@
           return;
         }
 
-        // Only apply resistance when hovering over left side
-        if (!isOverLeftSide) {
+        // Skip resistance when hovering over left side (allow scrolling to header)
+        if (isOverLeftSide) {
           lastScrollTop = window.scrollY;
           return;
         }
