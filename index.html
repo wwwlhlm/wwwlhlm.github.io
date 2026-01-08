@@ -61,16 +61,19 @@
 
     .container {
       display: flex;
-      height: 100vh;
+      min-height: 100vh;
     }
 
-    /* Left Side - Calendar */
+    /* Left Side - Calendar (sticky) */
     .left-side {
       width: 47%;
       display: flex;
       flex-direction: column;
       padding: 15px;
-      overflow-y: auto;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      align-self: flex-start;
     }
 
     .calendar {
@@ -204,12 +207,6 @@
       padding-right: 48px;
       text-indent: 28px;
       max-width: none;
-    }
-
-    /* Main Content Wrapper */
-    .main-content {
-      height: 100vh;
-      overflow: hidden;
     }
 
     .entry-header {
@@ -474,7 +471,7 @@
     let activeEntryIndex = 0;
     let consumptionMode = 'day'; // 'day', 'month', 'year'
     let isJumping = false; // Flag für programmatisches Scrollen
-    let bypassResistance = false; // Flag um Scroll-Widerstand zu umgehen
+
 
     // Theme Toggle
     function toggleTheme() {
@@ -680,7 +677,7 @@
 
       attachHoverListeners();
       attachObservers();
-      attachScrollResistance();
+
       attachEntryClickListeners();
 
       // Scroll-Toggle Listener
@@ -822,8 +819,6 @@
       const scrollY = window.scrollY || window.pageYOffset;
       const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
 
-      bypassResistance = true;
-
       // Wenn wir in der Kalenderansicht sind (unter dem Header), scroll zum Header
       if (scrollY >= headerHeight - 50) {
         pageHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -831,10 +826,6 @@
         // Sonst scroll zur Kalenderansicht
         mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-
-      setTimeout(() => {
-        bypassResistance = false;
-      }, 1000);
     }
 
     // Button-Zustand basierend auf Scroll-Position aktualisieren
@@ -1178,51 +1169,7 @@
       }, 100);
     }
 
-    // Scroll-Widerstand beim Übergang vom ersten Eintrag zum Header
-    function attachScrollResistance() {
-      let lastScrollTop = 0;
-      let resistanceActive = false;
-      let mouseX = 0;
 
-      // Track mouse X position
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-      }, { passive: true });
-
-      window.addEventListener('scroll', () => {
-        if (bypassResistance) {
-          lastScrollTop = window.scrollY;
-          return;
-        }
-
-        // Check if mouse is in the first 1/4 of the viewport (navigation zone)
-        const viewportWidth = window.innerWidth;
-        const isInNavZone = mouseX < viewportWidth * 0.25;
-
-        // Skip resistance when in nav zone (allow scrolling to header)
-        if (isInNavZone) {
-          lastScrollTop = window.scrollY;
-          return;
-        }
-
-        const mainContent = document.getElementById('main-content');
-        const mainContentTop = mainContent.getBoundingClientRect().top;
-        const scrollTop = window.scrollY;
-        const scrollingUp = scrollTop < lastScrollTop;
-
-        // Wenn wir am main-content sind und nach oben scrollen wollen
-        if (scrollingUp && mainContentTop >= -50 && mainContentTop <= 50 && !resistanceActive) {
-          resistanceActive = true;
-          window.scrollTo({ top: mainContent.offsetTop, behavior: 'instant' });
-
-          setTimeout(() => {
-            resistanceActive = false;
-          }, 300); // 300ms Widerstand
-        }
-
-        lastScrollTop = scrollTop;
-      }, { passive: true });
-    }
 
     init();
   </script>
