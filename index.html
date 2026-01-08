@@ -1182,16 +1182,16 @@
     function attachScrollResistance() {
       let lastScrollTop = 0;
       let resistanceActive = false;
-      let isOverCalendar = false;
+      let isOverLeftSide = false;
 
-      // Track if mouse is over the calendar navigation
-      const calendar = document.querySelector('.calendar');
-      if (calendar) {
-        calendar.addEventListener('mouseenter', () => {
-          isOverCalendar = true;
+      // Track if mouse is over the left side (calendar + consumption)
+      const leftSide = document.querySelector('.left-side');
+      if (leftSide) {
+        leftSide.addEventListener('mouseenter', () => {
+          isOverLeftSide = true;
         });
-        calendar.addEventListener('mouseleave', () => {
-          isOverCalendar = false;
+        leftSide.addEventListener('mouseleave', () => {
+          isOverLeftSide = false;
         });
       }
 
@@ -1201,8 +1201,8 @@
           return;
         }
 
-        // Only apply resistance when hovering over calendar
-        if (!isOverCalendar) {
+        // Only apply resistance when hovering over left side
+        if (!isOverLeftSide) {
           lastScrollTop = window.scrollY;
           return;
         }
