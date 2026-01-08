@@ -65,7 +65,7 @@
     
     /* Left Side - Calendar */
     .left-side {
-      width: 47%;
+      width: 25%;
       display: flex;
       flex-direction: column;
       padding: 15px;
@@ -121,15 +121,16 @@
     
     /* Right Side - Entries */
     .right-side {
-      width: 53%;
+      width: 75%;
       overflow-y: auto;
-      padding: 15px 48px 50vh 0;
+      padding: 15px 48px 50vh calc(25% - 15px);
       position: relative;
       scroll-behavior: smooth;
     }
     
     .entry {
-      margin-bottom: 16px;
+      margin-bottom: 0;
+      padding-bottom: 16px;
       color: var(--text);
       transition: color 0.3s ease, opacity 0.15s ease;
       position: relative;
@@ -185,15 +186,16 @@
     .header-title {
       text-transform: uppercase;
       margin-bottom: 28px;
-      margin-left: 47%;
+      margin-left: 25%;
       padding-right: 48px;
+      max-width: 50%;
     }
     
     .header-text {
-      margin-left: 47%;
+      margin-left: 25%;
       padding-right: 48px;
       text-indent: 28px;
-      max-width: none;
+      max-width: 50%;
     }
     
     /* Main Content Wrapper */
@@ -204,7 +206,7 @@
 
     .entry-header {
       display: flex;
-      gap: 28px;
+      gap: 20px;
     }
     
     .entry-number {
@@ -661,6 +663,7 @@
     function attachEntryClickListeners() {
       const entries = document.querySelectorAll('.entry');
       let isHoveringEntry = false;
+      let leaveTimeout = null;
       
       entries.forEach((entry, index) => {
         entry.addEventListener('click', () => {
@@ -671,6 +674,13 @@
         
         entry.addEventListener('mouseenter', () => {
           isHoveringEntry = true;
+          if (leaveTimeout) {
+            clearTimeout(leaveTimeout);
+            leaveTimeout = null;
+          }
+          // Entferne active von allen, setze nur auf gehoverten
+          entries.forEach(e => e.classList.remove('active'));
+          entry.classList.add('active');
           // Zeige Konsum des gehovertenEintrags
           const hoveredEntry = allEntries[index];
           document.querySelectorAll('.consumption-value')[0].textContent = hoveredEntry.data.apples || 0;
@@ -680,12 +690,13 @@
         
         entry.addEventListener('mouseleave', () => {
           isHoveringEntry = false;
-          setTimeout(() => {
+          leaveTimeout = setTimeout(() => {
             if (!isHoveringEntry) {
-              // Zurück zum Konsum des aktiven Eintrags
+              // Zurück zum aktiven Eintrag
+              entries.forEach((e, i) => e.classList.toggle('active', i === activeEntryIndex));
               updateConsumption();
             }
-          }, 10);
+          }, 100);
         });
       });
     }
@@ -1139,10 +1150,16 @@
           const entryHeight = activeEntry.offsetHeight;
           
           rightSide.scrollTop = entryTop - (containerHeight / 2) + (entryHeight / 2);
+          
+          // Manuell Scroll-Event triggern für Opacity-Update
+          rightSide.dispatchEvent(new Event('scroll'));
         }
         
         setTimeout(() => {
           isJumping = false;
+          // Nochmal triggern nach isJumping = false
+          const rightSide = document.querySelector('.right-side');
+          if (rightSide) rightSide.dispatchEvent(new Event('scroll'));
         }, 1000);
       }, 100);
     }
@@ -1170,7 +1187,7 @@
           
           setTimeout(() => {
             resistanceActive = false;
-          }, 300); // 300ms Widerstand
+          }, 600); // 600ms Widerstand
         }
         
         lastScrollTop = scrollTop;
