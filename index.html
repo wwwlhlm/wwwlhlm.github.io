@@ -1182,9 +1182,27 @@
     function attachScrollResistance() {
       let lastScrollTop = 0;
       let resistanceActive = false;
+      let isOverCalendar = false;
+
+      // Track if mouse is over the calendar navigation
+      const calendar = document.querySelector('.calendar');
+      if (calendar) {
+        calendar.addEventListener('mouseenter', () => {
+          isOverCalendar = true;
+        });
+        calendar.addEventListener('mouseleave', () => {
+          isOverCalendar = false;
+        });
+      }
 
       window.addEventListener('scroll', () => {
         if (bypassResistance) {
+          lastScrollTop = window.scrollY;
+          return;
+        }
+
+        // Only apply resistance when hovering over calendar
+        if (!isOverCalendar) {
           lastScrollTop = window.scrollY;
           return;
         }
