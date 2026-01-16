@@ -851,14 +851,28 @@
       const years = document.querySelectorAll('.year-item:not(.index-item)');
       const indexItem = document.querySelector('.index-item');
       
+      let hoverTimeout = null;
+      
       // Index-Item Listener
       if (indexItem) {
         indexItem.addEventListener('click', () => {
           jumpToAbout();
         });
+        
+        indexItem.addEventListener('mouseenter', (e) => {
+          e.stopPropagation();
+          if (hoverTimeout) clearTimeout(hoverTimeout);
+          consumptionMode = 'all';
+          updateConsumption();
+        });
+        
+        indexItem.addEventListener('mouseleave', () => {
+          hoverTimeout = setTimeout(() => {
+            consumptionMode = isInAboutSection ? 'all' : 'day';
+            updateConsumption();
+          }, 50);
+        });
       }
-      
-      let hoverTimeout = null;
       
       years.forEach(el => {
         el.addEventListener('mouseenter', (e) => {
