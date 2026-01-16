@@ -326,18 +326,17 @@
       }
     }
     
-    /* Theme Toggle */
+    /* Theme Toggle - Pill Shape */
     .theme-toggle {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      border: 3px solid var(--text);
-      background: transparent;
+      bottom: 15px;
+      right: 15px;
+      width: 18px;
+      height: 30px;
+      border-radius: 9px;
+      background: var(--text);
       cursor: pointer;
-      transition: border-color 0.2s ease, opacity 0.3s ease;
+      transition: background 0.3s ease, opacity 0.3s ease;
       z-index: 20;
       opacity: 1;
     }
@@ -347,8 +346,27 @@
       pointer-events: none;
     }
     
-    .theme-toggle:hover {
-      border-color: var(--active);
+    .theme-toggle::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--bg);
+      transition: top 0.3s ease, background 0.3s ease;
+      transform: translateX(-50%);
+      top: 5px;
+    }
+    
+    /* Dawn: Mitte */
+    [data-theme="dawn"] .theme-toggle::after {
+      top: 11px;
+    }
+    
+    /* Night: Unten */
+    [data-theme="night"] .theme-toggle::after {
+      top: 17px;
     }
     
     /* Mobile */
