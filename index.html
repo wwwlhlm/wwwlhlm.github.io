@@ -134,6 +134,7 @@
     
     .year-item {
       font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1;
     }
     
     .year-spacer {
@@ -142,6 +143,7 @@
     
     .index-item {
       font-variant-numeric: normal;
+      font-feature-settings: normal;
     }
     
     .year-item:hover, .month-item:hover,
@@ -170,6 +172,7 @@
       text-align: right;
       min-width: 108px;
       font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1;
     }
     
     .consumption-item.hidden {
@@ -278,6 +281,7 @@
       min-width: 50px;
       text-align: right;
       font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1;
     }
     
     .entry-number.sunday {
@@ -378,11 +382,14 @@
     @media (max-width: 768px) {
       body {
         font-size: 24px;
-        line-height: 28px;
+        line-height: 26px;
+        min-height: 100vh;
+        overflow-x: hidden;
       }
       
       .container {
         flex-direction: column;
+        min-height: auto;
       }
       
       .left-side {
@@ -391,61 +398,183 @@
       
       .right-side {
         width: 100%;
-        padding: 15px;
-        padding-bottom: 50vh;
+        padding: 120px 20px 50vh 20px;
       }
       
+      /* Mobile Header - Datum & Konsum */
       .mobile-header {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        padding: 15px;
-        z-index: 10;
+        padding: 20px;
+        z-index: 100;
         display: flex;
-        gap: 20px;
-        color: var(--active);
+        background: var(--bg);
+        cursor: pointer;
       }
       
-      .mobile-footer {
-        position: fixed;
+      .mobile-header::after {
+        content: '';
+        position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 15px;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        color: var(--text);
+        height: 60px;
+        background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+        pointer-events: none;
+        transform: translateY(100%);
       }
       
-      .mobile-footer .consumption-value {
+      .mobile-date {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
         color: var(--active);
       }
       
-      .header {
-        margin-top: 50px;
+      .mobile-consumption {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
       }
       
+      .mobile-consumption-item {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .mobile-consumption-label {
+        color: var(--text);
+      }
+      
+      .mobile-consumption-value {
+        color: var(--active);
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum" 1;
+      }
+      
+      /* Mobile Nav Overlay */
+      .mobile-nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 200;
+        background: var(--bg);
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+      }
+      
+      .mobile-nav-overlay.active {
+        display: flex;
+      }
+      
+      .mobile-nav-overlay::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 200px;
+        background: linear-gradient(to top, var(--bg) 0%, var(--bg) 25px, transparent 100%);
+        pointer-events: none;
+      }
+      
+      .mobile-nav-header {
+        display: flex;
+        margin-bottom: 50px;
+      }
+      
+      .mobile-nav-close {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--text);
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      
+      .mobile-nav-close:hover {
+        background: var(--active);
+      }
+      
+      .mobile-nav-consumption {
+        width: 50%;
+        margin-left: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .mobile-nav-calendar {
+        display: flex;
+        flex: 1;
+      }
+      
+      .mobile-nav-years,
+      .mobile-nav-months {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .mobile-nav-item {
+        color: var(--text);
+        cursor: pointer;
+        transition: color 0.2s ease;
+        opacity: 0;
+        animation: fadeInItem 0.3s ease forwards;
+      }
+      
+      .mobile-nav-item.active {
+        color: var(--active);
+      }
+      
+      .mobile-nav-index {
+        animation-delay: 0ms;
+      }
+      
+      .mobile-nav-spacer {
+        height: 26px;
+      }
+      
+      /* Fade Gradients Mobile */
+      .fade-top {
+        display: none;
+      }
+      
+      .fade-bottom {
+        left: 0;
+        height: 200px;
+      }
+      
+      /* Entry Styles Mobile */
       .entry {
-        margin-bottom: 12px;
-      }
-      
-      .entry-number {
-        min-width: 20px;
+        padding-bottom: 12px;
       }
       
       .entry-header {
-        gap: 16px;
+        flex-direction: column;
+        gap: 0;
+      }
+      
+      .entry-number {
+        min-width: auto;
+        text-align: left;
       }
       
       .entry-text {
-        text-indent: 16px;
+        text-indent: 0;
+      }
+      
+      .entry.first-entry {
+        padding-top: 0;
       }
       
       .entry.month-start {
-        margin-top: 116px;
+        margin-top: 80px;
         padding-top: 28px;
       }
       
@@ -454,14 +583,52 @@
         height: 1.5px;
       }
       
-      .scroll-top, .theme-toggle {
+      /* About Section Mobile */
+      .about-wrapper {
+        margin-top: 80px;
+      }
+      
+      .about-section {
+        padding-left: 0;
+      }
+      
+      /* Theme Toggle Mobile */
+      .theme-toggle {
+        width: 16px;
+        height: 28px;
+        border-radius: 8px;
+        bottom: 20px;
+        right: 20px;
+      }
+      
+      .theme-toggle::after {
+        width: 6px;
+        height: 6px;
+        top: 5px;
+      }
+      
+      [data-theme="dawn"] .theme-toggle::after {
+        top: 11px;
+      }
+      
+      [data-theme="night"] .theme-toggle::after {
+        top: 17px;
+      }
+      
+      .theme-toggle.nav-open {
+        display: none;
+      }
+      
+      /* Hide desktop footer */
+      .mobile-footer {
         display: none;
       }
     }
     
     @media (min-width: 769px) {
-      .mobile-header, .mobile-footer {
-        display: none;
+      .mobile-header,
+      .mobile-nav-overlay {
+        display: none !important;
       }
     }
   </style>
@@ -485,6 +652,169 @@
     let lastDisplayedYear = null; // Für Monats-Animation bei Jahr-Wechsel
     let aboutData = { title: '', text: '' };
     let isInAboutSection = false; // Flag ob wir im About-Bereich sind
+    let isMobileNavOpen = false; // Flag für Mobile Nav
+    
+    // Mobile Nav Toggle
+    function toggleMobileNav() {
+      const overlay = document.getElementById('mobile-nav-overlay');
+      const toggle = document.querySelector('.theme-toggle');
+      
+      isMobileNavOpen = !isMobileNavOpen;
+      
+      if (isMobileNavOpen) {
+        overlay.classList.add('active');
+        if (toggle) toggle.classList.add('nav-open');
+        updateMobileNavConsumption();
+        attachMobileNavListeners();
+      } else {
+        overlay.classList.remove('active');
+        if (toggle) toggle.classList.remove('nav-open');
+      }
+    }
+    
+    // Mobile Nav Consumption Update
+    function updateMobileNavConsumption() {
+      const consumption = calculateConsumption();
+      const navApples = document.querySelector('.mobile-nav-apples');
+      const navBananas = document.querySelector('.mobile-nav-bananas');
+      const navCoffee = document.querySelector('.mobile-nav-coffee');
+      
+      if (navApples) navApples.textContent = consumption.apples;
+      if (navBananas) navBananas.textContent = consumption.bananas;
+      if (navCoffee) navCoffee.textContent = consumption.coffee;
+    }
+    
+    // Mobile Nav Listeners
+    function attachMobileNavListeners() {
+      const years = document.querySelectorAll('.mobile-nav-year');
+      const months = document.querySelectorAll('.mobile-nav-month');
+      const indexItem = document.querySelector('.mobile-nav-index');
+      
+      // Index Click
+      if (indexItem) {
+        indexItem.onclick = () => {
+          toggleMobileNav();
+          jumpToAbout();
+        };
+        
+        indexItem.ontouchstart = (e) => {
+          consumptionMode = 'all';
+          updateMobileNavConsumption();
+        };
+      }
+      
+      // Year Listeners
+      years.forEach(el => {
+        el.ontouchstart = (e) => {
+          const year = parseInt(el.dataset.year);
+          consumptionMode = 'year';
+          
+          // Temporär activeEntry für Berechnung setzen
+          const tempEntry = allEntries.find(e => e.year === year);
+          if (tempEntry) {
+            const tempIndex = activeEntryIndex;
+            activeEntryIndex = allEntries.indexOf(tempEntry);
+            updateMobileNavConsumption();
+            activeEntryIndex = tempIndex;
+          }
+          
+          // Aktiv-Status aktualisieren
+          years.forEach(y => y.classList.remove('active'));
+          el.classList.add('active');
+          
+          // Monate für dieses Jahr aktualisieren
+          updateMobileNavMonths(year);
+        };
+        
+        el.onclick = () => {
+          const year = parseInt(el.dataset.year);
+          jumpToFirstDayOfYear(year);
+          toggleMobileNav();
+        };
+      });
+      
+      // Month Listeners
+      attachMobileMonthListeners();
+    }
+    
+    // Mobile Month Listeners (separate Funktion für Re-Attachment)
+    function attachMobileMonthListeners() {
+      const months = document.querySelectorAll('.mobile-nav-month');
+      
+      months.forEach(el => {
+        el.ontouchstart = (e) => {
+          const month = parseInt(el.dataset.month);
+          const activeYear = document.querySelector('.mobile-nav-year.active');
+          const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
+          
+          consumptionMode = 'month';
+          
+          const tempEntry = allEntries.find(e => e.year === year && e.month === month);
+          if (tempEntry) {
+            const tempIndex = activeEntryIndex;
+            activeEntryIndex = allEntries.indexOf(tempEntry);
+            updateMobileNavConsumption();
+            activeEntryIndex = tempIndex;
+          }
+          
+          months.forEach(m => m.classList.remove('active'));
+          el.classList.add('active');
+        };
+        
+        el.onclick = () => {
+          const month = parseInt(el.dataset.month);
+          const activeYear = document.querySelector('.mobile-nav-year.active');
+          const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
+          
+          jumpToFirstDayOfMonth(year, month);
+          toggleMobileNav();
+        };
+      });
+    }
+    
+    // Update Mobile Nav Months für ein Jahr
+    function updateMobileNavMonths(year) {
+      const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
+                         'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+      
+      const monthsInYear = [...new Set(
+        allEntries.filter(e => e.year === year).map(e => e.month)
+      )].sort((a, b) => a - b);
+      
+      const monthsContainer = document.querySelector('.mobile-nav-months');
+      if (monthsContainer) {
+        monthsContainer.innerHTML = monthsInYear.map((month, i) => `
+          <div class="mobile-nav-item mobile-nav-month" data-month="${month}" style="animation-delay: ${i * 50}ms">
+            ${monthNames[month - 1]}
+          </div>
+        `).join('');
+        
+        // Re-attach listeners
+        attachMobileMonthListeners();
+      }
+    }
+    
+    // Update Mobile Header
+    function updateMobileHeader() {
+      const activeEntry = allEntries[activeEntryIndex];
+      const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
+                         'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+      
+      const mobileDay = document.querySelector('.mobile-day');
+      const mobileMonthName = document.querySelector('.mobile-month-name');
+      const mobileYear = document.querySelector('.mobile-year');
+      const mobileApples = document.querySelector('.mobile-apples');
+      const mobileBananas = document.querySelector('.mobile-bananas');
+      const mobileCoffee = document.querySelector('.mobile-coffee');
+      
+      if (mobileDay) mobileDay.textContent = activeEntry.day + '.';
+      if (mobileMonthName) mobileMonthName.textContent = monthNames[activeEntry.month - 1];
+      if (mobileYear) mobileYear.textContent = activeEntry.year;
+      
+      if (mobileApples) mobileApples.textContent = activeEntry.data.apples || 0;
+      if (mobileBananas) mobileBananas.textContent = activeEntry.data.bananas || 0;
+      if (mobileCoffee) mobileCoffee.textContent = activeEntry.data.coffee || 0;
+    }
     
     // Theme Toggle
     function toggleTheme() {
@@ -652,10 +982,6 @@
             </div>
             
             <div class="right-side">
-              <div class="mobile-header">
-                <span class="mobile-year"></span>
-                <span class="mobile-month"></span>
-              </div>
               ${allEntries.map((entry, index) => {
                 const isMonthStart = index > 0 && (
                   allEntries[index - 1].month !== entry.month ||
@@ -679,20 +1005,67 @@
                 </div>
               </div>
             </div>
-            
-            <div class="mobile-footer">
-              <div class="consumption-item">
-                <span class="consumption-label">Äpfel</span>
-                <span class="consumption-value mobile-apples"></span>
+          </div>
+        </div>
+        
+        <!-- Mobile Header -->
+        <div class="mobile-header" onclick="toggleMobileNav()">
+          <div class="mobile-date">
+            <span class="mobile-day"></span>
+            <span class="mobile-month-name"></span>
+            <span class="mobile-year"></span>
+          </div>
+          <div class="mobile-consumption">
+            <div class="mobile-consumption-item">
+              <span class="mobile-consumption-label">Äpfel</span>
+              <span class="mobile-consumption-value mobile-apples"></span>
+            </div>
+            <div class="mobile-consumption-item">
+              <span class="mobile-consumption-label">Bananen</span>
+              <span class="mobile-consumption-value mobile-bananas"></span>
+            </div>
+            <div class="mobile-consumption-item">
+              <span class="mobile-consumption-label">Kaffee</span>
+              <span class="mobile-consumption-value mobile-coffee"></span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mobile Nav Overlay -->
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+          <div class="mobile-nav-header">
+            <div class="mobile-nav-close" onclick="toggleMobileNav()"></div>
+            <div class="mobile-nav-consumption">
+              <div class="mobile-consumption-item">
+                <span class="mobile-consumption-label">Äpfel</span>
+                <span class="mobile-consumption-value mobile-nav-apples"></span>
               </div>
-              <div class="consumption-item">
-                <span class="consumption-label">Bananen</span>
-                <span class="consumption-value mobile-bananas"></span>
+              <div class="mobile-consumption-item">
+                <span class="mobile-consumption-label">Bananen</span>
+                <span class="mobile-consumption-value mobile-nav-bananas"></span>
               </div>
-              <div class="consumption-item">
-                <span class="consumption-label">Kaffees</span>
-                <span class="consumption-value mobile-coffee"></span>
+              <div class="mobile-consumption-item">
+                <span class="mobile-consumption-label">Kaffee</span>
+                <span class="mobile-consumption-value mobile-nav-coffee"></span>
               </div>
+            </div>
+          </div>
+          <div class="mobile-nav-calendar">
+            <div class="mobile-nav-years">
+              <div class="mobile-nav-item mobile-nav-index">Index</div>
+              <div class="mobile-nav-spacer"></div>
+              ${years.map((year, i) => `
+                <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${(i + 1) * 50}ms">
+                  ${year}
+                </div>
+              `).join('')}
+            </div>
+            <div class="mobile-nav-months">
+              ${monthsInYear.map((month, i) => `
+                <div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${monthBaseDelay + i * 50}ms">
+                  ${monthNames[month - 1]}
+                </div>
+              `).join('')}
             </div>
           </div>
         </div>
@@ -1082,22 +1455,7 @@
       }
       
       // Update mobile header
-      const mobileYear = document.querySelector('.mobile-year');
-      const mobileMonth = document.querySelector('.mobile-month');
-      if (mobileYear) mobileYear.textContent = activeEntry.year;
-      if (mobileMonth) {
-        const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
-                           'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
-        mobileMonth.textContent = monthNames[activeEntry.month - 1];
-      }
-      
-      // Update mobile footer
-      const mobileApples = document.querySelector('.mobile-apples');
-      const mobileBananas = document.querySelector('.mobile-bananas');
-      const mobileCoffee = document.querySelector('.mobile-coffee');
-      if (mobileApples) mobileApples.textContent = activeEntry.data.apples || 0;
-      if (mobileBananas) mobileBananas.textContent = activeEntry.data.bananas || 0;
-      if (mobileCoffee) mobileCoffee.textContent = activeEntry.data.coffee || 0;
+      updateMobileHeader();
       
       // Show/hide scroll-top button and theme toggle
       const scrollTopBtn = document.querySelector('.scroll-top');
