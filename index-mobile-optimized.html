@@ -398,7 +398,7 @@
       
       .right-side {
         width: 100%;
-        padding: 50vh 20px 50vh 20px;
+        padding: 50vh 20px 20px 20px;
       }
       
       /* Mobile Header - Datum & Konsum */
@@ -460,39 +460,40 @@
         font-feature-settings: "tnum" 1;
       }
       
-      /* Mobile Nav Overlay */
-      .mobile-nav-overlay {
+      /* Mobile Nav Container */
+      .mobile-nav-container {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        max-height: 70vh;
         z-index: 200;
+        display: none;
+        pointer-events: none;
+      }
+
+      .mobile-nav-container.active {
+        display: block;
+      }
+
+      /* Mobile Nav Overlay */
+      .mobile-nav-overlay {
         background: var(--bg);
         padding: 20px 20px 24px 20px;
-        display: none;
+        max-height: 70vh;
+        display: flex;
         flex-direction: column;
         overflow: hidden;
-      }
-      
-      .mobile-nav-overlay.active {
-        display: flex;
+        pointer-events: auto;
       }
 
       .mobile-nav-fade {
-        position: fixed;
+        position: absolute;
         top: 70vh;
         left: 50%;
         right: 0;
         height: 120px;
         background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
         pointer-events: none;
-        z-index: 199;
-        display: none;
-      }
-
-      .mobile-nav-fade.active {
-        display: block;
       }
       
       .mobile-nav-header {
@@ -614,7 +615,6 @@
 
       .about-section {
         padding-left: 0;
-        padding-bottom: 20px;
         position: sticky;
         bottom: 20px;
       }
@@ -683,15 +683,13 @@
     
     // Mobile Nav Toggle
     function toggleMobileNav() {
-      const overlay = document.getElementById('mobile-nav-overlay');
-      const fade = document.getElementById('mobile-nav-fade');
+      const container = document.getElementById('mobile-nav-container');
       const toggle = document.querySelector('.theme-toggle');
 
       isMobileNavOpen = !isMobileNavOpen;
 
       if (isMobileNavOpen) {
-        overlay.classList.add('active');
-        if (fade) fade.classList.add('active');
+        if (container) container.classList.add('active');
         if (toggle) toggle.classList.add('nav-open');
 
         if (isInAboutSection) {
@@ -734,8 +732,7 @@
         updateMobileNavConsumption();
         attachMobileNavListeners();
       } else {
-        overlay.classList.remove('active');
-        if (fade) fade.classList.remove('active');
+        if (container) container.classList.remove('active');
         if (toggle) toggle.classList.remove('nav-open');
       }
     }
@@ -1130,47 +1127,47 @@
           </div>
         </div>
         
-        <!-- Mobile Nav Overlay -->
-        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
-          <div class="mobile-nav-header" onclick="toggleMobileNav()">
-            <div class="mobile-nav-close"></div>
-            <div class="mobile-nav-consumption">
-              <div class="mobile-consumption-item">
-                <span class="mobile-consumption-label">Äpfel</span>
-                <span class="mobile-consumption-value mobile-nav-apples"></span>
+        <!-- Mobile Nav Container -->
+        <div class="mobile-nav-container" id="mobile-nav-container">
+          <div class="mobile-nav-overlay">
+            <div class="mobile-nav-header" onclick="toggleMobileNav()">
+              <div class="mobile-nav-close"></div>
+              <div class="mobile-nav-consumption">
+                <div class="mobile-consumption-item">
+                  <span class="mobile-consumption-label">Äpfel</span>
+                  <span class="mobile-consumption-value mobile-nav-apples"></span>
+                </div>
+                <div class="mobile-consumption-item">
+                  <span class="mobile-consumption-label">Bananen</span>
+                  <span class="mobile-consumption-value mobile-nav-bananas"></span>
+                </div>
+                <div class="mobile-consumption-item">
+                  <span class="mobile-consumption-label">Kaffee</span>
+                  <span class="mobile-consumption-value mobile-nav-coffee"></span>
+                </div>
               </div>
-              <div class="mobile-consumption-item">
-                <span class="mobile-consumption-label">Bananen</span>
-                <span class="mobile-consumption-value mobile-nav-bananas"></span>
+            </div>
+            <div class="mobile-nav-calendar">
+              <div class="mobile-nav-years">
+                <div class="mobile-nav-item mobile-nav-index">Index</div>
+                <div class="mobile-nav-spacer"></div>
+                ${years.map((year, i) => `
+                  <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${(i + 1) * 50}ms">
+                    ${year}
+                  </div>
+                `).join('')}
               </div>
-              <div class="mobile-consumption-item">
-                <span class="mobile-consumption-label">Kaffee</span>
-                <span class="mobile-consumption-value mobile-nav-coffee"></span>
+              <div class="mobile-nav-months">
+                ${monthsInYear.map((month, i) => `
+                  <div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${monthBaseDelay + i * 50}ms">
+                    ${monthNames[month - 1]}
+                  </div>
+                `).join('')}
               </div>
             </div>
           </div>
-          <div class="mobile-nav-calendar">
-            <div class="mobile-nav-years">
-              <div class="mobile-nav-item mobile-nav-index">Index</div>
-              <div class="mobile-nav-spacer"></div>
-              ${years.map((year, i) => `
-                <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${(i + 1) * 50}ms">
-                  ${year}
-                </div>
-              `).join('')}
-            </div>
-            <div class="mobile-nav-months">
-              ${monthsInYear.map((month, i) => `
-                <div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${monthBaseDelay + i * 50}ms">
-                  ${monthNames[month - 1]}
-                </div>
-              `).join('')}
-            </div>
-          </div>
+          <div class="mobile-nav-fade"></div>
         </div>
-
-        <!-- Mobile Nav Fade -->
-        <div class="mobile-nav-fade" id="mobile-nav-fade"></div>
 
         <div class="fade-top"></div>
         <div class="fade-bottom"></div>
