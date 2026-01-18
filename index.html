@@ -478,16 +478,21 @@
       .mobile-nav-overlay.active {
         display: flex;
       }
-      
-      .mobile-nav-overlay::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
+
+      .mobile-nav-fade {
+        position: fixed;
+        top: calc(70vh - 120px);
         left: 50%;
         right: 0;
         height: 120px;
         background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
         pointer-events: none;
+        z-index: 199;
+        display: none;
+      }
+
+      .mobile-nav-fade.active {
+        display: block;
       }
       
       .mobile-nav-header {
@@ -605,12 +610,12 @@
       .about-wrapper {
         margin-top: 100vh;
         min-height: auto;
-        padding-bottom: 20px;
       }
 
       .about-section {
         padding-left: 0;
         padding-top: 100px;
+        padding-bottom: 20px;
         position: relative;
       }
       
@@ -679,12 +684,14 @@
     // Mobile Nav Toggle
     function toggleMobileNav() {
       const overlay = document.getElementById('mobile-nav-overlay');
+      const fade = document.getElementById('mobile-nav-fade');
       const toggle = document.querySelector('.theme-toggle');
 
       isMobileNavOpen = !isMobileNavOpen;
 
       if (isMobileNavOpen) {
         overlay.classList.add('active');
+        if (fade) fade.classList.add('active');
         if (toggle) toggle.classList.add('nav-open');
 
         if (isInAboutSection) {
@@ -728,6 +735,7 @@
         attachMobileNavListeners();
       } else {
         overlay.classList.remove('active');
+        if (fade) fade.classList.remove('active');
         if (toggle) toggle.classList.remove('nav-open');
       }
     }
@@ -1160,7 +1168,10 @@
             </div>
           </div>
         </div>
-        
+
+        <!-- Mobile Nav Fade -->
+        <div class="mobile-nav-fade" id="mobile-nav-fade"></div>
+
         <div class="fade-top"></div>
         <div class="fade-bottom"></div>
         <div class="theme-toggle" onclick="toggleTheme()"></div>
@@ -1677,23 +1688,9 @@
         
         renderUI();
         scrollToActiveEntry();
-        
-        // Initial mobile header/footer updaten
-        const activeEntry = allEntries[activeEntryIndex];
-        const mobileYear = document.querySelector('.mobile-year');
-        const mobileMonth = document.querySelector('.mobile-month');
-        if (mobileYear) mobileYear.textContent = activeEntry.year;
-        if (mobileMonth) {
-          const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
-                             'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
-          mobileMonth.textContent = monthNames[activeEntry.month - 1];
-        }
-        const mobileApples = document.querySelector('.mobile-apples');
-        const mobileBananas = document.querySelector('.mobile-bananas');
-        const mobileCoffee = document.querySelector('.mobile-coffee');
-        if (mobileApples) mobileApples.textContent = activeEntry.data.apples || 0;
-        if (mobileBananas) mobileBananas.textContent = activeEntry.data.bananas || 0;
-        if (mobileCoffee) mobileCoffee.textContent = activeEntry.data.coffee || 0;
+
+        // Initial mobile header updaten
+        updateMobileHeader();
       } else {
         document.body.innerHTML = '<div class="loading">Keine Einträge gefunden.</div>';
       }
