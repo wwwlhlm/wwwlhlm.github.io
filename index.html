@@ -456,12 +456,14 @@
       }
       
       .mobile-date span {
-        transition: opacity 0.2s ease, transform 0.2s ease;
+        opacity: 1;
+        transform: translateY(0);
       }
       
       .mobile-panel.open .mobile-date span {
         opacity: 0;
         transform: translateY(-4px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
       }
       
       .mobile-day,
@@ -474,7 +476,8 @@
       .mobile-day.animate,
       .mobile-month-name.animate,
       .mobile-year.animate {
-        animation: fadeInSlide 0.3s ease forwards;
+        animation: fadeInSlide 0.3s ease forwards !important;
+        opacity: 0 !important;
       }
       
       .mobile-day.animate { animation-delay: 0ms; }
@@ -804,28 +807,14 @@
       if (coffee) coffee.textContent = consumption.coffee;
     }
     
-    // Mobile Nav Listeners
+    // Mobile Nav Listeners (nur für Kalender-Items)
     function attachMobileNavListeners() {
-      // Header click (open/close)
-      const panelHeader = document.querySelector('.mobile-panel-header');
-      const closeBtn = document.querySelector('.mobile-panel-close');
-      
-      if (panelHeader) {
-        panelHeader.onclick = (e) => {
-          // Nur reagieren wenn Panel geschlossen ist ODER auf Close-Button geklickt
-          if (!isMobileNavOpen || e.target.classList.contains('mobile-panel-close')) {
-            toggleMobileNav();
-          }
-        };
-      }
-      
       // Index Click
       const indexItem = document.querySelector('.mobile-nav-index');
-      if (indexItem) {
-        const newIndexItem = indexItem.cloneNode(true);
-        indexItem.parentNode.replaceChild(newIndexItem, indexItem);
-        
-        newIndexItem.addEventListener('click', () => {
+      if (indexItem && !indexItem.hasAttribute('data-listener')) {
+        indexItem.setAttribute('data-listener', 'true');
+        indexItem.addEventListener('click', (e) => {
+          e.stopPropagation();
           toggleMobileNav();
           jumpToAbout();
         });
@@ -833,14 +822,14 @@
 
       // Year Listeners
       document.querySelectorAll('.mobile-nav-year').forEach(el => {
-        const newEl = el.cloneNode(true);
-        el.parentNode.replaceChild(newEl, el);
+        if (el.hasAttribute('data-listener')) return;
+        el.setAttribute('data-listener', 'true');
         
         let touchHandled = false;
 
-        newEl.addEventListener('touchstart', (e) => {
+        el.addEventListener('touchstart', (e) => {
           touchHandled = true;
-          const year = parseInt(newEl.dataset.year);
+          const year = parseInt(el.dataset.year);
           consumptionMode = 'year';
 
           // Index deaktivieren
@@ -849,7 +838,7 @@
 
           // Jahre aktiv/inaktiv setzen
           document.querySelectorAll('.mobile-nav-year').forEach(y => y.classList.remove('active'));
-          newEl.classList.add('active');
+          el.classList.add('active');
 
           // Monate für dieses Jahr aktualisieren
           updateMobileNavMonths(year);
@@ -865,12 +854,13 @@
           updateMobileConsumption();
         });
 
-        newEl.addEventListener('click', (e) => {
+        el.addEventListener('click', (e) => {
+          e.stopPropagation();
           if (touchHandled) {
             touchHandled = false;
             return;
           }
-          const year = parseInt(newEl.dataset.year);
+          const year = parseInt(el.dataset.year);
           jumpToFirstDayOfYear(year);
           toggleMobileNav();
         });
@@ -883,32 +873,33 @@
     // Mobile Month Listeners
     function attachMobileMonthListeners() {
       document.querySelectorAll('.mobile-nav-month').forEach(el => {
-        const newEl = el.cloneNode(true);
-        el.parentNode.replaceChild(newEl, el);
+        if (el.hasAttribute('data-listener')) return;
+        el.setAttribute('data-listener', 'true');
         
         let touchHandled = false;
 
-        newEl.addEventListener('touchstart', (e) => {
+        el.addEventListener('touchstart', (e) => {
           touchHandled = true;
-          const month = parseInt(newEl.dataset.month);
+          const month = parseInt(el.dataset.month);
           const activeYear = document.querySelector('.mobile-nav-year.active');
           const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
 
           consumptionMode = 'month';
 
           document.querySelectorAll('.mobile-nav-month').forEach(m => m.classList.remove('active'));
-          newEl.classList.add('active');
+          el.classList.add('active');
 
           jumpToFirstDayOfMonthBackground(year, month);
           updateMobileConsumption();
         });
 
-        newEl.addEventListener('click', (e) => {
+        el.addEventListener('click', (e) => {
+          e.stopPropagation();
           if (touchHandled) {
             touchHandled = false;
             return;
           }
-          const month = parseInt(newEl.dataset.month);
+          const month = parseInt(el.dataset.month);
           const activeYear = document.querySelector('.mobile-nav-year.active');
           const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
 
@@ -1217,20 +1208,25 @@
       attachMobilePanelListeners();
     }
     
-    // Mobile Panel Listeners (Header Click)
+    // Mobile Panel Listeners (ein zentraler Listener)
     function attachMobilePanelListeners() {
       const isMobile = window.innerWidth <= 768;
       if (!isMobile) return;
       
-      const panelHeader = document.querySelector('.mobile-panel-header');
+      const panel = document.getElementById('mobile-panel');
+      if (!panel) return;
       
-      if (panelHeader) {
-        panelHeader.addEventListener('click', (e) => {
-          // Nicht auf Kalender-Items reagieren
-          if (e.target.closest('.mobile-nav-item')) return;
+      panel.addEventListener('click', (e) => {
+        const target = e.target;
+        
+        // Klick auf Kalender-Item ignorieren (hat eigene Listener)
+        if (target.closest('.mobile-nav-item')) return;
+        
+        // Klick auf Header-Bereich (links oder rechts) oder Close-Button
+        if (target.closest('.mobile-panel-header') || target.closest('.mobile-panel-close')) {
           toggleMobileNav();
-        });
-      }
+        }
+      });
     }
     
     // Klick-Listener für Einträge
