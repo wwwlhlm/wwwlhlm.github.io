@@ -466,12 +466,13 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 70vh;
+        max-height: 70vh;
         z-index: 200;
         background: var(--bg);
-        padding: 20px;
+        padding: 20px 20px 120px 20px;
         display: none;
         flex-direction: column;
+        overflow: hidden;
       }
       
       .mobile-nav-overlay.active {
@@ -484,8 +485,8 @@
         bottom: 0;
         left: 50%;
         right: 0;
-        height: 100px;
-        background: linear-gradient(to bottom, transparent 0%, var(--bg) 100%);
+        height: 120px;
+        background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
         pointer-events: none;
       }
       
@@ -609,9 +610,8 @@
 
       .about-section {
         padding-left: 0;
-        position: sticky;
-        bottom: 120px;
-        top: auto;
+        padding-top: 100px;
+        position: relative;
       }
       
       /* Theme Toggle Mobile */
@@ -687,26 +687,42 @@
         overlay.classList.add('active');
         if (toggle) toggle.classList.add('nav-open');
 
-        // Aktuelles Jahr und Monat ermitteln
-        const currentYear = allEntries[activeEntryIndex]?.year;
-        const currentMonth = allEntries[activeEntryIndex]?.month;
-
-        // Monate für aktuelles Jahr anzeigen
-        if (currentYear) {
-          updateMobileNavMonths(currentYear);
-        }
-
-        // Jahr und Monat als aktiv markieren
-        document.querySelectorAll('.mobile-nav-year').forEach(el => {
-          el.classList.toggle('active', parseInt(el.dataset.year) === currentYear);
-        });
-
-        // Warte kurz bis Monate gerendert sind, dann Monat aktivieren
-        setTimeout(() => {
-          document.querySelectorAll('.mobile-nav-month').forEach(el => {
-            el.classList.toggle('active', parseInt(el.dataset.month) === currentMonth);
+        if (isInAboutSection) {
+          // Im About-Bereich: Index aktivieren, keine Jahre/Monate
+          document.querySelectorAll('.mobile-nav-year').forEach(el => {
+            el.classList.remove('active');
           });
-        }, 50);
+          document.querySelectorAll('.mobile-nav-month').forEach(el => {
+            el.classList.remove('active');
+          });
+          const indexItem = document.querySelector('.mobile-nav-index');
+          if (indexItem) indexItem.classList.add('active');
+        } else {
+          // Aktuelles Jahr und Monat ermitteln
+          const currentYear = allEntries[activeEntryIndex]?.year;
+          const currentMonth = allEntries[activeEntryIndex]?.month;
+
+          // Monate für aktuelles Jahr anzeigen
+          if (currentYear) {
+            updateMobileNavMonths(currentYear);
+          }
+
+          // Jahr und Monat als aktiv markieren
+          document.querySelectorAll('.mobile-nav-year').forEach(el => {
+            el.classList.toggle('active', parseInt(el.dataset.year) === currentYear);
+          });
+
+          // Warte kurz bis Monate gerendert sind, dann Monat aktivieren
+          setTimeout(() => {
+            document.querySelectorAll('.mobile-nav-month').forEach(el => {
+              el.classList.toggle('active', parseInt(el.dataset.month) === currentMonth);
+            });
+          }, 50);
+
+          // Index deaktivieren
+          const indexItem = document.querySelector('.mobile-nav-index');
+          if (indexItem) indexItem.classList.remove('active');
+        }
 
         updateMobileNavConsumption();
         attachMobileNavListeners();
@@ -1269,6 +1285,15 @@
               consumptionMode = 'all';
               updateConsumption();
               updateMobileHeader();
+
+              // Mobile Nav aktualisieren wenn offen
+              if (isMobileNavOpen) {
+                document.querySelectorAll('.mobile-nav-year').forEach(el => el.classList.remove('active'));
+                document.querySelectorAll('.mobile-nav-month').forEach(el => el.classList.remove('active'));
+                const navIndexItem = document.querySelector('.mobile-nav-index');
+                if (navIndexItem) navIndexItem.classList.add('active');
+                updateMobileNavConsumption();
+              }
             }
             return;
           } else if (isInAboutSection && !isJumping) {
@@ -1276,6 +1301,12 @@
             isInAboutSection = false;
             const indexItem = document.querySelector('.index-item');
             if (indexItem) indexItem.classList.remove('active');
+
+            // Mobile Nav Index deaktivieren wenn offen
+            if (isMobileNavOpen) {
+              const navIndexItem = document.querySelector('.mobile-nav-index');
+              if (navIndexItem) navIndexItem.classList.remove('active');
+            }
 
             // Setze activeEntryIndex auf letzten Eintrag
             activeEntryIndex = allEntries.length - 1;
@@ -1587,7 +1618,32 @@
       
       // Update mobile header
       updateMobileHeader();
-      
+
+      // Update mobile nav wenn offen
+      if (isMobileNavOpen) {
+        // Jahr und Monat in Navi aktualisieren
+        document.querySelectorAll('.mobile-nav-year').forEach(el => {
+          el.classList.toggle('active', parseInt(el.dataset.year) === activeEntry.year);
+        });
+
+        // Wenn Jahr gewechselt hat, Monate neu laden
+        if (lastDisplayedYear !== activeEntry.year) {
+          updateMobileNavMonths(activeEntry.year);
+        }
+
+        // Monat aktualisieren
+        setTimeout(() => {
+          document.querySelectorAll('.mobile-nav-month').forEach(el => {
+            el.classList.toggle('active', parseInt(el.dataset.month) === activeEntry.month);
+          });
+        }, 50);
+
+        // Konsum aktualisieren (nur wenn nicht im About-Bereich)
+        if (!isInAboutSection) {
+          updateMobileNavConsumption();
+        }
+      }
+
       // Show/hide scroll-top button and theme toggle
       const scrollTopBtn = document.querySelector('.scroll-top');
       const themeToggle = document.querySelector('.theme-toggle');
