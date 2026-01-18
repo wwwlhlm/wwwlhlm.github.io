@@ -784,24 +784,25 @@
           const year = parseInt(el.dataset.year);
           consumptionMode = 'year';
 
+          // Index deaktivieren
+          const indexItem = document.querySelector('.mobile-nav-index');
+          if (indexItem) indexItem.classList.remove('active');
+
           // Jahre aktiv/inaktiv setzen
           years.forEach(y => y.classList.remove('active'));
           el.classList.add('active');
 
-          // Monate für dieses Jahr aktualisieren
+          // Monate für dieses Jahr aktualisieren (ohne einen zu aktivieren)
           updateMobileNavMonths(year);
 
           // Im Hintergrund zum ersten Tag des Jahres springen
           jumpToFirstDayOfYearBackground(year);
 
-          // Warte bis Monate gerendert sind, dann ersten Monat aktivieren
+          // Alle Monate deaktivieren (kein Monat soll ausgewählt sein)
           setTimeout(() => {
             const monthItems = document.querySelectorAll('.mobile-nav-month');
-            if (monthItems.length > 0) {
-              monthItems.forEach(m => m.classList.remove('active'));
-              monthItems[0].classList.add('active'); // Ersten Monat (Januar oder erster verfügbarer) aktivieren
-            }
-          }, 100);
+            monthItems.forEach(m => m.classList.remove('active'));
+          }, 50);
 
           // Konsum aktualisieren
           updateMobileNavConsumption();
@@ -1533,6 +1534,10 @@
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
         }
+        
+        // Mobile Nav Index immer deaktivieren
+        const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
+        if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
 
         const firstEntry = yearEntries[0];
         activeEntryIndex = allEntries.indexOf(firstEntry);
@@ -1552,6 +1557,10 @@
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
         }
+        
+        // Mobile Nav Index immer deaktivieren
+        const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
+        if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
 
         const firstEntry = monthEntries[0];
         activeEntryIndex = allEntries.indexOf(firstEntry);
@@ -1651,24 +1660,17 @@
       // Update mobile header
       updateMobileHeader();
 
-      // Update mobile nav wenn offen
-      if (isMobileNavOpen) {
+      // Update mobile nav wenn offen - aber NICHT die Monate überschreiben wenn User Jahr ausgewählt hat
+      if (isMobileNavOpen && consumptionMode !== 'year') {
         // Jahr und Monat in Navi aktualisieren
         document.querySelectorAll('.mobile-nav-year').forEach(el => {
           el.classList.toggle('active', parseInt(el.dataset.year) === activeEntry.year);
         });
 
-        // Wenn Jahr gewechselt hat, Monate neu laden
-        if (lastDisplayedYear !== activeEntry.year) {
-          updateMobileNavMonths(activeEntry.year);
-        }
-
-        // Monat aktualisieren
-        setTimeout(() => {
-          document.querySelectorAll('.mobile-nav-month').forEach(el => {
-            el.classList.toggle('active', parseInt(el.dataset.month) === activeEntry.month);
-          });
-        }, 50);
+        // Monat aktualisieren (nur wenn nicht im Jahr-Modus)
+        document.querySelectorAll('.mobile-nav-month').forEach(el => {
+          el.classList.toggle('active', parseInt(el.dataset.month) === activeEntry.month);
+        });
 
         // Konsum aktualisieren (nur wenn nicht im About-Bereich)
         if (!isInAboutSection) {
