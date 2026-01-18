@@ -499,8 +499,8 @@
       .mobile-nav-header {
         position: relative;
         display: flex;
-        margin-bottom: 28px;
-        padding-bottom: 28px;
+        margin-bottom: 20px;
+        padding-bottom: 24px;
       }
 
       .mobile-nav-header::after {
@@ -779,29 +779,36 @@
 
       // Index Click
       if (indexItem) {
-        indexItem.onclick = () => {
+        // Entferne alte Listener durch Klonen
+        const newIndexItem = indexItem.cloneNode(true);
+        indexItem.parentNode.replaceChild(newIndexItem, indexItem);
+        
+        newIndexItem.addEventListener('click', () => {
           toggleMobileNav();
           jumpToAbout();
-        };
+        });
       }
 
       // Year Listeners
       years.forEach(el => {
-        let tapTimer = null;
-        let tapped = false;
+        // Entferne alte Listener durch Klonen
+        const newEl = el.cloneNode(true);
+        el.parentNode.replaceChild(newEl, el);
+        
+        let touchHandled = false;
 
-        el.addEventListener('touchstart', (e) => {
-          tapped = true;
-          const year = parseInt(el.dataset.year);
+        newEl.addEventListener('touchstart', (e) => {
+          touchHandled = true;
+          const year = parseInt(newEl.dataset.year);
           consumptionMode = 'year';
 
           // Index deaktivieren
-          const indexItem = document.querySelector('.mobile-nav-index');
-          if (indexItem) indexItem.classList.remove('active');
+          const navIndexItem = document.querySelector('.mobile-nav-index');
+          if (navIndexItem) navIndexItem.classList.remove('active');
 
           // Jahre aktiv/inaktiv setzen
-          years.forEach(y => y.classList.remove('active'));
-          el.classList.add('active');
+          document.querySelectorAll('.mobile-nav-year').forEach(y => y.classList.remove('active'));
+          newEl.classList.add('active');
 
           // Monate für dieses Jahr aktualisieren (ohne einen zu aktivieren)
           updateMobileNavMonths(year);
@@ -819,20 +826,18 @@
           updateMobileNavConsumption();
         });
 
-        el.addEventListener('touchend', (e) => {
-          tapTimer = setTimeout(() => {
-            tapped = false;
-          }, 300);
-        });
-
-        el.onclick = (e) => {
-          // Nur bei nicht-Touch-Geräten
-          if (!tapped) {
-            const year = parseInt(el.dataset.year);
-            jumpToFirstDayOfYear(year);
-            toggleMobileNav();
+        newEl.addEventListener('click', (e) => {
+          // Ignoriere click wenn touch bereits verarbeitet wurde
+          if (touchHandled) {
+            touchHandled = false;
+            return;
           }
-        };
+          
+          // Desktop: Klick springt und schließt Nav
+          const year = parseInt(newEl.dataset.year);
+          jumpToFirstDayOfYear(year);
+          toggleMobileNav();
+        });
       });
 
       // Month Listeners
@@ -844,20 +849,23 @@
       const months = document.querySelectorAll('.mobile-nav-month');
 
       months.forEach(el => {
-        let tapTimer = null;
-        let tapped = false;
+        // Entferne alte Listener durch Klonen
+        const newEl = el.cloneNode(true);
+        el.parentNode.replaceChild(newEl, el);
+        
+        let touchHandled = false;
 
-        el.addEventListener('touchstart', (e) => {
-          tapped = true;
-          const month = parseInt(el.dataset.month);
+        newEl.addEventListener('touchstart', (e) => {
+          touchHandled = true;
+          const month = parseInt(newEl.dataset.month);
           const activeYear = document.querySelector('.mobile-nav-year.active');
           const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
 
           consumptionMode = 'month';
 
           // Monate aktiv/inaktiv setzen
-          months.forEach(m => m.classList.remove('active'));
-          el.classList.add('active');
+          document.querySelectorAll('.mobile-nav-month').forEach(m => m.classList.remove('active'));
+          newEl.classList.add('active');
 
           // Im Hintergrund zum ersten Tag des Monats springen
           jumpToFirstDayOfMonthBackground(year, month);
@@ -866,23 +874,21 @@
           updateMobileNavConsumption();
         });
 
-        el.addEventListener('touchend', (e) => {
-          tapTimer = setTimeout(() => {
-            tapped = false;
-          }, 300);
-        });
-
-        el.onclick = (e) => {
-          // Nur bei nicht-Touch-Geräten
-          if (!tapped) {
-            const month = parseInt(el.dataset.month);
-            const activeYear = document.querySelector('.mobile-nav-year.active');
-            const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
-
-            jumpToFirstDayOfMonth(year, month);
-            toggleMobileNav();
+        newEl.addEventListener('click', (e) => {
+          // Ignoriere click wenn touch bereits verarbeitet wurde
+          if (touchHandled) {
+            touchHandled = false;
+            return;
           }
-        };
+          
+          // Desktop: Klick springt und schließt Nav
+          const month = parseInt(newEl.dataset.month);
+          const activeYear = document.querySelector('.mobile-nav-year.active');
+          const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
+
+          jumpToFirstDayOfMonth(year, month);
+          toggleMobileNav();
+        });
       });
     }
     
