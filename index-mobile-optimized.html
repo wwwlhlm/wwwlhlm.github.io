@@ -489,7 +489,7 @@
       .mobile-nav-fade {
         position: absolute;
         top: 70vh;
-        left: 50%;
+        left: 0;
         right: 0;
         height: 120px;
         background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
@@ -702,6 +702,7 @@
           });
           const indexItem = document.querySelector('.mobile-nav-index');
           if (indexItem) indexItem.classList.add('active');
+          consumptionMode = 'all';
         } else {
           // Aktuelles Jahr und Monat ermitteln
           const currentYear = allEntries[activeEntryIndex]?.year;
@@ -727,6 +728,9 @@
           // Index deaktivieren
           const indexItem = document.querySelector('.mobile-nav-index');
           if (indexItem) indexItem.classList.remove('active');
+
+          // Konsum-Modus auf Monat setzen beim Öffnen der Nav
+          consumptionMode = 'month';
         }
 
         updateMobileNavConsumption();
@@ -734,6 +738,13 @@
       } else {
         if (container) container.classList.remove('active');
         if (toggle) toggle.classList.remove('nav-open');
+
+        // Konsum-Modus zurücksetzen beim Schließen
+        if (!isInAboutSection) {
+          consumptionMode = 'day';
+          updateConsumption();
+          updateMobileHeader();
+        }
       }
     }
     
@@ -782,6 +793,15 @@
 
           // Im Hintergrund zum ersten Tag des Jahres springen
           jumpToFirstDayOfYearBackground(year);
+
+          // Warte bis Monate gerendert sind, dann ersten Monat aktivieren
+          setTimeout(() => {
+            const monthItems = document.querySelectorAll('.mobile-nav-month');
+            if (monthItems.length > 0) {
+              monthItems.forEach(m => m.classList.remove('active'));
+              monthItems[0].classList.add('active'); // Ersten Monat (Januar oder erster verfügbarer) aktivieren
+            }
+          }, 100);
 
           // Konsum aktualisieren
           updateMobileNavConsumption();
@@ -1469,9 +1489,11 @@
           isInAboutSection = false;
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
+          const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
+          if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
           consumptionMode = 'day';
         }
-        
+
         const firstEntry = yearEntries[0]; // Erster = ältester wegen Sort
         activeEntryIndex = allEntries.indexOf(firstEntry);
         updateActiveEntryUI();
@@ -1490,6 +1512,8 @@
           isInAboutSection = false;
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
+          const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
+          if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
           consumptionMode = 'day';
         }
 
