@@ -466,6 +466,13 @@
         transition: opacity 0.2s ease, transform 0.2s ease;
       }
       
+      /* Versteckt-Zustand für Animation */
+      .mobile-date span.hidden {
+        opacity: 0 !important;
+        transform: translateY(-4px) !important;
+        transition: none !important;
+      }
+      
       .mobile-day,
       .mobile-year {
         font-variant-numeric: tabular-nums;
@@ -476,13 +483,8 @@
       .mobile-day.animate,
       .mobile-month-name.animate,
       .mobile-year.animate {
-        animation: fadeInSlide 0.3s ease forwards !important;
-        opacity: 0 !important;
+        animation: fadeInSlide 0.3s ease forwards;
       }
-      
-      .mobile-day.animate { animation-delay: 0ms; }
-      .mobile-month-name.animate { animation-delay: 50ms; }
-      .mobile-year.animate { animation-delay: 100ms; }
       
       @keyframes fadeInSlide {
         0% {
@@ -772,24 +774,47 @@
         if (!isInAboutSection) {
           consumptionMode = 'day';
           
-          // Animation für Datum
+          // Animation für Datum - zeitversetzt
           const mobileDay = document.querySelector('.mobile-day');
           const mobileMonthName = document.querySelector('.mobile-month-name');
           const mobileYear = document.querySelector('.mobile-year');
           
-          // Text aktualisieren und Animation starten
+          // Erst mit hidden-Klasse verstecken (überschreibt CSS Transition)
+          [mobileDay, mobileMonthName, mobileYear].forEach(el => {
+            if (el) el.classList.add('hidden');
+          });
+          
+          // Text aktualisieren
           updateMobileHeader();
           
-          [mobileDay, mobileMonthName, mobileYear].forEach(el => {
-            if (el) el.classList.add('animate');
-          });
+          // Gestaffelte Animation - hidden entfernen und animate hinzufügen
+          setTimeout(() => {
+            if (mobileDay) {
+              mobileDay.classList.remove('hidden');
+              mobileDay.classList.add('animate');
+            }
+          }, 10);
+          
+          setTimeout(() => {
+            if (mobileMonthName) {
+              mobileMonthName.classList.remove('hidden');
+              mobileMonthName.classList.add('animate');
+            }
+          }, 60);
+          
+          setTimeout(() => {
+            if (mobileYear) {
+              mobileYear.classList.remove('hidden');
+              mobileYear.classList.add('animate');
+            }
+          }, 110);
           
           // Animation-Klassen nach Abschluss entfernen
           setTimeout(() => {
             [mobileDay, mobileMonthName, mobileYear].forEach(el => {
               if (el) el.classList.remove('animate');
             });
-          }, 400);
+          }, 500);
         }
         
         updateMobileConsumption();
