@@ -499,7 +499,18 @@
       .mobile-nav-header {
         position: relative;
         display: flex;
-        margin-bottom: 50px;
+        margin-bottom: 28px;
+        padding-bottom: 28px;
+      }
+
+      .mobile-nav-header::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1.5px;
+        background: var(--text);
       }
 
       .mobile-nav-close {
@@ -615,8 +626,8 @@
 
       .about-section {
         padding-left: 0;
-        position: sticky;
-        bottom: 20px;
+        position: relative;
+        z-index: 1;
       }
       
       /* Theme Toggle Mobile */
@@ -1257,12 +1268,24 @@
       const isMobile = window.innerWidth <= 768;
       if (!isMobile) return;
 
-      const rightSide = document.querySelector('.right-side');
+      const entries = document.querySelectorAll('.entry');
+      const aboutSection = document.querySelector('.about-section');
 
-      // Klick auf Feed schließt Navigation
-      if (rightSide) {
-        rightSide.addEventListener('click', (e) => {
+      // Klick auf einen Eintrag schließt Navigation
+      entries.forEach(entry => {
+        entry.addEventListener('click', (e) => {
           if (isMobileNavOpen) {
+            e.stopPropagation();
+            toggleMobileNav();
+          }
+        });
+      });
+
+      // Klick auf About-Section schließt auch Navigation
+      if (aboutSection) {
+        aboutSection.addEventListener('click', (e) => {
+          if (isMobileNavOpen) {
+            e.stopPropagation();
             toggleMobileNav();
           }
         });
@@ -1594,9 +1617,13 @@
         behavior: 'smooth'
       });
 
+      // Längeres Timeout für smooth scroll + nochmal isInAboutSection sicherstellen
       setTimeout(() => {
         isJumping = false;
-      }, 1000);
+        // Nochmal sicherstellen dass wir im About-Bereich sind
+        isInAboutSection = true;
+        updateMobileHeader();
+      }, 1500);
     }
     
     // Update nur Konsum
