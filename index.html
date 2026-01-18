@@ -398,7 +398,7 @@
       
       .right-side {
         width: 100%;
-        padding: 120px 20px 50vh 20px;
+        padding: 50vh 20px 50vh 20px;
       }
       
       /* Mobile Header - Datum & Konsum */
@@ -482,7 +482,7 @@
         content: '';
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 50%;
         right: 0;
         height: 120px;
         background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
@@ -570,7 +570,7 @@
       
       /* Entry Styles Mobile */
       .entry {
-        padding-bottom: 16px;
+        padding-bottom: 20px;
       }
       
       .entry-header {
@@ -602,8 +602,9 @@
       
       /* About Section Mobile */
       .about-wrapper {
-        margin-top: 80px;
-        min-height: 100vh;
+        margin-top: 100vh;
+        min-height: auto;
+        padding-bottom: 20px;
       }
 
       .about-section {
@@ -679,12 +680,27 @@
     function toggleMobileNav() {
       const overlay = document.getElementById('mobile-nav-overlay');
       const toggle = document.querySelector('.theme-toggle');
-      
+
       isMobileNavOpen = !isMobileNavOpen;
-      
+
       if (isMobileNavOpen) {
         overlay.classList.add('active');
         if (toggle) toggle.classList.add('nav-open');
+
+        // Aktuelles Jahr und Monat ermitteln
+        const currentYear = allEntries[activeEntryIndex]?.year;
+        const currentMonth = allEntries[activeEntryIndex]?.month;
+
+        // Monate für aktuelles Jahr anzeigen
+        if (currentYear) {
+          updateMobileNavMonths(currentYear);
+        }
+
+        // Jahr und Monat als aktiv markieren
+        document.querySelectorAll('.mobile-nav-year').forEach(el => {
+          el.classList.toggle('active', parseInt(el.dataset.year) === currentYear);
+        });
+
         updateMobileNavConsumption();
         attachMobileNavListeners();
       } else {
@@ -733,17 +749,14 @@
           years.forEach(y => y.classList.remove('active'));
           el.classList.add('active');
 
-          // Finde ersten Eintrag des Jahres für Berechnung
-          const tempEntry = allEntries.find(e => e.year === year);
-          if (tempEntry) {
-            const tempIndex = activeEntryIndex;
-            activeEntryIndex = allEntries.indexOf(tempEntry);
-            updateMobileNavConsumption();
-            activeEntryIndex = tempIndex;
-          }
-
           // Monate für dieses Jahr aktualisieren
           updateMobileNavMonths(year);
+
+          // Im Hintergrund zum ersten Tag des Jahres springen
+          jumpToFirstDayOfYearBackground(year);
+
+          // Konsum aktualisieren
+          updateMobileNavConsumption();
         });
 
         el.addEventListener('touchend', (e) => {
@@ -786,14 +799,11 @@
           months.forEach(m => m.classList.remove('active'));
           el.classList.add('active');
 
-          // Finde ersten Eintrag des Monats für Berechnung
-          const tempEntry = allEntries.find(e => e.year === year && e.month === month);
-          if (tempEntry) {
-            const tempIndex = activeEntryIndex;
-            activeEntryIndex = allEntries.indexOf(tempEntry);
-            updateMobileNavConsumption();
-            activeEntryIndex = tempIndex;
-          }
+          // Im Hintergrund zum ersten Tag des Monats springen
+          jumpToFirstDayOfMonthBackground(year, month);
+
+          // Konsum aktualisieren
+          updateMobileNavConsumption();
         });
 
         el.addEventListener('touchend', (e) => {
@@ -1425,7 +1435,7 @@
     
     // Spring zum ersten Tag des Monats (ältester Tag)
     function jumpToFirstDayOfMonth(year, month) {
-      const monthEntries = allEntries.filter(e => 
+      const monthEntries = allEntries.filter(e =>
         e.year === year && e.month === month
       );
       if (monthEntries.length > 0) {
@@ -1436,8 +1446,44 @@
           if (indexItem) indexItem.classList.remove('active');
           consumptionMode = 'day';
         }
-        
+
         const firstEntry = monthEntries[0]; // Erster = ältester wegen Sort
+        activeEntryIndex = allEntries.indexOf(firstEntry);
+        updateActiveEntryUI();
+        scrollToActiveEntry();
+      }
+    }
+
+    // Spring zum ersten Tag des Jahres im Hintergrund (ohne Navi zu schließen)
+    function jumpToFirstDayOfYearBackground(year) {
+      const yearEntries = allEntries.filter(e => e.year === year);
+      if (yearEntries.length > 0) {
+        if (isInAboutSection) {
+          isInAboutSection = false;
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
+        }
+
+        const firstEntry = yearEntries[0];
+        activeEntryIndex = allEntries.indexOf(firstEntry);
+        updateActiveEntryUI();
+        scrollToActiveEntry();
+      }
+    }
+
+    // Spring zum ersten Tag des Monats im Hintergrund (ohne Navi zu schließen)
+    function jumpToFirstDayOfMonthBackground(year, month) {
+      const monthEntries = allEntries.filter(e =>
+        e.year === year && e.month === month
+      );
+      if (monthEntries.length > 0) {
+        if (isInAboutSection) {
+          isInAboutSection = false;
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
+        }
+
+        const firstEntry = monthEntries[0];
         activeEntryIndex = allEntries.indexOf(firstEntry);
         updateActiveEntryUI();
         scrollToActiveEntry();
