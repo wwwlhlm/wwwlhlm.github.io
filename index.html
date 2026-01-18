@@ -469,7 +469,7 @@
         max-height: 70vh;
         z-index: 200;
         background: var(--bg);
-        padding: 20px 20px 120px 20px;
+        padding: 20px 20px 24px 20px;
         display: none;
         flex-direction: column;
         overflow: hidden;
@@ -481,7 +481,7 @@
 
       .mobile-nav-fade {
         position: fixed;
-        top: calc(70vh - 120px);
+        top: 70vh;
         left: 50%;
         right: 0;
         height: 120px;
@@ -614,9 +614,9 @@
 
       .about-section {
         padding-left: 0;
-        padding-top: 100px;
         padding-bottom: 20px;
-        position: relative;
+        position: sticky;
+        bottom: 20px;
       }
       
       /* Theme Toggle Mobile */
