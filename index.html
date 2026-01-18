@@ -434,6 +434,32 @@
       }
 
       .mobile-day,
+      .mobile-month-name,
+      .mobile-year {
+        opacity: 1;
+        transition: opacity 0.15s ease;
+      }
+
+      .mobile-day.animate,
+      .mobile-month-name.animate,
+      .mobile-year.animate {
+        opacity: 0;
+        animation: fadeInItem 0.3s ease forwards;
+      }
+
+      .mobile-day.animate {
+        animation-delay: 0ms;
+      }
+
+      .mobile-month-name.animate {
+        animation-delay: 50ms;
+      }
+
+      .mobile-year.animate {
+        animation-delay: 100ms;
+      }
+
+      .mobile-day,
       .mobile-year {
         font-variant-numeric: tabular-nums;
         font-feature-settings: "tnum" 1;
@@ -754,9 +780,37 @@
         if (!isInAboutSection) {
           consumptionMode = 'day';
           updateConsumption();
+          animateMobileHeaderDate();
           updateMobileHeader();
         }
       }
+    }
+    
+    // Animation für Mobile Header Datum
+    function animateMobileHeaderDate() {
+      const mobileDay = document.querySelector('.mobile-day');
+      const mobileMonthName = document.querySelector('.mobile-month-name');
+      const mobileYear = document.querySelector('.mobile-year');
+      
+      // Entferne alte Animation-Klassen
+      [mobileDay, mobileMonthName, mobileYear].forEach(el => {
+        if (el) el.classList.remove('animate');
+      });
+      
+      // Force reflow um Animation neu zu starten
+      void document.body.offsetWidth;
+      
+      // Füge Animation-Klassen hinzu
+      [mobileDay, mobileMonthName, mobileYear].forEach(el => {
+        if (el) el.classList.add('animate');
+      });
+      
+      // Entferne Animation-Klassen nach Abschluss
+      setTimeout(() => {
+        [mobileDay, mobileMonthName, mobileYear].forEach(el => {
+          if (el) el.classList.remove('animate');
+        });
+      }, 400);
     }
     
     // Mobile Nav Consumption Update
