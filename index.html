@@ -457,19 +457,16 @@
       
       .mobile-date span {
         opacity: 1;
-        transform: translateY(0);
       }
       
       .mobile-panel.open .mobile-date span {
         opacity: 0;
-        transform: translateY(-4px);
-        transition: opacity 0.2s ease, transform 0.2s ease;
+        transition: opacity 0.2s ease;
       }
       
       /* Versteckt-Zustand für Animation */
       .mobile-date span.hidden {
         opacity: 0 !important;
-        transform: translateY(-4px) !important;
         transition: none !important;
       }
       
@@ -483,17 +480,15 @@
       .mobile-day.animate,
       .mobile-month-name.animate,
       .mobile-year.animate {
-        animation: fadeInSlide 0.3s ease forwards;
+        animation: fadeIn 0.3s ease forwards;
       }
       
-      @keyframes fadeInSlide {
+      @keyframes fadeIn {
         0% {
           opacity: 0;
-          transform: translateY(-4px);
         }
         100% {
           opacity: 1;
-          transform: translateY(0);
         }
       }
       
@@ -607,6 +602,7 @@
       .fade-bottom {
         left: 0;
         height: 100px;
+        transition: opacity 0.3s ease;
       }
       
       /* Entry Styles Mobile */
@@ -678,6 +674,17 @@
       }
       
       .mobile-panel.open ~ .theme-toggle {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      /* Im About-Bereich: Fade und Toggle ausblenden */
+      body.in-about .fade-bottom {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      body.in-about .theme-toggle {
         opacity: 0;
         pointer-events: none;
       }
@@ -1356,15 +1363,17 @@
         if (isJumping) return;
         
         const viewportCenter = window.innerHeight / 2;
+        const viewportTrigger = window.innerHeight * 0.75; // Früher triggern für About
         const aboutSection = document.getElementById('about-section');
         
         // Prüfe ob About-Section sichtbar ist
         if (aboutSection) {
           const aboutRect = aboutSection.getBoundingClientRect();
-          // Wenn About-Section obere Kante über Viewport-Mitte ist
-          if (aboutRect.top < viewportCenter) {
+          // Wenn About-Section obere Kante bei 75% des Viewports ist (früher als vorher)
+          if (aboutRect.top < viewportTrigger) {
             if (!isInAboutSection) {
               isInAboutSection = true;
+              document.body.classList.add('in-about');
               
               // Alle aktiven Elemente deaktivieren
               document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
@@ -1393,6 +1402,7 @@
           } else if (isInAboutSection && !isJumping) {
             // Zurück aus About-Bereich durch Scrollen - setze auf letzten Eintrag (neuesten)
             isInAboutSection = false;
+            document.body.classList.remove('in-about');
             const indexItem = document.querySelector('.index-item');
             if (indexItem) indexItem.classList.remove('active');
 
@@ -1553,6 +1563,7 @@
         // About-Status zurücksetzen
         if (isInAboutSection) {
           isInAboutSection = false;
+          document.body.classList.remove('in-about');
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
           const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
@@ -1576,6 +1587,7 @@
         // About-Status zurücksetzen
         if (isInAboutSection) {
           isInAboutSection = false;
+          document.body.classList.remove('in-about');
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
           const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
@@ -1596,6 +1608,7 @@
       if (yearEntries.length > 0) {
         if (isInAboutSection) {
           isInAboutSection = false;
+          document.body.classList.remove('in-about');
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
         }
@@ -1619,6 +1632,7 @@
       if (monthEntries.length > 0) {
         if (isInAboutSection) {
           isInAboutSection = false;
+          document.body.classList.remove('in-about');
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
         }
@@ -1638,6 +1652,7 @@
     function jumpToAbout() {
       isJumping = true;
       isInAboutSection = true;
+      document.body.classList.add('in-about');
       
       // Alle aktiven Elemente deaktivieren
       document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
