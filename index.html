@@ -1276,15 +1276,14 @@
       
       entries.forEach((entry, index) => {
         entry.addEventListener('click', () => {
-          // Auf Mobile: nur Nav schließen wenn offen, nicht scrollen
           const isMobile = window.innerWidth <= 768;
-          if (isMobile) {
-            if (isMobileNavOpen) {
-              toggleMobileNav();
-            }
-            return;
+          
+          // Nav schließen wenn offen (Mobile)
+          if (isMobile && isMobileNavOpen) {
+            toggleMobileNav();
           }
-          // Desktop: zum Eintrag springen
+          
+          // Zum Eintrag springen
           activeEntryIndex = index;
           updateActiveEntryUI();
           scrollToActiveEntry();
