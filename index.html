@@ -523,14 +523,11 @@
         background: var(--text);
         margin-top: 20px;
         opacity: 0;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: opacity 0.2s ease, transform 0.3s ease;
+        transition: opacity 0.2s ease;
       }
       
       .mobile-panel.open .mobile-panel-divider {
         opacity: 1;
-        transform: scaleX(1);
       }
       
       /* Calendar Section */
@@ -1258,8 +1255,9 @@
       panel.addEventListener('click', (e) => {
         const target = e.target;
         
-        // Klick auf Kalender-Item ignorieren (hat eigene Listener)
-        if (target.closest('.mobile-nav-item')) return;
+        // Klicks im Kalenderbereich komplett ignorieren
+        if (target.closest('.mobile-panel-calendar')) return;
+        if (target.closest('.mobile-panel-divider')) return;
         
         // Klick auf Header-Bereich (links oder rechts) oder Close-Button
         if (target.closest('.mobile-panel-header') || target.closest('.mobile-panel-close')) {
