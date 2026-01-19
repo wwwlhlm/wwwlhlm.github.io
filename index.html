@@ -398,7 +398,7 @@
       
       .right-side {
         width: 100%;
-        padding: 50vh 20px 20px 20px;
+        padding: 50vh 20px 0 20px;
       }
       
       /* ========== UNIFIED MOBILE PANEL ========== */
@@ -645,6 +645,7 @@
 
       .about-section {
         padding-left: 0;
+        padding-bottom: 20px;
         position: relative;
         z-index: 1;
       }
@@ -1267,11 +1268,20 @@
     // Klick-Listener für Einträge
     function attachEntryClickListeners() {
       const entries = document.querySelectorAll('.entry');
+      const isMobile = window.innerWidth <= 768;
       let isHoveringEntry = false;
       let leaveTimeout = null;
       
       entries.forEach((entry, index) => {
         entry.addEventListener('click', () => {
+          // Auf Mobile: nur Nav schließen wenn offen, nicht scrollen
+          if (isMobile) {
+            if (isMobileNavOpen) {
+              toggleMobileNav();
+            }
+            return;
+          }
+          // Desktop: zum Eintrag springen
           activeEntryIndex = index;
           updateActiveEntryUI();
           scrollToActiveEntry();
@@ -1314,25 +1324,14 @@
       });
     }
 
-    // Mobile Nav Close Listeners
+    // Mobile Nav Close Listeners (nur About-Section)
     function attachMobileNavCloseListeners() {
       const isMobile = window.innerWidth <= 768;
       if (!isMobile) return;
 
-      const entries = document.querySelectorAll('.entry');
       const aboutSection = document.querySelector('.about-section');
 
-      // Klick auf einen Eintrag schließt Navigation
-      entries.forEach(entry => {
-        entry.addEventListener('click', (e) => {
-          if (isMobileNavOpen) {
-            e.stopPropagation();
-            toggleMobileNav();
-          }
-        });
-      });
-
-      // Klick auf About-Section schließt auch Navigation
+      // Klick auf About-Section schließt Navigation
       if (aboutSection) {
         aboutSection.addEventListener('click', (e) => {
           if (isMobileNavOpen) {
