@@ -215,8 +215,11 @@
       cursor: pointer;
     }
     
-    .entry:hover {
-      color: var(--active);
+    /* Hover nur auf Geräten mit echtem Hover (nicht Touch) */
+    @media (hover: hover) {
+      .entry:hover {
+        color: var(--active);
+      }
     }
     
     .entry.month-start {
@@ -1287,44 +1290,47 @@
           scrollToActiveEntry();
         });
         
-        // Hover-Logik nur auf Desktop
-        const isDesktop = window.innerWidth > 768;
-        if (isDesktop) {
-          entry.addEventListener('mouseenter', () => {
-            isHoveringEntry = true;
-            if (leaveTimeout) {
-              clearTimeout(leaveTimeout);
-              leaveTimeout = null;
-            }
-            // Entferne active von allen, setze nur auf gehoverten
-            entries.forEach(e => e.classList.remove('active'));
-            entry.classList.add('active');
-            // Zeige Konsum des gehovertenEintrags
-            const hoveredEntry = allEntries[index];
-            document.querySelectorAll('.consumption-value')[1].textContent = hoveredEntry.data.apples || 0;
-            document.querySelectorAll('.consumption-value')[2].textContent = hoveredEntry.data.bananas || 0;
-            document.querySelectorAll('.consumption-value')[3].textContent = hoveredEntry.data.coffee || 0;
-            
-            const cyclingItem = document.querySelector('.consumption-item.cycling');
-            const cyclingValue = document.querySelector('.consumption-cycling');
-            if (cyclingItem && cyclingValue) {
-              const km = hoveredEntry.data.cycling_km || 0;
-              cyclingValue.textContent = km.toFixed(1);
-              cyclingItem.classList.toggle('hidden', km === 0);
-            }
-          });
+        // Hover-Logik - auf Mobile ignorieren
+        entry.addEventListener('mouseenter', () => {
+          // Auf Mobile ignorieren
+          if (window.innerWidth <= 768) return;
           
-          entry.addEventListener('mouseleave', () => {
-            isHoveringEntry = false;
-            leaveTimeout = setTimeout(() => {
-              if (!isHoveringEntry) {
-                // Zurück zum aktiven Eintrag
-                entries.forEach((e, i) => e.classList.toggle('active', i === activeEntryIndex));
-                updateConsumption();
-              }
-            }, 100);
-          });
-        }
+          isHoveringEntry = true;
+          if (leaveTimeout) {
+            clearTimeout(leaveTimeout);
+            leaveTimeout = null;
+          }
+          // Entferne active von allen, setze nur auf gehoverten
+          entries.forEach(e => e.classList.remove('active'));
+          entry.classList.add('active');
+          // Zeige Konsum des gehovertenEintrags
+          const hoveredEntry = allEntries[index];
+          document.querySelectorAll('.consumption-value')[1].textContent = hoveredEntry.data.apples || 0;
+          document.querySelectorAll('.consumption-value')[2].textContent = hoveredEntry.data.bananas || 0;
+          document.querySelectorAll('.consumption-value')[3].textContent = hoveredEntry.data.coffee || 0;
+          
+          const cyclingItem = document.querySelector('.consumption-item.cycling');
+          const cyclingValue = document.querySelector('.consumption-cycling');
+          if (cyclingItem && cyclingValue) {
+            const km = hoveredEntry.data.cycling_km || 0;
+            cyclingValue.textContent = km.toFixed(1);
+            cyclingItem.classList.toggle('hidden', km === 0);
+          }
+        });
+        
+        entry.addEventListener('mouseleave', () => {
+          // Auf Mobile ignorieren
+          if (window.innerWidth <= 768) return;
+          
+          isHoveringEntry = false;
+          leaveTimeout = setTimeout(() => {
+            if (!isHoveringEntry) {
+              // Zurück zum aktiven Eintrag
+              entries.forEach((e, i) => e.classList.toggle('active', i === activeEntryIndex));
+              updateConsumption();
+            }
+          }, 100);
+        });
       });
     }
 
