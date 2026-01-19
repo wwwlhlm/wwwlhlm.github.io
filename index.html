@@ -678,13 +678,15 @@
         pointer-events: none;
       }
       
-      /* Im About-Bereich: Fade und Toggle ausblenden */
-      body.in-about .fade-bottom {
+      /* Im About-Bereich oder beim letzten Eintrag: Fade und Toggle ausblenden */
+      body.in-about .fade-bottom,
+      body.at-last-entry .fade-bottom {
         opacity: 0;
         pointer-events: none;
       }
       
-      body.in-about .theme-toggle {
+      body.in-about .theme-toggle,
+      body.at-last-entry .theme-toggle {
         opacity: 0;
         pointer-events: none;
       }
@@ -1743,6 +1745,10 @@
       
       // Update mobile header
       updateMobileHeader();
+
+      // Prüfe ob letzter Eintrag - dann Fade und Toggle ausblenden
+      const isLastEntry = activeEntryIndex === allEntries.length - 1;
+      document.body.classList.toggle('at-last-entry', isLastEntry);
 
       // Update mobile nav wenn offen - aber NICHT die Monate überschreiben wenn User Jahr ausgewählt hat
       if (isMobileNavOpen && consumptionMode !== 'year') {
