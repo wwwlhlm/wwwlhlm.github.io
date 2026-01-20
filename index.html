@@ -1279,9 +1279,10 @@
         entry.addEventListener('click', () => {
           const isMobile = window.innerWidth <= 768;
           
-          // Wenn Nav offen ist auf Mobile, schließen und zum Entry springen
+          // Wenn Nav offen ist auf Mobile, nur schließen (nicht springen)
           if (isMobile && isMobileNavOpen) {
             toggleMobileNav();
+            return;
           }
           
           // Zum Eintrag springen
