@@ -1277,10 +1277,11 @@
       
       entries.forEach((entry, index) => {
         entry.addEventListener('click', () => {
-          // Wenn Nav offen ist auf Mobile, nichts tun
           const isMobile = window.innerWidth <= 768;
+          
+          // Wenn Nav offen ist auf Mobile, schließen und zum Entry springen
           if (isMobile && isMobileNavOpen) {
-            return;
+            toggleMobileNav();
           }
           
           // Zum Eintrag springen
@@ -1333,18 +1334,30 @@
       });
     }
 
-    // Mobile Nav Close Listeners (nur About-Section)
+    // Mobile Nav Close Listeners
     function attachMobileNavCloseListeners() {
       const isMobile = window.innerWidth <= 768;
       if (!isMobile) return;
 
       const aboutSection = document.querySelector('.about-section');
+      const rightSide = document.querySelector('.right-side');
 
       // Klick auf About-Section schließt Navigation
       if (aboutSection && !aboutSection.hasAttribute('data-close-listener')) {
         aboutSection.setAttribute('data-close-listener', 'true');
         aboutSection.addEventListener('click', () => {
           if (isMobileNavOpen) {
+            toggleMobileNav();
+          }
+        });
+      }
+      
+      // Klick auf Feed-Bereich (right-side) schließt Navigation
+      if (rightSide && !rightSide.hasAttribute('data-close-listener')) {
+        rightSide.setAttribute('data-close-listener', 'true');
+        rightSide.addEventListener('click', (e) => {
+          // Nur wenn Nav offen und nicht auf einen Entry geklickt
+          if (isMobileNavOpen && !e.target.closest('.entry')) {
             toggleMobileNav();
           }
         });
