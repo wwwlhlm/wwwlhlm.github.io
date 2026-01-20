@@ -526,30 +526,28 @@
       .mobile-consumption-item {
         display: flex;
         justify-content: space-between;
-        opacity: 1;
-        transition: opacity 0.3s ease;
       }
       
-      /* Animation bei geöffneter Nav */
-      .mobile-panel.open .mobile-consumption-item {
+      /* Animation bei geöffneter Nav - nur mit Klasse */
+      .mobile-consumption-item.animating {
         opacity: 0;
         animation: fadeInItem 0.3s ease forwards;
       }
       
-      .mobile-panel.open .mobile-consumption-item:nth-child(1) {
+      .mobile-consumption-item.animating:nth-child(1) {
         animation-delay: 0ms;
       }
       
-      .mobile-panel.open .mobile-consumption-item:nth-child(2) {
-        animation-delay: 50ms;
+      .mobile-consumption-item.animating:nth-child(2) {
+        animation-delay: 75ms;
       }
       
-      .mobile-panel.open .mobile-consumption-item:nth-child(3) {
-        animation-delay: 100ms;
-      }
-      
-      .mobile-panel.open .mobile-consumption-item:nth-child(4) {
+      .mobile-consumption-item.animating:nth-child(3) {
         animation-delay: 150ms;
+      }
+      
+      .mobile-consumption-item.animating:nth-child(4) {
+        animation-delay: 225ms;
       }
       
       .mobile-consumption-label {
@@ -833,6 +831,17 @@
           // Konsum-Modus auf Monat setzen beim Öffnen
           consumptionMode = 'month';
         }
+
+        // Konsum-Items Animation starten (mit kleinem Delay damit Panel erst offen ist)
+        setTimeout(() => {
+          const consumptionItems = document.querySelectorAll('.mobile-consumption-item');
+          consumptionItems.forEach(item => item.classList.add('animating'));
+          
+          // Animation-Klasse nach Abschluss entfernen
+          setTimeout(() => {
+            consumptionItems.forEach(item => item.classList.remove('animating'));
+          }, 600);
+        }, 10);
 
         updateMobileConsumption();
         attachMobileNavListeners();
