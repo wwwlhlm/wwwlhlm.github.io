@@ -886,10 +886,11 @@
           // Konsum auf Jahr setzen
           consumptionMode = 'year';
           
-          // activeEntryIndex setzen und im Hintergrund scrollen
+          // activeEntryIndex setzen, UI updaten und scrollen
           const yearEntries = allEntries.filter(e => e.year === year);
           if (yearEntries.length > 0) {
             activeEntryIndex = allEntries.indexOf(yearEntries[0]);
+            updateActiveEntryUI();
             scrollToActiveEntry();
           }
           
@@ -916,10 +917,11 @@
           // Konsum auf Monat setzen
           consumptionMode = 'month';
           
-          // activeEntryIndex setzen und im Hintergrund scrollen
+          // activeEntryIndex setzen, UI updaten und scrollen
           const monthEntries = allEntries.filter(e => e.year === year && e.month === month);
           if (monthEntries.length > 0) {
             activeEntryIndex = allEntries.indexOf(monthEntries[0]);
+            updateActiveEntryUI();
             scrollToActiveEntry();
           }
           
@@ -1350,6 +1352,7 @@
       // Scroll Listener für aktiven Eintrag (optimiert)
       const updateActiveEntry = () => {
         if (isJumping) return;
+        if (isMobileNavOpen) return; // Nicht updaten wenn Mobile Nav offen
         
         const viewportCenter = window.innerHeight / 2;
         const viewportTrigger = window.innerHeight * 0.75; // Früher triggern für About
