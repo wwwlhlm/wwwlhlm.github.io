@@ -997,6 +997,8 @@
     }
     
     // Theme Toggle
+    let toggleTimeout = null;
+    
     function toggleTheme() {
       const html = document.documentElement;
       const toggle = document.querySelector('.theme-toggle');
@@ -1014,6 +1016,23 @@
       // Active state hinzufügen
       if (toggle) {
         toggle.classList.add('active');
+        
+        // Timer als Fallback (falls kein Sprung passiert)
+        if (toggleTimeout) clearTimeout(toggleTimeout);
+        toggleTimeout = setTimeout(() => {
+          toggle.classList.remove('active');
+        }, 3000);
+      }
+    }
+    
+    function clearToggleActive() {
+      const toggle = document.querySelector('.theme-toggle');
+      if (toggle) {
+        toggle.classList.remove('active');
+      }
+      if (toggleTimeout) {
+        clearTimeout(toggleTimeout);
+        toggleTimeout = null;
       }
     }
     
@@ -1921,10 +1940,7 @@
       isJumping = true;
       
       // Toggle active state entfernen bei Sprung
-      const themeToggle = document.querySelector('.theme-toggle');
-      if (themeToggle) {
-        themeToggle.classList.remove('active');
-      }
+      clearToggleActive();
       
       setTimeout(() => {
         const activeEntry = document.querySelector('.entry.active');
