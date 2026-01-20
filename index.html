@@ -273,6 +273,10 @@
     
     .about-text {
       white-space: pre-wrap;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphenate-limit-chars: 8 4 4;
     }
 
     .entry-header {
@@ -298,7 +302,7 @@
       hyphens: auto;
       -webkit-hyphens: auto;
       -ms-hyphens: auto;
-      hyphenate-limit-chars: 6 3 3;
+      hyphenate-limit-chars: 8 4 4;
       text-indent: 0;
     }
     
@@ -349,7 +353,8 @@
       opacity: 1;
     }
     
-    .theme-toggle:hover {
+    .theme-toggle:hover,
+    .theme-toggle.active {
       background: var(--active);
     }
     
@@ -886,15 +891,15 @@
           // Konsum auf Jahr setzen
           consumptionMode = 'year';
           
-          // activeEntryIndex setzen, UI updaten und scrollen
+          // activeEntryIndex setzen, Konsum sofort updaten, dann UI und scrollen
           const yearEntries = allEntries.filter(e => e.year === year);
           if (yearEntries.length > 0) {
             activeEntryIndex = allEntries.indexOf(yearEntries[0]);
+            updateMobileConsumption(); // Sofort updaten
             updateActiveEntryUI();
             scrollToActiveEntry();
           }
           
-          updateMobileConsumption();
           return;
         }
         
@@ -917,15 +922,15 @@
           // Konsum auf Monat setzen
           consumptionMode = 'month';
           
-          // activeEntryIndex setzen, UI updaten und scrollen
+          // activeEntryIndex setzen, Konsum sofort updaten, dann UI und scrollen
           const monthEntries = allEntries.filter(e => e.year === year && e.month === month);
           if (monthEntries.length > 0) {
             activeEntryIndex = allEntries.indexOf(monthEntries[0]);
+            updateMobileConsumption(); // Sofort updaten
             updateActiveEntryUI();
             scrollToActiveEntry();
           }
           
-          updateMobileConsumption();
           return;
         }
       });
@@ -986,6 +991,7 @@
     // Theme Toggle
     function toggleTheme() {
       const html = document.documentElement;
+      const toggle = document.querySelector('.theme-toggle');
       const currentTheme = html.getAttribute('data-theme') || 'day';
       
       // Cycle: day -> dawn -> night -> day
@@ -996,6 +1002,14 @@
       
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
+      
+      // Active state für 2 Sekunden
+      if (toggle) {
+        toggle.classList.add('active');
+        setTimeout(() => {
+          toggle.classList.remove('active');
+        }, 2000);
+      }
     }
     
     // Theme beim Laden anwenden
@@ -1355,13 +1369,13 @@
         if (isMobileNavOpen) return; // Nicht updaten wenn Mobile Nav offen
         
         const viewportCenter = window.innerHeight / 2;
-        const viewportTrigger = window.innerHeight * 0.75; // Früher triggern für About
+        const viewportTrigger = window.innerHeight; // About wird bei 100vh getriggert
         const aboutSection = document.getElementById('about-section');
         
         // Prüfe ob About-Section sichtbar ist
         if (aboutSection) {
           const aboutRect = aboutSection.getBoundingClientRect();
-          // Wenn About-Section obere Kante bei 75% des Viewports ist (früher als vorher)
+          // Wenn About-Section obere Kante bei 100vh (unterer Viewport-Rand) ist
           if (aboutRect.top < viewportTrigger) {
             if (!isInAboutSection) {
               isInAboutSection = true;
