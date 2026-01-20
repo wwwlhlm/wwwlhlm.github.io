@@ -1003,14 +1003,19 @@
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
       
-      // Active state für 2 Sekunden
+      // Active state hinzufügen
       if (toggle) {
         toggle.classList.add('active');
-        setTimeout(() => {
-          toggle.classList.remove('active');
-        }, 2000);
       }
     }
+    
+    // Toggle active state bei Scroll entfernen
+    window.addEventListener('scroll', () => {
+      const toggle = document.querySelector('.theme-toggle');
+      if (toggle && toggle.classList.contains('active')) {
+        toggle.classList.remove('active');
+      }
+    }, { passive: true });
     
     // Theme beim Laden anwenden
     (function() {
