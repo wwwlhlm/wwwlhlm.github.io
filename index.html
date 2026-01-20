@@ -1291,47 +1291,44 @@
           scrollToActiveEntry();
         });
         
-        // Hover-Logik - auf Mobile ignorieren
-        entry.addEventListener('mouseenter', () => {
-          // Auf Mobile ignorieren
-          if (window.innerWidth <= 768) return;
-          
-          isHoveringEntry = true;
-          if (leaveTimeout) {
-            clearTimeout(leaveTimeout);
-            leaveTimeout = null;
-          }
-          // Entferne active von allen, setze nur auf gehoverten
-          entries.forEach(e => e.classList.remove('active'));
-          entry.classList.add('active');
-          // Zeige Konsum des gehovertenEintrags
-          const hoveredEntry = allEntries[index];
-          document.querySelectorAll('.consumption-value')[1].textContent = hoveredEntry.data.apples || 0;
-          document.querySelectorAll('.consumption-value')[2].textContent = hoveredEntry.data.bananas || 0;
-          document.querySelectorAll('.consumption-value')[3].textContent = hoveredEntry.data.coffee || 0;
-          
-          const cyclingItem = document.querySelector('.consumption-item.cycling');
-          const cyclingValue = document.querySelector('.consumption-cycling');
-          if (cyclingItem && cyclingValue) {
-            const km = hoveredEntry.data.cycling_km || 0;
-            cyclingValue.textContent = km.toFixed(1);
-            cyclingItem.classList.toggle('hidden', km === 0);
-          }
-        });
-        
-        entry.addEventListener('mouseleave', () => {
-          // Auf Mobile ignorieren
-          if (window.innerWidth <= 768) return;
-          
-          isHoveringEntry = false;
-          leaveTimeout = setTimeout(() => {
-            if (!isHoveringEntry) {
-              // Zurück zum aktiven Eintrag
-              entries.forEach((e, i) => e.classList.toggle('active', i === activeEntryIndex));
-              updateConsumption();
+        // Hover-Logik - nur auf Geräten mit Maus
+        const hasHover = window.matchMedia('(hover: hover)').matches;
+        if (hasHover) {
+          entry.addEventListener('mouseenter', () => {
+            isHoveringEntry = true;
+            if (leaveTimeout) {
+              clearTimeout(leaveTimeout);
+              leaveTimeout = null;
             }
-          }, 100);
-        });
+            // Entferne active von allen, setze nur auf gehoverten
+            entries.forEach(e => e.classList.remove('active'));
+            entry.classList.add('active');
+            // Zeige Konsum des gehovertenEintrags
+            const hoveredEntry = allEntries[index];
+            document.querySelectorAll('.consumption-value')[1].textContent = hoveredEntry.data.apples || 0;
+            document.querySelectorAll('.consumption-value')[2].textContent = hoveredEntry.data.bananas || 0;
+            document.querySelectorAll('.consumption-value')[3].textContent = hoveredEntry.data.coffee || 0;
+            
+            const cyclingItem = document.querySelector('.consumption-item.cycling');
+            const cyclingValue = document.querySelector('.consumption-cycling');
+            if (cyclingItem && cyclingValue) {
+              const km = hoveredEntry.data.cycling_km || 0;
+              cyclingValue.textContent = km.toFixed(1);
+              cyclingItem.classList.toggle('hidden', km === 0);
+            }
+          });
+          
+          entry.addEventListener('mouseleave', () => {
+            isHoveringEntry = false;
+            leaveTimeout = setTimeout(() => {
+              if (!isHoveringEntry) {
+                // Zurück zum aktiven Eintrag
+                entries.forEach((e, i) => e.classList.toggle('active', i === activeEntryIndex));
+                updateConsumption();
+              }
+            }, 100);
+          });
+        }
       });
     }
 
@@ -1483,6 +1480,9 @@
       const years = document.querySelectorAll('.year-item:not(.index-item)');
       const indexItem = document.querySelector('.index-item');
       
+      // Prüfe ob Gerät echten Hover unterstützt (Maus, nicht Touch)
+      const hasHover = window.matchMedia('(hover: hover)').matches;
+      
       let hoverTimeout = null;
       
       // Index-Item Listener
@@ -1491,45 +1491,51 @@
           jumpToAbout();
         });
         
-        indexItem.addEventListener('mouseenter', (e) => {
-          e.stopPropagation();
-          if (hoverTimeout) clearTimeout(hoverTimeout);
-          consumptionMode = 'all';
-          updateConsumption();
-        });
-        
-        indexItem.addEventListener('mouseleave', () => {
-          hoverTimeout = setTimeout(() => {
-            consumptionMode = isInAboutSection ? 'all' : 'day';
+        // Hover nur auf Geräten mit Maus
+        if (hasHover) {
+          indexItem.addEventListener('mouseenter', (e) => {
+            e.stopPropagation();
+            if (hoverTimeout) clearTimeout(hoverTimeout);
+            consumptionMode = 'all';
             updateConsumption();
-          }, 50);
-        });
+          });
+          
+          indexItem.addEventListener('mouseleave', () => {
+            hoverTimeout = setTimeout(() => {
+              consumptionMode = isInAboutSection ? 'all' : 'day';
+              updateConsumption();
+            }, 50);
+          });
+        }
       }
       
       years.forEach(el => {
-        el.addEventListener('mouseenter', (e) => {
-          e.stopPropagation();
-          if (hoverTimeout) clearTimeout(hoverTimeout);
-          consumptionMode = 'year';
+        // Hover nur auf Geräten mit Maus
+        if (hasHover) {
+          el.addEventListener('mouseenter', (e) => {
+            e.stopPropagation();
+            if (hoverTimeout) clearTimeout(hoverTimeout);
+            consumptionMode = 'year';
+            
+            // Temporarily set active year for calculation
+            const hoveredYear = parseInt(el.dataset.year);
+            const tempActiveEntry = allEntries.find(e => e.year === hoveredYear);
+            if (tempActiveEntry) {
+              const tempIndex = activeEntryIndex;
+              activeEntryIndex = allEntries.indexOf(tempActiveEntry);
+              updateConsumption();
+              activeEntryIndex = tempIndex; // Restore
+            }
+          });
           
-          // Temporarily set active year for calculation
-          const hoveredYear = parseInt(el.dataset.year);
-          const tempActiveEntry = allEntries.find(e => e.year === hoveredYear);
-          if (tempActiveEntry) {
-            const tempIndex = activeEntryIndex;
-            activeEntryIndex = allEntries.indexOf(tempActiveEntry);
-            updateConsumption();
-            activeEntryIndex = tempIndex; // Restore
-          }
-        });
-        
-        el.addEventListener('mouseleave', () => {
-          hoverTimeout = setTimeout(() => {
-            // Im About-Bereich zurück auf 'all', sonst 'day'
-            consumptionMode = isInAboutSection ? 'all' : 'day';
-            updateConsumption();
-          }, 50);
-        });
+          el.addEventListener('mouseleave', () => {
+            hoverTimeout = setTimeout(() => {
+              // Im About-Bereich zurück auf 'all', sonst 'day'
+              consumptionMode = isInAboutSection ? 'all' : 'day';
+              updateConsumption();
+            }, 50);
+          });
+        }
         
         el.addEventListener('click', () => {
           const year = parseInt(el.dataset.year);
@@ -1543,35 +1549,42 @@
     // Separate Funktion für Monats-Listener (wird auch bei Jahr-Wechsel aufgerufen)
     function attachMonthListeners(sharedHoverTimeout) {
       const months = document.querySelectorAll('.month-item');
+      
+      // Prüfe ob Gerät echten Hover unterstützt (Maus, nicht Touch)
+      const hasHover = window.matchMedia('(hover: hover)').matches;
+      
       let hoverTimeout = sharedHoverTimeout || null;
       
       months.forEach(el => {
-        el.addEventListener('mouseenter', (e) => {
-          e.stopPropagation();
-          if (hoverTimeout) clearTimeout(hoverTimeout);
-          consumptionMode = 'month';
+        // Hover nur auf Geräten mit Maus
+        if (hasHover) {
+          el.addEventListener('mouseenter', (e) => {
+            e.stopPropagation();
+            if (hoverTimeout) clearTimeout(hoverTimeout);
+            consumptionMode = 'month';
+            
+            // Temporarily set active month for calculation
+            const hoveredMonth = parseInt(el.dataset.month);
+            const activeEntry = allEntries[activeEntryIndex];
+            const tempActiveEntry = allEntries.find(e => 
+              e.year === activeEntry.year && e.month === hoveredMonth
+            );
+            if (tempActiveEntry) {
+              const tempIndex = activeEntryIndex;
+              activeEntryIndex = allEntries.indexOf(tempActiveEntry);
+              updateConsumption();
+              activeEntryIndex = tempIndex; // Restore
+            }
+          });
           
-          // Temporarily set active month for calculation
-          const hoveredMonth = parseInt(el.dataset.month);
-          const activeEntry = allEntries[activeEntryIndex];
-          const tempActiveEntry = allEntries.find(e => 
-            e.year === activeEntry.year && e.month === hoveredMonth
-          );
-          if (tempActiveEntry) {
-            const tempIndex = activeEntryIndex;
-            activeEntryIndex = allEntries.indexOf(tempActiveEntry);
-            updateConsumption();
-            activeEntryIndex = tempIndex; // Restore
-          }
-        });
-        
-        el.addEventListener('mouseleave', () => {
-          hoverTimeout = setTimeout(() => {
-            // Im About-Bereich zurück auf 'all', sonst 'day'
-            consumptionMode = isInAboutSection ? 'all' : 'day';
-            updateConsumption();
-          }, 50);
-        });
+          el.addEventListener('mouseleave', () => {
+            hoverTimeout = setTimeout(() => {
+              // Im About-Bereich zurück auf 'all', sonst 'day'
+              consumptionMode = isInAboutSection ? 'all' : 'day';
+              updateConsumption();
+            }, 50);
+          });
+        }
         
         el.addEventListener('click', () => {
           const month = parseInt(el.dataset.month);
