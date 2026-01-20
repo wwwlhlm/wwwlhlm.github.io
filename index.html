@@ -1009,14 +1009,6 @@
       }
     }
     
-    // Toggle active state bei Scroll entfernen
-    window.addEventListener('scroll', () => {
-      const toggle = document.querySelector('.theme-toggle');
-      if (toggle && toggle.classList.contains('active')) {
-        toggle.classList.remove('active');
-      }
-    }, { passive: true });
-    
     // Theme beim Laden anwenden
     (function() {
       const savedTheme = localStorage.getItem('theme');
@@ -1773,9 +1765,14 @@
       const isLastEntry = activeEntryIndex === allEntries.length - 1;
       document.body.classList.toggle('at-last-entry', isLastEntry);
 
-      // Show/hide scroll-top button and theme toggle
-      const scrollTopBtn = document.querySelector('.scroll-top');
+      // Toggle active state entfernen bei Eintragswechsel
       const themeToggle = document.querySelector('.theme-toggle');
+      if (themeToggle) {
+        themeToggle.classList.remove('active');
+      }
+
+      // Show/hide scroll-top button
+      const scrollTopBtn = document.querySelector('.scroll-top');
     }
     
     // Init
