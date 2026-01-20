@@ -756,16 +756,15 @@
             updateMobileNavMonths(currentYear);
           }
 
-          // Jahr und Monat als aktiv markieren
+          // Jahr als aktiv markieren
           document.querySelectorAll('.mobile-nav-year').forEach(el => {
             el.classList.toggle('active', parseInt(el.dataset.year) === currentYear);
           });
 
-          setTimeout(() => {
-            document.querySelectorAll('.mobile-nav-month').forEach(el => {
-              el.classList.toggle('active', parseInt(el.dataset.month) === currentMonth);
-            });
-          }, 50);
+          // Monat als aktiv markieren (direkt nach updateMobileNavMonths)
+          document.querySelectorAll('.mobile-nav-month').forEach(el => {
+            el.classList.toggle('active', parseInt(el.dataset.month) === currentMonth);
+          });
 
           // Index deaktivieren
           const indexItem = document.querySelector('.mobile-nav-index');
@@ -864,6 +863,12 @@
         if (target.classList.contains('mobile-nav-year')) {
           const year = parseInt(target.dataset.year);
           
+          // About-Status zurücksetzen
+          if (isInAboutSection) {
+            isInAboutSection = false;
+            document.body.classList.remove('in-about');
+          }
+          
           // Index deaktivieren
           const navIndexItem = document.querySelector('.mobile-nav-index');
           if (navIndexItem) navIndexItem.classList.remove('active');
@@ -878,11 +883,16 @@
           // Alle Monate deaktivieren
           document.querySelectorAll('.mobile-nav-month').forEach(m => m.classList.remove('active'));
           
-          // Im Hintergrund zum ersten Tag des Jahres springen
-          jumpToFirstDayOfYearBackground(year);
-          
           // Konsum auf Jahr setzen
           consumptionMode = 'year';
+          
+          // activeEntryIndex setzen und im Hintergrund scrollen
+          const yearEntries = allEntries.filter(e => e.year === year);
+          if (yearEntries.length > 0) {
+            activeEntryIndex = allEntries.indexOf(yearEntries[0]);
+            scrollToActiveEntry();
+          }
+          
           updateMobileConsumption();
           return;
         }
@@ -893,15 +903,26 @@
           const activeYear = document.querySelector('.mobile-nav-year.active');
           const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
           
+          // About-Status zurücksetzen
+          if (isInAboutSection) {
+            isInAboutSection = false;
+            document.body.classList.remove('in-about');
+          }
+          
           // Monate aktiv/inaktiv setzen
           document.querySelectorAll('.mobile-nav-month').forEach(m => m.classList.remove('active'));
           target.classList.add('active');
           
-          // Im Hintergrund zum ersten Tag des Monats springen
-          jumpToFirstDayOfMonthBackground(year, month);
-          
           // Konsum auf Monat setzen
           consumptionMode = 'month';
+          
+          // activeEntryIndex setzen und im Hintergrund scrollen
+          const monthEntries = allEntries.filter(e => e.year === year && e.month === month);
+          if (monthEntries.length > 0) {
+            activeEntryIndex = allEntries.indexOf(monthEntries[0]);
+            scrollToActiveEntry();
+          }
+          
           updateMobileConsumption();
           return;
         }
@@ -1715,24 +1736,6 @@
       // Prüfe ob letzter Eintrag - dann Fade und Toggle ausblenden
       const isLastEntry = activeEntryIndex === allEntries.length - 1;
       document.body.classList.toggle('at-last-entry', isLastEntry);
-
-      // Update mobile nav wenn offen - aber NICHT die Monate überschreiben wenn User Jahr ausgewählt hat
-      if (isMobileNavOpen && consumptionMode !== 'year') {
-        // Jahr und Monat in Navi aktualisieren
-        document.querySelectorAll('.mobile-nav-year').forEach(el => {
-          el.classList.toggle('active', parseInt(el.dataset.year) === activeEntry.year);
-        });
-
-        // Monat aktualisieren (nur wenn nicht im Jahr-Modus)
-        document.querySelectorAll('.mobile-nav-month').forEach(el => {
-          el.classList.toggle('active', parseInt(el.dataset.month) === activeEntry.month);
-        });
-
-        // Konsum aktualisieren (nur wenn nicht im About-Bereich)
-        if (!isInAboutSection) {
-          updateMobileConsumption();
-        }
-      }
 
       // Show/hide scroll-top button and theme toggle
       const scrollTopBtn = document.querySelector('.scroll-top');
