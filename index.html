@@ -353,9 +353,10 @@
       opacity: 1;
     }
     
-    .theme-toggle:hover,
-    .theme-toggle.active {
-      background: var(--active);
+    @media (hover: hover) {
+      .theme-toggle:hover {
+        background: var(--active);
+      }
     }
     
     .theme-toggle.hidden {
@@ -997,11 +998,8 @@
     }
     
     // Theme Toggle
-    let toggleTimeout = null;
-    
     function toggleTheme() {
       const html = document.documentElement;
-      const toggle = document.querySelector('.theme-toggle');
       const currentTheme = html.getAttribute('data-theme') || 'day';
       
       // Cycle: day -> dawn -> night -> day
@@ -1012,28 +1010,6 @@
       
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      
-      // Active state hinzufügen
-      if (toggle) {
-        toggle.classList.add('active');
-        
-        // Timer als Fallback (falls kein Sprung passiert)
-        if (toggleTimeout) clearTimeout(toggleTimeout);
-        toggleTimeout = setTimeout(() => {
-          toggle.classList.remove('active');
-        }, 3000);
-      }
-    }
-    
-    function clearToggleActive() {
-      const toggle = document.querySelector('.theme-toggle');
-      if (toggle) {
-        toggle.classList.remove('active');
-      }
-      if (toggleTimeout) {
-        clearTimeout(toggleTimeout);
-        toggleTimeout = null;
-      }
     }
     
     // Theme beim Laden anwenden
@@ -1938,9 +1914,6 @@
     // Scroll zu aktivem Eintrag
     function scrollToActiveEntry() {
       isJumping = true;
-      
-      // Toggle active state entfernen bei Sprung
-      clearToggleActive();
       
       setTimeout(() => {
         const activeEntry = document.querySelector('.entry.active');
