@@ -399,8 +399,6 @@
         font-size: 24px;
         line-height: 26px;
         min-height: 100vh;
-        min-height: 100dvh;
-        min-height: -webkit-fill-available;
         overflow-x: hidden;
       }
       
@@ -416,7 +414,6 @@
       .right-side {
         width: 100%;
         padding: 50vh 20px 0 20px;
-        padding-top: 50dvh;
       }
       
       /* ========== UNIFIED MOBILE PANEL ========== */
@@ -428,10 +425,6 @@
         z-index: 100;
         background: var(--bg);
         padding: 20px;
-        /* iOS Safari fix */
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        max-height: calc(var(--vh, 1vh) * 100);
       }
       
       /* Header Row */
@@ -667,7 +660,6 @@
       /* About Section Mobile */
       .about-wrapper {
         margin-top: 100vh;
-        margin-top: 100dvh;
         min-height: auto;
       }
 
@@ -756,15 +748,6 @@
     let aboutData = { title: '', text: '' };
     let isInAboutSection = false; // Flag ob wir im About-Bereich sind
     let isMobileNavOpen = false; // Flag für Mobile Nav
-    
-    // iOS Safari Viewport Height Fix
-    function setViewportHeight() {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-    setViewportHeight();
-    window.addEventListener('resize', setViewportHeight);
-    window.addEventListener('orientationchange', setViewportHeight);
     
     // Mobile Panel Toggle
     function toggleMobileNav() {
