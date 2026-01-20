@@ -864,6 +864,7 @@
         let touchHandled = false;
 
         el.addEventListener('touchstart', (e) => {
+          e.stopPropagation();
           touchHandled = true;
           const year = parseInt(el.dataset.year);
           consumptionMode = 'year';
@@ -888,6 +889,10 @@
           }, 50);
 
           updateMobileConsumption();
+        });
+        
+        el.addEventListener('touchend', (e) => {
+          e.stopPropagation();
         });
 
         el.addEventListener('click', (e) => {
@@ -915,7 +920,9 @@
         let touchHandled = false;
 
         el.addEventListener('touchstart', (e) => {
+          e.stopPropagation();
           touchHandled = true;
+          
           const month = parseInt(el.dataset.month);
           const activeYear = document.querySelector('.mobile-nav-year.active');
           const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
@@ -927,6 +934,10 @@
 
           jumpToFirstDayOfMonthBackground(year, month);
           updateMobileConsumption();
+        });
+        
+        el.addEventListener('touchend', (e) => {
+          e.stopPropagation();
         });
 
         el.addEventListener('click', (e) => {
@@ -1244,25 +1255,31 @@
       attachMobilePanelListeners();
     }
     
-    // Mobile Panel Listeners (ein zentraler Listener)
+    // Mobile Panel Listeners (nur auf Header)
     function attachMobilePanelListeners() {
       const isMobile = window.innerWidth <= 768;
       if (!isMobile) return;
       
-      const panel = document.getElementById('mobile-panel');
-      if (!panel) return;
+      const panelHeader = document.querySelector('.mobile-panel-header');
+      if (!panelHeader) return;
       
-      panel.addEventListener('click', (e) => {
-        const target = e.target;
-        
-        // Klicks im Kalenderbereich komplett ignorieren
-        if (target.closest('.mobile-panel-calendar')) return;
-        if (target.closest('.mobile-panel-divider')) return;
-        
-        // Klick auf Header-Bereich (links oder rechts) oder Close-Button
-        if (target.closest('.mobile-panel-header') || target.closest('.mobile-panel-close')) {
-          toggleMobileNav();
+      let touchHandled = false;
+      
+      panelHeader.addEventListener('touchstart', () => {
+        touchHandled = true;
+      });
+      
+      panelHeader.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        toggleMobileNav();
+      });
+      
+      panelHeader.addEventListener('click', () => {
+        if (touchHandled) {
+          touchHandled = false;
+          return;
         }
+        toggleMobileNav();
       });
     }
     
