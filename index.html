@@ -538,6 +538,21 @@
         font-feature-settings: "tnum" 1;
       }
       
+      /* KM-Zeile: nur bei geöffneter Nav oder im About-Bereich sichtbar */
+      .mobile-consumption-km {
+        display: none;
+      }
+      
+      .mobile-panel.open .mobile-consumption-km,
+      body.in-about .mobile-consumption-km {
+        display: flex;
+      }
+      
+      /* KM-Wert ausblenden wenn 0 */
+      .mobile-consumption-km.no-value .mobile-cycling {
+        visibility: hidden;
+      }
+      
       /* Divider Line */
       .mobile-panel-divider {
         height: 1.5px;
@@ -857,10 +872,14 @@
       const apples = document.querySelector('.mobile-apples');
       const bananas = document.querySelector('.mobile-bananas');
       const coffee = document.querySelector('.mobile-coffee');
+      const cycling = document.querySelector('.mobile-cycling');
+      const cyclingItem = document.querySelector('.mobile-consumption-km');
       
       if (apples) apples.textContent = consumption.apples;
       if (bananas) bananas.textContent = consumption.bananas;
       if (coffee) coffee.textContent = consumption.coffee;
+      if (cycling) cycling.textContent = consumption.cycling_km.toFixed(1);
+      if (cyclingItem) cyclingItem.classList.toggle('no-value', consumption.cycling_km === 0);
     }
     
     // Mobile Nav Listeners - Event Delegation
@@ -1224,6 +1243,10 @@
               <div class="mobile-consumption-item">
                 <span class="mobile-consumption-label">Kaffee</span>
                 <span class="mobile-consumption-value mobile-coffee"></span>
+              </div>
+              <div class="mobile-consumption-item mobile-consumption-km">
+                <span class="mobile-consumption-label">KM</span>
+                <span class="mobile-consumption-value mobile-cycling"></span>
               </div>
             </div>
           </div>
