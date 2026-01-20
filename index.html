@@ -431,6 +431,7 @@
         /* iOS Safari fix */
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
+        max-height: calc(var(--vh, 1vh) * 100);
       }
       
       /* Header Row */
@@ -755,6 +756,15 @@
     let aboutData = { title: '', text: '' };
     let isInAboutSection = false; // Flag ob wir im About-Bereich sind
     let isMobileNavOpen = false; // Flag für Mobile Nav
+    
+    // iOS Safari Viewport Height Fix
+    function setViewportHeight() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+    window.addEventListener('orientationchange', setViewportHeight);
     
     // Mobile Panel Toggle
     function toggleMobileNav() {
