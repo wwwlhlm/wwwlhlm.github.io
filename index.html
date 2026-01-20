@@ -146,10 +146,16 @@
       font-feature-settings: normal;
     }
     
-    .year-item:hover, .month-item:hover,
     .year-item.active, .month-item.active {
       transform: translateX(28px);
       color: var(--active);
+    }
+    
+    @media (hover: hover) {
+      .year-item:hover, .month-item:hover {
+        transform: translateX(28px);
+        color: var(--active);
+      }
     }
     
     .consumption {
@@ -1949,7 +1955,7 @@
           isJumping = false;
           // Nochmal triggern nach isJumping = false
           window.dispatchEvent(new Event('scroll'));
-        }, 1000);
+        }, 1200);
       }, 100);
     }
     
