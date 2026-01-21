@@ -442,11 +442,11 @@
       /* Close Button (X) */
       .mobile-panel-close {
         position: absolute;
-        top: -6px;
-        left: -4px;
-        width: 20px;
-        height: 20px;
-        padding: 4px;
+        top: -10px;
+        left: -8px;
+        width: 28px;
+        height: 28px;
+        padding: 8px;
         cursor: pointer;
         opacity: 0;
         pointer-events: none;
@@ -1083,13 +1083,15 @@
       if (isInAboutSection) {
         // Im About-Bereich
         if (isMobileNavOpen) {
-          // Nav offen: Datum-Felder leer lassen, Index in Zeile 4 ist sichtbar
+          // Nav offen: Datum-Felder leer lassen, Info in Zeile 4 ist sichtbar
           if (mobileDay) mobileDay.textContent = '';
           if (mobileMonthName) mobileMonthName.textContent = '';
           if (mobileYear) mobileYear.textContent = '';
         } else {
-          // Nav geschlossen: "Index" in Zeile 1 anzeigen
-          if (mobileDay) mobileDay.textContent = 'Index';
+          // Nav geschlossen: Jahres-Range anzeigen (z.B. "2021 — 2025")
+          const minYear = Math.min(...YEARS);
+          const maxYear = Math.max(...YEARS);
+          if (mobileDay) mobileDay.textContent = `${minYear} — ${maxYear}`;
           if (mobileMonthName) mobileMonthName.textContent = '';
           if (mobileYear) mobileYear.textContent = '';
         }
@@ -1235,7 +1237,7 @@
             <div class="calendar">
               <div class="years">
                 <div class="year-item index-item" style="animation-delay: 0ms">
-                  Index
+                  Info
                 </div>
                 <div class="year-spacer"></div>
                 ${years.map((year, i) => `
@@ -1314,7 +1316,7 @@
                 <span class="mobile-day"></span>
                 <span class="mobile-month-name"></span>
                 <span class="mobile-year"></span>
-                <span class="mobile-header-index">Index</span>
+                <span class="mobile-header-index">Info</span>
               </div>
             </div>
             <div class="mobile-panel-right">
