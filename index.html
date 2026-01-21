@@ -600,16 +600,18 @@
       
       /* Divider Line unter Calendar */
       .mobile-panel-divider-bottom {
-        height: 1.5px;
+        height: 0;
         background: var(--text);
-        margin-top: 20px;
         opacity: 0;
-        transition: opacity 0s ease;
+        overflow: hidden;
+        transition: opacity 0s ease, height 0s ease;
       }
       
       .mobile-panel.open .mobile-panel-divider-bottom {
+        height: 1.5px;
+        margin-top: 20px;
         opacity: 1;
-        transition: opacity 0.2s ease;
+        transition: opacity 0.2s ease 0.3s, height 0s ease 0.3s, margin-top 0s ease 0.3s; /* 0.3s Verzögerung */
       }
       
       .mobile-nav-years,
