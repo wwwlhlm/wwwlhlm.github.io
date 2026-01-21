@@ -647,7 +647,17 @@
         transform: translateX(20px);
       }
       
-      /* Fade Gradient - Panel nutzt den Feed-Fade */
+      /* Fade Gradient - klebt am Header/Panel und wandert mit */
+      .mobile-panel::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 75px;
+        background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+        pointer-events: none;
+        top: 100%;
+      }
       
       /* Fade Gradients Mobile */
       .fade-top {
@@ -657,13 +667,10 @@
       .fade-bottom {
         left: 0;
         height: 75px;
-        transition: opacity 0.3s ease, top 0.35s ease;
-      }
-      
-      /* Bei offener Nav: fade-bottom unter dem Panel positionieren */
-      body.mobile-nav-open .fade-bottom {
-        bottom: auto;
-        background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+        bottom: 0;
+        top: auto;
+        background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+        transition: opacity 0.3s ease;
       }
       
       /* Entry Styles Mobile */
@@ -800,15 +807,6 @@
       if (isMobileNavOpen) {
         panel.classList.add('open');
         document.body.classList.add('mobile-nav-open');
-        
-        // fade-bottom unter dem Panel positionieren (nach kurzer Verzögerung für Panel-Höhe)
-        setTimeout(() => {
-          const fadeBottom = document.querySelector('.fade-bottom');
-          if (fadeBottom && panel) {
-            const panelHeight = panel.offsetHeight;
-            fadeBottom.style.top = panelHeight + 'px';
-          }
-        }, 350); // Nach der Panel-Animation
 
         if (isInAboutSection) {
           // Im About-Bereich: Index aktivieren, keine Jahre/Monate
@@ -896,12 +894,6 @@
       } else {
         panel.classList.remove('open');
         document.body.classList.remove('mobile-nav-open');
-        
-        // fade-bottom zurücksetzen
-        const fadeBottom = document.querySelector('.fade-bottom');
-        if (fadeBottom) {
-          fadeBottom.style.top = '';
-        }
 
         // Konsum-Modus zurücksetzen beim Schließen
         if (!isInAboutSection) {
