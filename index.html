@@ -647,7 +647,7 @@
 
       .fade-bottom {
         left: 0;
-        height: 100px;
+        height: 75px;
         transition: opacity 0.3s ease;
       }
       
@@ -1026,6 +1026,15 @@
             isInAboutSection = false;
             document.body.classList.remove('in-about');
           }
+          
+          // Info deaktivieren
+          const navIndexItem = document.querySelector('.mobile-header-index');
+          if (navIndexItem) navIndexItem.classList.remove('active');
+          
+          // Jahr aktivieren (falls noch nicht aktiv)
+          document.querySelectorAll('.mobile-nav-year').forEach(y => {
+            y.classList.toggle('active', parseInt(y.dataset.year) === year);
+          });
           
           // Monate aktiv/inaktiv setzen
           document.querySelectorAll('.mobile-nav-month').forEach(m => m.classList.remove('active'));
@@ -1559,9 +1568,29 @@
           }
         }
         
-        // Nur Einträge in der Nähe des aktiven prüfen (±20)
-        const startIndex = Math.max(0, activeEntryIndex - 20);
-        const endIndex = Math.min(entries.length, activeEntryIndex + 20);
+        // Prüfbereich: normalerweise ±20 um aktiven Index
+        // ABER: erweitere nach unten wenn nah am Anfang, nach oben wenn nah am Ende
+        let startIndex = Math.max(0, activeEntryIndex - 20);
+        let endIndex = Math.min(entries.length, activeEntryIndex + 20);
+        
+        // Wenn sehr nah am Anfang: prüfe auch Index 0
+        if (activeEntryIndex < 30) {
+          startIndex = 0;
+        }
+        
+        // Wenn sehr nah am Ende: prüfe auch letzten Index
+        if (activeEntryIndex > entries.length - 30) {
+          endIndex = entries.length;
+        }
+        
+        // Spezialfall: Wenn ganz oben gescrollt, setze auf ersten Eintrag
+        if (window.scrollY < 50) {
+          if (activeEntryIndex !== 0) {
+            activeEntryIndex = 0;
+            updateActiveEntryUI();
+          }
+          return;
+        }
         
         let closestEntry = null;
         let closestDistance = Infinity;
