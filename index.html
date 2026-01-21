@@ -479,11 +479,12 @@
         color: var(--active);
       }
       
-      .mobile-date span {
+      .mobile-date span:not(.mobile-header-index) {
         opacity: 1;
+        min-height: 26px; /* Feste Zeilenhöhe damit Index immer in Zeile 4 bleibt */
       }
       
-      .mobile-panel.open .mobile-date span {
+      .mobile-panel.open .mobile-date span:not(.mobile-header-index) {
         opacity: 0;
         transition: opacity 0.2s ease;
       }
@@ -516,7 +517,7 @@
         }
       }
       
-      /* Index im Header (nur bei geöffneter Nav sichtbar) */
+      /* Index im Header (nur bei geöffneter Nav sichtbar, Zeile 4) */
       .mobile-header-index {
         color: var(--text);
         cursor: pointer;
@@ -528,6 +529,7 @@
       
       .mobile-panel.open .mobile-header-index {
         display: block;
+        opacity: 1;
       }
       
       .mobile-header-index.active {
@@ -565,11 +567,6 @@
       .mobile-panel.open .mobile-consumption-km,
       body.in-about .mobile-consumption-km {
         display: flex;
-      }
-      
-      /* KM-Wert ausblenden wenn 0 */
-      .mobile-consumption-km.no-value .mobile-cycling {
-        visibility: hidden;
       }
       
       /* Divider Line */
@@ -928,13 +925,11 @@
       const bananas = document.querySelector('.mobile-bananas');
       const coffee = document.querySelector('.mobile-coffee');
       const cycling = document.querySelector('.mobile-cycling');
-      const cyclingItem = document.querySelector('.mobile-consumption-km');
       
       if (apples) apples.textContent = consumption.apples;
       if (bananas) bananas.textContent = consumption.bananas;
       if (coffee) coffee.textContent = consumption.coffee;
-      if (cycling) cycling.textContent = consumption.cycling_km.toFixed(1);
-      if (cyclingItem) cyclingItem.classList.toggle('no-value', consumption.cycling_km === 0);
+      if (cycling) cycling.textContent = consumption.cycling_km > 0 ? consumption.cycling_km.toFixed(1) : 'k.A.';
     }
     
     // Mobile Nav Listeners - Event Delegation
@@ -1287,8 +1282,8 @@
                 <span class="mobile-day"></span>
                 <span class="mobile-month-name"></span>
                 <span class="mobile-year"></span>
+                <span class="mobile-header-index">Index</span>
               </div>
-              <div class="mobile-header-index">Index</div>
             </div>
             <div class="mobile-panel-right">
               <div class="mobile-consumption-item">
