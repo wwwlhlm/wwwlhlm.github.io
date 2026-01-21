@@ -423,8 +423,24 @@
         left: 0;
         right: 0;
         z-index: 100;
+      }
+      
+      /* Der eigentliche Container mit Background (später Glass-Effect) */
+      .mobile-panel-content {
         background: var(--bg);
         padding: 20px;
+        /* Hier können später weitere Effekte hinzugefügt werden:
+           backdrop-filter: blur(10px);
+           border-radius: 0 0 20px 20px;
+           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        */
+      }
+      
+      /* Fade klebt immer an der Unterkante des Containers */
+      .mobile-panel-fade {
+        height: 75px;
+        background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+        pointer-events: none;
       }
       
       /* Header Row */
@@ -612,7 +628,7 @@
       .mobile-panel.open .mobile-panel-divider-bottom {
         height: 1.5px;
         margin-top: 20px;
-        animation: fadeInDivider 0.2s ease 0.5s forwards;
+        animation: fadeInDivider 0.2s ease 0.4s forwards;
       }
       
       @keyframes fadeInDivider {
@@ -647,18 +663,6 @@
       .mobile-nav-item.active {
         color: var(--active);
         transform: translateX(20px);
-      }
-      
-      /* Fade Gradient - klebt am Header/Panel und wandert mit */
-      .mobile-panel::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 75px;
-        background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
-        pointer-events: none;
-        top: 100%;
       }
       
       /* Fade Gradients Mobile */
@@ -1339,58 +1343,61 @@
         
         <!-- Unified Mobile Panel -->
         <div class="mobile-panel" id="mobile-panel">
-          <div class="mobile-panel-header">
-            <div class="mobile-panel-left">
-              <div class="mobile-panel-close">
-                <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.5303 10.5303L0.530273 0.530272" stroke-width="1.5" stroke-miterlimit="10"/>
-                  <path d="M0.530273 10.5303L10.5303 0.530272" stroke-width="1.5" stroke-miterlimit="10"/>
-                </svg>
+          <div class="mobile-panel-content">
+            <div class="mobile-panel-header">
+              <div class="mobile-panel-left">
+                <div class="mobile-panel-close">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5303 10.5303L0.530273 0.530272" stroke-width="1.5" stroke-miterlimit="10"/>
+                    <path d="M0.530273 10.5303L10.5303 0.530272" stroke-width="1.5" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+                <div class="mobile-date">
+                  <span class="mobile-day"></span>
+                  <span class="mobile-month-name"></span>
+                  <span class="mobile-year"></span>
+                  <span class="mobile-header-index">Info</span>
+                </div>
               </div>
-              <div class="mobile-date">
-                <span class="mobile-day"></span>
-                <span class="mobile-month-name"></span>
-                <span class="mobile-year"></span>
-                <span class="mobile-header-index">Info</span>
+              <div class="mobile-panel-right">
+                <div class="mobile-consumption-item">
+                  <span class="mobile-consumption-label">Äpfel</span>
+                  <span class="mobile-consumption-value mobile-apples"></span>
+                </div>
+                <div class="mobile-consumption-item">
+                  <span class="mobile-consumption-label">Bananen</span>
+                  <span class="mobile-consumption-value mobile-bananas"></span>
+                </div>
+                <div class="mobile-consumption-item">
+                  <span class="mobile-consumption-label">Kaffee</span>
+                  <span class="mobile-consumption-value mobile-coffee"></span>
+                </div>
+                <div class="mobile-consumption-item mobile-consumption-km">
+                  <span class="mobile-consumption-label">KM</span>
+                  <span class="mobile-consumption-value mobile-cycling"></span>
+                </div>
               </div>
             </div>
-            <div class="mobile-panel-right">
-              <div class="mobile-consumption-item">
-                <span class="mobile-consumption-label">Äpfel</span>
-                <span class="mobile-consumption-value mobile-apples"></span>
+            <div class="mobile-panel-divider"></div>
+            <div class="mobile-panel-calendar">
+              <div class="mobile-nav-years">
+                ${years.map((year, i) => `
+                  <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${i * 50}ms">
+                    ${year}
+                  </div>
+                `).join('')}
               </div>
-              <div class="mobile-consumption-item">
-                <span class="mobile-consumption-label">Bananen</span>
-                <span class="mobile-consumption-value mobile-bananas"></span>
-              </div>
-              <div class="mobile-consumption-item">
-                <span class="mobile-consumption-label">Kaffee</span>
-                <span class="mobile-consumption-value mobile-coffee"></span>
-              </div>
-              <div class="mobile-consumption-item mobile-consumption-km">
-                <span class="mobile-consumption-label">KM</span>
-                <span class="mobile-consumption-value mobile-cycling"></span>
-              </div>
-            </div>
-          </div>
-          <div class="mobile-panel-divider"></div>
-          <div class="mobile-panel-calendar">
-            <div class="mobile-nav-years">
-              ${years.map((year, i) => `
-                <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${i * 50}ms">
-                  ${year}
+              <div class="mobile-nav-months">
+                ${monthsInYear.map((month, i) => `
+                  <div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${monthBaseDelay + i * 50}ms">
+                    ${monthNames[month - 1]}
                 </div>
               `).join('')}
+              </div>
             </div>
-            <div class="mobile-nav-months">
-              ${monthsInYear.map((month, i) => `
-                <div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${monthBaseDelay + i * 50}ms">
-                  ${monthNames[month - 1]}
-                </div>
-              `).join('')}
-            </div>
+            <div class="mobile-panel-divider-bottom"></div>
           </div>
-          <div class="mobile-panel-divider-bottom"></div>
+          <div class="mobile-panel-fade"></div>
         </div>
 
         <div class="fade-top"></div>
