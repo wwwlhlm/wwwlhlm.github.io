@@ -940,11 +940,7 @@
     
     // Mobile Nav Listeners - Event Delegation
     function attachMobileNavListeners() {
-      const calendar = document.querySelector('.mobile-panel-calendar');
-      if (!calendar || calendar.hasAttribute('data-listener')) return;
-      calendar.setAttribute('data-listener', 'true');
-      
-      // Handler für Index im Header (außerhalb des Kalenders)
+      // Handler für Index im Header (außerhalb des Kalenders) - zuerst prüfen
       const headerIndex = document.querySelector('.mobile-header-index');
       if (headerIndex && !headerIndex.hasAttribute('data-listener')) {
         headerIndex.setAttribute('data-listener', 'true');
@@ -971,6 +967,10 @@
           }, 1500);
         });
       }
+      
+      const calendar = document.querySelector('.mobile-panel-calendar');
+      if (!calendar || calendar.hasAttribute('data-listener')) return;
+      calendar.setAttribute('data-listener', 'true');
       
       // Ein einziger Listener für den ganzen Kalender
       calendar.addEventListener('click', (e) => {
