@@ -594,7 +594,22 @@
       
       .mobile-panel.open .mobile-panel-calendar {
         max-height: 60vh;
-        padding-top: 20px;
+        padding-top: 12px;
+        overflow: visible;
+      }
+      
+      /* Divider Line unter Calendar */
+      .mobile-panel-divider-bottom {
+        height: 1.5px;
+        background: var(--text);
+        margin-top: 20px;
+        opacity: 0;
+        transition: opacity 0s ease;
+      }
+      
+      .mobile-panel.open .mobile-panel-divider-bottom {
+        opacity: 1;
+        transition: opacity 0.2s ease;
       }
       
       .mobile-nav-years,
@@ -1364,6 +1379,7 @@
               `).join('')}
             </div>
           </div>
+          <div class="mobile-panel-divider-bottom"></div>
         </div>
 
         <div class="fade-top"></div>
