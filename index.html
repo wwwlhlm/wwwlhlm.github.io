@@ -572,14 +572,15 @@
       
       /* Divider Line */
       .mobile-panel-divider {
-        height: 1.5px;
+        height: 0;
         background: var(--text);
-        margin-top: 20px;
         opacity: 0;
         transition: opacity 0s ease; /* Sofort ausblenden */
       }
       
       .mobile-panel.open .mobile-panel-divider {
+        height: 1.5px;
+        margin-top: 20px;
         opacity: 1;
         transition: opacity 0.2s ease; /* Langsam einblenden */
       }
