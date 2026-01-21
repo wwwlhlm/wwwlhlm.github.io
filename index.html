@@ -791,6 +791,8 @@
           const indexItem = document.querySelector('.mobile-header-index');
           if (indexItem) indexItem.classList.add('active');
           consumptionMode = 'all';
+          // Header aktualisieren (leert Zeilen 1-3)
+          updateMobileHeader();
         } else {
           // Aktuelles Jahr und Monat ermitteln
           const currentYear = allEntries[activeEntryIndex]?.year;
@@ -912,6 +914,9 @@
               if (el) el.classList.remove('animate');
             });
           }, 500);
+        } else {
+          // Im About-Bereich: Header und Konsum aktualisieren
+          updateMobileHeader();
         }
         
         updateMobileConsumption();
@@ -943,8 +948,26 @@
       if (headerIndex && !headerIndex.hasAttribute('data-listener')) {
         headerIndex.setAttribute('data-listener', 'true');
         headerIndex.addEventListener('click', () => {
+          // Erst About-Status und Index aktivieren
+          isInAboutSection = true;
+          document.body.classList.add('in-about');
+          headerIndex.classList.add('active');
+          consumptionMode = 'all';
+          updateMobileConsumption();
+          
+          // Dann Nav schließen
           toggleMobileNav();
-          jumpToAbout();
+          
+          // Zum About-Bereich scrollen
+          isJumping = true;
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+          });
+          
+          setTimeout(() => {
+            isJumping = false;
+          }, 1500);
         });
       }
       
@@ -1057,10 +1080,18 @@
       const mobileYear = document.querySelector('.mobile-year');
 
       if (isInAboutSection) {
-        // Im About-Bereich "Index" anzeigen
-        if (mobileDay) mobileDay.textContent = 'Index';
-        if (mobileMonthName) mobileMonthName.textContent = '';
-        if (mobileYear) mobileYear.textContent = '';
+        // Im About-Bereich
+        if (isMobileNavOpen) {
+          // Nav offen: Datum-Felder leer lassen, Index in Zeile 4 ist sichtbar
+          if (mobileDay) mobileDay.textContent = '';
+          if (mobileMonthName) mobileMonthName.textContent = '';
+          if (mobileYear) mobileYear.textContent = '';
+        } else {
+          // Nav geschlossen: "Index" in Zeile 1 anzeigen
+          if (mobileDay) mobileDay.textContent = 'Index';
+          if (mobileMonthName) mobileMonthName.textContent = '';
+          if (mobileYear) mobileYear.textContent = '';
+        }
       } else {
         // Normales Datum anzeigen
         const activeEntry = allEntries[activeEntryIndex];
