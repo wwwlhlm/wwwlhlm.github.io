@@ -450,7 +450,7 @@
         cursor: pointer;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.2s ease;
+        transition: opacity 0s ease; /* Sofort ausblenden */
       }
       
       .mobile-panel-close svg {
@@ -466,6 +466,7 @@
       .mobile-panel.open .mobile-panel-close {
         opacity: 1;
         pointer-events: auto;
+        transition: opacity 0.2s ease; /* Langsam einblenden */
       }
       
       .mobile-panel-close:active svg path {
