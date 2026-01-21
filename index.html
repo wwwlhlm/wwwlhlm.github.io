@@ -1378,7 +1378,9 @@
       panelHeader.setAttribute('data-listener', 'true');
       
       // Nur click - funktioniert auf Touch und Desktop
-      panelHeader.addEventListener('click', () => {
+      panelHeader.addEventListener('click', (e) => {
+        // Nicht reagieren wenn auf Index geklickt wurde
+        if (e.target.closest('.mobile-header-index')) return;
         toggleMobileNav();
       });
     }
