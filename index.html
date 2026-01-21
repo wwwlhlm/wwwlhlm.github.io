@@ -516,6 +516,26 @@
         }
       }
       
+      /* Index im Header (nur bei geöffneter Nav sichtbar) */
+      .mobile-header-index {
+        color: var(--text);
+        cursor: pointer;
+        display: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+        padding-left: 20px;
+        margin-left: -20px;
+      }
+      
+      .mobile-panel.open .mobile-header-index,
+      body.in-about .mobile-header-index {
+        display: block;
+      }
+      
+      .mobile-header-index.active {
+        color: var(--active);
+        transform: translateX(20px);
+      }
+      
       /* Right Side: Consumption */
       .mobile-panel-right {
         width: 50%;
@@ -559,11 +579,12 @@
         background: var(--text);
         margin-top: 20px;
         opacity: 0;
-        transition: opacity 0.2s ease;
+        transition: opacity 0s ease; /* Sofort ausblenden */
       }
       
       .mobile-panel.open .mobile-panel-divider {
         opacity: 1;
+        transition: opacity 0.2s ease; /* Langsam einblenden */
       }
       
       /* Calendar Section */
@@ -607,14 +628,6 @@
       .mobile-nav-item.active {
         color: var(--active);
         transform: translateX(20px);
-      }
-      
-      .mobile-nav-index {
-        animation-delay: 0ms !important;
-      }
-      
-      .mobile-nav-spacer {
-        height: 26px;
       }
       
       /* Fade Gradient */
@@ -779,7 +792,7 @@
           // Im About-Bereich: Index aktivieren, keine Jahre/Monate
           document.querySelectorAll('.mobile-nav-year').forEach(el => el.classList.remove('active'));
           document.querySelectorAll('.mobile-nav-month').forEach(el => el.classList.remove('active'));
-          const indexItem = document.querySelector('.mobile-nav-index');
+          const indexItem = document.querySelector('.mobile-header-index');
           if (indexItem) indexItem.classList.add('active');
           consumptionMode = 'all';
         } else {
@@ -803,7 +816,7 @@
           });
 
           // Index deaktivieren
-          const indexItem = document.querySelector('.mobile-nav-index');
+          const indexItem = document.querySelector('.mobile-header-index');
           if (indexItem) indexItem.classList.remove('active');
 
           // Konsum-Modus auf Monat setzen beim Öffnen
@@ -812,11 +825,13 @@
 
         // Konsum-Items Animation starten (gestaffelt)
         const consumptionItems = document.querySelectorAll('.mobile-consumption-item');
+        const headerIndex = document.querySelector('.mobile-header-index');
         
         // 1. Verstecken
         consumptionItems.forEach(item => {
           item.style.opacity = '0';
         });
+        if (headerIndex) headerIndex.style.opacity = '0';
         
         // 2. Werte updaten
         updateMobileConsumption();
@@ -828,8 +843,16 @@
               item.style.transition = 'opacity 0.3s ease';
               setTimeout(() => {
                 item.style.opacity = '1';
-              }, i * 75);
+              }, i * 50);
             });
+            
+            // Index gleichzeitig mit KM (4. Item = 150ms)
+            if (headerIndex) {
+              headerIndex.style.transition = 'opacity 0.3s ease';
+              setTimeout(() => {
+                headerIndex.style.opacity = '1';
+              }, 150);
+            }
           });
         });
         
@@ -839,6 +862,10 @@
             item.style.opacity = '';
             item.style.transition = '';
           });
+          if (headerIndex) {
+            headerIndex.style.opacity = '';
+            headerIndex.style.transition = '';
+          }
         }, 700);
 
         attachMobileNavListeners();
@@ -863,26 +890,25 @@
           updateMobileHeader();
           
           // Gestaffelte Animation - hidden entfernen und animate hinzufügen
-          setTimeout(() => {
-            if (mobileDay) {
-              mobileDay.classList.remove('hidden');
-              mobileDay.classList.add('animate');
-            }
-          }, 10);
+          // Tag sofort
+          if (mobileDay) {
+            mobileDay.classList.remove('hidden');
+            mobileDay.classList.add('animate');
+          }
           
           setTimeout(() => {
             if (mobileMonthName) {
               mobileMonthName.classList.remove('hidden');
               mobileMonthName.classList.add('animate');
             }
-          }, 60);
+          }, 50);
           
           setTimeout(() => {
             if (mobileYear) {
               mobileYear.classList.remove('hidden');
               mobileYear.classList.add('animate');
             }
-          }, 110);
+          }, 100);
           
           // Animation-Klassen nach Abschluss entfernen
           setTimeout(() => {
@@ -918,16 +944,19 @@
       if (!calendar || calendar.hasAttribute('data-listener')) return;
       calendar.setAttribute('data-listener', 'true');
       
+      // Handler für Index im Header (außerhalb des Kalenders)
+      const headerIndex = document.querySelector('.mobile-header-index');
+      if (headerIndex && !headerIndex.hasAttribute('data-listener')) {
+        headerIndex.setAttribute('data-listener', 'true');
+        headerIndex.addEventListener('click', () => {
+          toggleMobileNav();
+          jumpToAbout();
+        });
+      }
+      
       // Ein einziger Listener für den ganzen Kalender
       calendar.addEventListener('click', (e) => {
         const target = e.target;
-        
-        // Index
-        if (target.classList.contains('mobile-nav-index')) {
-          toggleMobileNav();
-          jumpToAbout();
-          return;
-        }
         
         // Jahr
         if (target.classList.contains('mobile-nav-year')) {
@@ -940,7 +969,7 @@
           }
           
           // Index deaktivieren
-          const navIndexItem = document.querySelector('.mobile-nav-index');
+          const navIndexItem = document.querySelector('.mobile-header-index');
           if (navIndexItem) navIndexItem.classList.remove('active');
           
           // Jahre aktiv/inaktiv setzen
@@ -1260,6 +1289,7 @@
                 <span class="mobile-month-name"></span>
                 <span class="mobile-year"></span>
               </div>
+              <div class="mobile-header-index">Index</div>
             </div>
             <div class="mobile-panel-right">
               <div class="mobile-consumption-item">
@@ -1283,10 +1313,8 @@
           <div class="mobile-panel-divider"></div>
           <div class="mobile-panel-calendar">
             <div class="mobile-nav-years">
-              <div class="mobile-nav-item mobile-nav-index">Index</div>
-              <div class="mobile-nav-spacer"></div>
               ${years.map((year, i) => `
-                <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${(i + 1) * 50}ms">
+                <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${i * 50}ms">
                   ${year}
                 </div>
               `).join('')}
@@ -1475,7 +1503,7 @@
               if (isMobileNavOpen) {
                 document.querySelectorAll('.mobile-nav-year').forEach(el => el.classList.remove('active'));
                 document.querySelectorAll('.mobile-nav-month').forEach(el => el.classList.remove('active'));
-                const navIndexItem = document.querySelector('.mobile-nav-index');
+                const navIndexItem = document.querySelector('.mobile-header-index');
                 if (navIndexItem) navIndexItem.classList.add('active');
                 updateMobileConsumption();
               }
@@ -1490,7 +1518,7 @@
 
             // Mobile Nav Index deaktivieren wenn offen
             if (isMobileNavOpen) {
-              const navIndexItem = document.querySelector('.mobile-nav-index');
+              const navIndexItem = document.querySelector('.mobile-header-index');
               if (navIndexItem) navIndexItem.classList.remove('active');
             }
 
@@ -1664,7 +1692,7 @@
           document.body.classList.remove('in-about');
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
-          const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
+          const mobileNavIndexItem = document.querySelector('.mobile-header-index');
           if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
           consumptionMode = 'day';
         }
@@ -1688,7 +1716,7 @@
           document.body.classList.remove('in-about');
           const indexItem = document.querySelector('.index-item');
           if (indexItem) indexItem.classList.remove('active');
-          const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
+          const mobileNavIndexItem = document.querySelector('.mobile-header-index');
           if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
           consumptionMode = 'day';
         }
@@ -1712,7 +1740,7 @@
         }
         
         // Mobile Nav Index immer deaktivieren
-        const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
+        const mobileNavIndexItem = document.querySelector('.mobile-header-index');
         if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
 
         const firstEntry = yearEntries[0];
@@ -1736,7 +1764,7 @@
         }
         
         // Mobile Nav Index immer deaktivieren
-        const mobileNavIndexItem = document.querySelector('.mobile-nav-index');
+        const mobileNavIndexItem = document.querySelector('.mobile-header-index');
         if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
 
         const firstEntry = monthEntries[0];
