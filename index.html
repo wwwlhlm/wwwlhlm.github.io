@@ -528,28 +528,6 @@
         justify-content: space-between;
       }
       
-      /* Animation bei geöffneter Nav - nur mit Klasse */
-      .mobile-consumption-item.animating {
-        opacity: 0;
-        animation: fadeInItem 0.3s ease forwards;
-      }
-      
-      .mobile-consumption-item.animating:nth-child(1) {
-        animation-delay: 0ms;
-      }
-      
-      .mobile-consumption-item.animating:nth-child(2) {
-        animation-delay: 75ms;
-      }
-      
-      .mobile-consumption-item.animating:nth-child(3) {
-        animation-delay: 150ms;
-      }
-      
-      .mobile-consumption-item.animating:nth-child(4) {
-        animation-delay: 225ms;
-      }
-      
       .mobile-consumption-label {
         color: var(--text);
       }
@@ -832,18 +810,37 @@
           consumptionMode = 'month';
         }
 
-        // Konsum-Items Animation starten (mit kleinem Delay damit Panel erst offen ist)
-        setTimeout(() => {
-          const consumptionItems = document.querySelectorAll('.mobile-consumption-item');
-          consumptionItems.forEach(item => item.classList.add('animating'));
-          
-          // Animation-Klasse nach Abschluss entfernen
-          setTimeout(() => {
-            consumptionItems.forEach(item => item.classList.remove('animating'));
-          }, 600);
-        }, 10);
-
+        // Konsum-Items Animation starten (gestaffelt)
+        const consumptionItems = document.querySelectorAll('.mobile-consumption-item');
+        
+        // 1. Verstecken
+        consumptionItems.forEach(item => {
+          item.style.opacity = '0';
+        });
+        
+        // 2. Werte updaten
         updateMobileConsumption();
+        
+        // 3. Nach einem Frame einblenden
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            consumptionItems.forEach((item, i) => {
+              item.style.transition = 'opacity 0.3s ease';
+              setTimeout(() => {
+                item.style.opacity = '1';
+              }, i * 75);
+            });
+          });
+        });
+        
+        // Inline styles nach Abschluss entfernen
+        setTimeout(() => {
+          consumptionItems.forEach(item => {
+            item.style.opacity = '';
+            item.style.transition = '';
+          });
+        }, 700);
+
         attachMobileNavListeners();
       } else {
         panel.classList.remove('open');
