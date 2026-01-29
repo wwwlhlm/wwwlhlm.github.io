@@ -430,11 +430,11 @@
       .mobile-panel-content {
         background: var(--bg);
         padding: 20px;
-        /* Hier können später weitere Effekte hinzugefügt werden:
-           backdrop-filter: blur(10px);
-           border-radius: 0 0 20px 20px;
-           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        */
+        transition: background 0.35s ease;
+      }
+      
+      .mobile-panel.open .mobile-panel-content {
+        background: transparent;
       }
       
       /* Fade klebt immer an der Unterkante des Containers */
@@ -442,6 +442,11 @@
         height: 75px;
         background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
         pointer-events: none;
+        transition: opacity 0.35s ease;
+      }
+      
+      .mobile-panel.open .mobile-panel-fade {
+        opacity: 0;
       }
       
       /* Header Row */
