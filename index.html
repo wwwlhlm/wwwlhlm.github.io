@@ -611,24 +611,9 @@
         overflow: visible;
       }
       
-      /* Divider Line unter Calendar */
+      /* Divider Line unter Calendar - ausgeblendet */
       .mobile-panel-divider-bottom {
-        height: 0;
-        background: var(--text);
-        opacity: 0;
-        transition: none;
-        position: relative;
-        z-index: 2;
-      }
-      
-      .mobile-panel.open .mobile-panel-divider-bottom {
-        height: 1.5px;
-        margin-top: 20px;
-        animation: fadeInDivider 0.2s ease 0.4s forwards;
-      }
-      
-      @keyframes fadeInDivider {
-        to { opacity: 1; }
+        display: none;
       }
       
       .mobile-nav-years,
@@ -752,7 +737,7 @@
       /* Blur-Effekt auf Content wenn Nav offen */
       body.mobile-nav-open .right-side,
       body.mobile-nav-open .fade-bottom {
-        filter: blur(6px) brightness(1.05) contrast(1.0);
+        filter: blur(6px) brightness(1.05) contrast(0.9);
       }
       
       .right-side {
