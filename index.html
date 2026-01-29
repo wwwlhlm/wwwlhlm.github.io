@@ -966,7 +966,7 @@
       if (apples) apples.textContent = consumption.apples;
       if (bananas) bananas.textContent = consumption.bananas;
       if (coffee) coffee.textContent = consumption.coffee;
-      if (cycling) cycling.textContent = consumption.cycling_km > 0 ? consumption.cycling_km.toFixed(1) : 'k.A.';
+      if (cycling) cycling.textContent = consumption.cycling_km > 0 ? consumption.cycling_km.toFixed(1) : '—';
     }
     
     // Mobile Nav Listeners - Event Delegation
@@ -983,19 +983,42 @@
           consumptionMode = 'all';
           updateMobileConsumption();
           
+          // Content sofort ausblenden
+          const rightSide = document.querySelector('.right-side');
+          if (rightSide) {
+            rightSide.style.transition = 'none';
+            rightSide.style.opacity = '0';
+          }
+          
           // Dann Nav schließen
           toggleMobileNav();
           
-          // Zum About-Bereich scrollen
+          // Warten bis Opacity gerendert ist, dann scrollen
           isJumping = true;
-          window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: 'smooth'
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              // Zum About-Bereich scrollen (sofort)
+              window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'instant'
+              });
+              
+              // Content sanft einblenden
+              setTimeout(() => {
+                if (rightSide) {
+                  rightSide.style.transition = 'opacity 0.3s ease';
+                  rightSide.style.opacity = '1';
+                }
+                setTimeout(() => {
+                  if (rightSide) {
+                    rightSide.style.transition = '';
+                    rightSide.style.opacity = '';
+                  }
+                  isJumping = false;
+                }, 400);
+              }, 50);
+            });
           });
-          
-          setTimeout(() => {
-            isJumping = false;
-          }, 1500);
         });
       }
       
