@@ -677,7 +677,7 @@
         bottom: 0;
         top: auto;
         background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease, filter 0.35s ease;
       }
       
       /* Entry Styles Mobile */
@@ -752,6 +752,16 @@
       .mobile-panel.open ~ .theme-toggle {
         opacity: 0;
         pointer-events: none;
+      }
+      
+      /* Blur-Effekt auf Content wenn Nav offen */
+      body.mobile-nav-open .right-side,
+      body.mobile-nav-open .fade-bottom {
+        filter: blur(8px);
+      }
+      
+      .right-side {
+        transition: filter 0.35s ease;
       }
       
       /* Im About-Bereich oder beim letzten Eintrag: Fade und Toggle ausblenden */
