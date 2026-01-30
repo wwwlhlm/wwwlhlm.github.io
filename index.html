@@ -1744,6 +1744,11 @@
         
         el.addEventListener('click', () => {
           const year = parseInt(el.dataset.year);
+          
+          // Sofort Klassen setzen (wie bei Mobile)
+          document.querySelectorAll('.year-item:not(.index-item)').forEach(y => y.classList.remove('active'));
+          el.classList.add('active');
+          
           jumpToFirstDayOfYear(year);
         });
       });
@@ -1794,6 +1799,11 @@
         el.addEventListener('click', () => {
           const month = parseInt(el.dataset.month);
           const activeEntry = allEntries[activeEntryIndex];
+          
+          // Sofort Klassen setzen (wie bei Mobile)
+          document.querySelectorAll('.month-item').forEach(m => m.classList.remove('active'));
+          el.classList.add('active');
+          
           jumpToFirstDayOfMonth(activeEntry.year, month);
         });
       });
