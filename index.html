@@ -1824,10 +1824,19 @@
           const mobileNavIndexItem = document.querySelector('.mobile-header-index');
           if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
           consumptionMode = 'day';
+          
+          // Alle aktiven Klassen entfernen bevor neue gesetzt werden
+          document.querySelectorAll('.year-item.active').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.month-item.active').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
         }
 
         const firstEntry = yearEntries[0]; // Erster = ältester wegen Sort
         activeEntryIndex = allEntries.indexOf(firstEntry);
+        
+        // lastDisplayedYear zurücksetzen um Monate neu zu rendern
+        lastDisplayedYear = null;
+        
         updateActiveEntryUI();
         scrollToActiveEntry();
       } else {
@@ -1837,6 +1846,8 @@
     
     // Spring zum ersten Tag des Monats (ältester Tag)
     function jumpToFirstDayOfMonth(year, month) {
+      isJumping = true; // Sofort setzen
+      
       const monthEntries = allEntries.filter(e =>
         e.year === year && e.month === month
       );
@@ -1850,12 +1861,22 @@
           const mobileNavIndexItem = document.querySelector('.mobile-header-index');
           if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
           consumptionMode = 'day';
+          
+          // Alle aktiven Klassen entfernen
+          document.querySelectorAll('.year-item.active').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.month-item.active').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
+          
+          // lastDisplayedYear zurücksetzen
+          lastDisplayedYear = null;
         }
 
         const firstEntry = monthEntries[0]; // Erster = ältester wegen Sort
         activeEntryIndex = allEntries.indexOf(firstEntry);
         updateActiveEntryUI();
         scrollToActiveEntry();
+      } else {
+        isJumping = false;
       }
     }
 
@@ -2170,15 +2191,11 @@
             top: entryTop - (viewportHeight / 2) + (entryHeight / 2),
             behavior: 'smooth'
           });
-          
-          // Manuell Scroll-Event triggern für Opacity-Update
-          window.dispatchEvent(new Event('scroll'));
         }
         
+        // isJumping länger aktiv lassen um Scroll-Listener zu blockieren
         setTimeout(() => {
           isJumping = false;
-          // Nochmal triggern nach isJumping = false
-          window.dispatchEvent(new Event('scroll'));
         }, 1200);
       }, 100);
     }
