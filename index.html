@@ -1811,6 +1811,8 @@
     
     // Spring zum ersten Tag des Jahres (ältester Tag)
     function jumpToFirstDayOfYear(year) {
+      isJumping = true; // Sofort setzen um Scroll-Listener zu blockieren
+      
       const yearEntries = allEntries.filter(e => e.year === year);
       if (yearEntries.length > 0) {
         // About-Status zurücksetzen
@@ -1828,6 +1830,8 @@
         activeEntryIndex = allEntries.indexOf(firstEntry);
         updateActiveEntryUI();
         scrollToActiveEntry();
+      } else {
+        isJumping = false; // Zurücksetzen falls keine Einträge
       }
     }
     
@@ -1982,11 +1986,22 @@
       }
       lastDisplayedYear = activeEntry.year;
       
-      document.querySelectorAll('.year-item').forEach(el => {
-        el.classList.toggle('active', parseInt(el.dataset.year) === activeEntry.year);
+      // Jahre: nur ändern wenn nötig (verhindert Flackern)
+      document.querySelectorAll('.year-item:not(.index-item)').forEach(el => {
+        const shouldBeActive = parseInt(el.dataset.year) === activeEntry.year;
+        const isActive = el.classList.contains('active');
+        if (shouldBeActive !== isActive) {
+          el.classList.toggle('active', shouldBeActive);
+        }
       });
+      
+      // Monate: nur ändern wenn nötig (verhindert Flackern)
       document.querySelectorAll('.month-item').forEach(el => {
-        el.classList.toggle('active', parseInt(el.dataset.month) === activeEntry.month);
+        const shouldBeActive = parseInt(el.dataset.month) === activeEntry.month;
+        const isActive = el.classList.contains('active');
+        if (shouldBeActive !== isActive) {
+          el.classList.toggle('active', shouldBeActive);
+        }
       });
       
       // Update consumption when switching days
