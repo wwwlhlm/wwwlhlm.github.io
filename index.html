@@ -1749,6 +1749,10 @@
           document.querySelectorAll('.year-item:not(.index-item)').forEach(y => y.classList.remove('active'));
           el.classList.add('active');
           
+          // Index deaktivieren falls aktiv
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
+          
           jumpToFirstDayOfYear(year);
         });
       });
@@ -1798,13 +1802,36 @@
         
         el.addEventListener('click', () => {
           const month = parseInt(el.dataset.month);
-          const activeEntry = allEntries[activeEntryIndex];
+          
+          // Jahr bestimmen: Aktives Jahr-Element oder fallback auf neuestes Jahr
+          const activeYearEl = document.querySelector('.year-item.active:not(.index-item)');
+          let year;
+          if (activeYearEl) {
+            year = parseInt(activeYearEl.dataset.year);
+          } else if (isInAboutSection) {
+            // Im Info-Bereich: Neuestes Jahr mit diesem Monat finden
+            const yearsWithMonth = allEntries.filter(e => e.month === month).map(e => e.year);
+            year = Math.max(...yearsWithMonth);
+          } else {
+            year = allEntries[activeEntryIndex].year;
+          }
+          
+          // Index deaktivieren falls aktiv
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
           
           // Sofort Klassen setzen (wie bei Mobile)
           document.querySelectorAll('.month-item').forEach(m => m.classList.remove('active'));
           el.classList.add('active');
           
-          jumpToFirstDayOfMonth(activeEntry.year, month);
+          // Jahr auch aktiv setzen falls nicht schon
+          if (!activeYearEl || parseInt(activeYearEl.dataset.year) !== year) {
+            document.querySelectorAll('.year-item:not(.index-item)').forEach(y => y.classList.remove('active'));
+            const yearEl = document.querySelector(`.year-item[data-year="${year}"]`);
+            if (yearEl) yearEl.classList.add('active');
+          }
+          
+          jumpToFirstDayOfMonth(year, month);
         });
       });
     }
