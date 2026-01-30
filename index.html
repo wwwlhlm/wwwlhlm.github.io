@@ -613,27 +613,13 @@
       .mobile-panel.open .mobile-panel-calendar {
         max-height: 60vh;
         padding-top: 16px;
+        padding-bottom: 16px;
         overflow: visible;
       }
       
-      /* Divider Line unter Calendar */
+      /* Divider Line unter Calendar - ausgeblendet */
       .mobile-panel-divider-bottom {
-        height: 0;
-        background: var(--text);
-        opacity: 0;
-        transition: none;
-        position: relative;
-        z-index: 2;
-      }
-      
-      .mobile-panel.open .mobile-panel-divider-bottom {
-        height: 1.5px;
-        margin-top: 20px;
-        animation: fadeInDivider 0.2s ease 0.4s forwards;
-      }
-      
-      @keyframes fadeInDivider {
-        to { opacity: 1; }
+        display: none;
       }
       
       .mobile-nav-years,
