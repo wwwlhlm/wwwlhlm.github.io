@@ -2011,8 +2011,8 @@
       
       const activeEntry = allEntries[activeEntryIndex];
       
-      // Prüfe ob Jahr gewechselt hat
-      if (lastDisplayedYear !== null && lastDisplayedYear !== activeEntry.year) {
+      // Prüfe ob Jahr gewechselt hat oder lastDisplayedYear null ist (nach Info-Bereich)
+      if (lastDisplayedYear === null || lastDisplayedYear !== activeEntry.year) {
         // Monate neu rendern mit Animation
         const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
                            'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
