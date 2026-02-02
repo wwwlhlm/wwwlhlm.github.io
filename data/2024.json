@@ -136,7 +136,7 @@
       "bananas": 2,
       "coffee": 2,
       "mood": 1,
-      "cycling_km": 0,
+      "cycling_km": 42.19,
       "weekday_index": 0,
       "text": "Zieleinlauf am Maronistand."
     },
@@ -266,7 +266,7 @@
       "bananas": 3,
       "coffee": 1,
       "mood": -0.5,
-      "cycling_km": 0,
+      "cycling_km": 101.86,
       "weekday_index": 6,
       "text": "Der Rheinfall wird in der Off-Season auch nicht einfach abgestellt."
     },
@@ -313,9 +313,9 @@
     {
       "date": "2024-02-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Meine Extremitäten folgen ungern einem Takt."
@@ -323,9 +323,9 @@
     {
       "date": "2024-02-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Das zweifache Eselsohr wäre ein Kündigungsgrund."
@@ -333,29 +333,29 @@
     {
       "date": "2024-02-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
+      "cycling_km": 108.76,
       "weekday_index": 6,
       "text": "Auf und Ab im Oberland."
     },
     {
       "date": "2024-02-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "The sadest long distance call."
     },
     {
       "date": "2024-02-05",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Es geht noch 20 Minuten, sagt die Frau zwei Sitze vor mir zu ihrem Partner."
@@ -363,9 +363,9 @@
     {
       "date": "2024-02-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Zwei ineinander verschränkte Schriftzeichen, auch ein Kündigungsgrund."
@@ -373,9 +373,9 @@
     {
       "date": "2024-02-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Je größer der Muskel desto härter die Musik. / Ein simultanübersetzender Papagei."
@@ -383,9 +383,9 @@
     {
       "date": "2024-02-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "—"
@@ -393,9 +393,9 @@
     {
       "date": "2024-02-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Er machte ein trauriges Gesicht für die grosse Leinwand."
@@ -403,18 +403,18 @@
     {
       "date": "2024-02-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": 1,
+      "cycling_km": 47.75,
       "weekday_index": 6,
       "text": "Smalltalk kann auch eine Art von Schweigen sein."
     },
     {
       "date": "2024-02-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 0,
@@ -423,9 +423,9 @@
     {
       "date": "2024-02-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Heftkritik: Note 3.5"
@@ -433,19 +433,19 @@
     {
       "date": "2024-02-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Was würde der Algorithmus mir empfehlen?"
     },
     {
       "date": "2024-02-14",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "—"
@@ -453,19 +453,19 @@
     {
       "date": "2024-02-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -2,
       "cycling_km": 0,
       "weekday_index": 4,
-      "text": "[[Nath]]: <span class=\"quote\">Vielleicht war der Magazinhype allgemein ein Millennialding. Und jetzt haben die Magazine eine Krise wie wir. b: Wir brauchten jemanden der uns die Welt erklärt und jetzt verstehen wir sie trotzdem nicht.</span>"
+      "text": "[[Nath]]: <span class=\"quote\">Vielleicht war der Magazinhype allgemein ein Millennialding. Und jetzt haben die Magazine eine Krise wie wir. / </span>[[Bill]]: <span class=\"quote\">Wir brauchten jemanden der uns die Welt erklärt und jetzt verstehen wir sie trotzdem nicht.</span>"
     },
     {
       "date": "2024-02-16",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 1,
       "coffee": 0,
-      "mood": 0,
+      "mood": -2,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Fieberträume, heiss"
@@ -473,9 +473,9 @@
     {
       "date": "2024-02-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 0.5,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Fieberträume, lauwarm"
@@ -483,9 +483,9 @@
     {
       "date": "2024-02-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 0.5,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Zwei Menschen im Park, aber ohne Sonne."
@@ -493,19 +493,19 @@
     {
       "date": "2024-02-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 1,
-      "text": "Serienmarathon, im 1.5x Zeitraffer."
+      "text": "Serienmarathon, im 1,5× Zeitraffer."
     },
     {
       "date": "2024-02-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -2,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Erst zuhören, dann Einspruch erheben."
@@ -513,9 +513,9 @@
     {
       "date": "2024-02-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Ist das jetzt mein Peak-Räuchertofu?"
@@ -523,9 +523,9 @@
     {
       "date": "2024-02-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "—"
@@ -533,9 +533,9 @@
     {
       "date": "2024-02-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Bewegen wie Jane Fonda, nur im Dunkeln."
@@ -543,9 +543,9 @@
     {
       "date": "2024-02-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "—"
@@ -553,19 +553,19 @@
     {
       "date": "2024-02-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": 1,
+      "cycling_km": 76.4,
       "weekday_index": 0,
       "text": "Das rollende Aargau-Panorama (in Vistavsion)."
     },
     {
       "date": "2024-02-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Mit 30 hatte ich noch nicht über «Zone 2» nachgedacht."
@@ -573,29 +573,29 @@
     {
       "date": "2024-02-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Spritze im Bein, Teil 2: Die Krankenschwester erwählt wie sie Blutspuren legt, um ihr Hunde für die Jagd zu trainieren."
+      "text": "Die Krankenschwester erzählt wie sie Blutspuren legt, um ihren Hunde für die Jagd zu trainieren, kurz nachdem sie mir Blut abnahm."
     },
     {
       "date": "2024-02-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Ich fand alle Kissen hässlich."
     },
     {
       "date": "2024-02-29",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "—"
@@ -603,19 +603,19 @@
     {
       "date": "2024-03-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Ich habe einen Koffer voller Haselnussmuss in Berlin."
     },
     {
       "date": "2024-03-02",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "—"
@@ -623,10 +623,10 @@
     {
       "date": "2024-03-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -0.5,
+      "cycling_km": 74.17,
       "weekday_index": 0,
       "text": "Drei Würmer für ein Halleluja."
     },
@@ -686,7 +686,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 57.01,
       "weekday_index": 6,
       "text": "Ich dachte ich sehe meine erste Schweizer Favela, stellt sich heraus, es war ein Pfadilager."
     },
@@ -736,7 +736,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 34.79,
       "weekday_index": 4,
       "text": "Das Ego fährt nicht gern langsam, aber im Windschatten."
     },
@@ -766,7 +766,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 90.91,
       "weekday_index": 0,
       "text": "Sihltal-Blues"
     },
@@ -906,7 +906,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 54.9,
       "weekday_index": 0,
       "text": "Die Katze und die Amsel: Playdate mit dem Henker."
     },
@@ -976,7 +976,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 77.44,
       "weekday_index": 0,
       "text": "Altherrenrunde auf dem Berg."
     },
@@ -1046,7 +1046,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 131.92,
       "weekday_index": 0,
       "text": "Im Windschatten der High-Performer."
     },
@@ -1156,7 +1156,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 42.21,
       "weekday_index": 4,
       "text": "Instant-Classic sagt sie. / In der Nacht aufwachen und realisieren was man vor ein paar Stunden falsch in die Druckerei geschickt hat."
     },
@@ -1186,7 +1186,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 72.45,
       "weekday_index": 0,
       "text": "Stadtring through memory lane. / Leute beim AfD-Plakate hängen zuschauen. / Die Bestattungscheckliste immer griffbereit."
     },
@@ -1206,7 +1206,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 57.8,
       "weekday_index": 2,
       "text": "Idylle und AfD II."
     },
@@ -1236,7 +1236,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 75.1,
       "weekday_index": 5,
       "text": "Sweet-Daddy-Issues / Eine Kornschrotmaschine in meinem Ebenbild."
     },
@@ -1256,7 +1256,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 157.17,
       "weekday_index": 0,
       "text": "Halbzeit-Picknick am Friedhof mit Mutter."
     },
@@ -1276,7 +1276,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 157.78,
       "weekday_index": 2,
       "text": "Oder zur Oder. / Piroggen an der Ziellinie."
     },
@@ -1306,7 +1306,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 46.5,
       "weekday_index": 5,
       "text": "Über Kopfsteinpflaster musst du gehen."
     },
@@ -1376,7 +1376,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 38.76,
       "weekday_index": 5,
       "text": "—"
     },
@@ -1396,7 +1396,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 119.33,
       "weekday_index": 0,
       "text": "Stadt mit B."
     },
@@ -1466,7 +1466,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 155.04,
       "weekday_index": 0,
       "text": "Mal den Walensee von oben sehen."
     },
@@ -1496,7 +1496,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 49.18,
       "weekday_index": 3,
       "text": "Platten bei der Zieleinfahrt."
     },
@@ -1526,7 +1526,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 68.26,
       "weekday_index": 6,
       "text": "Ausrutscher mit Kollateralschaden bevor es überhaupt losgeht. / Das Elsass ist auch ganz schön."
     },
@@ -1556,7 +1556,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 42.15,
       "weekday_index": 2,
       "text": "Sonnenuntergang und zurück."
     },
@@ -1596,7 +1596,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 48.31,
       "weekday_index": 6,
       "text": "Ein Pizzarand wie ein Burgwall."
     },
@@ -1616,7 +1616,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 34.31,
       "weekday_index": 1,
       "text": "Sonne unter über Schlieren."
     },
@@ -1676,7 +1676,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 127.13,
       "weekday_index": 0,
       "text": "An den Kirchen schmeckt das Wasser immer am Besten."
     },
@@ -1716,7 +1716,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 21.92,
       "weekday_index": 4,
       "text": "Die poetische Note im Geschäftsumfeld."
     },
@@ -1746,7 +1746,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 114.96,
       "weekday_index": 0,
       "text": "Wind, aber nur, wenn er von hinten kommt."
     },
@@ -1766,7 +1766,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 37.74,
       "weekday_index": 2,
       "text": "Sonnenuntergangsromantik knapp verfehlt."
     },
@@ -1806,7 +1806,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 48.69,
       "weekday_index": 6,
       "text": "Interkontinentaler Schlamm von oben."
     },
@@ -1846,7 +1846,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 89.57,
       "weekday_index": 3,
       "text": "Neue Wege durch die Agglo."
     },
@@ -1906,7 +1906,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 99,
       "weekday_index": 2,
       "text": "Seen sind zum Baden da – drei an der Zahl."
     },
@@ -1956,7 +1956,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 143.05,
       "weekday_index": 0,
       "text": "Auf dem Berg ist die Küche zu."
     },
@@ -1976,7 +1976,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 20.99,
       "weekday_index": 2,
       "text": "—"
     },
@@ -2016,7 +2016,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 82.86,
       "weekday_index": 6,
       "text": "Beine wie Broiler, dazu eine Hühnerbrust."
     },
@@ -2056,7 +2056,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 124.81,
       "weekday_index": 3,
       "text": "Rheinwasser in beiden Nasenflügeln."
     },
@@ -2086,7 +2086,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 68.54,
       "weekday_index": 6,
       "text": "Die Verbissenheit sitzt tief im Sattel. / «War die Schweiz nach dem Schweizer Käse benannt worden?», fragt das Kind."
     },
@@ -2106,7 +2106,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 42.54,
       "weekday_index": 1,
       "text": "—"
     },
@@ -2166,7 +2166,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 62.23,
       "weekday_index": 0,
       "text": "Albis mal anders."
     },
@@ -2186,7 +2186,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 41.86,
       "weekday_index": 2,
       "text": "Grüne Welle Agglo."
     },
@@ -2236,7 +2236,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 179.01,
       "weekday_index": 0,
       "text": "Salzlake umschreib meinen Zustand ganz gut. / Rechts hinterm Volg gehts hoch."
     },
@@ -2266,7 +2266,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 90.19,
       "weekday_index": 3,
       "text": "Warum bergab wenn man den Berg ein zweites Mal hochfahren kann."
     },
@@ -2366,7 +2366,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 165.03,
       "weekday_index": 6,
       "text": "Pragel, die Rückkehr, inkl. Flädlibrühe."
     },
@@ -2406,7 +2406,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 40.17,
       "weekday_index": 3,
       "text": "Ich kenne meine Dörfer."
     },
@@ -2446,7 +2446,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 105.81,
       "weekday_index": 0,
       "text": "Die Ideen sind aus."
     },
@@ -2466,7 +2466,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 24.55,
       "weekday_index": 2,
       "text": "Zone-2-Filmabend / Bienenwaben sind auch nur geometrischer Ohrenschmalz."
     },
@@ -2506,7 +2506,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 99.26,
       "weekday_index": 6,
       "text": "Trullikon, again."
     },
@@ -2536,7 +2536,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 38.74,
       "weekday_index": 2,
       "text": "—"
     },
@@ -2586,7 +2586,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 106.66,
       "weekday_index": 0,
       "text": "—"
     },
@@ -2616,7 +2616,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 34.15,
       "weekday_index": 3,
       "text": "—"
     },
@@ -2656,7 +2656,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 47.8,
       "weekday_index": 0,
       "text": "E-Velo-Windschattenschmarotzer"
     },
@@ -2686,7 +2686,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 38.88,
       "weekday_index": 3,
       "text": "Eine Woche Koffer packen und noch nichts drin."
     },
@@ -2896,7 +2896,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 24.54,
       "weekday_index": 3,
       "text": "Alles so ruhig hier."
     },
@@ -2906,7 +2906,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 54.8,
       "weekday_index": 4,
       "text": "—"
     },
@@ -2936,7 +2936,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 94.79,
       "weekday_index": 0,
       "text": "Look gegen Look auf gerader Strecke."
     },
@@ -3006,7 +3006,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 128.57,
       "weekday_index": 0,
       "text": "Hin und wieder ein Happy End auf der Kinoleinwand zu sehen wäre schön."
     },
@@ -3046,7 +3046,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 35.51,
       "weekday_index": 4,
       "text": "Ligaturen-Legastheniker / Wie Wild auf freier Wildbahn, nur mit blinkendem Rücklicht."
     },
@@ -3076,7 +3076,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 101.24,
       "weekday_index": 0,
       "text": "Mehr «B» steckt nicht im Zürcher Oberland."
     },
@@ -3106,7 +3106,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 50.98,
       "weekday_index": 3,
       "text": "Hohe Kadenz, nicht mein Ding. / Das Herz schlägt schneller als der MR-Tomograph trommelt."
     },
@@ -3136,7 +3136,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 46.97,
       "weekday_index": 6,
       "text": "—"
     },
@@ -3206,7 +3206,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 54.62,
       "weekday_index": 6,
       "text": "Kalte Füsse waren nicht die Nachmittagsunterhaltung die ich suchte."
     },
@@ -3216,7 +3216,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 70,
       "weekday_index": 0,
       "text": "Das erste Mal mit der SVP stimmen, so schnell bin ich rechts abgebogen."
     },
@@ -3286,7 +3286,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 60.99,
       "weekday_index": 0,
       "text": "Regen von unten, Fahrtwind von vorn."
     },
@@ -3316,7 +3316,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 17.32,
       "weekday_index": 3,
       "text": "Da sage einer, ein kleines (Pulley-)Rädchen kann nichts grosses anrichten."
     },
@@ -3386,7 +3386,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 49.13,
       "weekday_index": 3,
       "text": "Dem Team beweisen, dass ich eine Helm besitze."
     },
@@ -3426,7 +3426,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 62.15,
       "weekday_index": 0,
       "text": "Das Sihltal war heut besonders grau. / Sodium und Gomorrha."
     },
@@ -3596,7 +3596,7 @@
       "bananas": 0,
       "coffee": 0,
       "mood": 0,
-      "cycling_km": 0,
+      "cycling_km": 42.18,
       "weekday_index": 3,
       "text": "Generisch ist eine Sprache für sich."
     },
@@ -3648,7 +3648,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 1,
-      "text": "Große Erwartungen, große Enttäuschungen. / Zopf am Meter (gefühlt.)"
+      "text": "Große Erwartungen, große Enttäuschungen. / Zopf am Meter (gefühlt)."
     },
     {
       "date": "2024-12-31",
