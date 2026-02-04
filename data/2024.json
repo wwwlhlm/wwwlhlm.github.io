@@ -632,10 +632,10 @@
     },
     {
       "date": "2024-03-04",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Beim Applaus ermahnt die Dame den Herren in der Reihe vor ihr, er sollte nicht stehen und klatschen, er versperre die Sicht."
@@ -643,9 +643,9 @@
     {
       "date": "2024-03-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Leiharbeiter auf zwei Rädern."
@@ -653,8 +653,8 @@
     {
       "date": "2024-03-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
@@ -663,9 +663,9 @@
     {
       "date": "2024-03-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "—"
@@ -673,19 +673,19 @@
     {
       "date": "2024-03-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Die Sonne heute ist den Frauen gewidmet."
     },
     {
       "date": "2024-03-09",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 57.01,
       "weekday_index": 6,
       "text": "Ich dachte ich sehe meine erste Schweizer Favela, stellt sich heraus, es war ein Pfadilager."
@@ -693,9 +693,9 @@
     {
       "date": "2024-03-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Kann man so ein Pariser Leben auch in Zürich haben?"
@@ -704,8 +704,8 @@
       "date": "2024-03-11",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -713,9 +713,9 @@
     {
       "date": "2024-03-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Mehr Inder als man denkt. / Urlaub ist ein Minutsgeschäft."
@@ -723,8 +723,8 @@
     {
       "date": "2024-03-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 2.5,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
@@ -733,9 +733,9 @@
     {
       "date": "2024-03-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 34.79,
       "weekday_index": 4,
       "text": "Das Ego fährt nicht gern langsam, aber im Windschatten."
@@ -743,29 +743,29 @@
     {
       "date": "2024-03-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Kumquat für die Hosentasche."
     },
     {
       "date": "2024-03-16",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Nath: Je kleiner die Autonummer, desto blöder die Person."
     },
     {
       "date": "2024-03-17",
-      "apples": 0,
-      "bananas": 0,
+      "apples": 1,
+      "bananas": 3,
       "coffee": 0,
-      "mood": 0,
+      "mood": -0.5,
       "cycling_km": 90.91,
       "weekday_index": 0,
       "text": "Sihltal-Blues"
@@ -773,9 +773,9 @@
     {
       "date": "2024-03-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Synchron mit der Cloud."
@@ -783,9 +783,9 @@
     {
       "date": "2024-03-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "—"
@@ -793,9 +793,9 @@
     {
       "date": "2024-03-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Auch für die alten Hüte ist Platz."
@@ -803,8 +803,8 @@
     {
       "date": "2024-03-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 3,
+      "coffee": 2.5,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 4,
@@ -813,9 +813,9 @@
     {
       "date": "2024-03-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "—"
@@ -823,9 +823,9 @@
     {
       "date": "2024-03-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Kurzweilig in der ewigen Stadt. / Die Frau mit den fünf bis sechs verschiedenen Klingeltönen."
@@ -833,9 +833,9 @@
     {
       "date": "2024-03-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Der Guide in Pompeji sprach in seinem stark italienisch gefärbten englisch davon, das der Ort von Asche («Ash») und Pommes («Plumes») verschüttet wurde."
@@ -843,9 +843,9 @@
     {
       "date": "2024-03-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Echt hoch, sagt der Tourist auf der Busfahrt hoch zum Vesuv."
@@ -853,19 +853,19 @@
     {
       "date": "2024-03-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Regen ist der Feind des Touristen, selbst der botanische Garten war geschlossen. / Hafenluft ist äußerst russig."
     },
     {
       "date": "2024-03-27",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -2,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Status: Statuen"
@@ -873,9 +873,9 @@
     {
       "date": "2024-03-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Hab heute viel und laut genießt, ein Wunder Capri ist nicht in zwei Teile zerbrochen: Ca und Pri."
@@ -883,12 +883,12 @@
     {
       "date": "2024-03-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "Miranda, Diktatorin der Herzen."
+      "text": "—"
     },
     {
       "date": "2024-03-30",
@@ -902,10 +902,10 @@
     },
     {
       "date": "2024-03-31",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 54.9,
       "weekday_index": 0,
       "text": "Die Katze und die Amsel: Playdate mit dem Henker."
