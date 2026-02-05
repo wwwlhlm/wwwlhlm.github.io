@@ -913,9 +913,9 @@
     {
       "date": "2024-04-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -923,9 +923,9 @@
     {
       "date": "2024-04-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2.5,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Das Musizierrecht für eine Woche verwirkt."
@@ -933,29 +933,29 @@
     {
       "date": "2024-04-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Colli verpasst"
     },
     {
       "date": "2024-04-04",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Das Team fragt sich: Wann rastest du einmal aus?"
     },
     {
       "date": "2024-04-05",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Eine Folge Star Trek geht noch."
@@ -963,19 +963,19 @@
     {
       "date": "2024-04-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Arbeitskollegen a.D."
     },
     {
       "date": "2024-04-07",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2.5,
+      "mood": 0.5,
       "cycling_km": 77.44,
       "weekday_index": 0,
       "text": "Altherrenrunde auf dem Berg."
@@ -983,9 +983,9 @@
     {
       "date": "2024-04-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Saharastaub auf meiner Seele."
@@ -993,9 +993,9 @@
     {
       "date": "2024-04-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Sinuswellenform der Tage."
@@ -1003,9 +1003,9 @@
     {
       "date": "2024-04-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 4,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Apero-Crasher wider Willen."
@@ -1013,19 +1013,19 @@
     {
       "date": "2024-04-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
-      "text": "Nath: Ruhe und Basikum."
+      "text": "[[Nath]]: <span class=\"quote\">Ruhe und Basikum.</span>"
     },
     {
       "date": "2024-04-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "—"
@@ -1033,9 +1033,9 @@
     {
       "date": "2024-04-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Die Seele liegt blank auf der Europaallee."
@@ -1043,8 +1043,8 @@
     {
       "date": "2024-04-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 3,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 131.92,
       "weekday_index": 0,
@@ -1053,9 +1053,9 @@
     {
       "date": "2024-04-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -1063,9 +1063,9 @@
     {
       "date": "2024-04-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Die Postkartenwelle rollt."
@@ -1073,9 +1073,9 @@
     {
       "date": "2024-04-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Dauerrezepte werden mit dem Alter auch nicht kürzer."
@@ -1083,19 +1083,19 @@
     {
       "date": "2024-04-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
-      "text": "Du kannst nicht Nein sagen? – Nein!"
+      "text": "Du kannst nicht Nein sagen? – Nein."
     },
     {
       "date": "2024-04-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Streicheleinheiten abzugeben."
@@ -1103,9 +1103,9 @@
     {
       "date": "2024-04-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Regen und Traufe, mehrfach."
@@ -1113,9 +1113,9 @@
     {
       "date": "2024-04-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Ein Kinosaal voller Lesben."
@@ -1123,9 +1123,9 @@
     {
       "date": "2024-04-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -1133,9 +1133,9 @@
     {
       "date": "2024-04-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Ordnung ist nicht unbedingt mein Metier."
@@ -1143,9 +1143,9 @@
     {
       "date": "2024-04-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "16 Seiten extra."
@@ -1153,19 +1153,19 @@
     {
       "date": "2024-04-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1.5,
       "cycling_km": 42.21,
       "weekday_index": 4,
       "text": "Instant-Classic sagt sie. / In der Nacht aufwachen und realisieren was man vor ein paar Stunden falsch in die Druckerei geschickt hat."
     },
     {
       "date": "2024-04-26",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Alles ausser Velo putzen."
@@ -1173,9 +1173,9 @@
     {
       "date": "2024-04-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Das Schlafdefizit steigt."
@@ -1183,9 +1183,9 @@
     {
       "date": "2024-04-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 72.45,
       "weekday_index": 0,
       "text": "Stadtring through memory lane. / Leute beim AfD-Plakate hängen zuschauen. / Die Bestattungscheckliste immer griffbereit."
@@ -1193,9 +1193,9 @@
     {
       "date": "2024-04-29",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 1,
       "coffee": 0,
-      "mood": 0,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "«Süssigkeiten sind auch Ernährung,» sagt das Kind."
@@ -1203,9 +1203,9 @@
     {
       "date": "2024-04-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 57.8,
       "weekday_index": 2,
       "text": "Idylle und AfD II."
