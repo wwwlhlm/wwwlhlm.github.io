@@ -1,0 +1,2273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A–B–K</title>
+  
+  <!-- Open Graph / Social Media Preview -->
+  <meta property="og:title" content="A–B–K">
+  <meta property="og:description" content="Äpfel, Bananen, Kaffees – Ein Tagebuch">
+  <meta property="og:image" content="https://wwwlhlm.github.io/assets/preview.png">
+  <meta property="og:url" content="https://wwwlhlm.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <style>
+    @font-face {
+      font-family: 'Tagebuch';
+      src: url('https://abk.billschulz.ch/assets/normal.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Tagebuch';
+      src: url('https://abk.billschulz.ch/assets/kursiv.woff2') format('woff2');
+      font-weight: normal;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: 'Arial Narrow';
+      src: local('Arial Narrow'),
+           local('ArialNarrow'),
+           url('https://abk.billschulz.ch/assets/Arial-Narrow.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Arial Narrow';
+      src: local('Arial Narrow Italic'),
+           local('ArialNarrow-Italic'),
+           url('https://abk.billschulz.ch/assets/Arial-Narrow-Italic.ttf') format('truetype');
+      font-weight: normal;
+      font-style: italic;
+    }
+    
+    :root, [data-theme="day"] {
+      --bg: #FFFFFF;
+      --text: #FF5A27;
+      --active: #191919;
+    }
+    
+    [data-theme="dawn"] {
+      --bg: #FF5A27;
+      --text: #000000;
+      --active: #FFFFFF;
+    }
+    
+    [data-theme="night"] {
+      --bg: #191919;
+      --text: #FF5A27;
+      --active: #FFFFFF;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Tagebuch', 'Arial Narrow', Arial, sans-serif;
+      font-size: 33px;
+      line-height: 32px;
+      background: var(--bg);
+      color: var(--text);
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+    }
+    
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    
+    /* Left Side - Calendar */
+    .left-side {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    
+    .calendar {
+      display: flex;
+      gap: 72px;
+      flex-grow: 1;
+    }
+    
+    .years, .months {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .year-item, .month-item {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: var(--text);
+      padding-left: 28px;
+      margin-left: -28px;
+      opacity: 0;
+      animation: fadeInItem 0.3s ease forwards;
+    }
+    
+    @keyframes fadeInItem {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .year-item {
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1;
+    }
+    
+    .year-spacer {
+      height: 32px; /* Eine Zeile Abstand */
+    }
+    
+    .index-item {
+      font-variant-numeric: normal;
+      font-feature-settings: normal;
+    }
+    
+    .year-item.active, .month-item.active {
+      transform: translateX(28px);
+      color: var(--active);
+    }
+    
+    @media (hover: hover) {
+      .year-item:hover, .month-item:hover {
+        transform: translateX(28px);
+        color: var(--active);
+      }
+    }
+    
+    .consumption {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+    
+    .consumption-item {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .consumption-label {
+      min-width: 120px;
+      color: var(--text);
+    }
+    
+    .consumption-value {
+      color: var(--active);
+      text-align: right;
+      min-width: 108px;
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1;
+    }
+    
+    .consumption-item.hidden {
+      display: none;
+    }
+    
+    /* Fade Gradients */
+    .fade-top, .fade-bottom {
+      position: fixed;
+      left: 48%;
+      right: 0;
+      height: 200px;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    .fade-top {
+      top: 0;
+      background: linear-gradient(to bottom, var(--bg) 0%, var(--bg) 25px, transparent 100%);
+    }
+    
+    .fade-bottom {
+      bottom: 0;
+      background: linear-gradient(to top, var(--bg) 0%, var(--bg) 25px, transparent 100%);
+    }
+    
+    /* Right Side - Entries */
+    .right-side {
+      width: 52%;
+      margin-left: auto; /* Rechts ausrichten */
+      padding: 15px 28px 50vh 0;
+      position: relative;
+    }
+    
+    .entry {
+      margin-bottom: 0;
+      padding-bottom: 16px;
+      color: var(--text);
+      transition: color 0.3s ease;
+      position: relative;
+      cursor: pointer;
+    }
+    
+    /* Hover nur auf Geräten mit echtem Hover (nicht Touch) */
+    @media (hover: hover) {
+      .entry:hover {
+        color: var(--active);
+      }
+    }
+    
+    .entry.month-start {
+      padding-top: 48px;
+      margin-top: 144px;
+    }
+    
+    .entry.month-start::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 12px;
+      right: 0;
+      height: 2px;
+      background: var(--text);
+    }
+    
+    .entry.first-entry {
+      padding-top: 50vh;
+      margin-top: 0;
+    }
+    
+    .entry.first-entry::before {
+      display: none;
+    }
+    
+    .entry.active {
+      color: var(--active);
+    }
+    
+    /* About Section */
+    .about-wrapper {
+      margin-top: 100vh;
+      min-height: 100vh;
+    }
+    
+    .about-section {
+      padding-left: 12px;
+      color: var(--active);
+      position: sticky;
+      top: 15px;
+      z-index: 15;
+      background: var(--bg);
+    }
+    
+    .about-title {
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      letter-spacing: 0.02em;
+    }
+    
+    .about-text {
+      white-space: pre-wrap;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphenate-limit-chars: 8 4 4;
+    }
+
+    .entry-header {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .entry-number {
+      min-width: 50px;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1;
+    }
+    
+    .entry-number.sunday {
+      font-style: italic;
+    }
+    
+    .entry-text {
+      flex: 1;
+      letter-spacing: 0.01em;
+      white-space: pre-wrap;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphenate-limit-chars: 8 4 4;
+      text-indent: 0;
+    }
+    
+    .quote {
+      font-style: italic;
+    }
+    
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: var(--active);
+      gap: 8px;
+    }
+    
+    .loading-item {
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+    }
+    
+    .loading-item:nth-child(1) { animation-delay: 0s; }
+    .loading-item:nth-child(2) { animation-delay: 0.3s; }
+    .loading-item:nth-child(3) { animation-delay: 0.6s; }
+    .loading-item:nth-child(4) { animation-delay: 0.9s; }
+    .loading-item:nth-child(5) { animation-delay: 1.2s; }
+    .loading-item:nth-child(6) { animation-delay: 1.5s; }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    
+    /* Theme Toggle - Pill Shape */
+    .theme-toggle {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      width: 18px;
+      height: 30px;
+      border-radius: 9px;
+      background: var(--text);
+      cursor: pointer;
+      transition: background 0.3s ease, opacity 0.3s ease;
+      z-index: 20;
+      opacity: 1;
+    }
+    
+    @media (hover: hover) {
+      .theme-toggle:hover {
+        background: var(--active);
+      }
+    }
+    
+    .theme-toggle.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .theme-toggle::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--bg);
+      transition: top 0.3s ease, background 0.3s ease;
+      transform: translateX(-50%);
+      top: 5px;
+    }
+    
+    /* Dawn: Mitte */
+    [data-theme="dawn"] .theme-toggle::after {
+      top: 11px;
+    }
+    
+    /* Night: Unten */
+    [data-theme="night"] .theme-toggle::after {
+      top: 17px;
+    }
+    
+    /* Mobile */
+    @media (max-width: 768px) {
+      body {
+        font-size: 24px;
+        line-height: 26px;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      
+      .container {
+        flex-direction: column;
+        min-height: auto;
+      }
+      
+      .left-side {
+        display: none;
+      }
+      
+      .right-side {
+        width: 100%;
+        padding: 50vh 20px 0 20px;
+      }
+      
+      /* ========== UNIFIED MOBILE PANEL ========== */
+      .mobile-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+      }
+      
+      /* Der eigentliche Container mit Background (später Glass-Effect) */
+      .mobile-panel-content {
+        background: var(--bg);
+        padding: 20px;
+        /* Hier können später weitere Effekte hinzugefügt werden:
+           backdrop-filter: blur(10px);
+           border-radius: 0 0 20px 20px;
+           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        */
+      }
+      
+      /* Fade klebt immer an der Unterkante des Containers */
+      .mobile-panel-fade {
+        height: 75px;
+        background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+        pointer-events: none;
+      }
+      
+      /* Header Row */
+      .mobile-panel-header {
+        display: flex;
+        position: relative;
+      }
+      
+      /* Left Side: Close Button + Date */
+      .mobile-panel-left {
+        width: 50%;
+        position: relative;
+      }
+      
+      /* Close Button (X) */
+      .mobile-panel-close {
+        position: absolute;
+        top: -12px;
+        left: -6px;
+        width: 20px;
+        height: 20px;
+        padding: 8px;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0s ease; /* Sofort ausblenden */
+      }
+      
+      .mobile-panel-close svg {
+        width: 12px;
+        height: 12px;
+      }
+      
+      .mobile-panel-close svg path {
+        stroke: var(--text);
+        transition: stroke 0.2s ease;
+      }
+      
+      .mobile-panel.open .mobile-panel-close {
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 0.2s ease; /* Langsam einblenden */
+      }
+      
+      .mobile-panel-close:active svg path {
+        stroke: var(--active);
+      }
+      
+      /* Date Display */
+      .mobile-date {
+        display: flex;
+        flex-direction: column;
+        color: var(--active);
+      }
+      
+      .mobile-date span:not(.mobile-header-index) {
+        opacity: 1;
+      }
+      
+      .mobile-panel.open .mobile-date span:not(.mobile-header-index) {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        min-height: 26px; /* Feste Zeilenhöhe damit Info immer in Zeile 4 bleibt */
+      }
+      
+      /* Versteckt-Zustand für Animation */
+      .mobile-date span.hidden {
+        opacity: 0 !important;
+        transition: none !important;
+      }
+      
+      .mobile-day,
+      .mobile-year {
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum" 1;
+      }
+      
+      /* Animate date on close */
+      .mobile-day.animate,
+      .mobile-month-name.animate,
+      .mobile-year.animate {
+        animation: fadeIn 0.3s ease forwards;
+      }
+      
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      /* Index im Header (nur bei geöffneter Nav sichtbar, Zeile 4) */
+      .mobile-header-index {
+        color: var(--text);
+        cursor: pointer;
+        display: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+        padding-left: 20px;
+        margin-left: -20px;
+      }
+      
+      .mobile-panel.open .mobile-header-index {
+        display: block;
+        opacity: 1;
+      }
+      
+      .mobile-header-index.active {
+        color: var(--active);
+        transform: translateX(20px);
+      }
+      
+      /* Right Side: Consumption */
+      .mobile-panel-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .mobile-consumption-item {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .mobile-consumption-label {
+        color: var(--text);
+      }
+      
+      .mobile-consumption-value {
+        color: var(--active);
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum" 1;
+      }
+      
+      /* KM-Zeile: nur bei geöffneter Nav oder im About-Bereich sichtbar */
+      .mobile-consumption-km {
+        display: none;
+      }
+      
+      .mobile-panel.open .mobile-consumption-km,
+      body.in-about .mobile-consumption-km {
+        display: flex;
+      }
+      
+      /* Divider Line */
+      .mobile-panel-divider {
+        height: 0;
+        background: var(--text);
+        opacity: 0;
+        transition: opacity 0s ease; /* Sofort ausblenden */
+      }
+      
+      .mobile-panel.open .mobile-panel-divider {
+        height: 1.5px;
+        margin-top: 20px;
+        opacity: 1;
+        transition: opacity 0.2s ease; /* Langsam einblenden */
+      }
+      
+      /* Calendar Section */
+      .mobile-panel-calendar {
+        display: flex;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+      
+      .mobile-panel.open .mobile-panel-calendar {
+        max-height: 60vh;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        overflow: visible;
+      }
+      
+      /* Divider Line unter Calendar - ausgeblendet */
+      .mobile-panel-divider-bottom {
+        display: none;
+      }
+      
+      .mobile-nav-years,
+      .mobile-nav-months {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .mobile-nav-item {
+        color: var(--text);
+        cursor: pointer;
+        transition: color 0.2s ease, transform 0.2s ease;
+        padding-left: 20px;
+        margin-left: -20px;
+        opacity: 0;
+      }
+      
+      .mobile-panel.open .mobile-nav-item {
+        animation: fadeInItem 0.3s ease forwards;
+      }
+      
+      .mobile-nav-year {
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum" 1;
+      }
+
+      .mobile-nav-item.active {
+        color: var(--active);
+        transform: translateX(20px);
+      }
+      
+      /* Fade Gradients Mobile */
+      .fade-top {
+        display: none;
+      }
+
+      .fade-bottom {
+        left: 0;
+        height: 75px;
+        bottom: 0;
+        top: auto;
+        background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+        transition: opacity 0.3s ease, filter 0.35s ease;
+        will-change: filter;
+        transform: translateZ(0);
+      }
+      
+      /* Entry Styles Mobile */
+      .entry {
+        padding-bottom: 20px;
+      }
+      
+      .entry-header {
+        flex-direction: column;
+        gap: 0;
+      }
+      
+      .entry-number {
+        display: none;
+      }
+      
+      .entry-text {
+        text-indent: 0;
+      }
+      
+      .entry.first-entry {
+        padding-top: 0;
+      }
+      
+      .entry.month-start {
+        margin-top: 80px;
+        padding-top: 28px;
+      }
+      
+      .entry.month-start::before {
+        left: 0;
+        height: 1.5px;
+      }
+      
+      /* About Section Mobile */
+      .about-wrapper {
+        margin-top: 100vh;
+        min-height: auto;
+      }
+
+      .about-section {
+        padding-left: 0;
+        padding-bottom: 20px;
+        position: relative;
+        z-index: 1;
+      }
+      
+      /* Theme Toggle Mobile */
+      .theme-toggle {
+        width: 16px;
+        height: 28px;
+        border-radius: 8px;
+        bottom: 20px;
+        right: 20px;
+        transition: opacity 0.2s ease, background 0.3s ease;
+      }
+      
+      .theme-toggle::after {
+        width: 6px;
+        height: 6px;
+        top: 5px;
+      }
+      
+      [data-theme="dawn"] .theme-toggle::after {
+        top: 11px;
+      }
+      
+      [data-theme="night"] .theme-toggle::after {
+        top: 17px;
+      }
+      
+      .mobile-panel.open ~ .theme-toggle {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      /* Blur-Effekt auf Feed wenn Nav offen */
+      .right-side {
+        will-change: filter;
+        transform: translateZ(0); /* Hardware-Beschleunigung */
+        transition: filter 0.35s ease;
+      }
+      
+      body.mobile-nav-open .right-side,
+      body.mobile-nav-open .fade-bottom {
+        filter: blur(5px) brightness(1.0) contrast(1.1);
+      }
+      
+      /* Im About-Bereich oder beim letzten Eintrag: Fade und Toggle ausblenden */
+      body.in-about .fade-bottom,
+      body.at-last-entry .fade-bottom {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      body.in-about .theme-toggle,
+      body.at-last-entry .theme-toggle {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      /* Hide old elements */
+      .mobile-header,
+      .mobile-nav-container {
+        display: none !important;
+      }
+    }
+    
+    @media (min-width: 769px) {
+      .mobile-header,
+      .mobile-nav-overlay,
+      .mobile-panel {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="theme-toggle hidden" onclick="toggleTheme()"></div>
+  <div class="loading">
+    <div class="loading-item">Lädt Einträge...</div>
+  </div>
+
+  <script>
+    const DATA_PATH = './data/';
+    const STATS_FILE = './data/stats.md';
+    const ABOUT_FILE = './data/about.md';
+    
+    let YEARS = [];
+    let allEntries = [];
+    let activeEntryIndex = 0;
+    let consumptionMode = 'day'; // 'day', 'month', 'year', 'all'
+    let isJumping = false; // Flag für programmatisches Scrollen
+    let lastDisplayedYear = null; // Für Monats-Animation bei Jahr-Wechsel
+    let aboutData = { title: '', text: '' };
+    let isInAboutSection = false; // Flag ob wir im About-Bereich sind
+    let isMobileNavOpen = false; // Flag für Mobile Nav
+    
+    // Mobile Panel Toggle
+    function toggleMobileNav() {
+      const panel = document.getElementById('mobile-panel');
+      if (!panel) return;
+
+      isMobileNavOpen = !isMobileNavOpen;
+
+      if (isMobileNavOpen) {
+        panel.classList.add('open');
+        document.body.classList.add('mobile-nav-open');
+
+        if (isInAboutSection) {
+          // Im About-Bereich: Index aktivieren, keine Jahre/Monate
+          document.querySelectorAll('.mobile-nav-year').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.mobile-nav-month').forEach(el => el.classList.remove('active'));
+          const indexItem = document.querySelector('.mobile-header-index');
+          if (indexItem) indexItem.classList.add('active');
+          consumptionMode = 'all';
+          // Header aktualisieren (leert Zeilen 1-3)
+          updateMobileHeader();
+        } else {
+          // Aktuelles Jahr und Monat ermitteln
+          const currentYear = allEntries[activeEntryIndex]?.year;
+          const currentMonth = allEntries[activeEntryIndex]?.month;
+
+          // Monate für aktuelles Jahr anzeigen
+          if (currentYear) {
+            updateMobileNavMonths(currentYear);
+          }
+
+          // Jahr als aktiv markieren
+          document.querySelectorAll('.mobile-nav-year').forEach(el => {
+            el.classList.toggle('active', parseInt(el.dataset.year) === currentYear);
+          });
+
+          // Monat als aktiv markieren (direkt nach updateMobileNavMonths)
+          document.querySelectorAll('.mobile-nav-month').forEach(el => {
+            el.classList.toggle('active', parseInt(el.dataset.month) === currentMonth);
+          });
+
+          // Index deaktivieren
+          const indexItem = document.querySelector('.mobile-header-index');
+          if (indexItem) indexItem.classList.remove('active');
+
+          // Konsum-Modus auf Monat setzen beim Öffnen
+          consumptionMode = 'month';
+        }
+
+        // Konsum-Items Animation starten (gestaffelt)
+        const consumptionItems = document.querySelectorAll('.mobile-consumption-item');
+        const headerIndex = document.querySelector('.mobile-header-index');
+        
+        // 1. Verstecken
+        consumptionItems.forEach(item => {
+          item.style.opacity = '0';
+        });
+        if (headerIndex) headerIndex.style.opacity = '0';
+        
+        // 2. Werte updaten
+        updateMobileConsumption();
+        
+        // 3. Nach einem Frame einblenden
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            consumptionItems.forEach((item, i) => {
+              item.style.transition = 'opacity 0.3s ease';
+              setTimeout(() => {
+                item.style.opacity = '1';
+              }, i * 50);
+            });
+            
+            // Index gleichzeitig mit KM (4. Item = 150ms)
+            if (headerIndex) {
+              headerIndex.style.transition = 'opacity 0.3s ease';
+              setTimeout(() => {
+                headerIndex.style.opacity = '1';
+              }, 150);
+            }
+          });
+        });
+        
+        // Inline styles nach Abschluss entfernen
+        setTimeout(() => {
+          consumptionItems.forEach(item => {
+            item.style.opacity = '';
+            item.style.transition = '';
+          });
+          if (headerIndex) {
+            headerIndex.style.opacity = '';
+            headerIndex.style.transition = '';
+          }
+        }, 700);
+
+        attachMobileNavListeners();
+      } else {
+        panel.classList.remove('open');
+        document.body.classList.remove('mobile-nav-open');
+
+        // Konsum-Modus zurücksetzen beim Schließen
+        if (!isInAboutSection) {
+          consumptionMode = 'day';
+          
+          // Animation für Datum - zeitversetzt
+          const mobileDay = document.querySelector('.mobile-day');
+          const mobileMonthName = document.querySelector('.mobile-month-name');
+          const mobileYear = document.querySelector('.mobile-year');
+          
+          // Erst mit hidden-Klasse verstecken (überschreibt CSS Transition)
+          [mobileDay, mobileMonthName, mobileYear].forEach(el => {
+            if (el) el.classList.add('hidden');
+          });
+          
+          // Text aktualisieren
+          updateMobileHeader();
+          
+          // Gestaffelte Animation - hidden entfernen und animate hinzufügen
+          // Tag sofort
+          if (mobileDay) {
+            mobileDay.classList.remove('hidden');
+            mobileDay.classList.add('animate');
+          }
+          
+          setTimeout(() => {
+            if (mobileMonthName) {
+              mobileMonthName.classList.remove('hidden');
+              mobileMonthName.classList.add('animate');
+            }
+          }, 50);
+          
+          setTimeout(() => {
+            if (mobileYear) {
+              mobileYear.classList.remove('hidden');
+              mobileYear.classList.add('animate');
+            }
+          }, 100);
+          
+          // Animation-Klassen nach Abschluss entfernen
+          setTimeout(() => {
+            [mobileDay, mobileMonthName, mobileYear].forEach(el => {
+              if (el) el.classList.remove('animate');
+            });
+          }, 500);
+        } else {
+          // Im About-Bereich: Header und Konsum aktualisieren
+          updateMobileHeader();
+        }
+        
+        updateMobileConsumption();
+      }
+    }
+    
+    // Mobile Consumption Update (unified - eine Funktion für alles)
+    function updateMobileConsumption() {
+      const consumption = calculateConsumption();
+      const apples = document.querySelector('.mobile-apples');
+      const bananas = document.querySelector('.mobile-bananas');
+      const coffee = document.querySelector('.mobile-coffee');
+      const cycling = document.querySelector('.mobile-cycling');
+      
+      if (apples) apples.textContent = consumption.apples;
+      if (bananas) bananas.textContent = consumption.bananas;
+      if (coffee) coffee.textContent = consumption.coffee;
+      if (cycling) cycling.textContent = consumption.cycling_km > 0 ? consumption.cycling_km.toFixed(1) : '—';
+    }
+    
+    // Mobile Nav Listeners - Event Delegation
+    function attachMobileNavListeners() {
+      // Handler für Index im Header (außerhalb des Kalenders) - zuerst prüfen
+      const headerIndex = document.querySelector('.mobile-header-index');
+      if (headerIndex && !headerIndex.hasAttribute('data-listener')) {
+        headerIndex.setAttribute('data-listener', 'true');
+        headerIndex.addEventListener('click', () => {
+          // Erst About-Status und Index aktivieren
+          isInAboutSection = true;
+          document.body.classList.add('in-about');
+          headerIndex.classList.add('active');
+          consumptionMode = 'all';
+          updateMobileConsumption();
+          
+          // Content sofort ausblenden
+          const rightSide = document.querySelector('.right-side');
+          if (rightSide) {
+            rightSide.style.transition = 'none';
+            rightSide.style.opacity = '0';
+          }
+          
+          // Dann Nav schließen
+          toggleMobileNav();
+          
+          // Warten bis Opacity gerendert ist, dann scrollen
+          isJumping = true;
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              // Zum About-Bereich scrollen (sofort)
+              window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'instant'
+              });
+              
+              // Content sanft einblenden
+              setTimeout(() => {
+                if (rightSide) {
+                  rightSide.style.transition = 'opacity 0.3s ease';
+                  rightSide.style.opacity = '1';
+                }
+                setTimeout(() => {
+                  if (rightSide) {
+                    rightSide.style.transition = '';
+                    rightSide.style.opacity = '';
+                  }
+                  isJumping = false;
+                }, 400);
+              }, 50);
+            });
+          });
+        });
+      }
+      
+      const calendar = document.querySelector('.mobile-panel-calendar');
+      if (!calendar || calendar.hasAttribute('data-listener')) return;
+      calendar.setAttribute('data-listener', 'true');
+      
+      // Ein einziger Listener für den ganzen Kalender
+      calendar.addEventListener('click', (e) => {
+        const target = e.target;
+        
+        // Jahr
+        if (target.classList.contains('mobile-nav-year')) {
+          const year = parseInt(target.dataset.year);
+          
+          // About-Status zurücksetzen
+          if (isInAboutSection) {
+            isInAboutSection = false;
+            document.body.classList.remove('in-about');
+          }
+          
+          // Index deaktivieren
+          const navIndexItem = document.querySelector('.mobile-header-index');
+          if (navIndexItem) navIndexItem.classList.remove('active');
+          
+          // Jahre aktiv/inaktiv setzen
+          document.querySelectorAll('.mobile-nav-year').forEach(y => y.classList.remove('active'));
+          target.classList.add('active');
+          
+          // Monate für dieses Jahr aktualisieren
+          updateMobileNavMonths(year);
+          
+          // Alle Monate deaktivieren
+          document.querySelectorAll('.mobile-nav-month').forEach(m => m.classList.remove('active'));
+          
+          // Konsum auf Jahr setzen
+          consumptionMode = 'year';
+          
+          // activeEntryIndex setzen, Konsum sofort updaten, dann UI und scrollen
+          const yearEntries = allEntries.filter(e => e.year === year);
+          if (yearEntries.length > 0) {
+            activeEntryIndex = allEntries.indexOf(yearEntries[0]);
+            updateMobileConsumption(); // Sofort updaten
+            updateActiveEntryUI();
+            scrollToActiveEntry();
+          }
+          
+          return;
+        }
+        
+        // Monat
+        if (target.classList.contains('mobile-nav-month')) {
+          const month = parseInt(target.dataset.month);
+          const activeYear = document.querySelector('.mobile-nav-year.active');
+          const year = activeYear ? parseInt(activeYear.dataset.year) : allEntries[activeEntryIndex].year;
+          
+          // About-Status zurücksetzen
+          if (isInAboutSection) {
+            isInAboutSection = false;
+            document.body.classList.remove('in-about');
+          }
+          
+          // Info deaktivieren
+          const navIndexItem = document.querySelector('.mobile-header-index');
+          if (navIndexItem) navIndexItem.classList.remove('active');
+          
+          // Jahr aktivieren (falls noch nicht aktiv)
+          document.querySelectorAll('.mobile-nav-year').forEach(y => {
+            y.classList.toggle('active', parseInt(y.dataset.year) === year);
+          });
+          
+          // Monate aktiv/inaktiv setzen
+          document.querySelectorAll('.mobile-nav-month').forEach(m => m.classList.remove('active'));
+          target.classList.add('active');
+          
+          // Konsum auf Monat setzen
+          consumptionMode = 'month';
+          
+          // activeEntryIndex setzen, Konsum sofort updaten, dann UI und scrollen
+          const monthEntries = allEntries.filter(e => e.year === year && e.month === month);
+          if (monthEntries.length > 0) {
+            activeEntryIndex = allEntries.indexOf(monthEntries[0]);
+            updateMobileConsumption(); // Sofort updaten
+            updateActiveEntryUI();
+            scrollToActiveEntry();
+          }
+          
+          return;
+        }
+      });
+    }
+    
+    // Mobile Month Listeners - nicht mehr nötig, Event Delegation übernimmt
+    function attachMobileMonthListeners() {
+      // Leer - Event Delegation auf .mobile-panel-calendar übernimmt alles
+    }
+    
+    // Update Mobile Nav Months für ein Jahr
+    function updateMobileNavMonths(year) {
+      const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
+                         'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+      
+      const monthsInYear = [...new Set(
+        allEntries.filter(e => e.year === year).map(e => e.month)
+      )].sort((a, b) => a - b);
+      
+      const monthsContainer = document.querySelector('.mobile-nav-months');
+      if (monthsContainer) {
+        monthsContainer.innerHTML = monthsInYear.map((month, i) => `
+          <div class="mobile-nav-item mobile-nav-month" data-month="${month}" style="animation-delay: ${i * 50}ms">
+            ${monthNames[month - 1]}
+          </div>
+        `).join('');
+        
+        attachMobileMonthListeners();
+      }
+    }
+    
+    // Update Mobile Header (nur Datum)
+    function updateMobileHeader() {
+      const mobileDay = document.querySelector('.mobile-day');
+      const mobileMonthName = document.querySelector('.mobile-month-name');
+      const mobileYear = document.querySelector('.mobile-year');
+
+      if (isInAboutSection) {
+        // Im About-Bereich
+        if (isMobileNavOpen) {
+          // Nav offen: Datum-Felder leer lassen, Info in Zeile 4 ist sichtbar
+          if (mobileDay) mobileDay.textContent = '';
+          if (mobileMonthName) mobileMonthName.textContent = '';
+          if (mobileYear) mobileYear.textContent = '';
+        } else {
+          // Nav geschlossen: Jahres-Range anzeigen (z.B. "2021 — 2025")
+          const minYear = Math.min(...YEARS);
+          const maxYear = Math.max(...YEARS);
+          if (mobileDay) mobileDay.textContent = `${minYear} — ${maxYear}`;
+          if (mobileMonthName) mobileMonthName.textContent = '';
+          if (mobileYear) mobileYear.textContent = '';
+        }
+      } else {
+        // Normales Datum anzeigen
+        const activeEntry = allEntries[activeEntryIndex];
+        const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+                           'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+
+        if (mobileDay) mobileDay.textContent = activeEntry.day + '.';
+        if (mobileMonthName) mobileMonthName.textContent = monthNames[activeEntry.month - 1];
+        if (mobileYear) mobileYear.textContent = activeEntry.year;
+      }
+      
+      // Konsum auch aktualisieren
+      updateMobileConsumption();
+    }
+    
+    // Theme Toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme') || 'day';
+      
+      // Cycle: day -> dawn -> night -> day
+      const themes = ['day', 'dawn', 'night'];
+      const currentIndex = themes.indexOf(currentTheme);
+      const nextIndex = (currentIndex + 1) % themes.length;
+      const newTheme = themes[nextIndex];
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+    
+    // Theme beim Laden anwenden
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    })();
+    
+    // Lade alle Einträge aus JSON-Dateien
+    async function loadAllEntries() {
+      const entries = [];
+      
+      for (const year of YEARS) {
+        try {
+          const response = await fetch(`${DATA_PATH}${year}.json`);
+          if (response.ok) {
+            const data = await response.json();
+            
+            // Einträge hinzufügen
+            for (const entry of data.entries) {
+              // Datum an das Jahr der JSON-Datei anpassen
+              const adjustedDate = entry.date.replace(/^\d{4}/, year.toString());
+              
+              entries.push({
+                date: adjustedDate,
+                year: year,
+                month: parseInt(adjustedDate.split('-')[1]),
+                day: parseInt(adjustedDate.split('-')[2]),
+                data: {
+                  apples: entry.apples || 0,
+                  bananas: entry.bananas || 0,
+                  coffee: entry.coffee || 0,
+                  mood: entry.mood || 0,
+                  cycling_km: entry.cycling_km || 0,
+                  weekday_index: entry.weekday_index
+                },
+                text: formatText(entry.text)
+              });
+            }
+          }
+        } catch (error) {
+          console.log(`Konnte ${year}.json nicht laden`);
+        }
+      }
+      
+      // Sort by date ascending (oldest first)
+      entries.sort((a, b) => a.date.localeCompare(b.date));
+      
+      return entries;
+    }
+    
+    // Formatiere Text
+    function formatText(text) {
+      text = text.replace(/ \/ /g, '  /  ');
+      text = text.replace(/\\\*/g, '*');
+      text = text.replace(/\[\[([^\]]+)\]\]/g, (match, name) => name.charAt(0) + '.');
+      text = text.replace(/<span class="quote">(.*?)<\/span>/g, '<span class="quote">$1</span>');
+      return text;
+    }
+    
+    // Berechne Konsum basierend auf Modus
+    function calculateConsumption() {
+      const activeEntry = allEntries[activeEntryIndex];
+      let entries = [];
+      
+      if (consumptionMode === 'day') {
+        entries = [activeEntry];
+      } else if (consumptionMode === 'month') {
+        entries = allEntries.filter(e => 
+          e.year === activeEntry.year && e.month === activeEntry.month
+        );
+      } else if (consumptionMode === 'year') {
+        entries = allEntries.filter(e => e.year === activeEntry.year);
+      } else if (consumptionMode === 'all') {
+        entries = allEntries;
+      }
+      
+      return {
+        apples: entries.reduce((sum, e) => sum + (e.data.apples || 0), 0),
+        bananas: entries.reduce((sum, e) => sum + (e.data.bananas || 0), 0),
+        coffee: entries.reduce((sum, e) => sum + (e.data.coffee || 0), 0),
+        cycling_km: entries.reduce((sum, e) => sum + (e.data.cycling_km || 0), 0)
+      };
+    }
+    
+    // Rendere UI
+    function renderUI() {
+      const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
+                         'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+      
+      // Get unique years (descending - newest first) and months
+      const years = [...new Set(allEntries.map(e => e.year))].sort((a, b) => b - a);
+      const currentYear = allEntries[activeEntryIndex]?.year || 2025;
+      const currentMonth = allEntries[activeEntryIndex]?.month || 1;
+      
+      // Get months for current year (ascending - January first)
+      const monthsInYear = [...new Set(
+        allEntries.filter(e => e.year === currentYear).map(e => e.month)
+      )].sort((a, b) => a - b);
+      
+      // Calculate consumption
+      const consumption = calculateConsumption();
+      
+      // Berechne Basis-Delay für Monate (nach allen Jahren)
+      const monthBaseDelay = years.length * 50;
+      
+      document.body.innerHTML = `
+        <div class="container">
+          <div class="left-side">
+            <div class="calendar">
+              <div class="years">
+                <div class="year-item index-item" style="animation-delay: 0ms">
+                  Info
+                </div>
+                <div class="year-spacer"></div>
+                ${years.map((year, i) => `
+                  <div class="year-item ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${(i + 1) * 50}ms">
+                    ${year}
+                  </div>
+                `).join('')}
+              </div>
+                <div class="months">
+                  ${monthsInYear.map((month, i) => `
+                    <div class="month-item ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${monthBaseDelay + i * 50}ms">
+                      ${monthNames[month - 1]}
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+              
+              <div class="consumption">
+                <div class="consumption-item cycling ${consumption.cycling_km > 0 ? '' : 'hidden'}">
+                  <span class="consumption-label">KM</span>
+                  <span class="consumption-value consumption-cycling">${consumption.cycling_km.toFixed(1)}</span>
+                </div>
+                <div class="consumption-item">
+                  <span class="consumption-label">Äpfel</span>
+                  <span class="consumption-value">${consumption.apples}</span>
+                </div>
+                <div class="consumption-item">
+                  <span class="consumption-label">Bananen</span>
+                  <span class="consumption-value">${consumption.bananas}</span>
+                </div>
+                <div class="consumption-item">
+                  <span class="consumption-label">Kaffees</span>
+                  <span class="consumption-value">${consumption.coffee}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="right-side">
+              ${allEntries.map((entry, index) => {
+                const isMonthStart = index > 0 && (
+                  allEntries[index - 1].month !== entry.month ||
+                  allEntries[index - 1].year !== entry.year
+                );
+                const isFirst = index === 0;
+                
+                return `
+                <div class="entry ${index === activeEntryIndex ? 'active' : ''} ${isMonthStart ? 'month-start' : ''} ${isFirst ? 'first-entry' : ''}" data-index="${index}">
+                  <div class="entry-header">
+                    <div class="entry-number ${entry.data.weekday_index === 0 ? 'sunday' : ''}">${entry.day}.</div>
+                    <div class="entry-text">${entry.text}</div>
+                  </div>
+                </div>
+              `}).join('')}
+              
+              <div class="about-wrapper">
+                <div class="about-section" id="about-section">
+                  <div class="about-title">${aboutData.title}</div>
+                  <div class="about-text">${aboutData.text}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Unified Mobile Panel -->
+        <div class="mobile-panel" id="mobile-panel">
+          <div class="mobile-panel-content">
+            <div class="mobile-panel-header">
+              <div class="mobile-panel-left">
+                <div class="mobile-panel-close">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5303 10.5303L0.530273 0.530272" stroke-width="1.5" stroke-miterlimit="10"/>
+                    <path d="M0.530273 10.5303L10.5303 0.530272" stroke-width="1.5" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+                <div class="mobile-date">
+                  <span class="mobile-day"></span>
+                  <span class="mobile-month-name"></span>
+                  <span class="mobile-year"></span>
+                  <span class="mobile-header-index">Info</span>
+                </div>
+              </div>
+              <div class="mobile-panel-right">
+                <div class="mobile-consumption-item">
+                  <span class="mobile-consumption-label">Äpfel</span>
+                  <span class="mobile-consumption-value mobile-apples"></span>
+                </div>
+                <div class="mobile-consumption-item">
+                  <span class="mobile-consumption-label">Bananen</span>
+                  <span class="mobile-consumption-value mobile-bananas"></span>
+                </div>
+                <div class="mobile-consumption-item">
+                  <span class="mobile-consumption-label">Kaffee</span>
+                  <span class="mobile-consumption-value mobile-coffee"></span>
+                </div>
+                <div class="mobile-consumption-item mobile-consumption-km">
+                  <span class="mobile-consumption-label">KM</span>
+                  <span class="mobile-consumption-value mobile-cycling"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-panel-divider"></div>
+            <div class="mobile-panel-calendar">
+              <div class="mobile-nav-years">
+                ${years.map((year, i) => `
+                  <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${i * 50}ms">
+                    ${year}
+                  </div>
+                `).join('')}
+              </div>
+              <div class="mobile-nav-months">
+                ${monthsInYear.map((month, i) => `
+                  <div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${monthBaseDelay + i * 50}ms">
+                    ${monthNames[month - 1]}
+                </div>
+              `).join('')}
+              </div>
+            </div>
+            <div class="mobile-panel-divider-bottom"></div>
+          </div>
+          <div class="mobile-panel-fade"></div>
+        </div>
+
+        <div class="fade-top"></div>
+        <div class="fade-bottom"></div>
+        <div class="theme-toggle" onclick="toggleTheme()"></div>
+      `;
+      
+      attachHoverListeners();
+      attachObservers();
+      attachEntryClickListeners();
+      attachKeyboardNavigation();
+      attachMobileNavCloseListeners();
+      attachMobilePanelListeners();
+    }
+    
+    // Mobile Panel Listeners (nur auf Header)
+    function attachMobilePanelListeners() {
+      const isMobile = window.innerWidth <= 768;
+      if (!isMobile) return;
+      
+      const panelHeader = document.querySelector('.mobile-panel-header');
+      if (!panelHeader || panelHeader.hasAttribute('data-listener')) return;
+      panelHeader.setAttribute('data-listener', 'true');
+      
+      // Nur click - funktioniert auf Touch und Desktop
+      panelHeader.addEventListener('click', (e) => {
+        // Nicht reagieren wenn auf Index geklickt wurde
+        if (e.target.closest('.mobile-header-index')) return;
+        toggleMobileNav();
+      });
+    }
+    
+    // Klick-Listener für Einträge
+    function attachEntryClickListeners() {
+      const entries = document.querySelectorAll('.entry');
+      let isHoveringEntry = false;
+      let leaveTimeout = null;
+      
+      entries.forEach((entry, index) => {
+        entry.addEventListener('click', () => {
+          const isMobile = window.innerWidth <= 768;
+          
+          // Wenn Nav offen ist auf Mobile, nur schließen (nicht springen)
+          if (isMobile && isMobileNavOpen) {
+            toggleMobileNav();
+            return;
+          }
+          
+          // Zum Eintrag springen
+          activeEntryIndex = index;
+          updateActiveEntryUI();
+          scrollToActiveEntry();
+        });
+        
+        // Hover-Logik - nur auf Geräten mit Maus
+        const hasHover = window.matchMedia('(hover: hover)').matches;
+        if (hasHover) {
+          entry.addEventListener('mouseenter', () => {
+            isHoveringEntry = true;
+            if (leaveTimeout) {
+              clearTimeout(leaveTimeout);
+              leaveTimeout = null;
+            }
+            // Entferne active von allen, setze nur auf gehoverten
+            entries.forEach(e => e.classList.remove('active'));
+            entry.classList.add('active');
+            // Zeige Konsum des gehovertenEintrags
+            const hoveredEntry = allEntries[index];
+            document.querySelectorAll('.consumption-value')[1].textContent = hoveredEntry.data.apples || 0;
+            document.querySelectorAll('.consumption-value')[2].textContent = hoveredEntry.data.bananas || 0;
+            document.querySelectorAll('.consumption-value')[3].textContent = hoveredEntry.data.coffee || 0;
+            
+            const cyclingItem = document.querySelector('.consumption-item.cycling');
+            const cyclingValue = document.querySelector('.consumption-cycling');
+            if (cyclingItem && cyclingValue) {
+              const km = hoveredEntry.data.cycling_km || 0;
+              cyclingValue.textContent = km.toFixed(1);
+              cyclingItem.classList.toggle('hidden', km === 0);
+            }
+          });
+          
+          entry.addEventListener('mouseleave', () => {
+            isHoveringEntry = false;
+            leaveTimeout = setTimeout(() => {
+              if (!isHoveringEntry) {
+                // Zurück zum aktiven Eintrag
+                entries.forEach((e, i) => e.classList.toggle('active', i === activeEntryIndex));
+                updateConsumption();
+              }
+            }, 100);
+          });
+        }
+      });
+    }
+
+    // Mobile Nav Close Listeners
+    function attachMobileNavCloseListeners() {
+      const isMobile = window.innerWidth <= 768;
+      if (!isMobile) return;
+
+      const aboutSection = document.querySelector('.about-section');
+      const rightSide = document.querySelector('.right-side');
+
+      // Klick auf About-Section schließt Navigation
+      if (aboutSection && !aboutSection.hasAttribute('data-close-listener')) {
+        aboutSection.setAttribute('data-close-listener', 'true');
+        aboutSection.addEventListener('click', () => {
+          if (isMobileNavOpen) {
+            toggleMobileNav();
+          }
+        });
+      }
+      
+      // Klick auf Feed-Bereich (right-side) schließt Navigation
+      if (rightSide && !rightSide.hasAttribute('data-close-listener')) {
+        rightSide.setAttribute('data-close-listener', 'true');
+        rightSide.addEventListener('click', (e) => {
+          // Nur wenn Nav offen und nicht auf einen Entry geklickt
+          if (isMobileNavOpen && !e.target.closest('.entry')) {
+            toggleMobileNav();
+          }
+        });
+      }
+    }
+
+    // Scroll Listener für aktiven Eintrag und Fade-Effekt
+    function attachObservers() {
+      const entries = document.querySelectorAll('.entry');
+      const isMobile = window.innerWidth <= 768;
+      
+      // Throttle-Funktion
+      const throttle = (func, limit) => {
+        let inThrottle;
+        return function(...args) {
+          if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+          }
+        };
+      };
+      
+      // Scroll Listener für aktiven Eintrag (optimiert)
+      const updateActiveEntry = () => {
+        if (isJumping) return;
+        if (isMobileNavOpen) return; // Nicht updaten wenn Mobile Nav offen
+        
+        const viewportCenter = window.innerHeight / 2;
+        const viewportTrigger = window.innerHeight; // About wird bei 100vh getriggert
+        const aboutSection = document.getElementById('about-section');
+        
+        // Prüfe ob About-Section sichtbar ist
+        if (aboutSection) {
+          const aboutRect = aboutSection.getBoundingClientRect();
+          // Wenn About-Section obere Kante bei 100vh (unterer Viewport-Rand) ist
+          if (aboutRect.top < viewportTrigger) {
+            if (!isInAboutSection) {
+              isInAboutSection = true;
+              document.body.classList.add('in-about');
+              
+              // Alle aktiven Elemente deaktivieren
+              document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
+              document.querySelectorAll('.year-item.active').forEach(el => el.classList.remove('active'));
+              document.querySelectorAll('.month-item.active').forEach(el => el.classList.remove('active'));
+              
+              // Index aktiv setzen
+              const indexItem = document.querySelector('.index-item');
+              if (indexItem) indexItem.classList.add('active');
+              
+              // Konsum auf Gesamt setzen
+              consumptionMode = 'all';
+              updateConsumption();
+              updateMobileHeader();
+
+              // Mobile Nav aktualisieren wenn offen
+              if (isMobileNavOpen) {
+                document.querySelectorAll('.mobile-nav-year').forEach(el => el.classList.remove('active'));
+                document.querySelectorAll('.mobile-nav-month').forEach(el => el.classList.remove('active'));
+                const navIndexItem = document.querySelector('.mobile-header-index');
+                if (navIndexItem) navIndexItem.classList.add('active');
+                updateMobileConsumption();
+              }
+            }
+            return;
+          } else if (isInAboutSection && !isJumping) {
+            // Zurück aus About-Bereich durch Scrollen - setze auf letzten Eintrag (neuesten)
+            isInAboutSection = false;
+            document.body.classList.remove('in-about');
+            const indexItem = document.querySelector('.index-item');
+            if (indexItem) indexItem.classList.remove('active');
+
+            // Mobile Nav Index deaktivieren wenn offen
+            if (isMobileNavOpen) {
+              const navIndexItem = document.querySelector('.mobile-header-index');
+              if (navIndexItem) navIndexItem.classList.remove('active');
+            }
+
+            // Setze activeEntryIndex auf letzten Eintrag
+            activeEntryIndex = allEntries.length - 1;
+            consumptionMode = 'day';
+            updateActiveEntryUI();
+          }
+        }
+        
+        // Prüfbereich: normalerweise ±20 um aktiven Index
+        // ABER: erweitere nach unten wenn nah am Anfang, nach oben wenn nah am Ende
+        let startIndex = Math.max(0, activeEntryIndex - 20);
+        let endIndex = Math.min(entries.length, activeEntryIndex + 20);
+        
+        // Wenn sehr nah am Anfang: prüfe auch Index 0
+        if (activeEntryIndex < 30) {
+          startIndex = 0;
+        }
+        
+        // Wenn sehr nah am Ende: prüfe auch letzten Index
+        if (activeEntryIndex > entries.length - 30) {
+          endIndex = entries.length;
+        }
+        
+        // Spezialfall: Wenn ganz oben gescrollt, setze auf ersten Eintrag
+        if (window.scrollY < 50) {
+          if (activeEntryIndex !== 0) {
+            activeEntryIndex = 0;
+            updateActiveEntryUI();
+          }
+          return;
+        }
+        
+        let closestEntry = null;
+        let closestDistance = Infinity;
+        
+        for (let i = startIndex; i < endIndex; i++) {
+          const entry = entries[i];
+          // Für ersten Eintrag: nutze entry-header statt gesamten Entry (wegen padding-top: 50vh)
+          const measureElement = i === 0 ? entry.querySelector('.entry-header') : entry;
+          const rect = measureElement.getBoundingClientRect();
+          const entryCenter = rect.top + rect.height / 2;
+          const distance = Math.abs(entryCenter - viewportCenter);
+          
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestEntry = i;
+          }
+        }
+        
+        if (closestEntry !== null && activeEntryIndex !== closestEntry) {
+          activeEntryIndex = closestEntry;
+          updateActiveEntryUI();
+        }
+      };
+      
+      // Throttled Version (50ms auf Mobile, 16ms auf Desktop)
+      const throttledUpdateActive = throttle(updateActiveEntry, isMobile ? 50 : 16);
+      window.addEventListener('scroll', throttledUpdateActive, { passive: true });
+    }
+    
+    // Scroll Toggle - zwischen Header und Kalenderansicht
+    // Hover Listener für Konsum
+    function attachHoverListeners() {
+      const leftSide = document.querySelector('.left-side');
+      const years = document.querySelectorAll('.year-item:not(.index-item)');
+      const indexItem = document.querySelector('.index-item');
+      
+      // Prüfe ob Gerät echten Hover unterstützt (Maus, nicht Touch)
+      const hasHover = window.matchMedia('(hover: hover)').matches;
+      
+      let hoverTimeout = null;
+      
+      // Index-Item Listener
+      if (indexItem) {
+        indexItem.addEventListener('click', () => {
+          jumpToAbout();
+        });
+        
+        // Hover nur auf Geräten mit Maus
+        if (hasHover) {
+          indexItem.addEventListener('mouseenter', (e) => {
+            e.stopPropagation();
+            if (hoverTimeout) clearTimeout(hoverTimeout);
+            consumptionMode = 'all';
+            updateConsumption();
+          });
+          
+          indexItem.addEventListener('mouseleave', () => {
+            hoverTimeout = setTimeout(() => {
+              consumptionMode = isInAboutSection ? 'all' : 'day';
+              updateConsumption();
+            }, 50);
+          });
+        }
+      }
+      
+      years.forEach(el => {
+        // Hover nur auf Geräten mit Maus
+        if (hasHover) {
+          el.addEventListener('mouseenter', (e) => {
+            e.stopPropagation();
+            if (hoverTimeout) clearTimeout(hoverTimeout);
+            consumptionMode = 'year';
+            
+            // Temporarily set active year for calculation
+            const hoveredYear = parseInt(el.dataset.year);
+            const tempActiveEntry = allEntries.find(e => e.year === hoveredYear);
+            if (tempActiveEntry) {
+              const tempIndex = activeEntryIndex;
+              activeEntryIndex = allEntries.indexOf(tempActiveEntry);
+              updateConsumption();
+              activeEntryIndex = tempIndex; // Restore
+            }
+          });
+          
+          el.addEventListener('mouseleave', () => {
+            hoverTimeout = setTimeout(() => {
+              // Im About-Bereich zurück auf 'all', sonst 'day'
+              consumptionMode = isInAboutSection ? 'all' : 'day';
+              updateConsumption();
+            }, 50);
+          });
+        }
+        
+        el.addEventListener('click', () => {
+          const year = parseInt(el.dataset.year);
+          
+          // Sofort Klassen setzen (wie bei Mobile)
+          document.querySelectorAll('.year-item:not(.index-item)').forEach(y => y.classList.remove('active'));
+          el.classList.add('active');
+          
+          // Index deaktivieren falls aktiv
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
+          
+          jumpToFirstDayOfYear(year);
+        });
+      });
+      
+      attachMonthListeners(hoverTimeout);
+    }
+    
+    // Separate Funktion für Monats-Listener (wird auch bei Jahr-Wechsel aufgerufen)
+    function attachMonthListeners(sharedHoverTimeout) {
+      const months = document.querySelectorAll('.month-item');
+      
+      // Prüfe ob Gerät echten Hover unterstützt (Maus, nicht Touch)
+      const hasHover = window.matchMedia('(hover: hover)').matches;
+      
+      let hoverTimeout = sharedHoverTimeout || null;
+      
+      months.forEach(el => {
+        // Hover nur auf Geräten mit Maus
+        if (hasHover) {
+          el.addEventListener('mouseenter', (e) => {
+            e.stopPropagation();
+            if (hoverTimeout) clearTimeout(hoverTimeout);
+            consumptionMode = 'month';
+            
+            // Temporarily set active month for calculation
+            const hoveredMonth = parseInt(el.dataset.month);
+            const activeEntry = allEntries[activeEntryIndex];
+            const tempActiveEntry = allEntries.find(e => 
+              e.year === activeEntry.year && e.month === hoveredMonth
+            );
+            if (tempActiveEntry) {
+              const tempIndex = activeEntryIndex;
+              activeEntryIndex = allEntries.indexOf(tempActiveEntry);
+              updateConsumption();
+              activeEntryIndex = tempIndex; // Restore
+            }
+          });
+          
+          el.addEventListener('mouseleave', () => {
+            hoverTimeout = setTimeout(() => {
+              // Im About-Bereich zurück auf 'all', sonst 'day'
+              consumptionMode = isInAboutSection ? 'all' : 'day';
+              updateConsumption();
+            }, 50);
+          });
+        }
+        
+        el.addEventListener('click', () => {
+          const month = parseInt(el.dataset.month);
+          
+          // Jahr bestimmen: Aktives Jahr-Element oder fallback auf neuestes Jahr
+          const activeYearEl = document.querySelector('.year-item.active:not(.index-item)');
+          let year;
+          if (activeYearEl) {
+            year = parseInt(activeYearEl.dataset.year);
+          } else if (isInAboutSection) {
+            // Im Info-Bereich: Neuestes Jahr mit diesem Monat finden
+            const yearsWithMonth = allEntries.filter(e => e.month === month).map(e => e.year);
+            year = Math.max(...yearsWithMonth);
+          } else {
+            year = allEntries[activeEntryIndex].year;
+          }
+          
+          // Index deaktivieren falls aktiv
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
+          
+          // Sofort Klassen setzen (wie bei Mobile)
+          document.querySelectorAll('.month-item').forEach(m => m.classList.remove('active'));
+          el.classList.add('active');
+          
+          // Jahr auch aktiv setzen falls nicht schon
+          if (!activeYearEl || parseInt(activeYearEl.dataset.year) !== year) {
+            document.querySelectorAll('.year-item:not(.index-item)').forEach(y => y.classList.remove('active'));
+            const yearEl = document.querySelector(`.year-item[data-year="${year}"]`);
+            if (yearEl) yearEl.classList.add('active');
+          }
+          
+          jumpToFirstDayOfMonth(year, month);
+        });
+      });
+    }
+    
+    // Spring zum ersten Tag des Jahres (ältester Tag)
+    function jumpToFirstDayOfYear(year) {
+      isJumping = true; // Sofort setzen um Scroll-Listener zu blockieren
+      
+      const yearEntries = allEntries.filter(e => e.year === year);
+      if (yearEntries.length > 0) {
+        // About-Status zurücksetzen
+        if (isInAboutSection) {
+          isInAboutSection = false;
+          document.body.classList.remove('in-about');
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
+          const mobileNavIndexItem = document.querySelector('.mobile-header-index');
+          if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
+          consumptionMode = 'day';
+          
+          // Alle aktiven Klassen entfernen bevor neue gesetzt werden
+          document.querySelectorAll('.year-item.active').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.month-item.active').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
+        }
+
+        const firstEntry = yearEntries[0]; // Erster = ältester wegen Sort
+        activeEntryIndex = allEntries.indexOf(firstEntry);
+        
+        // lastDisplayedYear zurücksetzen um Monate neu zu rendern
+        lastDisplayedYear = null;
+        
+        updateActiveEntryUI();
+        scrollToActiveEntry();
+      } else {
+        isJumping = false; // Zurücksetzen falls keine Einträge
+      }
+    }
+    
+    // Spring zum ersten Tag des Monats (ältester Tag)
+    function jumpToFirstDayOfMonth(year, month) {
+      isJumping = true; // Sofort setzen
+      
+      const monthEntries = allEntries.filter(e =>
+        e.year === year && e.month === month
+      );
+      if (monthEntries.length > 0) {
+        // About-Status zurücksetzen
+        if (isInAboutSection) {
+          isInAboutSection = false;
+          document.body.classList.remove('in-about');
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
+          const mobileNavIndexItem = document.querySelector('.mobile-header-index');
+          if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
+          consumptionMode = 'day';
+          
+          // Alle aktiven Klassen entfernen
+          document.querySelectorAll('.year-item.active').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.month-item.active').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
+          
+          // lastDisplayedYear zurücksetzen
+          lastDisplayedYear = null;
+        }
+
+        const firstEntry = monthEntries[0]; // Erster = ältester wegen Sort
+        activeEntryIndex = allEntries.indexOf(firstEntry);
+        updateActiveEntryUI();
+        scrollToActiveEntry();
+      } else {
+        isJumping = false;
+      }
+    }
+
+    // Spring zum ersten Tag des Jahres im Hintergrund (ohne Navi zu schließen)
+    function jumpToFirstDayOfYearBackground(year) {
+      const yearEntries = allEntries.filter(e => e.year === year);
+      if (yearEntries.length > 0) {
+        if (isInAboutSection) {
+          isInAboutSection = false;
+          document.body.classList.remove('in-about');
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
+        }
+        
+        // Mobile Nav Index immer deaktivieren
+        const mobileNavIndexItem = document.querySelector('.mobile-header-index');
+        if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
+
+        const firstEntry = yearEntries[0];
+        activeEntryIndex = allEntries.indexOf(firstEntry);
+        updateActiveEntryUI();
+        scrollToActiveEntry();
+      }
+    }
+
+    // Spring zum ersten Tag des Monats im Hintergrund (ohne Navi zu schließen)
+    function jumpToFirstDayOfMonthBackground(year, month) {
+      const monthEntries = allEntries.filter(e =>
+        e.year === year && e.month === month
+      );
+      if (monthEntries.length > 0) {
+        if (isInAboutSection) {
+          isInAboutSection = false;
+          document.body.classList.remove('in-about');
+          const indexItem = document.querySelector('.index-item');
+          if (indexItem) indexItem.classList.remove('active');
+        }
+        
+        // Mobile Nav Index immer deaktivieren
+        const mobileNavIndexItem = document.querySelector('.mobile-header-index');
+        if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
+
+        const firstEntry = monthEntries[0];
+        activeEntryIndex = allEntries.indexOf(firstEntry);
+        updateActiveEntryUI();
+        scrollToActiveEntry();
+      }
+    }
+    
+    // Spring zum About-Bereich (Ende der Seite)
+    function jumpToAbout() {
+      isJumping = true;
+      isInAboutSection = true;
+      document.body.classList.add('in-about');
+      
+      // Alle aktiven Elemente deaktivieren
+      document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.year-item.active').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.month-item.active').forEach(el => el.classList.remove('active'));
+      
+      // Index aktiv setzen
+      const indexItem = document.querySelector('.index-item');
+      if (indexItem) indexItem.classList.add('active');
+      
+      // Konsum auf Gesamt setzen
+      consumptionMode = 'all';
+      updateConsumption();
+      updateMobileHeader();
+
+      // Ans Ende scrollen
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth'
+      });
+
+      // Längeres Timeout für smooth scroll + nochmal isInAboutSection sicherstellen
+      setTimeout(() => {
+        isJumping = false;
+        // Nochmal sicherstellen dass wir im About-Bereich sind
+        isInAboutSection = true;
+        updateMobileHeader();
+      }, 1500);
+    }
+    
+    // Update nur Konsum
+    function updateConsumption() {
+      const consumption = calculateConsumption();
+      document.querySelectorAll('.consumption-value')[1].textContent = consumption.apples;
+      document.querySelectorAll('.consumption-value')[2].textContent = consumption.bananas;
+      document.querySelectorAll('.consumption-value')[3].textContent = consumption.coffee;
+      
+      const cyclingItem = document.querySelector('.consumption-item.cycling');
+      const cyclingValue = document.querySelector('.consumption-cycling');
+      if (cyclingItem && cyclingValue) {
+        cyclingValue.textContent = consumption.cycling_km.toFixed(1);
+        cyclingItem.classList.toggle('hidden', consumption.cycling_km === 0);
+      }
+    }
+    
+    // Update aktiver Eintrag
+    function updateActiveEntryUI() {
+      document.querySelectorAll('.entry').forEach((el, i) => {
+        el.classList.toggle('active', i === activeEntryIndex);
+      });
+      
+      const activeEntry = allEntries[activeEntryIndex];
+      
+      // Prüfe ob Jahr gewechselt hat oder lastDisplayedYear null ist (nach Info-Bereich)
+      if (lastDisplayedYear === null || lastDisplayedYear !== activeEntry.year) {
+        // Monate neu rendern mit Animation
+        const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
+                           'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+        const monthsInYear = [...new Set(
+          allEntries.filter(e => e.year === activeEntry.year).map(e => e.month)
+        )].sort((a, b) => a - b);
+        
+        const monthsContainer = document.querySelector('.months');
+        if (monthsContainer) {
+          monthsContainer.innerHTML = monthsInYear.map((month, i) => `
+            <div class="month-item ${month === activeEntry.month ? 'active' : ''}" data-month="${month}" style="animation-delay: ${i * 50}ms">
+              ${monthNames[month - 1]}
+            </div>
+          `).join('');
+          
+          // Event-Listener für neue Monate
+          attachMonthListeners(null);
+        }
+      }
+      lastDisplayedYear = activeEntry.year;
+      
+      // Jahre: nur ändern wenn nötig (verhindert Flackern)
+      document.querySelectorAll('.year-item:not(.index-item)').forEach(el => {
+        const shouldBeActive = parseInt(el.dataset.year) === activeEntry.year;
+        const isActive = el.classList.contains('active');
+        if (shouldBeActive !== isActive) {
+          el.classList.toggle('active', shouldBeActive);
+        }
+      });
+      
+      // Monate: nur ändern wenn nötig (verhindert Flackern)
+      document.querySelectorAll('.month-item').forEach(el => {
+        const shouldBeActive = parseInt(el.dataset.month) === activeEntry.month;
+        const isActive = el.classList.contains('active');
+        if (shouldBeActive !== isActive) {
+          el.classList.toggle('active', shouldBeActive);
+        }
+      });
+      
+      // Update consumption when switching days
+      if (consumptionMode === 'day') {
+        updateConsumption();
+      }
+      
+      // Update mobile header
+      updateMobileHeader();
+
+      // Prüfe ob letzter Eintrag - dann Fade und Toggle ausblenden
+      const isLastEntry = activeEntryIndex === allEntries.length - 1;
+      document.body.classList.toggle('at-last-entry', isLastEntry);
+
+      // Show/hide scroll-top button
+      const scrollTopBtn = document.querySelector('.scroll-top');
+    }
+    
+    // Init
+    async function init() {
+      // Lade Stats zuerst (schnell)
+      await loadAndShowStats();
+      
+      // Lade About-Text
+      await loadAbout();
+      
+      // Dann die Einträge aus JSON
+      allEntries = await loadAllEntries();
+      
+      if (allEntries.length > 0) {
+        // Prüfe URL-Hash für spezifisches Datum
+        const hash = window.location.hash.substring(1);
+        
+        if (hash) {
+          const dateIndex = allEntries.findIndex(e => e.date === hash);
+          if (dateIndex !== -1) {
+            activeEntryIndex = dateIndex;
+          } else {
+            activeEntryIndex = Math.floor(Math.random() * allEntries.length);
+          }
+        } else {
+          activeEntryIndex = Math.floor(Math.random() * allEntries.length);
+        }
+        
+        renderUI();
+        scrollToActiveEntry();
+
+        // Initial mobile header updaten
+        updateMobileHeader();
+      } else {
+        document.body.innerHTML = '<div class="loading">Keine Einträge gefunden.</div>';
+      }
+    }
+    
+    // Lade About-Text
+    async function loadAbout() {
+      try {
+        const response = await fetch(ABOUT_FILE);
+        if (response.ok) {
+          const content = await response.text();
+          const lines = content.split('\n');
+          let inFrontmatter = false;
+          let frontmatterData = {};
+          let textLines = [];
+          
+          for (const line of lines) {
+            if (line.trim() === '---') {
+              inFrontmatter = !inFrontmatter;
+              continue;
+            }
+            if (inFrontmatter) {
+              const colonIndex = line.indexOf(':');
+              if (colonIndex > -1) {
+                const key = line.substring(0, colonIndex).trim();
+                const value = line.substring(colonIndex + 1).trim();
+                frontmatterData[key] = value;
+              }
+            } else {
+              textLines.push(line);
+            }
+          }
+          
+          aboutData.title = frontmatterData.title || '';
+          aboutData.text = formatText(textLines.join('\n').trim()) || '';
+        }
+      } catch (error) {
+        console.log('About nicht gefunden');
+      }
+    }
+    
+    // Lade und zeige Stats
+    async function loadAndShowStats() {
+      const loadingDiv = document.querySelector('.loading');
+      
+      try {
+        const response = await fetch(STATS_FILE);
+        
+        if (response.ok) {
+          const content = await response.text();
+          const lines = content.split('\n');
+          let inFrontmatter = false;
+          let data = {};
+          
+          for (const line of lines) {
+            if (line.trim() === '---') {
+              inFrontmatter = !inFrontmatter;
+              continue;
+            }
+            if (inFrontmatter) {
+              const colonIndex = line.indexOf(':');
+              if (colonIndex > -1) {
+                const key = line.substring(0, colonIndex).trim();
+                const value = line.substring(colonIndex + 1).trim();
+                data[key] = isNaN(value) ? value : parseFloat(value);
+              }
+            }
+          }
+          
+          // Jahre aus year_range generieren (z.B. "2021 – 2025")
+          if (data.year_range) {
+            const match = data.year_range.match(/(\d{4})\s*[–-]\s*(\d{4})/);
+            if (match) {
+              const startYear = parseInt(match[1]);
+              const endYear = parseInt(match[2]);
+              for (let y = endYear; y >= startYear; y--) {
+                YEARS.push(y);
+              }
+            }
+          }
+          
+          const messages = [
+            'Lädt Einträge...',
+            data.year_range,
+            `${data.total_days} Tage`,
+            `${data.total_apples} Äpfel`,
+            `${data.total_bananas} Bananen`,
+            `${data.total_coffee} Kaffees`
+          ];
+          
+          for (let i = 0; i < messages.length; i++) {
+            loadingDiv.innerHTML = `<div class="loading-item">${messages[i]}</div>`;
+            const delay = i === 0 ? 1000 : 600;
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
+        }
+      } catch (error) {
+        console.log('Stats nicht gefunden');
+      }
+      
+      await new Promise(resolve => setTimeout(resolve, 200));
+    }
+    
+    // Scroll zu aktivem Eintrag
+    function scrollToActiveEntry() {
+      isJumping = true;
+      
+      setTimeout(() => {
+        const activeEntry = document.querySelector('.entry.active');
+        if (activeEntry) {
+          const rect = activeEntry.getBoundingClientRect();
+          const entryTop = window.scrollY + rect.top;
+          const viewportHeight = window.innerHeight;
+          const entryHeight = activeEntry.offsetHeight;
+          
+          window.scrollTo({
+            top: entryTop - (viewportHeight / 2) + (entryHeight / 2),
+            behavior: 'smooth'
+          });
+        }
+        
+        // isJumping länger aktiv lassen um Scroll-Listener zu blockieren
+        setTimeout(() => {
+          isJumping = false;
+        }, 1200);
+      }, 100);
+    }
+    
+    // Pfeiltasten-Navigation
+    function attachKeyboardNavigation() {
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          
+          if (e.key === 'ArrowDown' && activeEntryIndex < allEntries.length - 1) {
+            activeEntryIndex++;
+          } else if (e.key === 'ArrowUp' && activeEntryIndex > 0) {
+            activeEntryIndex--;
+          }
+          
+          // Flag setzen um Scroll-Listener zu blockieren
+          isJumping = true;
+          
+          updateActiveEntryUI();
+          
+          // Direkter Scroll
+          const entries = document.querySelectorAll('.entry');
+          const activeEntry = entries[activeEntryIndex];
+          if (activeEntry) {
+            const rect = activeEntry.getBoundingClientRect();
+            const entryTop = window.scrollY + rect.top;
+            const viewportHeight = window.innerHeight;
+            const entryHeight = activeEntry.offsetHeight;
+            
+            window.scrollTo({
+              top: entryTop - (viewportHeight / 2) + (entryHeight / 2),
+              behavior: 'smooth'
+            });
+          }
+          
+          // Flag nach kurzem Delay zurücksetzen
+          setTimeout(() => {
+            isJumping = false;
+          }, 300);
+        }
+      });
+    }
+    
+    init();
+  </script>
+</body>
+</html>
