@@ -745,13 +745,13 @@
       /* Blur-Effekt auf Feed wenn Nav offen */
       .right-side {
         will-change: filter;
-        transform: translateZ(0); /* Hardware-Beschleunigung */
+        transform: translateZ(0);
         transition: filter 0.35s ease;
       }
       
       body.mobile-nav-open .right-side,
       body.mobile-nav-open .fade-bottom {
-        filter: blur(5px) brightness(1.0) contrast(1.1);
+        filter: blur(6px) brightness(1.05) contrast(0.9);
       }
       
       /* Im About-Bereich oder beim letzten Eintrag: Fade und Toggle ausblenden */
@@ -1718,6 +1718,7 @@
         // Hover nur auf Geräten mit Maus
         if (hasHover) {
           el.addEventListener('mouseenter', (e) => {
+            if (isJumping) return; // Nicht während Jump
             e.stopPropagation();
             if (hoverTimeout) clearTimeout(hoverTimeout);
             consumptionMode = 'year';
@@ -1734,8 +1735,8 @@
           });
           
           el.addEventListener('mouseleave', () => {
+            if (isJumping) return; // Nicht während Jump
             hoverTimeout = setTimeout(() => {
-              // Im About-Bereich zurück auf 'all', sonst 'day'
               consumptionMode = isInAboutSection ? 'all' : 'day';
               updateConsumption();
             }, 50);
@@ -1745,15 +1746,63 @@
         el.addEventListener('click', () => {
           const year = parseInt(el.dataset.year);
           
-          // Sofort Klassen setzen (wie bei Mobile)
-          document.querySelectorAll('.year-item:not(.index-item)').forEach(y => y.classList.remove('active'));
+          // === MOBILE-PATTERN: Alles selbst machen ===
+          isJumping = true;
+          
+          // 1. About-Status zurücksetzen
+          if (isInAboutSection) {
+            isInAboutSection = false;
+            document.body.classList.remove('in-about');
+          }
+          
+          // 2. Alle aktiven Klassen entfernen
+          document.querySelectorAll('.index-item.active').forEach(x => x.classList.remove('active'));
+          document.querySelectorAll('.year-item.active').forEach(x => x.classList.remove('active'));
+          document.querySelectorAll('.month-item.active').forEach(x => x.classList.remove('active'));
+          
+          // 3. Geklicktes Jahr aktiv setzen
           el.classList.add('active');
           
-          // Index deaktivieren falls aktiv
-          const indexItem = document.querySelector('.index-item');
-          if (indexItem) indexItem.classList.remove('active');
+          // 4. Monate für dieses Jahr rendern
+          const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
+                             'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+          const monthsInYear = [...new Set(
+            allEntries.filter(e => e.year === year).map(e => e.month)
+          )].sort((a, b) => a - b);
           
-          jumpToFirstDayOfYear(year);
+          const monthsContainer = document.querySelector('.months');
+          if (monthsContainer) {
+            // Ersten Eintrag des Jahres finden für aktiven Monat
+            const yearEntries = allEntries.filter(e => e.year === year);
+            const firstEntry = yearEntries[0];
+            const activeMonth = firstEntry ? firstEntry.month : monthsInYear[0];
+            
+            monthsContainer.innerHTML = monthsInYear.map((month, i) => `
+              <div class="month-item ${month === activeMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${i * 50}ms">
+                ${monthNames[month - 1]}
+              </div>
+            `).join('');
+            
+            // Event-Listener für neue Monate
+            attachMonthListeners(null);
+          }
+          lastDisplayedYear = year;
+          
+          // 5. activeEntryIndex setzen
+          const yearEntries = allEntries.filter(e => e.year === year);
+          if (yearEntries.length > 0) {
+            activeEntryIndex = allEntries.indexOf(yearEntries[0]);
+          }
+          
+          // 6. Konsum und Entries aktualisieren
+          consumptionMode = 'day';
+          updateConsumption();
+          document.querySelectorAll('.entry').forEach((entry, i) => {
+            entry.classList.toggle('active', i === activeEntryIndex);
+          });
+          
+          // 7. Scrollen
+          scrollToActiveEntry();
         });
       });
       
@@ -1773,15 +1822,17 @@
         // Hover nur auf Geräten mit Maus
         if (hasHover) {
           el.addEventListener('mouseenter', (e) => {
+            if (isJumping) return; // Nicht während Jump
             e.stopPropagation();
             if (hoverTimeout) clearTimeout(hoverTimeout);
             consumptionMode = 'month';
             
             // Temporarily set active month for calculation
             const hoveredMonth = parseInt(el.dataset.month);
-            const activeEntry = allEntries[activeEntryIndex];
+            const activeYearEl = document.querySelector('.year-item.active:not(.index-item)');
+            const year = activeYearEl ? parseInt(activeYearEl.dataset.year) : allEntries[activeEntryIndex].year;
             const tempActiveEntry = allEntries.find(e => 
-              e.year === activeEntry.year && e.month === hoveredMonth
+              e.year === year && e.month === hoveredMonth
             );
             if (tempActiveEntry) {
               const tempIndex = activeEntryIndex;
@@ -1792,8 +1843,8 @@
           });
           
           el.addEventListener('mouseleave', () => {
+            if (isJumping) return; // Nicht während Jump
             hoverTimeout = setTimeout(() => {
-              // Im About-Bereich zurück auf 'all', sonst 'day'
               consumptionMode = isInAboutSection ? 'all' : 'day';
               updateConsumption();
             }, 50);
@@ -1803,43 +1854,61 @@
         el.addEventListener('click', () => {
           const month = parseInt(el.dataset.month);
           
-          // Jahr bestimmen: Aktives Jahr-Element oder fallback auf neuestes Jahr
+          // Jahr bestimmen: Aktives Jahr-Element oder neuestes Jahr mit diesem Monat
           const activeYearEl = document.querySelector('.year-item.active:not(.index-item)');
           let year;
           if (activeYearEl) {
             year = parseInt(activeYearEl.dataset.year);
-          } else if (isInAboutSection) {
-            // Im Info-Bereich: Neuestes Jahr mit diesem Monat finden
+          } else {
+            // Kein Jahr aktiv (z.B. im Info-Bereich): Neuestes Jahr mit diesem Monat
             const yearsWithMonth = allEntries.filter(e => e.month === month).map(e => e.year);
             year = Math.max(...yearsWithMonth);
-          } else {
-            year = allEntries[activeEntryIndex].year;
           }
           
-          // Index deaktivieren falls aktiv
-          const indexItem = document.querySelector('.index-item');
-          if (indexItem) indexItem.classList.remove('active');
+          // === MOBILE-PATTERN: Alles selbst machen ===
+          isJumping = true;
           
-          // Sofort Klassen setzen (wie bei Mobile)
-          document.querySelectorAll('.month-item').forEach(m => m.classList.remove('active'));
-          el.classList.add('active');
+          // 1. About-Status zurücksetzen
+          if (isInAboutSection) {
+            isInAboutSection = false;
+            document.body.classList.remove('in-about');
+          }
           
-          // Jahr auch aktiv setzen falls nicht schon
+          // 2. Alle aktiven Klassen entfernen
+          document.querySelectorAll('.index-item.active').forEach(x => x.classList.remove('active'));
+          document.querySelectorAll('.month-item.active').forEach(x => x.classList.remove('active'));
+          
+          // 3. Jahr aktiv setzen (falls nicht schon)
           if (!activeYearEl || parseInt(activeYearEl.dataset.year) !== year) {
-            document.querySelectorAll('.year-item:not(.index-item)').forEach(y => y.classList.remove('active'));
+            document.querySelectorAll('.year-item.active').forEach(x => x.classList.remove('active'));
             const yearEl = document.querySelector(`.year-item[data-year="${year}"]`);
             if (yearEl) yearEl.classList.add('active');
           }
           
-          jumpToFirstDayOfMonth(year, month);
+          // 4. Geklickten Monat aktiv setzen
+          el.classList.add('active');
+          
+          // 5. activeEntryIndex setzen
+          const monthEntries = allEntries.filter(e => e.year === year && e.month === month);
+          if (monthEntries.length > 0) {
+            activeEntryIndex = allEntries.indexOf(monthEntries[0]);
+          }
+          
+          // 6. Konsum und Entries aktualisieren
+          consumptionMode = 'day';
+          updateConsumption();
+          document.querySelectorAll('.entry').forEach((entry, i) => {
+            entry.classList.toggle('active', i === activeEntryIndex);
+          });
+          
+          // 7. Scrollen
+          scrollToActiveEntry();
         });
       });
     }
     
     // Spring zum ersten Tag des Jahres (ältester Tag)
     function jumpToFirstDayOfYear(year) {
-      isJumping = true; // Sofort setzen um Scroll-Listener zu blockieren
-      
       const yearEntries = allEntries.filter(e => e.year === year);
       if (yearEntries.length > 0) {
         // About-Status zurücksetzen
@@ -1851,30 +1920,17 @@
           const mobileNavIndexItem = document.querySelector('.mobile-header-index');
           if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
           consumptionMode = 'day';
-          
-          // Alle aktiven Klassen entfernen bevor neue gesetzt werden
-          document.querySelectorAll('.year-item.active').forEach(el => el.classList.remove('active'));
-          document.querySelectorAll('.month-item.active').forEach(el => el.classList.remove('active'));
-          document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
         }
 
         const firstEntry = yearEntries[0]; // Erster = ältester wegen Sort
         activeEntryIndex = allEntries.indexOf(firstEntry);
-        
-        // lastDisplayedYear zurücksetzen um Monate neu zu rendern
-        lastDisplayedYear = null;
-        
         updateActiveEntryUI();
         scrollToActiveEntry();
-      } else {
-        isJumping = false; // Zurücksetzen falls keine Einträge
       }
     }
     
     // Spring zum ersten Tag des Monats (ältester Tag)
     function jumpToFirstDayOfMonth(year, month) {
-      isJumping = true; // Sofort setzen
-      
       const monthEntries = allEntries.filter(e =>
         e.year === year && e.month === month
       );
@@ -1888,22 +1944,12 @@
           const mobileNavIndexItem = document.querySelector('.mobile-header-index');
           if (mobileNavIndexItem) mobileNavIndexItem.classList.remove('active');
           consumptionMode = 'day';
-          
-          // Alle aktiven Klassen entfernen
-          document.querySelectorAll('.year-item.active').forEach(el => el.classList.remove('active'));
-          document.querySelectorAll('.month-item.active').forEach(el => el.classList.remove('active'));
-          document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
-          
-          // lastDisplayedYear zurücksetzen
-          lastDisplayedYear = null;
         }
 
         const firstEntry = monthEntries[0]; // Erster = ältester wegen Sort
         activeEntryIndex = allEntries.indexOf(firstEntry);
         updateActiveEntryUI();
         scrollToActiveEntry();
-      } else {
-        isJumping = false;
       }
     }
 
@@ -2011,8 +2057,18 @@
       
       const activeEntry = allEntries[activeEntryIndex];
       
-      // Prüfe ob Jahr gewechselt hat oder lastDisplayedYear null ist (nach Info-Bereich)
-      if (lastDisplayedYear === null || lastDisplayedYear !== activeEntry.year) {
+      // Während isJumping: Nur Entries aktualisieren, nicht Jahre/Monate
+      // Die Click-Handler setzen diese bereits selbst
+      if (isJumping) {
+        // Nur Mobile Header und andere UI-Updates
+        updateMobileHeader();
+        const isLastEntry = activeEntryIndex === allEntries.length - 1;
+        document.body.classList.toggle('at-last-entry', isLastEntry);
+        return;
+      }
+      
+      // Prüfe ob Jahr gewechselt hat (nur beim Scrollen, nicht beim Click)
+      if (lastDisplayedYear !== null && lastDisplayedYear !== activeEntry.year) {
         // Monate neu rendern mit Animation
         const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
                            'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
@@ -2034,22 +2090,11 @@
       }
       lastDisplayedYear = activeEntry.year;
       
-      // Jahre: nur ändern wenn nötig (verhindert Flackern)
-      document.querySelectorAll('.year-item:not(.index-item)').forEach(el => {
-        const shouldBeActive = parseInt(el.dataset.year) === activeEntry.year;
-        const isActive = el.classList.contains('active');
-        if (shouldBeActive !== isActive) {
-          el.classList.toggle('active', shouldBeActive);
-        }
+      document.querySelectorAll('.year-item').forEach(el => {
+        el.classList.toggle('active', parseInt(el.dataset.year) === activeEntry.year);
       });
-      
-      // Monate: nur ändern wenn nötig (verhindert Flackern)
       document.querySelectorAll('.month-item').forEach(el => {
-        const shouldBeActive = parseInt(el.dataset.month) === activeEntry.month;
-        const isActive = el.classList.contains('active');
-        if (shouldBeActive !== isActive) {
-          el.classList.toggle('active', shouldBeActive);
-        }
+        el.classList.toggle('active', parseInt(el.dataset.month) === activeEntry.month);
       });
       
       // Update consumption when switching days
@@ -2218,11 +2263,15 @@
             top: entryTop - (viewportHeight / 2) + (entryHeight / 2),
             behavior: 'smooth'
           });
+          
+          // Manuell Scroll-Event triggern für Opacity-Update
+          window.dispatchEvent(new Event('scroll'));
         }
         
-        // isJumping länger aktiv lassen um Scroll-Listener zu blockieren
         setTimeout(() => {
           isJumping = false;
+          // Nochmal triggern nach isJumping = false
+          window.dispatchEvent(new Event('scroll'));
         }, 1200);
       }, 100);
     }
