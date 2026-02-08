@@ -1755,10 +1755,10 @@
             document.body.classList.remove('in-about');
           }
           
-          // 2. Alle aktiven Klassen entfernen
-          document.querySelectorAll('.index-item.active').forEach(x => x.classList.remove('active'));
-          document.querySelectorAll('.year-item.active').forEach(x => x.classList.remove('active'));
-          document.querySelectorAll('.month-item.active').forEach(x => x.classList.remove('active'));
+          // 2. Alle aktiven Klassen entfernen (ALLE durchgehen, nicht nur .active)
+          document.querySelectorAll('.index-item').forEach(x => x.classList.remove('active'));
+          document.querySelectorAll('.year-item').forEach(x => x.classList.remove('active'));
+          document.querySelectorAll('.month-item').forEach(x => x.classList.remove('active'));
           
           // 3. Geklicktes Jahr aktiv setzen
           el.classList.add('active');
@@ -1874,16 +1874,14 @@
             document.body.classList.remove('in-about');
           }
           
-          // 2. Alle aktiven Klassen entfernen
-          document.querySelectorAll('.index-item.active').forEach(x => x.classList.remove('active'));
-          document.querySelectorAll('.month-item.active').forEach(x => x.classList.remove('active'));
+          // 2. Alle aktiven Klassen entfernen (ALLE durchgehen, nicht nur .active)
+          document.querySelectorAll('.index-item').forEach(x => x.classList.remove('active'));
+          document.querySelectorAll('.year-item').forEach(x => x.classList.remove('active'));
+          document.querySelectorAll('.month-item').forEach(x => x.classList.remove('active'));
           
-          // 3. Jahr aktiv setzen (falls nicht schon)
-          if (!activeYearEl || parseInt(activeYearEl.dataset.year) !== year) {
-            document.querySelectorAll('.year-item.active').forEach(x => x.classList.remove('active'));
-            const yearEl = document.querySelector(`.year-item[data-year="${year}"]`);
-            if (yearEl) yearEl.classList.add('active');
-          }
+          // 3. Jahr aktiv setzen
+          const yearEl = document.querySelector(`.year-item[data-year="${year}"]`);
+          if (yearEl) yearEl.classList.add('active');
           
           // 4. Geklickten Monat aktiv setzen
           el.classList.add('active');
@@ -2263,15 +2261,11 @@
             top: entryTop - (viewportHeight / 2) + (entryHeight / 2),
             behavior: 'smooth'
           });
-          
-          // Manuell Scroll-Event triggern für Opacity-Update
-          window.dispatchEvent(new Event('scroll'));
         }
         
+        // isJumping länger aktiv lassen um Scroll-Listener zu blockieren
         setTimeout(() => {
           isJumping = false;
-          // Nochmal triggern nach isJumping = false
-          window.dispatchEvent(new Event('scroll'));
         }, 1200);
       }, 100);
     }
