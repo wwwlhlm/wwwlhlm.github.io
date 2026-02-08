@@ -1718,7 +1718,6 @@
         // Hover nur auf Geräten mit Maus
         if (hasHover) {
           el.addEventListener('mouseenter', (e) => {
-            if (isJumping) return; // Nicht während Jump
             e.stopPropagation();
             if (hoverTimeout) clearTimeout(hoverTimeout);
             consumptionMode = 'year';
@@ -1735,7 +1734,6 @@
           });
           
           el.addEventListener('mouseleave', () => {
-            if (isJumping) return; // Nicht während Jump
             hoverTimeout = setTimeout(() => {
               consumptionMode = isInAboutSection ? 'all' : 'day';
               updateConsumption();
@@ -1822,7 +1820,6 @@
         // Hover nur auf Geräten mit Maus
         if (hasHover) {
           el.addEventListener('mouseenter', (e) => {
-            if (isJumping) return; // Nicht während Jump
             e.stopPropagation();
             if (hoverTimeout) clearTimeout(hoverTimeout);
             consumptionMode = 'month';
@@ -1843,7 +1840,6 @@
           });
           
           el.addEventListener('mouseleave', () => {
-            if (isJumping) return; // Nicht während Jump
             hoverTimeout = setTimeout(() => {
               consumptionMode = isInAboutSection ? 'all' : 'day';
               updateConsumption();
