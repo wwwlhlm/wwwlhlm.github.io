@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>A–B–K</title>
   
   <!-- Open Graph / Social Media Preview -->
@@ -396,11 +396,17 @@
     
     /* Mobile */
     @media (max-width: 768px) {
+      html {
+        overflow-x: hidden;
+        overscroll-behavior: none;
+      }
+      
       body {
         font-size: 24px;
         line-height: 26px;
         min-height: 100vh;
         overflow-x: hidden;
+        overscroll-behavior: none;
       }
       
       .container {
@@ -430,6 +436,7 @@
       .mobile-panel-content {
         background: var(--bg);
         padding: 20px;
+        padding-top: max(20px, env(safe-area-inset-top));
         /* Hier können später weitere Effekte hinzugefügt werden:
            backdrop-filter: blur(10px);
            border-radius: 0 0 20px 20px;
