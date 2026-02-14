@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A–B–K</title>
   
   <!-- Open Graph / Social Media Preview -->
@@ -396,14 +396,11 @@
     
     /* Mobile */
     @media (max-width: 768px) {
-      html, body {
-        overflow-x: hidden;
-      }
-      
       body {
         font-size: 24px;
         line-height: 26px;
         min-height: 100vh;
+        overflow-x: hidden;
       }
       
       .container {
@@ -433,7 +430,6 @@
       .mobile-panel-content {
         background: var(--bg);
         padding: 20px;
-        padding-top: max(20px, env(safe-area-inset-top));
         /* Hier können später weitere Effekte hinzugefügt werden:
            backdrop-filter: blur(10px);
            border-radius: 0 0 20px 20px;
@@ -1739,6 +1735,7 @@
           
           el.addEventListener('mouseleave', () => {
             hoverTimeout = setTimeout(() => {
+              // Im About-Bereich zurück auf 'all', sonst 'day'
               consumptionMode = isInAboutSection ? 'all' : 'day';
               updateConsumption();
             }, 50);
@@ -1757,7 +1754,7 @@
             document.body.classList.remove('in-about');
           }
           
-          // 2. Alle aktiven Klassen entfernen (ALLE durchgehen, nicht nur .active)
+          // 2. Alle aktiven Klassen entfernen (ALLE durchgehen)
           document.querySelectorAll('.index-item').forEach(x => x.classList.remove('active'));
           document.querySelectorAll('.year-item').forEach(x => x.classList.remove('active'));
           document.querySelectorAll('.month-item').forEach(x => x.classList.remove('active'));
@@ -1845,6 +1842,7 @@
           
           el.addEventListener('mouseleave', () => {
             hoverTimeout = setTimeout(() => {
+              // Im About-Bereich zurück auf 'all', sonst 'day'
               consumptionMode = isInAboutSection ? 'all' : 'day';
               updateConsumption();
             }, 50);
@@ -1874,7 +1872,7 @@
             document.body.classList.remove('in-about');
           }
           
-          // 2. Alle aktiven Klassen entfernen (ALLE durchgehen, nicht nur .active)
+          // 2. Alle aktiven Klassen entfernen (ALLE durchgehen)
           document.querySelectorAll('.index-item').forEach(x => x.classList.remove('active'));
           document.querySelectorAll('.year-item').forEach(x => x.classList.remove('active'));
           document.querySelectorAll('.month-item').forEach(x => x.classList.remove('active'));
