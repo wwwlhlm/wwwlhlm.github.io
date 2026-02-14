@@ -2209,15 +2209,12 @@
             }
           }
           
-          // Jahre aus year_range generieren (z.B. "2021 – 2025")
-          if (data.year_range) {
-            const match = data.year_range.match(/(\d{4})\s*[–-]\s*(\d{4})/);
-            if (match) {
-              const startYear = parseInt(match[1]);
-              const endYear = parseInt(match[2]);
-              for (let y = endYear; y >= startYear; y--) {
-                YEARS.push(y);
-              }
+          // Jahre aus year_first und year_last generieren
+          if (data.year_first && data.year_last) {
+            const startYear = parseInt(data.year_first);
+            const endYear = parseInt(data.year_last);
+            for (let y = endYear; y >= startYear; y--) {
+              YEARS.push(y);
             }
           }
           
