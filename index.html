@@ -115,12 +115,12 @@
     
     .year-item, .month-item {
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.2s ease-in;
       color: var(--text);
       padding-left: 28px;
       margin-left: -28px;
       opacity: 0;
-      animation: fadeInItem 0.3s ease forwards;
+      animation: fadeInItem 0.3s ease-in forwards;
     }
     
     @keyframes fadeInItem {
@@ -288,7 +288,7 @@
 
     .entry-header {
       display: flex;
-      gap: 24px;
+      gap: 28px;
     }
     
     .entry-number {
@@ -317,113 +317,31 @@
       font-style: italic;
     }
     
-    /* Loading Screen */
-    .loading-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 100vh;
-      height: 100dvh;
-      padding: 24px;
-      background: var(--bg);
-      z-index: 1000;
-      font-size: 84px;
-      line-height: 80px;
-      letter-spacing: -0.02em;
-    }
-    
-    .loading-container.hidden {
-      display: none;
-    }
-    
-    .loading-line {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      opacity: 0;
-      transition: opacity 0.2s ease-in, transform 0.2s ease-in, color 0.2s ease-in;
-      position: relative;
-    }
-    
-    .loading-line.visible {
-      opacity: 1;
-    }
-    
-    .loading-left {
-      text-align: left;
-    }
-    
-    .loading-center-start {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    
-    .loading-center-between {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .loading-right {
-      text-align: right;
-    }
-    
-    .loading-value {
-      color: var(--active);
-      font-variant-numeric: tabular-nums;
-      font-feature-settings: "tnum" 1;
-      display: inline-flex;
-    }
-    
-    .loading-value .digit {
-      display: inline-block;
-      max-width: 0;
-      opacity: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      transition: max-width 0.1s ease-out, opacity 0.1s ease-out;
-    }
-    
-    .loading-value .digit.visible {
-      max-width: 1em;
-      opacity: 1;
-    }
-    
-    .loading-line-1 {
-      position: absolute;
-      top: 24px;
-      left: 24px;
-      right: 24px;
-    }
-    
-    .loading-bottom-block {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
-      right: 24px;
+    .loading {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: var(--active);
+      gap: 8px;
     }
     
-    @media (max-width: 768px) {
-      .loading-container {
-        font-size: 48px;
-        line-height: 44px;
-        padding: 16px;
-      }
-      
-      .loading-line-1 {
-        top: 16px;
-        left: 16px;
-        right: 16px;
-      }
-      
-      .loading-bottom-block {
-        bottom: 16px;
-        left: 16px;
-        right: 16px;
+    .loading-item {
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+    }
+    
+    .loading-item:nth-child(1) { animation-delay: 0s; }
+    .loading-item:nth-child(2) { animation-delay: 0.3s; }
+    .loading-item:nth-child(3) { animation-delay: 0.6s; }
+    .loading-item:nth-child(4) { animation-delay: 0.9s; }
+    .loading-item:nth-child(5) { animation-delay: 1.2s; }
+    .loading-item:nth-child(6) { animation-delay: 1.5s; }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
       }
     }
     
@@ -622,7 +540,7 @@
         color: var(--text);
         cursor: pointer;
         display: none;
-        transition: color 0.2s ease, transform 0.2s ease;
+        transition: color 0.2s ease-in, transform 0.2s ease-in;
         padding-left: 20px;
         margin-left: -20px;
       }
@@ -714,14 +632,14 @@
       .mobile-nav-item {
         color: var(--text);
         cursor: pointer;
-        transition: color 0.2s ease, transform 0.2s ease;
+        transition: color 0.2s ease-in, transform 0.2s ease-in;
         padding-left: 20px;
         margin-left: -20px;
         opacity: 0;
       }
       
       .mobile-panel.open .mobile-nav-item {
-        animation: fadeInItem 0.3s ease forwards;
+        animation: fadeInItem 0.3s ease-in forwards;
       }
       
       .mobile-nav-year {
@@ -867,46 +785,8 @@
 </head>
 <body>
   <div class="theme-toggle hidden" onclick="toggleTheme()"></div>
-  
-  <div class="loading-container" id="loading-screen">
-    <div class="loading-line loading-line-1">
-      <span class="loading-left">Inhalte</span>
-      <span class="loading-right">laden</span>
-    </div>
-    
-    <div class="loading-bottom-block">
-      <div class="loading-line loading-line-2">
-        <span class="loading-left loading-value" data-key="year_first">0</span>
-        <span class="loading-center-start">bis</span>
-        <span class="loading-right loading-value" data-key="year_last">0</span>
-      </div>
-      
-      <div class="loading-line loading-line-3">
-        <span class="loading-left">Tage</span>
-        <span class="loading-right loading-value" data-key="total_days">0</span>
-      </div>
-      
-      <div class="loading-line loading-line-4">
-        <span class="loading-left">Äpfel</span>
-        <span class="loading-right loading-value" data-key="total_apples">0</span>
-      </div>
-      
-      <div class="loading-line loading-line-5">
-        <span class="loading-left">Bananen</span>
-        <span class="loading-right loading-value" data-key="total_bananas">0</span>
-      </div>
-      
-      <div class="loading-line loading-line-6">
-        <span class="loading-left">Kaffees</span>
-        <span class="loading-right loading-value" data-key="total_coffee">0</span>
-      </div>
-      
-      <div class="loading-line loading-line-7">
-        <span class="loading-left">Alles</span>
-        <span class="loading-center-between">in</span>
-        <span class="loading-right">Ordnung</span>
-      </div>
-    </div>
+  <div class="loading">
+    <div class="loading-item">Lädt Einträge...</div>
   </div>
 
   <script>
@@ -2261,9 +2141,7 @@
         // Initial mobile header updaten
         updateMobileHeader();
       } else {
-        const loadingScreen = document.getElementById('loading-screen');
-        if (loadingScreen) loadingScreen.classList.add('hidden');
-        document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;color:var(--active);">Keine Einträge gefunden.</div>';
+        document.body.innerHTML = '<div class="loading">Keine Einträge gefunden.</div>';
       }
     }
     
@@ -2303,10 +2181,9 @@
       }
     }
     
-    // Lade und zeige Stats mit Animation
+    // Lade und zeige Stats
     async function loadAndShowStats() {
-      const loadingContainer = document.getElementById('loading-screen');
-      let statsData = {};
+      const loadingDiv = document.querySelector('.loading');
       
       try {
         const response = await fetch(STATS_FILE);
@@ -2315,6 +2192,7 @@
           const content = await response.text();
           const lines = content.split('\n');
           let inFrontmatter = false;
+          let data = {};
           
           for (const line of lines) {
             if (line.trim() === '---') {
@@ -2326,154 +2204,40 @@
               if (colonIndex > -1) {
                 const key = line.substring(0, colonIndex).trim();
                 const value = line.substring(colonIndex + 1).trim();
-                statsData[key] = isNaN(value) ? value : parseFloat(value);
+                data[key] = isNaN(value) ? value : parseFloat(value);
               }
             }
           }
           
           // Jahre aus year_first und year_last generieren
-          if (statsData.year_first && statsData.year_last) {
-            const startYear = parseInt(statsData.year_first);
-            const endYear = parseInt(statsData.year_last);
+          if (data.year_first && data.year_last) {
+            const startYear = parseInt(data.year_first);
+            const endYear = parseInt(data.year_last);
             for (let y = endYear; y >= startYear; y--) {
               YEARS.push(y);
             }
+          }
+          
+          const messages = [
+            'Lädt Einträge...',
+            `${data.year_first} – ${data.year_last}`,
+            `${data.total_days} Tage`,
+            `${data.total_apples} Äpfel`,
+            `${data.total_bananas} Bananen`,
+            `${data.total_coffee} Kaffees`
+          ];
+          
+          for (let i = 0; i < messages.length; i++) {
+            loadingDiv.innerHTML = `<div class="loading-item">${messages[i]}</div>`;
+            const delay = i === 0 ? 1000 : 600;
+            await new Promise(resolve => setTimeout(resolve, delay));
           }
         }
       } catch (error) {
         console.log('Stats nicht gefunden');
       }
       
-      // Animation ausführen
-      await runLoadingAnimation(statsData);
-      
-      // Loading-Screen ausblenden
-      if (loadingContainer) {
-        loadingContainer.classList.add('hidden');
-      }
-    }
-    
-    // Ziffern-Animation: Zeigt jede Ziffer nacheinander
-    function animateValue(element, targetValue) {
-      const valueStr = targetValue.toString();
-      element.innerHTML = '';
-      
-      for (let i = 0; i < valueStr.length; i++) {
-        const digitSpan = document.createElement('span');
-        digitSpan.className = 'digit';
-        digitSpan.textContent = valueStr[i];
-        element.appendChild(digitSpan);
-      }
-      
-      const digits = element.querySelectorAll('.digit');
-      digits.forEach((digit, index) => {
-        setTimeout(() => {
-          digit.classList.add('visible');
-        }, index * 100);
-      });
-    }
-    
-    // Berechne Transform-Werte für Zeilen-Bewegung
-    function calculateLoadingTransforms() {
-      const line1 = document.querySelector('.loading-line-1');
-      const lines = [2, 3, 4, 5, 6].map(n => document.querySelector(`.loading-line-${n}`));
-      const lineHeight = parseFloat(getComputedStyle(document.querySelector('.loading-container')).lineHeight);
-      
-      const line1Rect = line1.getBoundingClientRect();
-      const line1Bottom = line1Rect.bottom;
-      
-      const transforms = {};
-      
-      lines.forEach((line, index) => {
-        const lineNum = index + 2;
-        const lineRect = line.getBoundingClientRect();
-        const currentTop = lineRect.top;
-        const targetTop = line1Bottom + (index * lineHeight);
-        transforms[lineNum] = targetTop - currentTop;
-      });
-      
-      return transforms;
-    }
-    
-    // Haupt-Loading-Animation
-    async function runLoadingAnimation(statsData) {
-      const lines = {
-        1: document.querySelector('.loading-line-1'),
-        2: document.querySelector('.loading-line-2'),
-        3: document.querySelector('.loading-line-3'),
-        4: document.querySelector('.loading-line-4'),
-        5: document.querySelector('.loading-line-5'),
-        6: document.querySelector('.loading-line-6'),
-        7: document.querySelector('.loading-line-7')
-      };
-      
-      const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-      
-      // Kurze Verzögerung für Font-Loading
-      await delay(150);
-      
-      // Phase 1: Zeilen erscheinen (Reihenfolge: 1, 7, 6, 5, 4, 3, 2)
-      const fadeOrder = [1, 7, 6, 5, 4, 3, 2];
-      
-      for (const lineNum of fadeOrder) {
-        lines[lineNum].classList.add('visible');
-        await delay(125);
-      }
-      
-      await delay(250);
-      
-      // Berechne Transform-Werte
-      const transforms = calculateLoadingTransforms();
-      
-      // Phase 2: Zeilen 2-6 nach oben bewegen mit Zahlen-Animation
-      const moveOrder = [2, 3, 4, 5, 6];
-      const valueMapping = {
-        2: ['year_first', 'year_last'],
-        3: ['total_days'],
-        4: ['total_apples'],
-        5: ['total_bananas'],
-        6: ['total_coffee']
-      };
-      
-      for (const lineNum of moveOrder) {
-        lines[lineNum].style.transform = `translateY(${transforms[lineNum]}px)`;
-        
-        const valueElements = lines[lineNum].querySelectorAll('.loading-value');
-        const keys = valueMapping[lineNum];
-        
-        valueElements.forEach((el, index) => {
-          const key = keys[index];
-          if (key && statsData[key] !== undefined) {
-            animateValue(el, statsData[key]);
-          }
-        });
-        
-        // Bei Zeile 6: Farbwechsel für Zeile 7
-        if (lineNum === 6) {
-          setTimeout(() => {
-            lines[7].style.color = 'var(--active)';
-          }, 100);
-        }
-        
-        await delay(400);
-      }
-      
-      await delay(800);
-      
-      // Phase 3: Zeilen 6 bis 1 ausblenden
-      const fadeOutOrder = [6, 5, 4, 3, 2, 1];
-      
-      for (const lineNum of fadeOutOrder) {
-        lines[lineNum].style.opacity = '0';
-        await delay(125);
-      }
-      
-      await delay(800);
-      
-      // Zeile 7 ausblenden
-      lines[7].style.opacity = '0';
-      
-      await delay(300);
+      await new Promise(resolve => setTimeout(resolve, 200));
     }
     
     // Scroll zu aktivem Eintrag
