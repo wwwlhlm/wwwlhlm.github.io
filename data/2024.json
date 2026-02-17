@@ -3053,8 +3053,8 @@
     {
       "date": "2024-11-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
@@ -3063,9 +3063,9 @@
     {
       "date": "2024-11-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Ganz in Grau."
@@ -3073,9 +3073,9 @@
     {
       "date": "2024-11-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 101.24,
       "weekday_index": 0,
       "text": "Mehr «B» steckt nicht im Zürcher Oberland."
@@ -3083,9 +3083,9 @@
     {
       "date": "2024-11-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Am falschen Ort, zur richtigen Zeit."
@@ -3093,9 +3093,9 @@
     {
       "date": "2024-11-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Wer ist hier der Guru?"
@@ -3103,9 +3103,9 @@
     {
       "date": "2024-11-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 50.98,
       "weekday_index": 3,
       "text": "Hohe Kadenz, nicht mein Ding. / Das Herz schlägt schneller als der MR-Tomograph trommelt."
@@ -3113,9 +3113,9 @@
     {
       "date": "2024-11-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Die Lasten der Welt."
@@ -3123,9 +3123,9 @@
     {
       "date": "2024-11-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Wenn gestikulierende Hände mehr erzählen als die Worte die aus dem Mund kommen."
@@ -3133,8 +3133,8 @@
     {
       "date": "2024-11-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 1,
       "mood": 0,
       "cycling_km": 46.97,
       "weekday_index": 6,
@@ -3143,9 +3143,9 @@
     {
       "date": "2024-11-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Über dem Nebelmeer für die Leute von darunter."
@@ -3153,19 +3153,19 @@
     {
       "date": "2024-11-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Mehr Nebelmeer."
     },
     {
       "date": "2024-11-12",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Die Abfahrt ins graue Tal fühlt sich an wie eine drohende Vorahnung."
@@ -3173,19 +3173,19 @@
     {
       "date": "2024-11-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Pragmatisch sollen die anderen sein."
     },
     {
       "date": "2024-11-14",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Doppel-Abschluss, reif für den Abschuss."
@@ -3193,8 +3193,8 @@
     {
       "date": "2024-11-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
@@ -3203,9 +3203,9 @@
     {
       "date": "2024-11-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 54.62,
       "weekday_index": 6,
       "text": "Kalte Füsse waren nicht die Nachmittagsunterhaltung die ich suchte."
@@ -3213,9 +3213,9 @@
     {
       "date": "2024-11-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1.5,
       "cycling_km": 70,
       "weekday_index": 0,
       "text": "Das erste Mal mit der SVP stimmen, so schnell bin ich rechts abgebogen."
@@ -3223,9 +3223,9 @@
     {
       "date": "2024-11-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -3233,9 +3233,9 @@
     {
       "date": "2024-11-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Meine derzeitige Sportlerkarriere beschränkt sich aufs Layouten von Sportberichterstattung."
@@ -3243,9 +3243,9 @@
     {
       "date": "2024-11-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Lebenszeichen der Mutter, nachdem ich meines schuldig blieb."
@@ -3253,9 +3253,9 @@
     {
       "date": "2024-11-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Nicht synchron mit der Welt."
@@ -3263,9 +3263,9 @@
     {
       "date": "2024-11-22",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 2,
       "coffee": 0,
-      "mood": 0,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Im Kreis rennen mit den Rentnern, deren Trainer lächelt mir bei jeder Runde zu, als würde ich bereits dazugehören."
@@ -3273,8 +3273,8 @@
     {
       "date": "2024-11-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
@@ -3283,9 +3283,9 @@
     {
       "date": "2024-11-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 60.99,
       "weekday_index": 0,
       "text": "Regen von unten, Fahrtwind von vorn."
@@ -3293,19 +3293,19 @@
     {
       "date": "2024-11-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "[[Estella]]: <span class=\"quote\">Ich hock auf nem Ball, ich hab das Leben im Griff.</span>"
     },
     {
       "date": "2024-11-26",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "—"
@@ -3313,9 +3313,9 @@
     {
       "date": "2024-11-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 17.32,
       "weekday_index": 3,
       "text": "Da sage einer, ein kleines (Pulley-)Rädchen kann nichts grosses anrichten."
@@ -3323,8 +3323,8 @@
     {
       "date": "2024-11-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 4,
@@ -3333,8 +3333,8 @@
     {
       "date": "2024-11-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
@@ -3342,10 +3342,10 @@
     },
     {
       "date": "2024-11-30",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Crashing into you, Teil 5 (Taube mitgezählt)."
@@ -3353,19 +3353,19 @@
     {
       "date": "2024-12-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Kleine Schrammen, dicker Kopf."
     },
     {
       "date": "2024-12-02",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 2,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -3373,9 +3373,9 @@
     {
       "date": "2024-12-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Der Maronistand ist auch eine Form von Wegelagerei."
@@ -3383,19 +3383,19 @@
     {
       "date": "2024-12-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 49.13,
       "weekday_index": 3,
       "text": "Dem Team beweisen, dass ich eine Helm besitze."
     },
     {
       "date": "2024-12-05",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Therapie ist wie Abwasch für die Seele."
@@ -3403,9 +3403,9 @@
     {
       "date": "2024-12-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "«Nackt zieht immer,» sagt sie. Und ja, auch ich bin da."
@@ -3413,9 +3413,9 @@
     {
       "date": "2024-12-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "«Prashant,» sagt die Stimme am Telefon."
@@ -3423,9 +3423,9 @@
     {
       "date": "2024-12-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 62.15,
       "weekday_index": 0,
       "text": "Das Sihltal war heut besonders grau. / Sodium und Gomorrha."
@@ -3433,9 +3433,9 @@
     {
       "date": "2024-12-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Die Krankenschwester findet ich habe besonders starke Beine."
@@ -3443,8 +3443,8 @@
     {
       "date": "2024-12-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
@@ -3453,9 +3453,9 @@
     {
       "date": "2024-12-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Vielleicht wird das noch eine Brieffreundschaft, vielleicht auch nicht."
@@ -3463,9 +3463,9 @@
     {
       "date": "2024-12-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Alles knarzt."
@@ -3473,9 +3473,9 @@
     {
       "date": "2024-12-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Autoresponder für den Rest des Jahres."
@@ -3483,9 +3483,9 @@
     {
       "date": "2024-12-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "—"
@@ -3493,9 +3493,9 @@
     {
       "date": "2024-12-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "High-Noon an der Museumskasse."
@@ -3503,19 +3503,19 @@
     {
       "date": "2024-12-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
-      "text": "—"
+      "text": "Ärmelcanalegrande"
     },
     {
       "date": "2024-12-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Kunsum, Essen und ein wenig indische Geschichtsstunde."
@@ -3524,8 +3524,8 @@
       "date": "2024-12-18",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Pay to tap, pay to broke. / quick-fit"
@@ -3533,9 +3533,9 @@
     {
       "date": "2024-12-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Das Ende des Kapitalismus, zumindest bis morgen."
@@ -3544,8 +3544,8 @@
       "date": "2024-12-20",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Der Masseur meint es sei mal nötig gewesen. / Das leise lispeln der Sigourney Weaver."
@@ -3553,9 +3553,9 @@
     {
       "date": "2024-12-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Flach wie Peckham."
@@ -3563,19 +3563,19 @@
     {
       "date": "2024-12-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Schlange stehen wie damals auf Ellis Island."
     },
     {
       "date": "2024-12-23",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -3583,8 +3583,8 @@
     {
       "date": "2024-12-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
@@ -3593,9 +3593,9 @@
     {
       "date": "2024-12-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 42.18,
       "weekday_index": 3,
       "text": "Generisch ist eine Sprache für sich."
@@ -3603,9 +3603,9 @@
     {
       "date": "2024-12-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Wichteln kennt nur Verlierer."
@@ -3613,8 +3613,8 @@
     {
       "date": "2024-12-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
@@ -3623,19 +3623,19 @@
     {
       "date": "2024-12-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "Aargau, Aarau, Aaliyah"
+      "text": "Aargau, Aarau, Aaliyah. / Abramo-be-witched"
     },
     {
       "date": "2024-12-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Schlechter Biss, Grafik Orlok."
@@ -3643,9 +3643,9 @@
     {
       "date": "2024-12-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Große Erwartungen, große Enttäuschungen. / Zopf am Meter (gefühlt)."
@@ -3653,8 +3653,8 @@
     {
       "date": "2024-12-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 1,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
