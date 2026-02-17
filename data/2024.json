@@ -2743,9 +2743,9 @@
     {
       "date": "2024-10-01",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 3,
       "coffee": 0,
-      "mood": 0,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Einmal in fast alle Touristenfallen tappen und dann noch schlecht Trinkgeld geben. / «Unlimited crowd», sagt der Tourguide."
@@ -2754,8 +2754,8 @@
       "date": "2024-10-02",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 1.5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "—"
@@ -2764,7 +2764,7 @@
       "date": "2024-10-03",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
+      "coffee": 1,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 4,
@@ -2773,9 +2773,9 @@
     {
       "date": "2024-10-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "I am a walking bottled-spring-water-commercial. / Neuer Tag, neues Dal. / Was ich nicht an Großzügigkeit besitze, besitze ich an Misstrauen."
@@ -2783,9 +2783,9 @@
     {
       "date": "2024-10-05",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 1,
       "coffee": 0,
-      "mood": 0,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Auf dem Strassenstrich der Ohrenputzer. / Big camera, good picture."
@@ -2794,8 +2794,8 @@
       "date": "2024-10-06",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Hotelzimmer ohne Fenster machen mir Angst. / Was will man mir heut verkaufen? Glück! / Zimmerupgrade aus der eigenen Tasche. / An Vaters Tür klopfen ist auch schon was."
@@ -2803,9 +2803,9 @@
     {
       "date": "2024-10-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Formerly know as Prince of Wales."
@@ -2813,9 +2813,9 @@
     {
       "date": "2024-10-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 2,
+      "mood": -2,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "—"
@@ -2825,7 +2825,7 @@
       "apples": 0,
       "bananas": 0,
       "coffee": 0,
-      "mood": 0,
+      "mood": -2,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Uffuff"
@@ -2833,9 +2833,9 @@
     {
       "date": "2024-10-10",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 1,
       "coffee": 0,
-      "mood": 0,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "«Messi oder Ronaldo?», fragen die beiden indischen Kinder im Vorraum eines Tempels. «Messi», antworte ich, und sie schütteln mir zustimmend die Hand. Dann folgt das obligatorische Selfie."
@@ -2843,9 +2843,9 @@
     {
       "date": "2024-10-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 2,
+      "mood": -2,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Hier markiert der Hund noch schnell sein Revier und mein Gepäck."
@@ -2853,9 +2853,9 @@
     {
       "date": "2024-10-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "—"
@@ -2864,8 +2864,8 @@
       "date": "2024-10-13",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 0,
       "text": "Gang zum Ganges. / Ein wenig kulturelle Aneignung ‌geht immer."
@@ -2874,8 +2874,8 @@
       "date": "2024-10-14",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 1.5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Eine Zeremonie in Geduld. / Lasst die Touristen tanzen."
@@ -2884,8 +2884,8 @@
       "date": "2024-10-15",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "In Transit in die Ewigkeit."
@@ -2893,19 +2893,19 @@
     {
       "date": "2024-10-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 24.54,
       "weekday_index": 3,
       "text": "Alles so ruhig hier."
     },
     {
       "date": "2024-10-17",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 54.8,
       "weekday_index": 4,
       "text": "—"
@@ -2913,39 +2913,39 @@
     {
       "date": "2024-10-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Bodyhorror-Horror-Show"
     },
     {
       "date": "2024-10-19",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Mit dem 20er-Pack-Toilettenapier in der Fankurve."
     },
     {
       "date": "2024-10-20",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 94.79,
       "weekday_index": 0,
       "text": "Look gegen Look auf gerader Strecke."
     },
     {
       "date": "2024-10-21",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Wunder: Unterdruck"
@@ -2953,9 +2953,9 @@
     {
       "date": "2024-10-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "—"
@@ -2963,8 +2963,8 @@
     {
       "date": "2024-10-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 3,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
@@ -2973,9 +2973,9 @@
     {
       "date": "2024-10-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Mehr Biss bitte."
@@ -2983,9 +2983,9 @@
     {
       "date": "2024-10-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "[[Bill]]: <span class=\"quote\">Ist das Helene Fischer auf Englisch?</span> [[Mark]]: <span class=\"quote\">Nein, das sind die Pokemons.</span>"
@@ -2993,9 +2993,9 @@
     {
       "date": "2024-10-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Ich bin ein Skelett dessen Knochen man schon Meilenweit hört."
@@ -3003,9 +3003,9 @@
     {
       "date": "2024-10-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 128.57,
       "weekday_index": 0,
       "text": "Hin und wieder ein Happy End auf der Kinoleinwand zu sehen wäre schön."
@@ -3013,9 +3013,9 @@
     {
       "date": "2024-10-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -3023,9 +3023,9 @@
     {
       "date": "2024-10-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "So wie ich Papier bündele müsste man mir die Schweizer Staatsbürgerschaft aberkennen. / Einstimmig einstimmig entschieden."
@@ -3033,8 +3033,8 @@
     {
       "date": "2024-10-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 1,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
@@ -3043,9 +3043,9 @@
     {
       "date": "2024-10-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 35.51,
       "weekday_index": 4,
       "text": "Ligaturen-Legastheniker / Wie Wild auf freier Wildbahn, nur mit blinkendem Rücklicht."
