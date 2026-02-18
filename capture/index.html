@@ -837,6 +837,20 @@ function dpSelectDate(iso){
 }
 // ──────────────────────────────────────────────────────────────
 
+// ── Keyboard Shortcuts ────────────────────────────────────────
+document.addEventListener('keydown',e=>{
+  const tag=document.activeElement.tagName;
+  if(tag==='INPUT'||tag==='TEXTAREA') return; // don't fire while typing
+  switch(e.key){
+    case 'd': case 'D': e.preventDefault(); toggleVoice(); break;
+    case 's': case 'S': e.preventDefault(); saveFile(); break;
+    case 'ArrowLeft':   e.preventDefault(); navigateDay(-1); break;
+    case 'ArrowRight':  e.preventDefault(); navigateDay(1); break;
+    case 'k': case 'K': e.preventDefault(); toggleDatePicker(); break;
+  }
+});
+// ──────────────────────────────────────────────────────────────
+
 let toastT;
 function toast(msg,type=''){
   const el=document.getElementById('toast');
