@@ -896,6 +896,17 @@ function toggleEntryPosition(){
   }
 }
 
+async function navigateYears(delta){
+  const d=new Date(currentDate+'T12:00:00');
+  d.setFullYear(d.getFullYear()+delta);
+  await autoSave(); currentDate=d.toISOString().split('T')[0]; await loadFile(currentDate);
+}
+async function navigateMonths(delta){
+  const d=new Date(currentDate+'T12:00:00');
+  d.setMonth(d.getMonth()+delta);
+  await autoSave(); currentDate=d.toISOString().split('T')[0]; await loadFile(currentDate);
+}
+
 // ── Keyboard Shortcuts ────────────────────────────────────────
 document.addEventListener('keydown',e=>{
   const tag=document.activeElement.tagName;
@@ -903,8 +914,18 @@ document.addEventListener('keydown',e=>{
   switch(e.key){
     case 'd': case 'D': e.preventDefault(); toggleVoice(); break;
     case 's': case 'S': e.preventDefault(); autoSave(); break;
-    case 'ArrowLeft':   e.preventDefault(); navigateDay(-1); break;
-    case 'ArrowRight':  e.preventDefault(); navigateDay(1); break;
+    case 'ArrowLeft':
+      e.preventDefault();
+      if(e.shiftKey&&e.altKey) navigateMonths(-1);
+      else if(e.shiftKey) navigateYears(-1);
+      else navigateDay(-1);
+      break;
+    case 'ArrowRight':
+      e.preventDefault();
+      if(e.shiftKey&&e.altKey) navigateMonths(1);
+      else if(e.shiftKey) navigateYears(1);
+      else navigateDay(1);
+      break;
     case 'k': case 'K': e.preventDefault(); toggleDatePicker(); break;
   }
 });
