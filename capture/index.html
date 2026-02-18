@@ -477,12 +477,14 @@ function populate(raw){
   sel.countriesOrdered=list('country'); if(!sel.countriesOrdered.length) sel.countriesOrdered=['CH'];
   sel.coffeeOrdered=list('coffee_locations');
   const rawSport=list('sport');
-  sel.sport=rawSport.map(s=>{ if(s.startsWith('Velo')){ const km=s.replace(/Velo\s*/,'').replace('km','').trim(); if(km) document.getElementById('veloKm').value=km; return 'Velo'; } return s; });
+  let veloKmValue='';
+  sel.sport=rawSport.map(s=>{ if(s.startsWith('Velo')){ const km=s.replace(/Velo\s*/,'').replace('km','').trim(); if(km) veloKmValue=km; return 'Velo'; } return s; });
   sel.people=list('people');
   document.getElementById('tags').value=list('tags').join(', ');
   document.getElementById('coords').value=list('coordinates').join(', ');
   document.getElementById('entryText').value=body;
   renderAll();
+  if(veloKmValue) document.getElementById('veloKm').value=veloKmValue;
 }
 
 function resetDefaults(){
