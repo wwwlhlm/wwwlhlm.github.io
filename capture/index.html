@@ -68,10 +68,10 @@
     }
     .btn-small:hover { background:rgba(253,147,159,.2); }
     .card { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden; }
-    .card-head {
-      display:flex;align-items:center;gap:8px;
-      padding:11px 14px 10px;border-bottom:1px solid var(--border);
-    }
+    .card-head { display:flex;align-items:center;gap:8px;padding:11px 14px 10px;border-bottom:1px solid var(--border); }
+    .card-move-btns { display:flex;gap:2px;margin-left:auto; }
+    .card-move-btn { width:20px;height:20px;border:none;background:transparent;color:var(--text-3);cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;border-radius:4px;padding:0;transition:color .15s;flex-shrink:0; }
+    .card-move-btn:hover { color:var(--text); }
     .card-head svg { width:13px;height:13px;stroke:var(--text-3);fill:none;stroke-width:2;flex-shrink:0; }
     .card-head-title { font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--text-3); }
     .card-body { padding:14px; }
@@ -304,10 +304,11 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" data-card="location">
     <div class="card-head">
       <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <span class="card-head-title">Ort & Land</span>
+      
     </div>
     <div class="card-body" style="display:flex;flex-direction:column;gap:10px">
       <div class="chip-row" id="locationChips"></div>
@@ -315,20 +316,22 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" data-card="coffee">
     <div class="card-head">
       <svg viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
       <span class="card-head-title">Kaffee-Orte</span>
+      
     </div>
     <div class="card-body">
       <div class="chip-row" id="coffeeChips"></div>
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" data-card="sport">
     <div class="card-head">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
       <span class="card-head-title">Sport</span>
+      
     </div>
     <div class="card-body">
       <div class="chip-row" id="sportChips">
@@ -337,10 +340,11 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" data-card="entry">
     <div class="card-head">
       <svg viewBox="0 0 24 24"><line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/></svg>
       <span class="card-head-title">Eintrag</span>
+      <div class="card-move-btns"><button class="card-move-btn" id="entryMoveBtn" onclick="toggleEntryPosition()" title="Position wechseln">↑</button></div>
     </div>
     <div class="card-body">
       <textarea class="entry-area" id="entryText" placeholder="Tagebucheintrag..." rows="4"></textarea>
@@ -848,6 +852,24 @@ function dpSelectDate(iso){
   navigateToDate(iso);
 }
 // ──────────────────────────────────────────────────────────────
+
+function toggleEntryPosition(){
+  const page=document.querySelector('.page');
+  const cards=[...page.querySelectorAll('[data-card]')];
+  const entry=page.querySelector('[data-card="entry"]');
+  const first=cards[0];
+  const btn=document.getElementById('entryMoveBtn');
+  if(entry===first){
+    // move to end: insert after last data-card
+    const last=cards[cards.length-1];
+    last.insertAdjacentElement('afterend',entry);
+    btn.textContent='↑';
+  } else {
+    // move to top
+    page.insertBefore(entry,first);
+    btn.textContent='↓';
+  }
+}
 
 // ── Keyboard Shortcuts ────────────────────────────────────────
 document.addEventListener('keydown',e=>{
