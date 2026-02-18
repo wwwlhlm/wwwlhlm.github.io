@@ -129,7 +129,7 @@
     .chip-input { height:28px;padding:0 10px;border-radius:14px;border:1px dashed var(--border-2);background:transparent;font-size:13px;color:var(--text);outline:none;min-width:110px;transition:all .15s; }
     .chip-input:focus { border-style:solid;border-color:var(--accent); }
     .chip-input::placeholder { color:var(--text-3); }
-    .ac-dropdown { position:absolute;top:calc(100% + 4px);left:0;background:var(--surface-2);border:1px solid var(--border-2);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:100;min-width:160px;max-height:180px;overflow-y:auto;display:none; }
+    .ac-dropdown { position:fixed;background:var(--surface-2);border:1px solid var(--border-2);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:100;min-width:160px;max-height:180px;overflow-y:auto;display:none; }
     .ac-dropdown.open { display:block; }
     .ac-item { padding:8px 12px;font-size:13px;color:var(--text-2);cursor:pointer;transition:background .1s; }
     .ac-item:hover { background:var(--border);color:var(--text); }
@@ -617,6 +617,15 @@ function makeACInput(placeholder,source,onSelect){
   const wrap=document.createElement('div'); wrap.className='ac-wrap';
   const input=document.createElement('input'); input.className='chip-input'; input.placeholder=placeholder; input.setAttribute('autocomplete','off');
   const drop=document.createElement('div'); drop.className='ac-dropdown';
+  document.body.appendChild(drop); // attach to body so it's not clipped
+
+  function positionDrop(){
+    const r=input.getBoundingClientRect();
+    drop.style.top=(r.bottom+4)+'px';
+    drop.style.left=r.left+'px';
+    drop.style.minWidth=r.width+'px';
+  }
+
   input.addEventListener('input',()=>{
     const q=input.value.trim().toLowerCase();
     if(!q){ drop.classList.remove('open'); return; }
@@ -624,13 +633,14 @@ function makeACInput(placeholder,source,onSelect){
     if(!matches.length){ drop.classList.remove('open'); return; }
     drop.innerHTML=matches.map(m=>`<div class="ac-item">${m}</div>`).join('');
     drop.querySelectorAll('.ac-item').forEach((item,i)=>{ item.onclick=()=>{ onSelect(matches[i]); input.value=''; drop.classList.remove('open'); }; });
+    positionDrop();
     drop.classList.add('open');
   });
   input.addEventListener('keydown',e=>{
     if(e.key==='Enter'&&input.value.trim()){ e.preventDefault(); onSelect(input.value.trim()); input.value=''; drop.classList.remove('open'); }
     if(e.key==='Escape'){ drop.classList.remove('open'); input.value=''; }
   });
-  wrap.appendChild(input); wrap.appendChild(drop); return wrap;
+  wrap.appendChild(input); return wrap;
 }
 document.addEventListener('click',e=>{ if(!e.target.closest('.ac-wrap')) document.querySelectorAll('.ac-dropdown').forEach(d=>d.classList.remove('open')); });
 
