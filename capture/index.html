@@ -603,7 +603,7 @@ function toggleCountry(c){
 }
 function toggleCoffee(c){
   const count=sel.coffeeOrdered.filter(x=>x===c).length;
-  if(count>=5){ sel.coffeeOrdered=sel.coffeeOrdered.filter(x=>x!==c); }
+  if(count>=6){ sel.coffeeOrdered=sel.coffeeOrdered.filter(x=>x!==c); }
   else{ sel.coffeeOrdered.push(c); }
   renderCoffeeChips();
 }
