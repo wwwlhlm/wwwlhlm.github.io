@@ -273,7 +273,7 @@
           <div class="counter-label">Äpfel</div>
           <div class="counter-ctrl">
             <button class="c-btn" onclick="adj('apples',-1)">−</button>
-            <input class="c-input" type="number" id="apples" value="0" min="0" step="0.5">
+            <input class="c-input" type="number" id="apples" value="0" min="0" step="1">
             <button class="c-btn" onclick="adj('apples',1)">+</button>
           </div>
         </div>
@@ -281,7 +281,7 @@
           <div class="counter-label">Bananen</div>
           <div class="counter-ctrl">
             <button class="c-btn" onclick="adj('bananas',-1)">−</button>
-            <input class="c-input" type="number" id="bananas" value="0" min="0" step="0.5">
+            <input class="c-input" type="number" id="bananas" value="0" min="0" step="1">
             <button class="c-btn" onclick="adj('bananas',1)">+</button>
           </div>
         </div>
@@ -289,7 +289,7 @@
           <div class="counter-label">Kaffee</div>
           <div class="counter-ctrl">
             <button class="c-btn" onclick="adj('coffee',-1)">−</button>
-            <input class="c-input" type="number" id="coffee" value="0" min="0" step="0.5">
+            <input class="c-input" type="number" id="coffee" value="0" min="0" step="1">
             <button class="c-btn" onclick="adj('coffee',1)">+</button>
           </div>
         </div>
@@ -297,7 +297,7 @@
       <div class="mood-row">
         <div class="mood-val" id="moodVal">0</div>
         <div class="mood-track">
-          <input type="range" id="moodSlider" min="-2" max="2" step="0.5" value="0" oninput="setMood(this.value)">
+          <input type="range" id="moodSlider" min="-2" max="2" step="1" value="0" oninput="setMood(this.value)">
           <div class="mood-ticks"><span>−2</span><span>−1</span><span>0</span><span>+1</span><span>+2</span></div>
         </div>
       </div>
@@ -743,7 +743,7 @@ function fallbackParse(t){
   t=t.toLowerCase();
   const W={'null':0,'kein':0,'keine':0,'ein':1,'eine':1,'zwei':2,'drei':3,'vier':4,'fünf':5,'sechs':6,'sieben':7,'acht':8,'neun':9,'zehn':10};
   const num=patterns=>{
-    for(const p of patterns){ const m=t.match(p); if(m){ const r=m[1].trim(); return W[r]!==undefined?W[r]:parseFloat(r)||null; } }
+    for(const p of patterns){ const m=t.match(p); if(m){ const r=m[1].trim(); return W[r]!==undefined?W[r]:parseFloat(r.replace(',','.'))||null; } }
     return null;
   };
   let mood=null;
@@ -752,9 +752,9 @@ function fallbackParse(t){
   const mm=t.match(/stimmung\s*(minus|plus|−|-|\+)?\s*([012](?:[.,]5)?)/);
   if(mm){ const s=(mm[1]==='minus'||mm[1]==='−'||mm[1]==='-')?-1:1; mood=s*parseFloat(mm[2].replace(',','.')); }
   return{
-    apples:num([/(\w+)\s*(?:äpfel?|apfel)/,/äpfel?\s*[:\-]?\s*(\w+)/]),
-    bananas:num([/(\w+)\s*bananen?/,/bananen?\s*[:\-]?\s*(\w+)/]),
-    coffee:num([/(\w+)\s*(?:kaffee|tasse)/,/kaffee\s*[:\-]?\s*(\w+)/]),
+    apples:num([/([\w.,]+)\s*(?:äpfel?|apfel)/,/äpfel?\s*[:\-]?\s*([\w.,]+)/]),
+    bananas:num([/([\w.,]+)\s*bananen?/,/bananen?\s*[:\-]?\s*([\w.,]+)/]),
+    coffee:num([/([\w.,]+)\s*(?:kaffee|tasse)/,/kaffee\s*[:\-]?\s*([\w.,]+)/]),
     mood
   };
 }
