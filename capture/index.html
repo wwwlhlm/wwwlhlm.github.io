@@ -78,10 +78,10 @@
     .mic-btn.on { border-color:var(--error);color:var(--error);background:rgba(229,115,115,.1);animation:pulse .9s ease infinite; }
     .mic-btn svg { width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8; }
     @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
-    .status-line { display:flex;align-items:center;gap:8px;font-size:12px;min-height:16px;opacity:0;transition:opacity .3s ease; }
+    .status-line { display:flex;align-items:baseline;gap:8px;font-size:12px;min-height:16px;opacity:0;transition:opacity .3s ease; }
     .status-line.show { opacity:1; }
-    .status-label { font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);font-size:10px;flex-shrink:0; }
-    .status-text { color:var(--text-2);font-style:italic; }
+    .status-label { font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);flex-shrink:0; }
+    .status-text { color:var(--text-2);font-style:italic;font-size:12px; }
     .status-text.active { color:var(--text);font-style:normal; }
     .counters { display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px; }
     .counter { display:flex;flex-direction:column;gap:6px; }
