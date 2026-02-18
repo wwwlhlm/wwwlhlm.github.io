@@ -760,17 +760,18 @@ function fallbackParse(t){
 }
 
 function applyVoice(json){
-  if(json.apples!=null) document.getElementById('apples').value=json.apples;
-  if(json.bananas!=null) document.getElementById('bananas').value=json.bananas;
-  if(json.coffee!=null) document.getElementById('coffee').value=json.coffee;
+  const fix=v=>parseFloat(String(v).replace(',','.'));
+  if(json.apples!=null) document.getElementById('apples').value=fix(json.apples);
+  if(json.bananas!=null) document.getElementById('bananas').value=fix(json.bananas);
+  if(json.coffee!=null) document.getElementById('coffee').value=fix(json.coffee);
   if(json.mood!=null){ document.getElementById('moodSlider').value=json.mood; setMood(json.mood); }
   toast('Werte erkannt ✓','ok');
 }
 
 function buildContent(){
-  const apples=parseInt(document.getElementById('apples').value)||0;
-  const bananas=parseInt(document.getElementById('bananas').value)||0;
-  const coffee=parseInt(document.getElementById('coffee').value)||0;
+  const apples=parseFloat(document.getElementById('apples').value)||0;
+  const bananas=parseFloat(document.getElementById('bananas').value)||0;
+  const coffee=parseFloat(document.getElementById('coffee').value)||0;
   const mood=parseFloat(document.getElementById('moodSlider').value);
   const entryText=document.getElementById('entryText').value.trim();
   const tags=document.getElementById('tags').value.trim().split(',').map(t=>t.trim()).filter(Boolean);
