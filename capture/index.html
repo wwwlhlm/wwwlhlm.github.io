@@ -552,8 +552,13 @@ function renderSportChips(){
   const el=document.getElementById('sportChips'), veloKm=document.getElementById('veloKm');
   el.innerHTML='';
   TOP.sport.forEach(s=>el.appendChild(makeChip(s,sel.sport.includes(s),()=>toggleSport(s))));
+  const custom=sel.sport.filter(s=>!TOP.sport.includes(s));
+  custom.forEach(s=>el.appendChild(makeChip(s,true,()=>toggleSport(s),null,()=>{ sel.sport=sel.sport.filter(x=>x!==s); renderSportChips(); })));
   veloKm.className='velo-km'+(sel.sport.includes('Velo')?' show':'');
   el.appendChild(veloKm);
+  el.appendChild(makeACInput('Weitere Sportart...',TOP.sport,val=>{
+    if(!sel.sport.includes(val)){ sel.sport.push(val); renderSportChips(); }
+  }));
 }
 
 function renderPeopleChips(){
