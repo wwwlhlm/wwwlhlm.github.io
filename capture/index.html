@@ -402,7 +402,17 @@ let vaultHandle=null, fileHandle=null;
 let currentDate=todayISO(), originalBodyText='';
 let sel={ locations:['Zurich'], countriesOrdered:['CH'], coffeeOrdered:[], sport:[], people:[] };
 
-document.addEventListener('DOMContentLoaded',()=>{ updateHeaderDate(); renderAll(); hideSpinner(); });
+let isDirty=false;
+
+function markDirty(){ isDirty=true; }
+
+document.addEventListener('DOMContentLoaded',()=>{
+  updateHeaderDate(); renderAll(); hideSpinner();
+  // Mark dirty on any direct input change
+  document.addEventListener('input', e=>{
+    if(e.target.closest('.page')) markDirty();
+  });
+});
 
 function todayISO(){ return new Date().toISOString().split('T')[0]; }
 function updateHeaderDate(){
@@ -438,10 +448,11 @@ function showSaveNotif(dateStr){
 }
 
 async function autoSave(){
-  if(!fileHandle) return;
+  if(!fileHandle||!isDirty) return;
   try{
     const w=await fileHandle.createWritable();
     await w.write(buildContent()); await w.close();
+    isDirty=false;
     showSaveNotif(currentDate);
   }catch(e){ toast('Speicherfehler: '+e.message,'err'); }
 }
@@ -514,6 +525,7 @@ function populate(raw){
   document.getElementById('entryText').value=body;
   renderAll();
   if(cyclingKm) document.getElementById('veloKm').value=cyclingKm;
+  isDirty=false;
 }
 
 function resetDefaults(){
@@ -522,7 +534,7 @@ function resetDefaults(){
   sel={locations:['Zurich'],countriesOrdered:['CH'],coffeeOrdered:[],sport:[],people:[]};
   document.getElementById('veloKm').value=''; document.getElementById('tags').value='';
   document.getElementById('coords').value=''; document.getElementById('entryText').value='';
-  originalBodyText=''; renderAll();
+  originalBodyText=''; renderAll(); isDirty=false;
 }
 
 function renderAll(){
@@ -622,23 +634,23 @@ function makeACInput(placeholder,source,onSelect){
 }
 document.addEventListener('click',e=>{ if(!e.target.closest('.ac-wrap')) document.querySelectorAll('.ac-dropdown').forEach(d=>d.classList.remove('open')); });
 
-function toggleLoc(loc){ sel.locations=sel.locations.includes(loc)?sel.locations.filter(x=>x!==loc):[...sel.locations,loc]; renderAll(); }
+function toggleLoc(loc){ sel.locations=sel.locations.includes(loc)?sel.locations.filter(x=>x!==loc):[...sel.locations,loc]; markDirty(); renderAll(); }
 function toggleCountry(c){
   const count=sel.countriesOrdered.filter(x=>x===c).length;
   if(count>=5){ sel.countriesOrdered=sel.countriesOrdered.filter(x=>x!==c); }
   else{ sel.countriesOrdered.push(c); }
-  renderCountryChips();
+  markDirty(); renderCountryChips();
 }
 function toggleCoffee(c){
   const count=sel.coffeeOrdered.filter(x=>x===c).length;
   if(count>=6){ sel.coffeeOrdered=sel.coffeeOrdered.filter(x=>x!==c); }
   else{ sel.coffeeOrdered.push(c); }
-  renderCoffeeChips();
+  markDirty(); renderCoffeeChips();
 }
-function toggleSport(s){ sel.sport=sel.sport.includes(s)?sel.sport.filter(x=>x!==s):[...sel.sport,s]; renderSportChips(); }
-function togglePerson(p){ sel.people=sel.people.includes(p)?sel.people.filter(x=>x!==p):[...sel.people,p]; renderPeopleChips(); }
+function toggleSport(s){ sel.sport=sel.sport.includes(s)?sel.sport.filter(x=>x!==s):[...sel.sport,s]; markDirty(); renderSportChips(); }
+function togglePerson(p){ sel.people=sel.people.includes(p)?sel.people.filter(x=>x!==p):[...sel.people,p]; markDirty(); renderPeopleChips(); }
 
-function adj(id,d){ const el=document.getElementById(id); el.value=Math.max(0,(parseFloat(el.value)||0)+d); }
+function adj(id,d){ const el=document.getElementById(id); el.value=Math.max(0,(parseFloat(el.value)||0)+d); markDirty(); }
 function setMood(v){
   v=parseFloat(v);
   const el=document.getElementById('moodVal');
@@ -757,7 +769,9 @@ function buildContent(){
   const cyclingKm=sel.sport.includes('Velo')?document.getElementById('veloKm').value:'';
   const d=new Date(currentDate+'T12:00:00'), wi=d.getDay()===0?7:d.getDay();
   const L=items=>items.length?'\n'+items.map(i=>`  - ${i}`).join('\n'):'';
-  const yaml=['---',`date: ${currentDate}`,`apples: ${apples}`,`bananas: ${bananas}`,`coffee: ${coffee}`,`mood: ${mood}`,`tags:${L(tags)}`,`location:${L(sel.locations)}`,`country:${L(sel.countriesOrdered)}`,`coordinates:${L(coords)}`,`coffee_locations:${L(sel.coffeeOrdered)}`,`sport:${L(sportList)}`,cyclingKm?`cycling_km: ${cyclingKm}`:'',`people:${L(sel.people)}`,`weekday_index: ${wi}`,'visibility: public',`updated: ${currentDate}`,'---'].filter(l=>l!=='').join('\n');
+  const now=new Date();
+  const updatedTs=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}T${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}:${String(now.getSeconds()).padStart(2,'0')}`;
+  const yaml=['---',`date: ${currentDate}`,`apples: ${apples}`,`bananas: ${bananas}`,`coffee: ${coffee}`,`mood: ${mood}`,`tags:${L(tags)}`,`location:${L(sel.locations)}`,`country:${L(sel.countriesOrdered)}`,`coordinates:${L(coords)}`,`coffee_locations:${L(sel.coffeeOrdered)}`,`sport:${L(sportList)}`,cyclingKm?`cycling_km: ${cyclingKm}`:'',`people:${L(sel.people)}`,`weekday_index: ${wi}`,'visibility: public',`updated: ${updatedTs}`,'---'].filter(l=>l!=='').join('\n');
   const body=entryText||originalBodyText;
   return yaml+(body?'\n'+body:'');
 }
