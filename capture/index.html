@@ -54,13 +54,6 @@
       padding:20px 16px 100px;
       display:flex; flex-direction:column; gap:10px;
     }
-    .file-bar {
-      display:flex; align-items:center; gap:10px;
-      padding:10px 14px; background:var(--surface);
-      border:1px solid var(--border); border-radius:var(--radius);
-    }
-    .file-bar svg { width:14px;height:14px;stroke:var(--text-3);fill:none;stroke-width:1.8;flex-shrink:0; }
-    .file-path { flex:1;font-size:12px;color:var(--text-2);font-family:ui-monospace,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
     .btn-small {
       font-size:12px;font-weight:500;color:var(--accent);
       background:var(--accent-bg);border:1px solid rgba(253,147,159,.25);
@@ -85,20 +78,11 @@
     .mic-btn.on { border-color:var(--error);color:var(--error);background:rgba(229,115,115,.1);animation:pulse .9s ease infinite; }
     .mic-btn svg { width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8; }
     @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
-    .voice-notif {
-      position:fixed;top:70px;right:16px;z-index:150;
-      background:var(--surface-2);border:1px solid var(--border-2);
-      border-radius:10px;padding:10px 14px;max-width:260px;
-      font-size:13px;color:var(--text);box-shadow:0 8px 24px rgba(0,0,0,.4);
-      opacity:0;transform:translateY(-6px);pointer-events:none;
-      transition:opacity .25s ease, transform .25s ease;
-    }
-    #saveNotif { top:70px; }
-    #voiceNotif.show ~ #saveNotif { top:130px; }
-    .voice-notif.show { opacity:1;transform:translateY(0); }
-    .voice-notif-label { font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);margin-bottom:3px; }
-    .voice-notif-text { color:var(--text-2);font-style:italic;line-height:1.4;word-break:break-word; }
-    .voice-notif-text.active { color:var(--text);font-style:normal; }
+    .status-line { display:flex;align-items:center;gap:8px;font-size:12px;min-height:16px;opacity:0;transition:opacity .3s ease; }
+    .status-line.show { opacity:1; }
+    .status-label { font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);font-size:10px;flex-shrink:0; }
+    .status-text { color:var(--text-2);font-style:italic; }
+    .status-text.active { color:var(--text);font-style:normal; }
     .counters { display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px; }
     .counter { display:flex;flex-direction:column;gap:6px; }
     .counter-label { font-size:11px;color:var(--text-3);font-weight:500;text-transform:uppercase;letter-spacing:.4px; }
@@ -141,7 +125,7 @@
     .entry-area { width:100%;min-height:80px;background:transparent;border:none;outline:none;font-size:14px;line-height:1.7;color:var(--text);resize:vertical;font-family:inherit; }
     .entry-area::placeholder { color:var(--text-3); }
     .entry-hint { font-size:11px;color:var(--text-3);margin-top:6px; }
-    .mic-bar { position:fixed;bottom:0;left:0;right:0;padding:14px 16px;background:linear-gradient(to top,var(--bg) 60%,transparent);display:flex;justify-content:center;z-index:40; }
+    .mic-bar { position:fixed;bottom:0;left:0;right:0;padding:10px 16px 14px;background:linear-gradient(to top,var(--bg) 60%,transparent);display:flex;flex-direction:column;align-items:center;gap:8px;z-index:40; }
     .toast { position:fixed;bottom:72px;left:50%;transform:translateX(-50%) translateY(8px);background:var(--surface-2);border:1px solid var(--border-2);color:var(--text);padding:9px 16px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:all .25s ease;white-space:nowrap;z-index:99; }
     .toast.show { opacity:1;transform:translateX(-50%) translateY(0); }
     .toast.ok { border-color:rgba(129,199,132,.4);color:var(--good); }
@@ -208,14 +192,7 @@
 <body>
 
 <div class="spinner-overlay hidden" id="spinner"><div class="spinner"></div></div>
-<div class="voice-notif" id="voiceNotif">
-  <div class="voice-notif-label">Diktat</div>
-  <div class="voice-notif-text" id="voiceTranscript"></div>
-</div>
-<div class="voice-notif" id="saveNotif">
-  <div class="voice-notif-label">Gespeichert</div>
-  <div class="voice-notif-text active" id="saveNotifText"></div>
-</div>
+
 
 <div class="header-wrap">
 <div class="header-inner">
@@ -255,11 +232,6 @@
 </div>
 
 <div class="page">
-
-  <div class="file-bar">
-    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-    <span class="file-path" id="filePath">Kein Ordner gewählt</span>
-  </div>
 
 
   <div class="card">
@@ -379,6 +351,10 @@
 </div>
 
 <div class="mic-bar">
+  <div class="status-line" id="statusLine">
+    <span class="status-label" id="statusLabel"></span>
+    <span class="status-text" id="statusText"></span>
+  </div>
   <button class="mic-btn" id="micBtn" onclick="toggleVoice()" title="Diktat (D)">
     <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
   </button>
@@ -436,15 +412,20 @@ async function reloadFile(){
   if(!vaultHandle){ toast('Zuerst Ordner wählen','err'); return; }
   await loadFile(currentDate);
 }
-let saveNotifTimer;
+let statusTimer;
+function showStatus(label, text, isActive, autohide=true){
+  document.getElementById('statusLabel').textContent=label;
+  document.getElementById('statusText').textContent=text;
+  document.getElementById('statusText').className='status-text'+(isActive?' active':'');
+  document.getElementById('statusLine').classList.add('show');
+  clearTimeout(statusTimer);
+  if(autohide) statusTimer=setTimeout(()=>document.getElementById('statusLine').classList.remove('show'),4000);
+}
+
 function showSaveNotif(dateStr){
   const d=new Date(dateStr+'T12:00:00');
   const label=d.toLocaleDateString('de-CH',{weekday:'short',day:'numeric',month:'long'});
-  document.getElementById('saveNotifText').textContent=label;
-  const notif=document.getElementById('saveNotif');
-  clearTimeout(saveNotifTimer);
-  notif.classList.add('show');
-  saveNotifTimer=setTimeout(()=>notif.classList.remove('show'),3000);
+  showStatus('Gespeichert', label, true);
 }
 
 async function autoSave(){
@@ -490,11 +471,10 @@ async function loadFile(date){
       fileHandle=await yearDir.getFileHandle(fname,{create:false});
       const file=await fileHandle.getFile();
       populate(await file.text());
-      document.getElementById('filePath').textContent=yyyy+'/'+fname;
-      toast('Geladen: '+fname,'ok');
+      showStatus('Geladen', yyyy+'/'+fname, true);
     }catch{
       fileHandle=null;
-      document.getElementById('filePath').textContent='Nicht gefunden: '+yyyy+'/'+fname;
+      showStatus('Nicht gefunden', yyyy+'/'+fname, false);
       resetDefaults(); toast('Datei nicht vorhanden','err');
     }
   }catch(e){ toast('Fehler: '+e.message,'err'); }
@@ -699,19 +679,9 @@ function toggleVoice(){
   if(!r) return;
   recFinal=''; r.start();
 }
-let voiceNotifTimer;
 function setTx(txt,has){
-  const notif=document.getElementById('voiceNotif');
-  const el=document.getElementById('voiceTranscript');
-  el.textContent=txt;
-  el.className='voice-notif-text'+(has?' active':'');
-  clearTimeout(voiceNotifTimer);
-  if(txt){ 
-    notif.classList.add('show');
-    if(has) voiceNotifTimer=setTimeout(()=>notif.classList.remove('show'),5000);
-  } else {
-    notif.classList.remove('show');
-  }
+  if(txt) showStatus('Diktat', txt, has, has);
+  else document.getElementById('statusLine').classList.remove('show');
 }
 
 async function parseVoice(text){
