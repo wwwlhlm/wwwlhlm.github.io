@@ -761,9 +761,7 @@
         bottom: 0;
         top: auto;
         background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
-        transition: opacity 0.3s ease, filter 0.35s ease;
-        will-change: filter;
-        transform: translateZ(0);
+        transition: opacity 0.3s ease;
       }
       
       /* Entry Styles Mobile */
@@ -840,16 +838,26 @@
         pointer-events: none;
       }
       
-      /* Blur-Effekt auf Feed wenn Nav offen */
-      .right-side {
-        will-change: filter;
-        transform: translateZ(0);
-        transition: filter 0.35s ease;
+      /* Overlay zwischen Feed und Nav */
+      .mobile-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99; /* Unter mobile-panel (100) aber über Feed */
+        background: color-mix(in srgb, var(--text) 25%, transparent);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
       }
       
-      body.mobile-nav-open .right-side,
-      body.mobile-nav-open .fade-bottom {
-        filter: blur(6px) brightness(1.05) contrast(0.9);
+      body.mobile-nav-open .mobile-overlay {
+        opacity: 1;
+        pointer-events: auto;
       }
       
       /* Im About-Bereich oder beim letzten Eintrag: Fade und Toggle ausblenden */
@@ -949,9 +957,12 @@
 
       isMobileNavOpen = !isMobileNavOpen;
 
+      const overlay = document.getElementById('mobile-overlay');
+
       if (isMobileNavOpen) {
         panel.classList.add('open');
         document.body.classList.add('mobile-nav-open');
+        if (overlay) overlay.style.display = 'block';
 
         if (isInAboutSection) {
           // Im About-Bereich: Index aktivieren, keine Jahre/Monate
@@ -1039,6 +1050,10 @@
       } else {
         panel.classList.remove('open');
         document.body.classList.remove('mobile-nav-open');
+        // Overlay nach Transition ausblenden
+        if (overlay) {
+          setTimeout(() => { overlay.style.display = 'none'; }, 350);
+        }
 
         // Konsum-Modus zurücksetzen beim Schließen
         if (!isInAboutSection) {
@@ -1503,6 +1518,8 @@
           </div>
         </div>
         
+        <div class="mobile-overlay" id="mobile-overlay"></div>
+        
         <!-- Unified Mobile Panel -->
         <div class="mobile-panel" id="mobile-panel">
           <div class="mobile-panel-content">
@@ -1579,6 +1596,14 @@
     function attachMobilePanelListeners() {
       const isMobile = window.innerWidth <= 768;
       if (!isMobile) return;
+      
+      const overlay = document.getElementById('mobile-overlay');
+      if (overlay && !overlay.hasAttribute('data-listener')) {
+        overlay.setAttribute('data-listener', 'true');
+        overlay.addEventListener('click', () => {
+          if (isMobileNavOpen) toggleMobileNav();
+        });
+      }
       
       const panelHeader = document.querySelector('.mobile-panel-header');
       if (!panelHeader || panelHeader.hasAttribute('data-listener')) return;
