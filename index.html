@@ -737,7 +737,7 @@
       }
       
       .mobile-panel.open .mobile-nav-item {
-        animation: fadeInItem 0.3s ease-in forwards;
+        animation: fadeInItem 0.2s ease-in forwards;
       }
       
       .mobile-nav-year {
@@ -1280,8 +1280,13 @@
       
       const monthsContainer = document.querySelector('.mobile-nav-months');
       if (monthsContainer) {
+        const n = monthsInYear.length;
+        const totalDuration = 350; // ms, gleich wie max-height transition
+        const animDuration = 200;  // ms, gleich wie fadeInItem
+        const delayStep = n > 1 ? (totalDuration - animDuration) / (n - 1) : 0;
+        
         monthsContainer.innerHTML = monthsInYear.map((month, i) => `
-          <div class="mobile-nav-item mobile-nav-month" data-month="${month}" style="animation-delay: ${i * 50}ms">
+          <div class="mobile-nav-item mobile-nav-month" data-month="${month}" style="animation-delay: ${Math.round(i * delayStep)}ms">
             ${monthNames[month - 1]}
           </div>
         `).join('');
@@ -1560,18 +1565,20 @@
             <div class="mobile-panel-divider"></div>
             <div class="mobile-panel-calendar">
               <div class="mobile-nav-years">
-                ${years.map((year, i) => `
-                  <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${i * 50}ms">
+                ${years.map((year, i) => {
+                  const yDelay = years.length > 1 ? Math.round(i * 150 / (years.length - 1)) : 0;
+                  return `<div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${yDelay}ms">
                     ${year}
-                  </div>
-                `).join('')}
+                  </div>`;
+                }).join('')}
               </div>
               <div class="mobile-nav-months">
-                ${monthsInYear.map((month, i) => `
-                  <div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${monthBaseDelay + i * 50}ms">
+                ${monthsInYear.map((month, i) => {
+                  const mDelay = monthsInYear.length > 1 ? Math.round(i * 150 / (monthsInYear.length - 1)) : 0;
+                  return `<div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${mDelay}ms">
                     ${monthNames[month - 1]}
-                </div>
-              `).join('')}
+                  </div>`;
+                }).join('')}
               </div>
             </div>
             <div class="mobile-panel-divider-bottom"></div>
