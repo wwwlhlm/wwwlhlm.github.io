@@ -737,7 +737,7 @@
       }
       
       .mobile-panel.open .mobile-nav-item {
-        animation: fadeInItem 0.2s ease-in forwards;
+        animation: fadeInItem 0.3s ease-in forwards;
       }
       
       .mobile-nav-year {
@@ -761,7 +761,9 @@
         bottom: 0;
         top: auto;
         background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease, filter 0.35s ease;
+        will-change: filter;
+        transform: translateZ(0);
       }
       
       /* Entry Styles Mobile */
@@ -838,26 +840,16 @@
         pointer-events: none;
       }
       
-      /* Overlay zwischen Feed und Nav */
-      .mobile-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 99; /* Unter mobile-panel (100) aber über Feed */
-        background: color-mix(in srgb, var(--text) 25%, transparent);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        opacity: 0;
-        transition: opacity 0.35s ease;
-        pointer-events: none;
+      /* Blur-Effekt auf Feed wenn Nav offen */
+      .right-side {
+        will-change: filter;
+        transform: translateZ(0);
+        transition: filter 0.35s ease;
       }
       
-      body.mobile-nav-open .mobile-overlay {
-        opacity: 1;
-        pointer-events: auto;
+      body.mobile-nav-open .right-side,
+      body.mobile-nav-open .fade-bottom {
+        filter: blur(6px) brightness(1.05) contrast(0.9);
       }
       
       /* Im About-Bereich oder beim letzten Eintrag: Fade und Toggle ausblenden */
@@ -957,12 +949,9 @@
 
       isMobileNavOpen = !isMobileNavOpen;
 
-      const overlay = document.getElementById('mobile-overlay');
-
       if (isMobileNavOpen) {
         panel.classList.add('open');
         document.body.classList.add('mobile-nav-open');
-        if (overlay) overlay.style.display = 'block';
 
         if (isInAboutSection) {
           // Im About-Bereich: Index aktivieren, keine Jahre/Monate
@@ -1050,10 +1039,6 @@
       } else {
         panel.classList.remove('open');
         document.body.classList.remove('mobile-nav-open');
-        // Overlay nach Transition ausblenden
-        if (overlay) {
-          setTimeout(() => { overlay.style.display = 'none'; }, 350);
-        }
 
         // Konsum-Modus zurücksetzen beim Schließen
         if (!isInAboutSection) {
@@ -1181,7 +1166,6 @@
       
       // Ein einziger Listener für den ganzen Kalender
       calendar.addEventListener('click', (e) => {
-        e.stopPropagation(); // Verhindert Bubbling zum Overlay
         const target = e.target;
         
         // Jahr
@@ -1519,8 +1503,6 @@
           </div>
         </div>
         
-        <div class="mobile-overlay" id="mobile-overlay"></div>
-        
         <!-- Unified Mobile Panel -->
         <div class="mobile-panel" id="mobile-panel">
           <div class="mobile-panel-content">
@@ -1561,20 +1543,18 @@
             <div class="mobile-panel-divider"></div>
             <div class="mobile-panel-calendar">
               <div class="mobile-nav-years">
-                ${years.map((year, i) => {
-                  const yDelay = years.length > 1 ? Math.round(i * 150 / (years.length - 1)) : 0;
-                  return `<div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${yDelay}ms">
+                ${years.map((year, i) => `
+                  <div class="mobile-nav-item mobile-nav-year ${year === currentYear ? 'active' : ''}" data-year="${year}" style="animation-delay: ${i * 50}ms">
                     ${year}
-                  </div>`;
-                }).join('')}
+                  </div>
+                `).join('')}
               </div>
               <div class="mobile-nav-months">
-                ${monthsInYear.map((month, i) => {
-                  const mDelay = monthsInYear.length > 1 ? Math.round(i * 150 / (monthsInYear.length - 1)) : 0;
-                  return `<div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${mDelay}ms">
+                ${monthsInYear.map((month, i) => `
+                  <div class="mobile-nav-item mobile-nav-month ${month === currentMonth ? 'active' : ''}" data-month="${month}" style="animation-delay: ${monthBaseDelay + i * 50}ms">
                     ${monthNames[month - 1]}
-                  </div>`;
-                }).join('')}
+                </div>
+              `).join('')}
               </div>
             </div>
             <div class="mobile-panel-divider-bottom"></div>
@@ -1600,21 +1580,12 @@
       const isMobile = window.innerWidth <= 768;
       if (!isMobile) return;
       
-      const overlay = document.getElementById('mobile-overlay');
-      if (overlay && !overlay.hasAttribute('data-listener')) {
-        overlay.setAttribute('data-listener', 'true');
-        overlay.addEventListener('click', () => {
-          if (isMobileNavOpen) toggleMobileNav();
-        });
-      }
-      
       const panelHeader = document.querySelector('.mobile-panel-header');
       if (!panelHeader || panelHeader.hasAttribute('data-listener')) return;
       panelHeader.setAttribute('data-listener', 'true');
       
       // Nur click - funktioniert auf Touch und Desktop
       panelHeader.addEventListener('click', (e) => {
-        e.stopPropagation();
         // Nicht reagieren wenn auf Index geklickt wurde
         if (e.target.closest('.mobile-header-index')) return;
         toggleMobileNav();
