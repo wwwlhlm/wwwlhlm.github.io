@@ -70,6 +70,22 @@
       box-sizing: border-box;
     }
     
+    /* Textmarkierung: kein Balken, nur Buchstabenfarbe auf 50% */
+    ::selection {
+      background: transparent;
+      color: color-mix(in srgb, var(--text) 50%, var(--bg));
+    }
+    
+    .entry.active ::selection,
+    .about-section ::selection,
+    .consumption-value::selection,
+    .mobile-consumption-value::selection,
+    .mobile-date ::selection,
+    .loading-value::selection {
+      background: transparent;
+      color: color-mix(in srgb, var(--active) 50%, var(--bg));
+    }
+    
     html {
       scroll-behavior: smooth;
     }
@@ -923,6 +939,8 @@
     let aboutData = { title: '', text: '' };
     let isInAboutSection = false; // Flag ob wir im About-Bereich sind
     let isMobileNavOpen = false; // Flag für Mobile Nav
+    let aboutTimeout = null; // Timeout-ID von jumpToAbout (damit abortierbar)
+    let scrollEndTimer = null; // Timer für Scroll-Ende-Erkennung
     
     // Mobile Panel Toggle
     function toggleMobileNav() {
@@ -1690,13 +1708,13 @@
         if (isMobileNavOpen) return; // Nicht updaten wenn Mobile Nav offen
         
         const viewportCenter = window.innerHeight / 2;
-        const viewportTrigger = window.innerHeight; // About wird bei 100vh getriggert
+        const viewportTrigger = window.innerHeight * 1.5; // About wird bei 150vh getriggert (verhindert 2025-Flackern)
         const aboutSection = document.getElementById('about-section');
         
         // Prüfe ob About-Section sichtbar ist
         if (aboutSection) {
           const aboutRect = aboutSection.getBoundingClientRect();
-          // Wenn About-Section obere Kante bei 100vh (unterer Viewport-Rand) ist
+          // Wenn About-Section obere Kante bei 150vh ist (früh genug um letzten Eintrag zu überspringen)
           if (aboutRect.top < viewportTrigger) {
             if (!isInAboutSection) {
               isInAboutSection = true;
@@ -1868,6 +1886,12 @@
           // === MOBILE-PATTERN: Alles selbst machen ===
           isJumping = true;
           
+          // aboutTimeout canceln falls noch aktiv (Safari-Fix)
+          if (aboutTimeout) {
+            clearTimeout(aboutTimeout);
+            aboutTimeout = null;
+          }
+          
           // 1. About-Status zurücksetzen
           if (isInAboutSection) {
             isInAboutSection = false;
@@ -1985,6 +2009,12 @@
           
           // === MOBILE-PATTERN: Alles selbst machen ===
           isJumping = true;
+          
+          // aboutTimeout canceln falls noch aktiv (Safari-Fix)
+          if (aboutTimeout) {
+            clearTimeout(aboutTimeout);
+            aboutTimeout = null;
+          }
           
           // 1. About-Status zurücksetzen
           if (isInAboutSection) {
@@ -2117,6 +2147,12 @@
     
     // Spring zum About-Bereich (Ende der Seite)
     function jumpToAbout() {
+      // Alten Timeout canceln falls noch aktiv
+      if (aboutTimeout) {
+        clearTimeout(aboutTimeout);
+        aboutTimeout = null;
+      }
+      
       isJumping = true;
       isInAboutSection = true;
       document.body.classList.add('in-about');
@@ -2142,8 +2178,9 @@
       });
 
       // Längeres Timeout für smooth scroll + nochmal isInAboutSection sicherstellen
-      setTimeout(() => {
+      aboutTimeout = setTimeout(() => {
         isJumping = false;
+        aboutTimeout = null;
         // Nochmal sicherstellen dass wir im About-Bereich sind
         isInAboutSection = true;
         updateMobileHeader();
@@ -2480,6 +2517,12 @@
     function scrollToActiveEntry() {
       isJumping = true;
       
+      // Vorherigen Scroll-Ende-Timer abbrechen
+      if (scrollEndTimer) {
+        clearTimeout(scrollEndTimer);
+        scrollEndTimer = null;
+      }
+      
       setTimeout(() => {
         const activeEntry = document.querySelector('.entry.active');
         if (activeEntry) {
@@ -2494,10 +2537,28 @@
           });
         }
         
-        // isJumping länger aktiv lassen um Scroll-Listener zu blockieren
+        // Scroll-Ende erkennen: isJumping = false sobald kein Scroll-Event mehr kommt
+        function onScrollActivity() {
+          if (scrollEndTimer) clearTimeout(scrollEndTimer);
+          scrollEndTimer = setTimeout(() => {
+            window.removeEventListener('scroll', onScrollActivity);
+            scrollEndTimer = null;
+            isJumping = false;
+          }, 200); // 200ms Stille = Scroll fertig
+        }
+        
+        window.addEventListener('scroll', onScrollActivity, { passive: true });
+        
+        // Fallback: nach 3s auf jeden Fall freigeben
         setTimeout(() => {
+          window.removeEventListener('scroll', onScrollActivity);
+          if (scrollEndTimer) {
+            clearTimeout(scrollEndTimer);
+            scrollEndTimer = null;
+          }
           isJumping = false;
-        }, 1200);
+        }, 3000);
+        
       }, 100);
     }
     
