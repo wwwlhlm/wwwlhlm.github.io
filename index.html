@@ -1181,6 +1181,7 @@
       
       // Ein einziger Listener für den ganzen Kalender
       calendar.addEventListener('click', (e) => {
+        e.stopPropagation(); // Verhindert Bubbling zum Overlay
         const target = e.target;
         
         // Jahr
@@ -1280,13 +1281,8 @@
       
       const monthsContainer = document.querySelector('.mobile-nav-months');
       if (monthsContainer) {
-        const n = monthsInYear.length;
-        const totalDuration = 350; // ms, gleich wie max-height transition
-        const animDuration = 200;  // ms, gleich wie fadeInItem
-        const delayStep = n > 1 ? (totalDuration - animDuration) / (n - 1) : 0;
-        
         monthsContainer.innerHTML = monthsInYear.map((month, i) => `
-          <div class="mobile-nav-item mobile-nav-month" data-month="${month}" style="animation-delay: ${Math.round(i * delayStep)}ms">
+          <div class="mobile-nav-item mobile-nav-month" data-month="${month}" style="animation-delay: ${i * 50}ms">
             ${monthNames[month - 1]}
           </div>
         `).join('');
@@ -1618,6 +1614,7 @@
       
       // Nur click - funktioniert auf Touch und Desktop
       panelHeader.addEventListener('click', (e) => {
+        e.stopPropagation();
         // Nicht reagieren wenn auf Index geklickt wurde
         if (e.target.closest('.mobile-header-index')) return;
         toggleMobileNav();
