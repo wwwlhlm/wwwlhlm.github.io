@@ -193,7 +193,7 @@
     {
       "date": "2025-01-20",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 2,
       "coffee": 1,
       "mood": 0.5,
       "cycling_km": 0,
@@ -312,7 +312,7 @@
     },
     {
       "date": "2025-02-01",
-      "apples": 0.5,
+      "apples": 0,
       "bananas": 2,
       "coffee": 1,
       "mood": -1,
@@ -327,7 +327,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Eine E-Mail von zweien (Babysteps)."
     },
     {
@@ -394,10 +394,10 @@
       "date": "2025-02-09",
       "apples": 0,
       "bananas": 3,
-      "coffee": 1.5,
+      "coffee": 1,
       "mood": -0.5,
       "cycling_km": 75.73,
-      "weekday_index": 6,
+      "weekday_index": 7,
       "text": "Knacknuss vs. Knackwurst / Robusta: Robustes Herzflackern. /  Abstimmen, ganz ohne mich."
     },
     {
@@ -424,7 +424,7 @@
       "date": "2025-02-12",
       "apples": 0,
       "bananas": 1,
-      "coffee": 2.5,
+      "coffee": 2,
       "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
@@ -467,7 +467,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 33.59,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Kinopublikum im Kreuzverhör: Wer «Cronenberg» sagen kann ist dabei."
     },
     {
@@ -734,8 +734,8 @@
       "date": "2025-03-15",
       "apples": 0,
       "bananas": 1,
-      "coffee": 0,
-      "mood": 2,
+      "coffee": 2,
+      "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "«Die Haare werden dünner», sagt er."
@@ -1447,7 +1447,7 @@
       "coffee": 2,
       "mood": -1,
       "cycling_km": 43.95,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Ein echter Miro mit 12° Anstieg: Ausrollen am Kunstolymp."
     },
     {
@@ -1923,9 +1923,9 @@
     {
       "date": "2025-07-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Ein Leben in Halbsätzen."
@@ -2448,7 +2448,7 @@
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Infiltration rechts, bitte"
+      "text": "Infiltration rechts, bitte."
     },
     {
       "date": "2025-09-03",
@@ -2504,7 +2504,7 @@
       "date": "2025-09-08",
       "apples": 0,
       "bananas": 2,
-      "coffee": 0,
+      "coffee": 1,
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
@@ -2538,7 +2538,7 @@
       "mood": 0,
       "cycling_km": 145.16,
       "weekday_index": 4,
-      "text": "Jeder von uns an Startpunkt, nur nicht am selben. / Windschnittig sieht anders aus."
+      "text": "Jeder von uns am Startpunkt, nur nicht am selben. / Windschnittig sieht anders aus."
     },
     {
       "date": "2025-09-12",
@@ -2864,7 +2864,7 @@
       "date": "2025-10-14",
       "apples": 1,
       "bananas": 2,
-      "coffee": 0,
+      "coffee": 3,
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
@@ -3298,7 +3298,7 @@
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "Abreagieren mit Beinen"
+      "text": "Abreagieren mit Beinen."
     },
     {
       "date": "2025-11-27",
@@ -3503,9 +3503,9 @@
     {
       "date": "2025-12-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Hochform wo andere ihr Nachmittagstief haben. / Ist heute der Tag an dem ich am Maronistand vorbeigehe, ohne etwas zu kaufen?"
@@ -3574,7 +3574,7 @@
       "date": "2025-12-24",
       "apples": 0,
       "bananas": 1,
-      "coffee": 0,
+      "coffee": 3,
       "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
