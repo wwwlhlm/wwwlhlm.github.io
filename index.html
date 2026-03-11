@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A–B–K</title>
   
   <!-- Open Graph / Social Media Preview -->
@@ -12,7 +12,6 @@
   <meta property="og:url" content="https://wwwlhlm.github.io/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#FFFFFF">
   
   <style>
     @font-face {
@@ -202,24 +201,6 @@
       display: none;
     }
     
-    /* iOS Safe-Area Fix: deckt den unteren Bereich mit der richtigen Hintergrundfarbe ab */
-    .safe-area-bottom {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: env(safe-area-inset-bottom);
-      background-color: var(--bg);
-      z-index: 9999;
-      pointer-events: none;
-    }
-    
-    @supports (padding-bottom: env(safe-area-inset-bottom)) {
-      .safe-area-bottom {
-        display: block;
-      }
-    }
     .fade-top, .fade-bottom {
       position: fixed;
       left: 48%;
@@ -900,7 +881,6 @@
   </style>
 </head>
 <body>
-  <div class="safe-area-bottom" id="safe-area-bottom"></div>
   <div class="theme-toggle hidden" onclick="toggleTheme()"></div>
   
   <div class="loading-container" id="loading-screen">
@@ -1331,28 +1311,13 @@
     }
     
     // Theme Toggle
-    const themeBgColors = { day: '#FFFFFF', dawn: '#FF5A27', night: '#191919' };
-    
-    function updateThemeColor(theme) {
-      const color = themeBgColors[theme] || '#FFFFFF';
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', color);
-      document.documentElement.style.backgroundColor = color;
-      document.body.style.backgroundColor = color;
-    }
-    
     function toggleTheme() {
       const html = document.documentElement;
       const currentTheme = html.getAttribute('data-theme') || 'day';
-      
-      // Cycle: day -> dawn -> night -> day
       const themes = ['day', 'dawn', 'night'];
-      const currentIndex = themes.indexOf(currentTheme);
-      const nextIndex = (currentIndex + 1) % themes.length;
-      const newTheme = themes[nextIndex];
-      
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeColor(newTheme);
+      const nextIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
+      html.setAttribute('data-theme', themes[nextIndex]);
+      localStorage.setItem('theme', themes[nextIndex]);
     }
     
     // Theme beim Laden anwenden
@@ -1360,7 +1325,6 @@
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
-        updateThemeColor(savedTheme);
       }
     })();
     
