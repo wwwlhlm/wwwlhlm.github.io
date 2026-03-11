@@ -68,7 +68,7 @@
       "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "Penne All Rabiat"
+      "text": "Penne All Rabiat."
     },
     {
       "date": "2022-01-08",
@@ -1858,7 +1858,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Pfadiweg, all the way. / Indische Väter haben keine guten Ruf."
+      "text": "Pfadiweg, all the way. / Indische Väter haben keinen guten Ruf."
     },
     {
       "date": "2022-07-06",
@@ -2173,12 +2173,12 @@
     {
       "date": "2022-08-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 0.5,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "1k heim 2k John 1k miro 0.5b / 0 / Bill ist ein Genieur sagt der Kleine. / Wenn das Kind interessehalber aus dem Katzenbrunnen trinkt. / Den Generationenvertrag hab ich beim Umzug verlegt."
+      "text": "Bill ist ein Genieur sagt der Kleine. / Wenn das Kind interessehalber aus dem Katzenbrunnen trinkt. / Den Generationenvertrag hab ich beim Umzug verlegt."
     },
     {
       "date": "2022-08-07",
@@ -2218,7 +2218,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "[[Bamna]]: Als hätte jemand ein Strandtuch über mein Herz gelegt. / Ihr Haar, ein Vision-Apartment-Haus für Insekten."
+      "text": "[[Bamna]]: <span class=\"quote\">Als hätte jemand ein Strandtuch über mein Herz gelegt.</span> / Ihr Haar, ein Vision-Apartment-Haus für Insekten."
     },
     {
       "date": "2022-08-11",
