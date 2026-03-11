@@ -1316,7 +1316,9 @@
     const themeBgColors = { day: '#FFFFFF', dawn: '#FF5A27', night: '#191919' };
     
     function updateThemeColor(theme) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', themeBgColors[theme] || '#FFFFFF');
+      const color = themeBgColors[theme] || '#FFFFFF';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', color);
+      document.body.style.backgroundColor = color;
     }
     
     function toggleTheme() {
