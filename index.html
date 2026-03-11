@@ -1104,7 +1104,7 @@
       if (apples) apples.textContent = consumption.apples;
       if (bananas) bananas.textContent = consumption.bananas;
       if (coffee) coffee.textContent = consumption.coffee;
-      if (cycling) cycling.textContent = consumption.cycling_km > 0 ? consumption.cycling_km.toFixed(1) : '—';
+      if (cycling) cycling.textContent = consumption.cycling_km > 0 ? formatKm(consumption.cycling_km) : '—';
     }
     
     // Mobile Nav Listeners - Event Delegation
@@ -1459,7 +1459,7 @@
               <div class="consumption">
                 <div class="consumption-item cycling ${consumption.cycling_km > 0 ? '' : 'hidden'}">
                   <span class="consumption-label">Velo-KM</span>
-                  <span class="consumption-value consumption-cycling">${consumption.cycling_km.toFixed(1)}</span>
+                  <span class="consumption-value consumption-cycling">${formatKm(consumption.cycling_km)}</span>
                 </div>
                 <div class="consumption-item">
                   <span class="consumption-label">Äpfel</span>
@@ -1636,7 +1636,7 @@
             const cyclingValue = document.querySelector('.consumption-cycling');
             if (cyclingItem && cyclingValue) {
               const km = hoveredEntry.data.cycling_km || 0;
-              cyclingValue.textContent = km.toFixed(1);
+              cyclingValue.textContent = formatKm(km);
               cyclingItem.classList.toggle('hidden', km === 0);
             }
           });
@@ -2187,6 +2187,10 @@
       }, 1500);
     }
     
+    function formatKm(km) {
+      return consumptionMode === 'day' ? km.toFixed(1) : Math.round(km).toString();
+    }
+    
     // Update nur Konsum
     function updateConsumption() {
       const consumption = calculateConsumption();
@@ -2197,7 +2201,7 @@
       const cyclingItem = document.querySelector('.consumption-item.cycling');
       const cyclingValue = document.querySelector('.consumption-cycling');
       if (cyclingItem && cyclingValue) {
-        cyclingValue.textContent = consumption.cycling_km.toFixed(1);
+        cyclingValue.textContent = formatKm(consumption.cycling_km);
         cyclingItem.classList.toggle('hidden', consumption.cycling_km === 0);
       }
     }
