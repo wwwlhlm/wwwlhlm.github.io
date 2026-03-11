@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>A–B–K</title>
   
   <!-- Open Graph / Social Media Preview -->
@@ -202,7 +202,24 @@
       display: none;
     }
     
-    /* Fade Gradients */
+    /* iOS Safe-Area Fix: deckt den unteren Bereich mit der richtigen Hintergrundfarbe ab */
+    .safe-area-bottom {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: env(safe-area-inset-bottom);
+      background-color: var(--bg);
+      z-index: 9999;
+      pointer-events: none;
+    }
+    
+    @supports (padding-bottom: env(safe-area-inset-bottom)) {
+      .safe-area-bottom {
+        display: block;
+      }
+    }
     .fade-top, .fade-bottom {
       position: fixed;
       left: 48%;
@@ -883,6 +900,7 @@
   </style>
 </head>
 <body>
+  <div class="safe-area-bottom" id="safe-area-bottom"></div>
   <div class="theme-toggle hidden" onclick="toggleTheme()"></div>
   
   <div class="loading-container" id="loading-screen">
