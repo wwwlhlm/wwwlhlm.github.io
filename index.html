@@ -1628,15 +1628,15 @@
             entry.classList.add('active');
             // Zeige Konsum des gehovertenEintrags
             const hoveredEntry = allEntries[index];
-            document.querySelectorAll('.consumption-value')[1].textContent = (hoveredEntry.data.apples || 0).toFixed(1);
-            document.querySelectorAll('.consumption-value')[2].textContent = (hoveredEntry.data.bananas || 0).toFixed(1);
-            document.querySelectorAll('.consumption-value')[3].textContent = (hoveredEntry.data.coffee || 0).toFixed(1);
+            document.querySelectorAll('.consumption-value')[1].textContent = formatDay(hoveredEntry.data.apples || 0);
+            document.querySelectorAll('.consumption-value')[2].textContent = formatDay(hoveredEntry.data.bananas || 0);
+            document.querySelectorAll('.consumption-value')[3].textContent = formatDay(hoveredEntry.data.coffee || 0);
             
             const cyclingItem = document.querySelector('.consumption-item.cycling');
             const cyclingValue = document.querySelector('.consumption-cycling');
             if (cyclingItem && cyclingValue) {
               const km = hoveredEntry.data.cycling_km || 0;
-              cyclingValue.textContent = km.toFixed(1);
+              cyclingValue.textContent = formatDay(km);
               cyclingItem.classList.toggle('hidden', km === 0);
             }
           });
@@ -2188,7 +2188,13 @@
     }
     
     function formatValue(val) {
-      return consumptionMode === 'day' ? parseFloat(val).toFixed(1) : Math.round(val).toString();
+      if (consumptionMode !== 'day') return Math.round(val).toString();
+      return formatDay(val);
+    }
+    
+    function formatDay(val) {
+      const n = parseFloat(val);
+      return n % 1 === 0 ? n.toString() : n.toFixed(1);
     }
     
     // Update nur Konsum
