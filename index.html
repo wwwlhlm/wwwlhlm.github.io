@@ -1101,10 +1101,10 @@
       const coffee = document.querySelector('.mobile-coffee');
       const cycling = document.querySelector('.mobile-cycling');
       
-      if (apples) apples.textContent = consumption.apples;
-      if (bananas) bananas.textContent = consumption.bananas;
-      if (coffee) coffee.textContent = consumption.coffee;
-      if (cycling) cycling.textContent = consumption.cycling_km > 0 ? formatKm(consumption.cycling_km) : '—';
+      if (apples) apples.textContent = formatValue(consumption.apples);
+      if (bananas) bananas.textContent = formatValue(consumption.bananas);
+      if (coffee) coffee.textContent = formatValue(consumption.coffee);
+      if (cycling) cycling.textContent = consumption.cycling_km > 0 ? formatValue(consumption.cycling_km) : '—';
     }
     
     // Mobile Nav Listeners - Event Delegation
@@ -1459,7 +1459,7 @@
               <div class="consumption">
                 <div class="consumption-item cycling ${consumption.cycling_km > 0 ? '' : 'hidden'}">
                   <span class="consumption-label">Velo-KM</span>
-                  <span class="consumption-value consumption-cycling">${formatKm(consumption.cycling_km)}</span>
+                  <span class="consumption-value consumption-cycling">${formatValue(consumption.cycling_km)}</span>
                 </div>
                 <div class="consumption-item">
                   <span class="consumption-label">Äpfel</span>
@@ -1628,15 +1628,15 @@
             entry.classList.add('active');
             // Zeige Konsum des gehovertenEintrags
             const hoveredEntry = allEntries[index];
-            document.querySelectorAll('.consumption-value')[1].textContent = hoveredEntry.data.apples || 0;
-            document.querySelectorAll('.consumption-value')[2].textContent = hoveredEntry.data.bananas || 0;
-            document.querySelectorAll('.consumption-value')[3].textContent = hoveredEntry.data.coffee || 0;
+            document.querySelectorAll('.consumption-value')[1].textContent = (hoveredEntry.data.apples || 0).toFixed(1);
+            document.querySelectorAll('.consumption-value')[2].textContent = (hoveredEntry.data.bananas || 0).toFixed(1);
+            document.querySelectorAll('.consumption-value')[3].textContent = (hoveredEntry.data.coffee || 0).toFixed(1);
             
             const cyclingItem = document.querySelector('.consumption-item.cycling');
             const cyclingValue = document.querySelector('.consumption-cycling');
             if (cyclingItem && cyclingValue) {
               const km = hoveredEntry.data.cycling_km || 0;
-              cyclingValue.textContent = formatKm(km);
+              cyclingValue.textContent = km.toFixed(1);
               cyclingItem.classList.toggle('hidden', km === 0);
             }
           });
@@ -2187,21 +2187,21 @@
       }, 1500);
     }
     
-    function formatKm(km) {
-      return consumptionMode === 'day' ? km.toFixed(1) : Math.round(km).toString();
+    function formatValue(val) {
+      return consumptionMode === 'day' ? parseFloat(val).toFixed(1) : Math.round(val).toString();
     }
     
     // Update nur Konsum
     function updateConsumption() {
       const consumption = calculateConsumption();
-      document.querySelectorAll('.consumption-value')[1].textContent = consumption.apples;
-      document.querySelectorAll('.consumption-value')[2].textContent = consumption.bananas;
-      document.querySelectorAll('.consumption-value')[3].textContent = consumption.coffee;
+      document.querySelectorAll('.consumption-value')[1].textContent = formatValue(consumption.apples);
+      document.querySelectorAll('.consumption-value')[2].textContent = formatValue(consumption.bananas);
+      document.querySelectorAll('.consumption-value')[3].textContent = formatValue(consumption.coffee);
       
       const cyclingItem = document.querySelector('.consumption-item.cycling');
       const cyclingValue = document.querySelector('.consumption-cycling');
       if (cyclingItem && cyclingValue) {
-        cyclingValue.textContent = formatKm(consumption.cycling_km);
+        cyclingValue.textContent = formatValue(consumption.cycling_km);
         cyclingItem.classList.toggle('hidden', consumption.cycling_km === 0);
       }
     }
