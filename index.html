@@ -12,6 +12,7 @@
   <meta property="og:url" content="https://wwwlhlm.github.io/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#FFFFFF">
   
   <style>
     @font-face {
@@ -1312,6 +1313,12 @@
     }
     
     // Theme Toggle
+    const themeBgColors = { day: '#FFFFFF', dawn: '#FF5A27', night: '#191919' };
+    
+    function updateThemeColor(theme) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', themeBgColors[theme] || '#FFFFFF');
+    }
+    
     function toggleTheme() {
       const html = document.documentElement;
       const currentTheme = html.getAttribute('data-theme') || 'day';
@@ -1324,6 +1331,7 @@
       
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
+      updateThemeColor(newTheme);
     }
     
     // Theme beim Laden anwenden
@@ -1331,6 +1339,7 @@
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeColor(savedTheme);
       }
     })();
     
