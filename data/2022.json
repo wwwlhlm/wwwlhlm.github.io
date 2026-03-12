@@ -583,8 +583,8 @@
     {
       "date": "2022-02-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 4,
       "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 1,
@@ -593,9 +593,9 @@
     {
       "date": "2022-03-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "[[Nath]]: <span class=\"quote\">Ich akzeptiere seine Existenz.</span>"
@@ -603,9 +603,9 @@
     {
       "date": "2022-03-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Das 600 Franken Sandwich."
@@ -613,9 +613,9 @@
     {
       "date": "2022-03-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Liquidität ist wie Sauerstoff, sagt die Buchhalterin."
@@ -623,9 +623,9 @@
     {
       "date": "2022-03-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Einigkeit auf mehreren Kommunikationskanälen."
@@ -633,9 +633,9 @@
     {
       "date": "2022-03-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Die Sonne scheint dort, wo ich grad nicht steh."
@@ -643,9 +643,9 @@
     {
       "date": "2022-03-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 7,
       "text": "Porridge, the new frontier."
@@ -654,7 +654,7 @@
       "date": "2022-03-07",
       "apples": 0,
       "bananas": 2,
-      "coffee": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 1,
@@ -663,8 +663,8 @@
     {
       "date": "2022-03-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
@@ -673,9 +673,9 @@
     {
       "date": "2022-03-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 6,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "—"
@@ -683,9 +683,9 @@
     {
       "date": "2022-03-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Nicht zu lächeln ist mein eingebauter Portraitmodus."
@@ -693,9 +693,9 @@
     {
       "date": "2022-03-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Inkognito im Architektenturnen."
@@ -703,39 +703,39 @@
     {
       "date": "2022-03-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "—"
     },
     {
       "date": "2022-03-13",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Aerosole der Freude."
     },
     {
       "date": "2022-03-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "So billo."
     },
     {
       "date": "2022-03-15",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Ein Tag in Sepia. / Inder bis zum Anschlag."
@@ -743,9 +743,9 @@
     {
       "date": "2022-03-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Der Mahner im Kinosessel."
@@ -753,9 +753,9 @@
     {
       "date": "2022-03-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Pink-Lady-Influencer"
@@ -763,9 +763,9 @@
     {
       "date": "2022-03-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "—"
@@ -773,9 +773,9 @@
     {
       "date": "2022-03-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Im dichten Nebel der Tanzfläche."
@@ -783,19 +783,19 @@
     {
       "date": "2022-03-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Schlafwandeln durch den Tag."
     },
     {
       "date": "2022-03-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Die moderne Frau von gestern."
@@ -803,9 +803,9 @@
     {
       "date": "2022-03-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Inkognito in der Bootyklasse."
@@ -813,9 +813,9 @@
     {
       "date": "2022-03-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Emotional-Support-Animals für die Toilettenpause."
@@ -823,9 +823,9 @@
     {
       "date": "2022-03-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Gott ist in der Zukunft angekommen. Der QR-Code führt direkt zu ihm."
@@ -833,9 +833,9 @@
     {
       "date": "2022-03-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Der Zustand des gedünsteten Broccolis gleicht dem meinen. / Stop-and-Go-Demo"
@@ -844,8 +844,8 @@
       "date": "2022-03-26",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Männer weinen im Stillen."
@@ -854,28 +854,28 @@
       "date": "2022-03-27",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "—"
     },
     {
       "date": "2022-03-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "A very punchable humor."
     },
     {
       "date": "2022-03-29",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 0.5,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Zwei Berge für den Frieden."
@@ -883,9 +883,9 @@
     {
       "date": "2022-03-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "—"
@@ -893,9 +893,9 @@
     {
       "date": "2022-03-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Besser «Späth» als nie."
@@ -903,8 +903,8 @@
     {
       "date": "2022-04-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
