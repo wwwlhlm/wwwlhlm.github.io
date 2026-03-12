@@ -1325,10 +1325,12 @@
       // display-Toggle zwingt Safari zum Resample.
       requestAnimationFrame(() => {
         const bg = getComputedStyle(html).getPropertyValue('--bg').trim();
+        const scrollY = window.scrollY;
         document.body.style.backgroundColor = bg;
         document.body.style.display = 'none';
         requestAnimationFrame(() => {
           document.body.style.display = '';
+          window.scrollTo(0, scrollY);
         });
       });
     }
