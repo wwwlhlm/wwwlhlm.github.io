@@ -63,6 +63,12 @@
       --text: #FF5A27;
       --active: #FFFFFF;
     }
+
+    /* Safari iOS 26: direkte background-color auf body (kein var())
+       damit der Toolbar-Algorithmus die Farbe zuverlässig liest. */
+    body { background-color: #FFFFFF; }
+    body.theme-dawn { background-color: #FF5A27; }
+    body.theme-night { background-color: #191919; }
     
     * {
       margin: 0;
@@ -1316,21 +1322,11 @@
       const currentTheme = html.getAttribute('data-theme') || 'day';
       const themes = ['day', 'dawn', 'night'];
       const nextIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
-      html.setAttribute('data-theme', themes[nextIndex]);
-      localStorage.setItem('theme', themes[nextIndex]);
-
-      // Safari iOS 26: visibility-Toggle erzwingt Toolbar-Resample.
-      // html bekommt dieselbe Farbe, damit der versteckte Frame
-      // eine solide Fläche zeigt statt Inhalte durchscheinen.
-      requestAnimationFrame(() => {
-        const bg = getComputedStyle(html).getPropertyValue('--bg').trim();
-        html.style.backgroundColor = bg;
-        document.body.style.visibility = 'hidden';
-        requestAnimationFrame(() => {
-          document.body.style.visibility = '';
-          html.style.backgroundColor = '';
-        });
-      });
+      const nextTheme = themes[nextIndex];
+      html.setAttribute('data-theme', nextTheme);
+      document.body.classList.remove('theme-dawn', 'theme-night');
+      if (nextTheme !== 'day') document.body.classList.add('theme-' + nextTheme);
+      localStorage.setItem('theme', nextTheme);
     }
     
     // Theme beim Laden anwenden
@@ -1338,6 +1334,7 @@
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme !== 'day') document.body.classList.add('theme-' + savedTheme);
       }
     })();
     
