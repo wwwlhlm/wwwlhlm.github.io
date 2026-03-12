@@ -1319,16 +1319,16 @@
       html.setAttribute('data-theme', themes[nextIndex]);
       localStorage.setItem('theme', themes[nextIndex]);
 
-      // Safari iOS 26: Toolbar-Resample erzwingen.
-      // visibility:hidden statt display:none — kein Reflow,
-      // kein Scroll-Reset, kein Fokusverlust.
-      // Ob Safari das als Resample-Trigger akzeptiert: ungetestet.
+      // Safari iOS 26: visibility-Toggle erzwingt Toolbar-Resample.
+      // html bekommt dieselbe Farbe, damit der versteckte Frame
+      // eine solide Fläche zeigt statt Inhalte durchscheinen.
       requestAnimationFrame(() => {
         const bg = getComputedStyle(html).getPropertyValue('--bg').trim();
-        document.body.style.backgroundColor = bg;
+        html.style.backgroundColor = bg;
         document.body.style.visibility = 'hidden';
         requestAnimationFrame(() => {
           document.body.style.visibility = '';
+          html.style.backgroundColor = '';
         });
       });
     }
