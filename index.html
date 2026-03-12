@@ -881,8 +881,6 @@
   </style>
 </head>
 <body>
-  <!-- Safari iOS 26: 1px-fixed-Element für Toolbar-Resample -->
-  <div id="safari-tint" style="position:fixed;bottom:0;left:0;width:100%;height:1px;pointer-events:none;z-index:-1;"></div>
   <div class="theme-toggle hidden" onclick="toggleTheme()"></div>
   
   <div class="loading-container" id="loading-screen">
@@ -1321,14 +1319,21 @@
       html.setAttribute('data-theme', themes[nextIndex]);
       localStorage.setItem('theme', themes[nextIndex]);
 
-      // Safari iOS 26: Toolbar-Farbe via winzigem fixed-Element neu samplen,
-      // ohne body-display zu togglen (würde Scroll + Fokus zerstören).
+      // Safari iOS 26: body-display-Toggle erzwingt Toolbar-Resample.
+      // isJumping unterdrückt Scroll-Handler während des einen Frames.
       requestAnimationFrame(() => {
         const bg = getComputedStyle(html).getPropertyValue('--bg').trim();
-        const tint = document.getElementById('safari-tint');
-        tint.style.backgroundColor = bg;
-        tint.style.display = 'none';
-        requestAnimationFrame(() => { tint.style.display = 'block'; });
+        const scrollY = window.scrollY;
+        const focused = document.activeElement;
+        isJumping = true;
+        document.body.style.backgroundColor = bg;
+        document.body.style.display = 'none';
+        requestAnimationFrame(() => {
+          document.body.style.display = '';
+          window.scrollTo(0, scrollY);
+          focused?.focus({ preventScroll: true });
+          requestAnimationFrame(() => { isJumping = false; });
+        });
       });
     }
     
