@@ -1318,6 +1318,21 @@
       const nextIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
       html.setAttribute('data-theme', themes[nextIndex]);
       localStorage.setItem('theme', themes[nextIndex]);
+
+      // Safari iOS 26: visibility-Toggle auf body erzwingt Toolbar-Resample.
+      // Overlay direkt an html (nicht body!) verhindert den Blitzer,
+      // da es von visibility:hidden auf body nicht betroffen ist.
+      requestAnimationFrame(() => {
+        const bg = getComputedStyle(html).getPropertyValue('--bg').trim();
+        const cover = document.createElement('div');
+        cover.style.cssText = `position:fixed;inset:0;background:${bg};z-index:99999;pointer-events:none;`;
+        html.appendChild(cover);
+        document.body.style.visibility = 'hidden';
+        requestAnimationFrame(() => {
+          document.body.style.visibility = '';
+          cover.remove();
+        });
+      });
     }
     
     // Theme beim Laden anwenden
