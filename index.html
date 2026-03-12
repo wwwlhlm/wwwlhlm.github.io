@@ -1318,6 +1318,19 @@
       const nextIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
       html.setAttribute('data-theme', themes[nextIndex]);
       localStorage.setItem('theme', themes[nextIndex]);
+
+      // Safari iOS 26: Toolbar-Farbe neu samplen erzwingen.
+      // Safari liest background-color zur Render-Zeit – JS-Änderungen
+      // via CSS-Variablen werden nicht automatisch übernommen.
+      // display-Toggle zwingt Safari zum Resample.
+      requestAnimationFrame(() => {
+        const bg = getComputedStyle(html).getPropertyValue('--bg').trim();
+        document.body.style.backgroundColor = bg;
+        document.body.style.display = 'none';
+        requestAnimationFrame(() => {
+          document.body.style.display = '';
+        });
+      });
     }
     
     // Theme beim Laden anwenden
