@@ -1319,20 +1319,16 @@
       html.setAttribute('data-theme', themes[nextIndex]);
       localStorage.setItem('theme', themes[nextIndex]);
 
-      // Safari iOS 26: body-display-Toggle erzwingt Toolbar-Resample.
-      // isJumping unterdrückt Scroll-Handler während des einen Frames.
+      // Safari iOS 26: Toolbar-Resample erzwingen.
+      // visibility:hidden statt display:none — kein Reflow,
+      // kein Scroll-Reset, kein Fokusverlust.
+      // Ob Safari das als Resample-Trigger akzeptiert: ungetestet.
       requestAnimationFrame(() => {
         const bg = getComputedStyle(html).getPropertyValue('--bg').trim();
-        const scrollY = window.scrollY;
-        const focused = document.activeElement;
-        isJumping = true;
         document.body.style.backgroundColor = bg;
-        document.body.style.display = 'none';
+        document.body.style.visibility = 'hidden';
         requestAnimationFrame(() => {
-          document.body.style.display = '';
-          window.scrollTo(0, scrollY);
-          focused?.focus({ preventScroll: true });
-          requestAnimationFrame(() => { isJumping = false; });
+          document.body.style.visibility = '';
         });
       });
     }
