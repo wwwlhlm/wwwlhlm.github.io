@@ -347,8 +347,8 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "The sadest long distance call."
+      "weekday_index": 7,
+      "text": "The saddest long distance call."
     },
     {
       "date": "2024-02-05",
@@ -557,8 +557,8 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 76.4,
-      "weekday_index": 0,
-      "text": "Das rollende Aargau-Panorama (in Vistavsion)."
+      "weekday_index": 7,
+      "text": "Das rollende Aargau-Panorama (in Vistavision)."
     },
     {
       "date": "2024-02-26",
@@ -578,7 +578,7 @@
       "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Die Krankenschwester erzählt wie sie Blutspuren legt, um ihren Hunde für die Jagd zu trainieren, kurz nachdem sie mir Blut abnahm."
+      "text": "Die Krankenschwester erzählt wie sie Blutspuren legt, um ihren Hund für die Jagd zu trainieren, kurz nachdem sie mir Blut abnahm."
     },
     {
       "date": "2024-02-28",
@@ -718,7 +718,7 @@
       "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Mehr Inder als man denkt. / Urlaub ist ein Minutsgeschäft."
+      "text": "Mehr Inder als man denkt. / Urlaub ist ein Minusgeschäft."
     },
     {
       "date": "2024-03-13",
@@ -837,8 +837,8 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "Der Guide in Pompeji sprach in seinem stark italienisch gefärbten englisch davon, das der Ort von Asche («Ash») und Pommes («Plumes») verschüttet wurde."
+      "weekday_index": 7,
+      "text": "Der Guide in Pompeji sprach in seinem stark italienisch gefärbten Englisch davon, dass der Ort von Asche («Ash») und Pommes («Plumes») verschüttet wurde."
     },
     {
       "date": "2024-03-25",
@@ -858,7 +858,7 @@
       "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Regen ist der Feind des Touristen, selbst der botanische Garten war geschlossen. / Hafenluft ist äußerst russig."
+      "text": "Regen ist der Feind des Touristen, selbst der botanische Garten war geschlossen. / Hafenluft ist äusserst russig."
     },
     {
       "date": "2024-03-27",
@@ -878,7 +878,7 @@
       "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
-      "text": "Hab heute viel und laut genießt, ein Wunder Capri ist nicht in zwei Teile zerbrochen: Ca und Pri."
+      "text": "Lautes Niesen, ein Wunder Capri ist nicht in zwei Teile zerbrochen: Ca und Pri."
     },
     {
       "date": "2024-03-29",
@@ -1018,7 +1018,7 @@
       "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
-      "text": "[[Nath]]: <span class=\"quote\">Ruhe und Basikum.</span>"
+      "text": "[[Nath]]: <span class=\"quote\">Ruhe und Basilikum.</span>"
     },
     {
       "date": "2024-04-12",
@@ -1198,7 +1198,7 @@
       "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
-      "text": "«Süssigkeiten sind auch Ernährung,» sagt das Kind."
+      "text": "Süssigkeiten sind auch Ernährung, sagt das Kind."
     },
     {
       "date": "2024-04-30",
@@ -1418,7 +1418,7 @@
       "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Heftkritik-Kinnhaken (Millenial-Edition): «Mir sind die Haftnotizen ausgegangen, so schlecht war der Flattersatz.»"
+      "text": "Heftkritik-Kinnhaken (Millennial-Edition): «Mir sind die Haftnotizen ausgegangen, so schlecht war der Flattersatz.»"
     },
     {
       "date": "2024-05-22",
@@ -1607,8 +1607,8 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "Slavische Athena vs. Oltener Helvetia"
+      "weekday_index": 7,
+      "text": "Slawische Athena vs. Oltener Helvetia"
     },
     {
       "date": "2024-06-10",
@@ -1677,8 +1677,8 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 127.13,
-      "weekday_index": 0,
-      "text": "An den Kirchen schmeckt das Wasser immer am Besten."
+      "weekday_index": 7,
+      "text": "An den Kirchen schmeckt das Wasser immer am besten."
     },
     {
       "date": "2024-06-17",
@@ -1948,7 +1948,7 @@
       "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "Sie nenne mich ein wandelndes Sonnencreme-Testimonial."
+      "text": "Sie nennen mich ein wandelndes Sonnencreme-Testimonial."
     },
     {
       "date": "2024-07-14",
@@ -2398,7 +2398,7 @@
       "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Ein drittes Geschlecht kann man im Visa-Formular angeben, aber nicht, das man keiner Religion angehört."
+      "text": "Ein drittes Geschlecht kann man im Visa-Formular angeben, aber nicht, dass man keiner Religion angehört."
     },
     {
       "date": "2024-08-28",
@@ -2438,7 +2438,7 @@
       "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "Die Klassiker-Kosum-Route."
+      "text": "Die Klassiker-Konsum-Route."
     },
     {
       "date": "2024-09-01",
@@ -2727,8 +2727,8 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "«Get yourself a happy wife», sagt der Mann am Bahnhof. / «No Tuktuk», ist mein einziger Satz auf Indisch. / Vom Strassenrand zum gedeckten Tisch und der Game-of-Thrones-Melodie auf der Zitar."
+      "weekday_index": 7,
+      "text": "Get yourself a happy wife, sagt der Mann am Bahnhof. / No Tuktuk, ist mein einziger Satz auf Indisch. / Vom Strassenrand zum gedeckten Tisch und der Game-of-Thrones-Melodie auf der Zitar."
     },
     {
       "date": "2024-09-30",
@@ -2748,7 +2748,7 @@
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Einmal in fast alle Touristenfallen tappen und dann noch schlecht Trinkgeld geben. / «Unlimited crowd», sagt der Tourguide."
+      "text": "Einmal in fast alle Touristenfallen tappen und dann noch schlecht Trinkgeld geben. / Unlimited crowd, sagt der Tourguide."
     },
     {
       "date": "2024-10-02",
@@ -2768,7 +2768,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 4,
-      "text": "Im Restaurant — no pressure — aber fülle doch vor den Augen der Eigentümerin die Google-Berwertung aus (war sehr gut)."
+      "text": "Im Restaurant — no pressure — aber fülle doch vor den Augen der Eigentümerin die Google-Bewertung aus (war sehr gut)."
     },
     {
       "date": "2024-10-04",
@@ -2778,7 +2778,7 @@
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "I am a walking bottled-spring-water-commercial. / Neuer Tag, neues Dal. / Was ich nicht an Großzügigkeit besitze, besitze ich an Misstrauen."
+      "text": "I am a walking bottled-spring-water-commercial. / Neuer Tag, neues Dal. / Was ich nicht an Grosszügigkeit besitze, besitze ich an Misstrauen."
     },
     {
       "date": "2024-10-05",
@@ -2808,7 +2808,7 @@
       "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
-      "text": "Formerly know as Prince of Wales."
+      "text": "Formerly known as Prince of Wales."
     },
     {
       "date": "2024-10-08",
@@ -2928,7 +2928,7 @@
       "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "Mit dem 20er-Pack-Toilettenapier in der Fankurve."
+      "text": "Mit dem 20er-Pack-Toilettenpapier in der Fankurve."
     },
     {
       "date": "2024-10-20",
@@ -3278,7 +3278,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "Spiessroutenlauf durch die Vorweihnachtszeit."
+      "text": "Spiessrutenlauf durch die Vorweihnachtszeit."
     },
     {
       "date": "2024-11-24",
@@ -3388,7 +3388,7 @@
       "mood": -1,
       "cycling_km": 49.13,
       "weekday_index": 3,
-      "text": "Dem Team beweisen, dass ich eine Helm besitze."
+      "text": "Dem Team beweisen, dass ich einen Helm besitze."
     },
     {
       "date": "2024-12-05",
@@ -3408,7 +3408,7 @@
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "«Nackt zieht immer,» sagt sie. Und ja, auch ich bin da."
+      "text": "Nackt zieht immer, sagt sie. Und ja, auch ich bin da."
     },
     {
       "date": "2024-12-07",
@@ -3418,7 +3418,7 @@
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "«Prashant,» sagt die Stimme am Telefon."
+      "text": "Prashant, sagt die Stimme am Telefon."
     },
     {
       "date": "2024-12-08",
@@ -3518,7 +3518,7 @@
       "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Kunsum, Essen und ein wenig indische Geschichtsstunde."
+      "text": "Konsum, Essen und ein wenig indische Geschichtsstunde."
     },
     {
       "date": "2024-12-18",
@@ -3548,7 +3548,7 @@
       "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "Der Masseur meint es sei mal nötig gewesen. / Das leise lispeln der Sigourney Weaver."
+      "text": "Der Masseur meint es sei mal nötig gewesen. / Das leise Lispeln der Sigourney Weaver."
     },
     {
       "date": "2024-12-21",
@@ -3588,7 +3588,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Eine Schwimmbahn für die Zurückgeblienen."
+      "text": "Eine Schwimmbahn für die Zurückgebliebenen."
     },
     {
       "date": "2024-12-25",
@@ -3648,7 +3648,7 @@
       "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
-      "text": "Große Erwartungen, große Enttäuschungen. / Zopf am Meter (gefühlt)."
+      "text": "Grosse Erwartungen, grosse Enttäuschungen. / Zopf am Meter (gefühlt)."
     },
     {
       "date": "2024-12-31",
