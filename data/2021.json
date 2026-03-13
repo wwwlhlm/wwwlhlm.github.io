@@ -288,7 +288,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "Das Ofengemüse-Dilemma. / Der Weg ist der Liebesbeweiss."
+      "text": "Das Ofengemüse-Dilemma. / Der Weg ist der Liebesbeweis."
     },
     {
       "date": "2021-01-30",
@@ -508,7 +508,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "Pillen-Express und Gnochi-Knockout."
+      "text": "Pillen-Express und Gnoochi-Knockout."
     },
     {
       "date": "2021-02-21",
@@ -958,7 +958,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Es braucht keinen Adam Curtis um mir zu sagen, dass ich ein Opfer des Kapitalismus ist, aber schön klingen würde es"
+      "text": "Es braucht keinen Adam Curtis um mir zu sagen, dass ich ein Opfer des Kapitalismus bin, aber schön klingen würde es."
     },
     {
       "date": "2021-04-07",
@@ -1038,7 +1038,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "Alles was ich über Hasen weiss, hab ich aus «Watershio Down»."
+      "text": "Alles was ich über Hasen weiss, hab ich aus «Watership Down»."
     },
     {
       "date": "2021-04-15",
@@ -1158,7 +1158,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 1,
-      "text": "Chef im Urlaub, oder die Stimme as dem Off."
+      "text": "Chef im Urlaub, oder die Stimme aus dem Off."
     },
     {
       "date": "2021-04-27",
@@ -1318,7 +1318,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "Mit einem Impftermin fühlt man sich ist schon immun."
+      "text": "Mit einem Impftermin fühlt man sich schon immun."
     },
     {
       "date": "2021-05-13",
@@ -1628,7 +1628,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "Das fremde Kind meint, ich sei zu dick für dir Rutsche, ich belehre es eines besseren."
+      "text": "Das fremde Kind meint, ich sei zu dick für die Rutsche, ich belehre es eines besseren."
     },
     {
       "date": "2021-06-13",
@@ -1838,7 +1838,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "Aperetivo wie die Profis, nur im kleinen Gals."
+      "text": "Aperitivo wie die Profis, nur im kleinen Gals."
     },
     {
       "date": "2021-07-04",
@@ -2718,7 +2718,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "Essen wie ein Leistungsträger. / Latenight-Schweigen"
+      "text": "Essen wie ein Leistungsträger. / Late-Night-Schweigen"
     },
     {
       "date": "2021-09-30",
@@ -2827,8 +2827,8 @@
       "coffee": 0,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "Elite-Döner-Exellence"
+      "weekday_index": 7,
+      "text": "Elite-Döner-Excellence"
     },
     {
       "date": "2021-10-11",
@@ -2908,7 +2908,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 1,
-      "text": "Das Rund der Laufbahn zeigt, es gibt noch Hoffnung. / Doppelherzbruch / [[Nath]]: Wir müssen anstossen wenn wir dann so weit sind. [[Bill]]: Oder einfach so lang anstoßen bis wir so weit sind."
+      "text": "Das Rund der Laufbahn zeigt, es gibt noch Hoffnung. / Doppelherzbruch / [[Nath]]: Wir müssen anstossen wenn wir dann so weit sind. [[Bill]]: Oder einfach so lang anstossen bis wir so weit sind."
     },
     {
       "date": "2021-10-19",
@@ -3058,7 +3058,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Große (letzte) Worte, kleine Schrift. / Wann sind wir uns einmal gut genug gewesen?"
+      "text": "Grosse (letzte) Worte, kleine Schrift. / Wann sind wir uns einmal gut genug gewesen?"
     },
     {
       "date": "2021-11-03",
@@ -3198,7 +3198,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Gekonnt in die ecke reden."
+      "text": "Gekonnt in die Ecke reden."
     },
     {
       "date": "2021-11-17",
@@ -3428,7 +3428,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 4,
-      "text": "[[Bill]] <span class=\"quote\">I am just in a financial down spiral since the day I was born.</span> [[Evgenia]]: <span class=\"quote\">Why can’t the universe accept that Bally shies are a necessity.</span> [[Bill]] <span class=\"quote\">The universe does, but not the credit card.</span>"
+      "text": "[[Bill]] <span class=\"quote\">I am just in a financial down spiral since the day I was born.</span> [[Evgenia]]: <span class=\"quote\">Why can’t the universe accept that Bally shoes are a necessity.</span> [[Bill]] <span class=\"quote\">The universe does, but not the credit card.</span>"
     },
     {
       "date": "2021-12-10",
