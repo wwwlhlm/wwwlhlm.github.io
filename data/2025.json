@@ -138,7 +138,7 @@
       "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Das Kaffeeersatzprodukt st auch eine Tasse voll Kindheitserinnerungen."
+      "text": "Das Kaffeeersatzprodukt ist auch eine Tasse voll Kindheitserinnerungen."
     },
     {
       "date": "2025-01-15",
@@ -288,7 +288,7 @@
       "mood": 1.5,
       "cycling_km": 98.68,
       "weekday_index": 3,
-      "text": "Einflugschneise Sihltaal"
+      "text": "Einflugschneise Sihltal"
     },
     {
       "date": "2025-01-30",
@@ -747,8 +747,8 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 38.47,
-      "weekday_index": 0,
-      "text": "Das Internet gibt es einem hart. / [[Bill]] zu [[Nath]]: <span class=\"quote\">Ich bin enttäuscht übernimmst du nicht automatisch meine Meinung.</span>"
+      "weekday_index": 7,
+      "text": "Das Internet gibt es einem hart. / [[Bill]] zu [[Nath]]: <span class=\"quote\">Ich bin enttäuscht, dass du nicht automatisch meine Meinung übernimmst.</span>"
     },
     {
       "date": "2025-03-17",
@@ -848,7 +848,7 @@
       "mood": 1,
       "cycling_km": 60.07,
       "weekday_index": 3,
-      "text": "«Eine Tür geht auf», sagt Frau Grau. Vielleicht war es auch nur ein Fenster."
+      "text": "Eine Tür geht auf, sagt Frau Grau. Vielleicht war es auch nur ein Fenster."
     },
     {
       "date": "2025-03-27",
@@ -1978,7 +1978,7 @@
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
-      "text": "Schock, das «50 Shades of Grey» Twilight-Fanfiction war."
+      "text": "Schock, dass «50 Shades of Grey» Twilight-Fanfiction ist."
     },
     {
       "date": "2025-07-18",
@@ -2318,7 +2318,7 @@
       "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "Erbeertörtchen, weil’s sein muss."
+      "text": "Erdbeertörtchen, weil’s sein muss."
     },
     {
       "date": "2025-08-21",
@@ -2668,7 +2668,7 @@
       "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "Heute: Den Haussegen einen Grossraumbüros gerettet."
+      "text": "Heute: Den Haussegen eines Grossraumbüros gerettet."
     },
     {
       "date": "2025-09-25",
@@ -2758,7 +2758,7 @@
       "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "«Du siehst immer so semisportlich aus», sagt er."
+      "text": "Du siehst immer so semisportlich aus, sagt er."
     },
     {
       "date": "2025-10-04",
@@ -2798,7 +2798,7 @@
       "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "«Studentisches gestalten», sagt er."
+      "text": "Studentisches Gestalten, sagt er."
     },
     {
       "date": "2025-10-08",
@@ -2948,7 +2948,7 @@
       "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "Das kleine Stück Kuchen ist gross genug für meine Komplexe. / «Du hast noch ein paar Baustellen», sagt die Physiotherapeutin."
+      "text": "Das kleine Stück Kuchen ist gross genug für meine Komplexe. / Du hast noch ein paar Baustellen, sagt die Physiotherapeutin."
     },
     {
       "date": "2025-10-23",
@@ -3288,7 +3288,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Abstimmungsverhalten: Sehr männlich. / Schulter: Rolle rückwärts. / Ich liess ihn nicht auf Sofa und den Teppich, sagte ich über den letzten Abend bei mir daheim. Das ich nicht meinen Besuch meinte, sondern nur dessen Hund überhörte mein Gegenüber jedoch."
+      "text": "Abstimmungsverhalten: Sehr männlich. / Schulter: Rolle rückwärts. / Ich liess ihn nicht auf Sofa und den Teppich, sagte ich über den letzten Abend bei mir daheim. Dass ich nicht meinen Besuch meinte, sondern nur dessen Hund überhörte mein Gegenüber jedoch."
     },
     {
       "date": "2025-11-26",
@@ -3398,7 +3398,7 @@
       "mood": -1,
       "cycling_km": 49.84,
       "weekday_index": 6,
-      "text": "Weihnachtlich, besinnliches draufhauen."
+      "text": "Weihnachtlich, besinnliches Draufhauen."
     },
     {
       "date": "2025-12-07",
