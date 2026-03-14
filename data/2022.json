@@ -973,19 +973,19 @@
     {
       "date": "2022-04-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "No-No-COVID"
     },
     {
       "date": "2022-04-09",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 0.5,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Kinderzirkus, wortwörtlich"
@@ -993,19 +993,19 @@
     {
       "date": "2022-04-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -2,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Der Konsumationszwang als Teil der Freundschaft mit mir."
     },
     {
       "date": "2022-04-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -2,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Montagmorgen-Post-Meeting-Tief / Einmal alles testen bitte."
@@ -1013,9 +1013,9 @@
     {
       "date": "2022-04-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Das kleine c."
@@ -1023,9 +1023,9 @@
     {
       "date": "2022-04-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "—"
@@ -1033,9 +1033,9 @@
     {
       "date": "2022-04-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -2,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Hast du einen Bill gesehen kennst du alle."
@@ -1053,21 +1053,21 @@
     {
       "date": "2022-04-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Jede Stufe eine kleine Qual."
     },
     {
       "date": "2022-04-17",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Zu viele Stufen zum Paradies."
     },
     {
@@ -1438,7 +1438,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Von Kontrabass umhüllt. /"
+      "text": "Von Kontrabass umhüllt. / Selbst den Gegenbeweis zu dem erbringen, was man noch kurz vorher behauptete."
     },
     {
       "date": "2022-05-25",
@@ -1608,7 +1608,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "[[S]]: Ich bin Laktose-Intolerant. [[Bill]]: Ich bin einfach nur intolerant."
+      "text": "[[S]]: <span class=\"quote\">Ich bin Laktose-Intolerant.</span> [[Bill]]: <span class=\"quote\">Ich bin einfach nur intolerant.</span>"
     },
     {
       "date": "2022-06-11",
@@ -1618,7 +1618,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "[[Sam]]: Sporty above Forty."
+      "text": "[[Sam]]: <span class=\"quote\">Sporty above Forty.</span>"
     },
     {
       "date": "2022-06-12",
@@ -2677,8 +2677,8 @@
       "coffee": 0,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "Wo ist die Medium-Tempo-Bahn? / Prokrastinieren mit freundlicher Unterstützung der Hipster-Christen. [[Tom]]: Du arbeitest zu viel. [[Bill]]: Nein, ich bin nur nicht effizient genug."
+      "weekday_index": 7,
+      "text": "Wo ist die Medium-Tempo-Bahn? / Prokrastinieren mit freundlicher Unterstützung der Hipster-Christen. / [[Tom]]: <span class=\"quote\">Du arbeitest zu viel.</span> [[Bill]]: <span class=\"quote\">Nein, ich bin nur nicht effizient genug.</span>"
     },
     {
       "date": "2022-09-26",
