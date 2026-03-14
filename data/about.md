@@ -2,4 +2,4 @@
 title: Alles in Ordnung
 ---
 
-Ordnung ist das halbe Leben hat man mir früher immer gesagt. Genützt hat es nicht viel. Ein halbes Leben dafür vergeht schnell. Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. 
+Rückwärtsschauen wenn andere nach vorn blicken. Was 2005 als monatliches Lebenszeichen begann – als eine Art analoge Push-Notification – hat sich längst zur Routine verselbstständigt und dabei still eine Datenbank angehäuft: Äpfel, Bananen, Kaffees, Kilometer. Nicht zur Optimierung, nicht in Echtzeit, sondern als Fossilien des Alltags. Updates erfolgen in sporadischen Abständen.
