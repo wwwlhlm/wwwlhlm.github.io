@@ -1388,7 +1388,7 @@
     
     // Formatiere Text
     function formatText(text) {
-      text = text.replace(/ \/ /g, '  /  ');
+      text = text.replace(/ \/ /g, '&nbsp;&nbsp;/  ');
       text = text.replace(/\\\*/g, '*');
       text = text.replace(/\[\[([^\]]+)\]\]/g, (match, name) => name.charAt(0) + '.');
       text = text.replace(/<span class="quote">(.*?)<\/span>/g, '<span class="quote">$1</span>');
