@@ -758,7 +758,7 @@
       "mood": 1,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "[[Bill]]: <span class=\"quote\">Heut ist heut. Er: …besonders nach gestern.</span>"
+      "text": "[[Bill]]: <span class=\"quote\">Heut ist heut.</span> Er: <span class=\"quote\">…besonders nach gestern.</span>"
     },
     {
       "date": "2021-03-18",
