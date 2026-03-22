@@ -1835,7 +1835,7 @@
       "apples": 0,
       "bananas": 1,
       "coffee": 2,
-      "mood": 0,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 7,
       "text": "Die Zeit zwischen den Zügen."
@@ -1843,8 +1843,8 @@
     {
       "date": "2022-07-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 1,
@@ -1853,9 +1853,9 @@
     {
       "date": "2022-07-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Pfadiweg, all the way. / Indische Väter haben keinen guten Ruf."
@@ -1863,9 +1863,9 @@
     {
       "date": "2022-07-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 48.02,
       "weekday_index": 3,
       "text": "—"
@@ -1873,9 +1873,9 @@
     {
       "date": "2022-07-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Ein Hundeleben, abgesagt."
@@ -1883,9 +1883,9 @@
     {
       "date": "2022-07-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Eine Tanzfläche für die Ex-Arbeitskolleg*innen."
@@ -1893,9 +1893,9 @@
     {
       "date": "2022-07-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Da waren es nur noch vier."
@@ -1903,19 +1903,19 @@
     {
       "date": "2022-07-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Mehr Emotional-Support-Animal als Party-Animal."
     },
     {
       "date": "2022-07-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 51.56,
       "weekday_index": 1,
       "text": "—"
@@ -1923,9 +1923,9 @@
     {
       "date": "2022-07-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Wenn man die Ziellinie verschiebt, kann man immer Gewinner sein."
@@ -1933,8 +1933,8 @@
     {
       "date": "2022-07-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 6,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
@@ -1943,19 +1943,19 @@
     {
       "date": "2022-07-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Sie sind aber ein spezieller Mensch, sagt die Frau in der Textilreinigung nach der Inspektion meiner Hemden."
     },
     {
       "date": "2022-07-15",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Wer zieht hier wen beim Gassi-gehen?"
@@ -1964,8 +1964,8 @@
       "date": "2022-07-16",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Ist ein Hundehaufen auf der teuersten Strasse der Stadt bereits Kapitalismuskritik?"
@@ -1973,19 +1973,19 @@
     {
       "date": "2022-07-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Heut wäre ein guter Tag gewesen um aus Scheisse Gold zu machen."
     },
     {
       "date": "2022-07-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Bring dein eigenes Haustier zur Arbeit."
@@ -1993,9 +1993,9 @@
     {
       "date": "2022-07-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Hundeabschied"
@@ -2003,9 +2003,9 @@
     {
       "date": "2022-07-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Geradebiegen für zwei Früchtekuchen. / Probleme, unsortiert."
@@ -2013,9 +2013,9 @@
     {
       "date": "2022-07-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Die Velo-Gang die bei Rot hält. / Ein Tag lang auf Abschied eingestellt."
@@ -2023,9 +2023,9 @@
     {
       "date": "2022-07-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Der Ritt gen Süden."
@@ -2034,48 +2034,48 @@
       "date": "2022-07-23",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Die Last der Welt in Form einer äusserst schweren Platte."
     },
     {
       "date": "2022-07-24",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Treppensteigen mit unlauteren Gedanken. / Die Entdeckung eines Fetischen am Esstisch."
     },
     {
       "date": "2022-07-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Kein Lycra-Tag heut. / Der Fluss bin ich."
     },
     {
       "date": "2022-07-26",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Die Erleuchtung fährt die Treppe hoch. / Der innere Kompass schlägt auch am falschen Ort richtig aus."
     },
     {
       "date": "2022-07-27",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Arcade Fire haben den Ohrwurm perfektioniert, den man so lang hört bis man ihn plötzlich nicht mehr leiden mag. / Warum sollte ich der Plan B sein?"
@@ -2083,19 +2083,19 @@
     {
       "date": "2022-07-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2.5,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Rudelkacken im Park. / Die Parkwächter auf ihren Motorrädern geben uns noch eine Gnadenfrist, schauen auf uns und den Sonnenuntergang, telefonieren, reden miteinander. Bevor sie uns unmissverständlich, aber ohne Druck zu machen, andeuteten: Jetzt müsst auch ihr gehen. Die Sonne mag bald untergegangen zu sein, der Tag lebt fort."
     },
     {
       "date": "2022-07-29",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Warum den kurzen Weg nehmen, wenn der Umweg auch schön ist. (Anmerkung: Wie sich herausstellte, war der kurze Weg am Ende noch schöner.)"
@@ -2103,22 +2103,22 @@
     {
       "date": "2022-07-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "—"
+      "text": "Die Kunst ein teures Outfit zu tragen, das nach nichts aussieht."
     },
     {
       "date": "2022-07-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "—"
+      "weekday_index": 7,
+      "text": "Eine Zugfahrt wie eine Therapiestunde."
     },
     {
       "date": "2022-08-01",
