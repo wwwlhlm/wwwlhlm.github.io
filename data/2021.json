@@ -28,7 +28,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 7,
-      "text": "Vaterbildnisse aus der Inbox. / Von aussen gesehen und von innen."
+      "text": "Tomatensauce, mein Alibi."
     },
     {
       "date": "2021-01-04",
@@ -902,10 +902,10 @@
     },
     {
       "date": "2021-04-01",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "[[Sam]]: <span class=\"quote\">You are not a hopelessly romantic person.</span> [[Bill]]: <span class=\"quote\">Maybe, but I am a romantic, and I am hopeless.</span>"
@@ -913,9 +913,9 @@
     {
       "date": "2021-04-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2.5,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "[[Nath]]: <span class=\"quote\">Sexuelle Orientierung: Beige.</span>"
@@ -923,9 +923,9 @@
     {
       "date": "2021-04-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Bier im Windschatten."
@@ -933,19 +933,19 @@
     {
       "date": "2021-04-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Meine Leiste ist nicht mehr die Neueste."
     },
     {
       "date": "2021-04-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -953,9 +953,9 @@
     {
       "date": "2021-04-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Es braucht keinen Adam Curtis um mir zu sagen, dass ich ein Opfer des Kapitalismus bin, aber schön klingen würde es."
@@ -963,9 +963,9 @@
     {
       "date": "2021-04-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Die Wetterfee trifft keine Schuld."
@@ -973,8 +973,8 @@
     {
       "date": "2021-04-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 4,
@@ -983,9 +983,9 @@
     {
       "date": "2021-04-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Wenn man gegen den Uhrzeigersinn rennt, rennt man dann gegen die Zeit?"
@@ -993,8 +993,8 @@
     {
       "date": "2021-04-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
@@ -1003,19 +1003,19 @@
     {
       "date": "2021-04-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1.5,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Mein Charme ist nicht per Videocall übertragbar."
     },
     {
       "date": "2021-04-12",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -1023,9 +1023,9 @@
     {
       "date": "2021-04-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Nicht immer synchron."
@@ -1033,9 +1033,9 @@
     {
       "date": "2021-04-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Alles was ich über Hasen weiss, hab ich aus «Watership Down»."
@@ -1043,9 +1043,9 @@
     {
       "date": "2021-04-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "—"
@@ -1053,9 +1053,9 @@
     {
       "date": "2021-04-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Bin ich ein guter Konsument?"
@@ -1063,9 +1063,9 @@
     {
       "date": "2021-04-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "—"
@@ -1073,19 +1073,19 @@
     {
       "date": "2021-04-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Olten sehen und gehen."
     },
     {
       "date": "2021-04-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Die Sonnenplätze sind bereits besetzt."
@@ -1093,9 +1093,9 @@
     {
       "date": "2021-04-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Die Welt mit den Augen der Kund*innen sehen ist nicht immer eine schöne Welt."
@@ -1103,9 +1103,9 @@
     {
       "date": "2021-04-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Kehrtwendehals"
@@ -1113,18 +1113,18 @@
     {
       "date": "2021-04-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Der Bullingerplatz ist wie Heimspiel für mich. / Knuddel-Muddel"
     },
     {
       "date": "2021-04-23",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
@@ -1132,10 +1132,10 @@
     },
     {
       "date": "2021-04-24",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "—"
@@ -1143,19 +1143,19 @@
     {
       "date": "2021-04-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Sonne bleicht das Hirn, Sonne streichelt die Seele."
     },
     {
       "date": "2021-04-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Chef im Urlaub, oder die Stimme aus dem Off."
@@ -1163,9 +1163,9 @@
     {
       "date": "2021-04-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "—"
@@ -1173,9 +1173,9 @@
     {
       "date": "2021-04-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Soft-Focus"
@@ -1183,8 +1183,8 @@
     {
       "date": "2021-04-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 4,
@@ -1193,19 +1193,19 @@
     {
       "date": "2021-04-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Auch ein halber Schlüssel passt noch ins Schloss."
     },
     {
       "date": "2021-05-01",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Wenn die Berge ihre Bordsteine hochklappen."
@@ -1213,19 +1213,19 @@
     {
       "date": "2021-05-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Handmaids-Fail"
     },
     {
       "date": "2021-05-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Dasein, ohne da zu sein."
@@ -1233,9 +1233,9 @@
     {
       "date": "2021-05-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Die Arbeiten wollten einfach nicht für mich sprechen."
@@ -1243,9 +1243,9 @@
     {
       "date": "2021-05-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Bewerbungsschreiben sind förmliche Liebesbriefe."
@@ -1253,9 +1253,9 @@
     {
       "date": "2021-05-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Mein innerer Tempomat. / Ehrenrunde bei Dr. Gerber."
@@ -1263,9 +1263,9 @@
     {
       "date": "2021-05-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Ein Mann für halbe Sachen."
@@ -1273,9 +1273,9 @@
     {
       "date": "2021-05-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Das Buffet ist wieder eröffnet."
@@ -1283,19 +1283,19 @@
     {
       "date": "2021-05-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "—"
     },
     {
       "date": "2021-05-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Die Anzeige sagt: Schiessen lernen, Freunde treffen."
@@ -1303,9 +1303,9 @@
     {
       "date": "2021-05-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Schwachpunkt 1: Schulter. / Schwachpunkt 2: Wille."
@@ -1313,9 +1313,9 @@
     {
       "date": "2021-05-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Mit einem Impftermin fühlt man sich schon immun."
@@ -1323,9 +1323,9 @@
     {
       "date": "2021-05-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2.5,
+      "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "—"
@@ -1333,8 +1333,8 @@
     {
       "date": "2021-05-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
@@ -1343,9 +1343,9 @@
     {
       "date": "2021-05-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Der Beginn eines schwedischen Sommers."
@@ -1353,19 +1353,19 @@
     {
       "date": "2021-05-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Thriller for dummies."
     },
     {
       "date": "2021-05-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -1373,9 +1373,9 @@
     {
       "date": "2021-05-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Scham auf zwei Rädern."
@@ -1383,9 +1383,9 @@
     {
       "date": "2021-05-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Die Stimmung balanciert zwischen Himmel und Hölle auf der Slackline."
@@ -1393,19 +1393,19 @@
     {
       "date": "2021-05-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 4,
-      "text": "Verkaufte man früher die Seele an die Banken, schon kommt der Sportvermarkter daher."
+      "text": "Verkaufte man früher seine Seele an die Banken, kommt heute bereits der Sportvermarkter daher. / [[Sam]]-Tag"
     },
     {
       "date": "2021-05-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Museumswetter, wenn nicht die Wege zwischen die Museen wären."
@@ -1413,9 +1413,9 @@
     {
       "date": "2021-05-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Ein Sport ohne Ziel."
@@ -1423,29 +1423,29 @@
     {
       "date": "2021-05-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 83.66,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Der Turbo-Modus am Reiskocher ist eine Offenbarung. / Belohnungsbanane"
     },
     {
       "date": "2021-05-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Guided by the red light. / Unser Gemüt gleicht der Sonne vor der sich der Mond schob."
     },
     {
       "date": "2021-05-25",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Das Farbrad neu erfinden."
@@ -1453,9 +1453,9 @@
     {
       "date": "2021-05-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "—"
@@ -1463,19 +1463,19 @@
     {
       "date": "2021-05-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Farbenblind auf beiden Augen."
     },
     {
       "date": "2021-05-28",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Für den einen ist es ein Dinner, für den anderen ein Dinnerdate."
@@ -1483,9 +1483,9 @@
     {
       "date": "2021-05-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Im Quadrant drehen."
@@ -1493,19 +1493,19 @@
     {
       "date": "2021-05-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "Treffpunkt Susenbergstrasse: Downwards von hier. / Es passiert nicht oft, dass einem die Polizei heim fährt."
+      "weekday_index": 7,
+      "text": "Treffpunkt Susenbergstrasse: Downwards von hier. / Service public: Es kommt nicht oft vor, dass die Polizei einen nach Hause fährt."
     },
     {
       "date": "2021-05-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Teilschuld ist auch eine Schuld. / Die Leute kommen, aber vor allem auch gehen sehen."
@@ -1513,29 +1513,29 @@
     {
       "date": "2021-06-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "E-Mails aus dem Off."
     },
     {
       "date": "2021-06-02",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Die Protein-Bowl, ein Teller Normalität."
     },
     {
       "date": "2021-06-03",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Die unbequeme Wahrheit kann nicht unbequem genug zu sein. / Das Wochenende lacht mir aus dem Arsch. / Psycho-Endspurt"
@@ -1543,9 +1543,9 @@
     {
       "date": "2021-06-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "—"
@@ -1553,8 +1553,8 @@
     {
       "date": "2021-06-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
@@ -1563,29 +1563,29 @@
     {
       "date": "2021-06-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "—"
     },
     {
       "date": "2021-06-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
-      "text": "Die Schieberegler des Glückseligkeit."
+      "text": "Der Schieberegler der Glückseligkeit steckt fest."
     },
     {
       "date": "2021-06-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "—"
@@ -1593,9 +1593,9 @@
     {
       "date": "2021-06-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Motte jagen, Portmonee finden."
@@ -1603,9 +1603,9 @@
     {
       "date": "2021-06-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Wenn er zuschlägt, bin ich der, der die Taschentücher bringt."
@@ -1613,9 +1613,9 @@
     {
       "date": "2021-06-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "—"
@@ -1623,9 +1623,9 @@
     {
       "date": "2021-06-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Das fremde Kind meint, ich sei zu dick für die Rutsche, ich belehre es eines besseren."
@@ -1633,19 +1633,19 @@
     {
       "date": "2021-06-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "Der barfuss laufende Inder auf der Laufbahn grüsst mich jetzt."
+      "weekday_index": 7,
+      "text": "Der barfusslaufende Inder auf der Laufbahn grüsst mich nun."
     },
     {
       "date": "2021-06-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Willkommen im Büro, aber nicht allzu lang."
@@ -1653,8 +1653,8 @@
     {
       "date": "2021-06-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 3,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
@@ -1662,9 +1662,9 @@
     },
     {
       "date": "2021-06-16",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
@@ -1673,9 +1673,9 @@
     {
       "date": "2021-06-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "—"
@@ -1683,9 +1683,9 @@
     {
       "date": "2021-06-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Opferrolle rückwärts."
@@ -1693,9 +1693,9 @@
     {
       "date": "2021-06-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Dresscode Sportshorts."
@@ -1703,19 +1703,19 @@
     {
       "date": "2021-06-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Die Playlist ist ein tiefer Blick in meine Seele."
     },
     {
       "date": "2021-06-21",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 2,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -1723,9 +1723,9 @@
     {
       "date": "2021-06-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Zurück auf schnellen Rädern."
@@ -1733,9 +1733,9 @@
     {
       "date": "2021-06-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Nach dreieinhalb Jahren ist das Problem nicht gelöst, aber die Perspektive darauf eine andere."
@@ -1743,8 +1743,8 @@
     {
       "date": "2021-06-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 4,
@@ -1753,8 +1753,8 @@
     {
       "date": "2021-06-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
@@ -1763,9 +1763,9 @@
     {
       "date": "2021-06-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "—"
@@ -1773,19 +1773,19 @@
     {
       "date": "2021-06-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Der Braten bin ich."
     },
     {
       "date": "2021-06-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Femme-Fan"
@@ -1793,8 +1793,8 @@
     {
       "date": "2021-06-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
@@ -1803,9 +1803,9 @@
     {
       "date": "2021-06-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Vielpacker"
@@ -1813,9 +1813,9 @@
     {
       "date": "2021-07-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Zu sagen «Ich liebe dich» ist keine Deeskalationsstrategie."
@@ -1823,39 +1823,39 @@
     {
       "date": "2021-07-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "Der morgendliche Covid-Stress-Test. /  Suppeneinlage als Hauptgang sozusagen."
+      "text": "Der morgendliche Covid-Stress-Test. / Suppeneinlage als Hauptgang sozusagen."
     },
     {
       "date": "2021-07-03",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "Aperitivo wie die Profis, nur im kleinen Gals."
+      "text": "Aperitivo wie die Profis, nur in kleinen Gläsern."
     },
     {
       "date": "2021-07-04",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Wo kam der Regen so schnell her?"
     },
     {
       "date": "2021-07-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Im Adamskostüm versuchte der Einsiedler des Nackstrandes uns die Bibel näher zu bringen. / [[Sam]]: <span class=\"quote\">She is never on her best behavior.</span>"
@@ -1864,11 +1864,11 @@
       "date": "2021-07-06",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Das schöne Wetter lassen wir links zurück."
+      "text": "Das schöne Wetter lassen da wo es ist."
     },
     {
       "date": "2021-07-07",
@@ -1938,7 +1938,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
-      "text": "Milchersatzgetränkkasten"
+      "text": "Milchersatzgetränkekasten"
     },
     {
       "date": "2021-07-14",
