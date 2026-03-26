@@ -2752,19 +2752,19 @@
     },
     {
       "date": "2022-10-03",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Im Telefon abnehmen bin ich eine Niete."
     },
     {
       "date": "2022-10-04",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
@@ -2772,10 +2772,10 @@
     },
     {
       "date": "2022-10-05",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 54.55,
       "weekday_index": 3,
       "text": "—"
@@ -2783,9 +2783,9 @@
     {
       "date": "2022-10-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Beim Anruf vergessen warum man eigentlich sprechen wollte."
@@ -2793,9 +2793,9 @@
     {
       "date": "2022-10-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Exkludiert von der Exklusivität. / Kaloriendefizitär."
@@ -2803,29 +2803,29 @@
     {
       "date": "2022-10-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 4,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Putzen für den inneren Frieden."
     },
     {
       "date": "2022-10-09",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 38.8,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Luft raus in Othmarsingen."
     },
     {
       "date": "2022-10-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Innerlich schwitze ich."
@@ -2833,9 +2833,9 @@
     {
       "date": "2022-10-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Twinning for the broken hearted."
@@ -2843,19 +2843,19 @@
     {
       "date": "2022-10-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Das Unbehagen nimmt vor mir Platz."
     },
     {
       "date": "2022-10-13",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 2,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "—"
@@ -2863,9 +2863,9 @@
     {
       "date": "2022-10-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Cocktail in der linken Arschbacke."
@@ -2873,8 +2873,8 @@
     {
       "date": "2022-10-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 3,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
@@ -2883,18 +2883,18 @@
     {
       "date": "2022-10-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 83.28,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Chlamydien am Nebentisch."
     },
     {
       "date": "2022-10-17",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 1,
@@ -2902,10 +2902,10 @@
     },
     {
       "date": "2022-10-18",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Diss-Dienstag"
@@ -2913,9 +2913,9 @@
     {
       "date": "2022-10-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": 1,
       "cycling_km": 45.38,
       "weekday_index": 3,
       "text": "Willkommen in Spreitenbach."
@@ -2923,9 +2923,9 @@
     {
       "date": "2022-10-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Dezimiert aber lustig."
@@ -2933,9 +2933,9 @@
     {
       "date": "2022-10-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Dem Schlüsselbund auf der Spur."
@@ -2943,9 +2943,9 @@
     {
       "date": "2022-10-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "—"
@@ -2953,9 +2953,9 @@
     {
       "date": "2022-10-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 65.84,
       "weekday_index": 7,
       "text": "Der Schmarotzer des Pelotons."
@@ -2963,9 +2963,9 @@
     {
       "date": "2022-10-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Wo nichts versteckt ist, gibts nichts zu entlarven."
@@ -2973,8 +2973,8 @@
     {
       "date": "2022-10-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 2,
@@ -2983,9 +2983,9 @@
     {
       "date": "2022-10-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "PDF schreiben im Akkord."
@@ -2993,19 +2993,19 @@
     {
       "date": "2022-10-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Spinne im Glashaus."
     },
     {
       "date": "2022-10-28",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "—"
@@ -3013,8 +3013,8 @@
     {
       "date": "2022-10-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
@@ -3023,19 +3023,19 @@
     {
       "date": "2022-10-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Jede Nacht sollte eine Stunde länger sein."
     },
     {
       "date": "2022-10-31",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "—"
@@ -3043,9 +3043,9 @@
     {
       "date": "2022-11-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 4,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Aus der Hecke springen ist eine Frage des Timings."
@@ -3053,9 +3053,9 @@
     {
       "date": "2022-11-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "—"
@@ -3063,9 +3063,9 @@
     {
       "date": "2022-11-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Shoppen und hoffen, dass das Glücksgefühl tritt gleich ein."
@@ -3073,39 +3073,39 @@
     {
       "date": "2022-11-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "—"
     },
     {
       "date": "2022-11-05",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Ich habe kein Schwimmbrillengesicht."
     },
     {
       "date": "2022-11-06",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Gesegnet ist das Glas Wasser zur Tasse Kaffee."
     },
     {
       "date": "2022-11-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Schlaf ich schlecht bei zu viel Übersatztext."
@@ -3113,9 +3113,9 @@
     {
       "date": "2022-11-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "—"
@@ -3123,9 +3123,9 @@
     {
       "date": "2022-11-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Ausgesprochen ausgeglichen. / Unsere Zyklen haben sich aneinander angepasst."
@@ -3133,9 +3133,9 @@
     {
       "date": "2022-11-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Warten auf die Toilettenspülung."
@@ -3143,9 +3143,9 @@
     {
       "date": "2022-11-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Wegen den Liedtexten ist niemand hier."
@@ -3153,9 +3153,9 @@
     {
       "date": "2022-11-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "vegan, inkonsequent"
@@ -3163,19 +3163,19 @@
     {
       "date": "2022-11-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "—"
     },
     {
       "date": "2022-11-14",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Porridge ist meine Charmeoffensive gegenüber älteren Damen, pflanzliche Sahne die Zauberformel."
@@ -3183,9 +3183,9 @@
     {
       "date": "2022-11-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Doppelte Buchführung meines Gefühlslebens."
@@ -3193,9 +3193,9 @@
     {
       "date": "2022-11-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "Zu sehr festhalten am loslassen."
@@ -3203,9 +3203,9 @@
     {
       "date": "2022-11-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "—"
@@ -3213,9 +3213,9 @@
     {
       "date": "2022-11-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "Aus dem Fenster schauen lohnt sich."
@@ -3223,9 +3223,9 @@
     {
       "date": "2022-11-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 5,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Putzfrauen muss man hofieren."
@@ -3233,19 +3233,19 @@
     {
       "date": "2022-11-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Home-office-los"
     },
     {
       "date": "2022-11-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 1,
       "text": "Der letzte Pessimist in der Runde."
@@ -3253,9 +3253,9 @@
     {
       "date": "2022-11-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 2,
       "text": "Eine Träne für einen Schatten."
@@ -3263,9 +3263,9 @@
     {
       "date": "2022-11-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 3,
       "text": "—"
@@ -3273,9 +3273,9 @@
     {
       "date": "2022-11-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
       "weekday_index": 4,
       "text": "Ich denke sie tindert nicht."
@@ -3283,9 +3283,9 @@
     {
       "date": "2022-11-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
       "weekday_index": 5,
       "text": "—"
@@ -3293,9 +3293,9 @@
     {
       "date": "2022-11-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
       "weekday_index": 6,
       "text": "Heut wird ohne mich gezügelt."
@@ -3303,11 +3303,11 @@
     {
       "date": "2022-11-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 0,
+      "weekday_index": 7,
       "text": "Kein Tofu und keine Internetverbindung um dies zu teilen."
     },
     {
