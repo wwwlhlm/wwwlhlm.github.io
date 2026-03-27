@@ -347,7 +347,7 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "The saddest long distance call."
     },
     {
@@ -557,7 +557,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 76.4,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Das rollende Aargau-Panorama (in Vistavision)."
     },
     {
@@ -767,7 +767,7 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 90.91,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Sihltal-Blues"
     },
     {
@@ -837,7 +837,7 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der Guide in Pompeji sprach in seinem stark italienisch gefärbten Englisch davon, dass der Ort von Asche («Ash») und Pommes («Plumes») verschüttet wurde."
     },
     {
@@ -1327,7 +1327,7 @@
       "coffee": 0,
       "mood": -1.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Auf gutem Weg zur Selenvergiftung."
     },
     {
@@ -1607,7 +1607,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Slawische Athena vs. Oltener Helvetia"
     },
     {
@@ -1677,7 +1677,7 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 127.13,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "An den Kirchen schmeckt das Wasser immer am besten."
     },
     {
@@ -2727,7 +2727,7 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Get yourself a happy wife, sagt der Mann am Bahnhof. / No Tuktuk, ist mein einziger Satz auf Indisch. / Vom Strassenrand zum gedeckten Tisch und der Game-of-Thrones-Melodie auf der Zitar."
     },
     {
