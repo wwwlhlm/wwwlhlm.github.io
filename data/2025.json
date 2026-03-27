@@ -327,7 +327,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Eine E-Mail von zweien (Babysteps)."
     },
     {
@@ -397,7 +397,7 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 75.73,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Knacknuss vs. Kackwurst / Robusta: Robustes Herzflackern. /  Abstimmen, ganz ohne mich."
     },
     {
@@ -467,7 +467,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 33.59,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Kinopublikum im Kreuzverhör: Wer «Cronenberg» sagen kann ist dabei."
     },
     {
@@ -1447,7 +1447,7 @@
       "coffee": 2,
       "mood": -1,
       "cycling_km": 43.95,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Ein echter Miro mit 12° Anstieg: Ausrollen am Kunstolymp."
     },
     {
@@ -3634,7 +3634,7 @@
       "date": "2025-12-30",
       "apples": 0,
       "bananas": 3,
-      "coffee": 3,
+      "coffee": 2,
       "mood": -1.5,
       "cycling_km": 0,
       "weekday_index": 2,
