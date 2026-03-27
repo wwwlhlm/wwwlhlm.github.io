@@ -444,7 +444,7 @@
       "date": "2021-02-14",
       "apples": 0,
       "bananas": 1.5,
-      "coffee": 3,
+      "coffee": 4,
       "mood": 1.5,
       "cycling_km": 0,
       "weekday_index": 7,
@@ -2038,7 +2038,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "Wir müssen erst wieder das tanzen lernen. / Die fehlenden Puzzleteile der Coolness."
+      "text": "Wir müssen erst wieder das tanzen lernen. / Die fehlenden Puzzleteile zur Coolness."
     },
     {
       "date": "2021-07-24",
@@ -2057,8 +2057,8 @@
       "coffee": 0,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 0,
-      "text": "Busfahrer: Wenn ich nach dieser Fahrt 45 Minuten Pause mache liegt die ganze Transportlogistik brach. / Warum hat Valentina einen Schnauz?"
+      "weekday_index": 7,
+      "text": "Busfahrer: <span class=\"quote\">Wenn ich nach dieser Fahrt 45 Minuten Pause mache liegt die ganze Transportlogistik brach.</span> / Warum hat Valentina einen Schnauz?"
     },
     {
       "date": "2021-07-26",
@@ -2108,7 +2108,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "Brücken erobern"
+      "text": "Brücken erobern."
     },
     {
       "date": "2021-07-31",
@@ -2158,7 +2158,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "Stangen / Die kleine Mäuse-Prozession / Die Pfütze und ihre Facetten."
+      "text": "Die kleine Mäuse-Prozession / Die Pfütze und ihre Facetten."
     },
     {
       "date": "2021-08-05",
@@ -2458,7 +2458,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 5,
-      "text": "[[Nath]]: <span class=\"quote\">Ich glaube «Call Me by Your Name» ist unser «Vom Winde verweht».</span> / Auf dem szenisch schönen Aussichtspunkt mit Blick über Athen sagt der junge Mann: Hier würde ich hingehen wenn ich eine Freundin hätte."
+      "text": "[[Nath]]: <span class=\"quote\">Ich glaube «Call Me by Your Name» ist unser «Vom Winde verweht».</span> / Auf dem szenisch schönen Aussichtspunkt mit Blick über Athen sagt der junge Mann: <span class=\"quote\">Hier würde ich hingehen wenn ich eine Freundin hätte.</span>"
     },
     {
       "date": "2021-09-04",
