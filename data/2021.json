@@ -27,7 +27,7 @@
       "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Tomatensauce, mein Alibi."
     },
     {
@@ -97,7 +97,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "–"
     },
     {
@@ -167,7 +167,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Das Netflix-Upgrade macht sich bezahlt."
     },
     {
@@ -237,7 +237,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Ich wachse nach der Sonne."
     },
     {
@@ -307,7 +307,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Ruhe vor dem Sturm im Kopf."
     },
     {
@@ -377,7 +377,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -447,7 +447,7 @@
       "coffee": 4,
       "mood": 1.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Semper hätte sich nicht träumen lassen, mal so zugebaut zu werden."
     },
     {
@@ -517,7 +517,7 @@
       "coffee": 3,
       "mood": -1.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Fast schon zu viel Frühling für mein Gemüt."
     },
     {
@@ -587,7 +587,7 @@
       "coffee": 1.5,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -657,7 +657,7 @@
       "coffee": 1.5,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Sonntage und die Ruhe vor dem Sturm."
     },
     {
@@ -727,7 +727,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "–"
     },
     {
@@ -797,7 +797,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Die Mutter im Hasenbau."
     },
     {
@@ -867,7 +867,7 @@
       "coffee": 2,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "In Beige gebettet."
     },
     {
@@ -937,7 +937,7 @@
       "coffee": 2,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Meine Leiste ist nicht mehr die Neueste."
     },
     {
@@ -1007,7 +1007,7 @@
       "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Mein Charme ist nicht per Videocall übertragbar."
     },
     {
@@ -1077,7 +1077,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Olten sehen und gehen."
     },
     {
@@ -1147,7 +1147,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Sonne bleicht das Hirn, Sonne streichelt die Seele."
     },
     {
@@ -1217,7 +1217,7 @@
       "coffee": 3,
       "mood": -1.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Handmaids-Fail"
     },
     {
@@ -1287,7 +1287,7 @@
       "coffee": 3,
       "mood": 1.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -1357,7 +1357,7 @@
       "coffee": 2,
       "mood": 1.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Thriller for dummies."
     },
     {
@@ -1427,7 +1427,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 83.66,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der Turbo-Modus am Reiskocher ist eine Offenbarung. / Belohnungsbanane"
     },
     {
@@ -1497,7 +1497,7 @@
       "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Treffpunkt Susenbergstrasse: Downwards von hier. / Service public: Es kommt nicht oft vor, dass die Polizei einen nach Hause fährt."
     },
     {
@@ -1567,7 +1567,7 @@
       "coffee": 3,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -1637,7 +1637,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der barfusslaufende Inder auf der Laufbahn grüsst mich nun."
     },
     {
@@ -1707,7 +1707,7 @@
       "coffee": 1,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Die Playlist ist ein tiefer Blick in meine Seele."
     },
     {
@@ -1777,7 +1777,7 @@
       "coffee": 3,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der Braten bin ich."
     },
     {
@@ -1847,7 +1847,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Wo kam der Regen so schnell her?"
     },
     {
@@ -2057,7 +2057,7 @@
       "coffee": 0,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Busfahrer: <span class=\"quote\">Wenn ich nach dieser Fahrt 45 Minuten Pause mache liegt die ganze Transportlogistik brach.</span> / Warum hat Valentina einen Schnauz?"
     },
     {
@@ -2547,7 +2547,7 @@
       "coffee": 0,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Bonding with the locals and the local cats. / Wanderhighway Number 1a."
     },
     {
@@ -2827,7 +2827,7 @@
       "coffee": 0,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Elite-Döner-Excellence"
     },
     {
