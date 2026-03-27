@@ -2878,7 +2878,7 @@
       "mood": 0,
       "cycling_km": 0,
       "weekday_index": 6,
-      "text": "[[Nath]]: Da hört der Spass auf: Wenn man wegen Kindern auf eine gute Pizza verzichten muss. / Dienstleistung, 250 CHF."
+      "text": "[[Nath]]: <span class=\"quote\">Da hört der Spass auf: Wenn man wegen Kindern auf eine gute Pizza verzichten muss.</span> / Dienstleistung, 250 CHF."
     },
     {
       "date": "2022-10-16",
