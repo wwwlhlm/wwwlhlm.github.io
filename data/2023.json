@@ -7,7 +7,7 @@
       "coffee": 2,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Die Hafeneinfahrt von zwei Seiten."
     },
     {
@@ -77,7 +77,7 @@
       "coffee": 4,
       "mood": -1.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Ein Ohr für ein Ohr."
     },
     {
@@ -147,7 +147,7 @@
       "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -217,7 +217,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der Mann im Schwimmbad hielt mich für die Putzkraft, und das obwohl ich in Badehosen vor ihm stand."
     },
     {
@@ -287,7 +287,7 @@
       "coffee": 2,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Katzen mit Soft-Click."
     },
     {
@@ -357,7 +357,7 @@
       "coffee": 3,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -427,7 +427,7 @@
       "coffee": 3,
       "mood": -1,
       "cycling_km": 44.9,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Maroni-Belohnung."
     },
     {
@@ -497,7 +497,7 @@
       "coffee": 3,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Gewinde, gut geschmiert."
     },
     {
@@ -567,7 +567,7 @@
       "coffee": 4,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Idle-Modus"
     },
     {
@@ -637,7 +637,7 @@
       "coffee": 4,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Selbsthilfe zum Selbsthilfeartikel"
     },
     {
@@ -707,7 +707,7 @@
       "coffee": 6,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Er empfiehlt mir Botox, dabei kommen die Sorgenfalten in meinem Gesicht doch von ihm."
     },
     {
@@ -777,7 +777,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Mein Leistungsdenken liess ich in Zürich zurück. / Vorsätzlich fahrlässiger Risotto Konsum."
     },
     {
@@ -847,7 +847,7 @@
       "coffee": 0,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Alles ist etwas zu früh nach der Zeitumstellung."
     },
     {
@@ -917,7 +917,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 22.11,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -987,7 +987,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 99.38,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -1057,7 +1057,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Entfolgt, Zopf inklusive."
     },
     {
@@ -1127,7 +1127,7 @@
       "coffee": 6,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Schwärmen unter Vorbehalt."
     },
     {
@@ -1197,7 +1197,7 @@
       "coffee": 4,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -1267,7 +1267,7 @@
       "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Die innere Unruhe selbst."
     },
     {
@@ -1337,7 +1337,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 140.13,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Olfaktorische Heimatgefühle."
     },
     {
@@ -1407,7 +1407,7 @@
       "coffee": 3,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -1477,7 +1477,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Wird jemals eine Rosenart meinen Namen tragen?"
     },
     {
@@ -1547,7 +1547,7 @@
       "coffee": 3,
       "mood": 0,
       "cycling_km": 113.35,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Kuchen-Blind-Spot"
     },
     {
@@ -1617,7 +1617,7 @@
       "coffee": 3,
       "mood": 0,
       "cycling_km": 43.64,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Als ob sich die Menschen im hohen Gras suhlen würden."
     },
     {
@@ -1687,7 +1687,7 @@
       "coffee": 2,
       "mood": -1,
       "cycling_km": 136.55,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Etwas zu verkrampft beim Anstieg."
     },
     {
@@ -1757,7 +1757,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 93.16,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Dieser See heisst dich nicht willkommen."
     },
     {
@@ -1827,7 +1827,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Sie ist näher an der Quelle, ich bin schon an der Flussmündung."
     },
     {
@@ -1897,7 +1897,7 @@
       "coffee": 1,
       "mood": -1,
       "cycling_km": 118.82,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Durchsage: <span class=\"quote\">Dieser Zug hält ausserplanmäßig in Oberrieden, Grund dafür ist das ein- und aussteigen von Fahrgästen.</span> / Passhöhe verpasst."
     },
     {
@@ -1967,7 +1967,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 206.61,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der schlechte Lebensstil radelt mit. / Service-public für dich und mich. / 205 Kilometer, 2500 Höhenmeter."
     },
     {
@@ -2037,7 +2037,7 @@
       "coffee": 3,
       "mood": -1,
       "cycling_km": 46.5,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Textnachricht: Wollte dir grad schreiben, die Badestelle am Türlersee hier ist ein Hundeparadies und dann seh ich, dass es Google als Hundewiese anzeigt. Der Mensch wird hier nur geduldet."
     },
     {
@@ -2107,7 +2107,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 184.5,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Burgen-Boost-Wil / Landschaften wie Desktop-Hintergründe."
     },
     {
@@ -2177,7 +2177,7 @@
       "coffee": 3,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Schreiben Frauen die schlechteren Kurznachrichten?"
     },
     {
@@ -2247,7 +2247,7 @@
       "coffee": 1,
       "mood": 1,
       "cycling_km": 125.92,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Drei Männer, jeweils mit einem Bier am Tresen sitzend finden Velofahren ein tolles Hobby und wünschen mir eine gute Fahrt."
     },
     {
@@ -2317,7 +2317,7 @@
       "coffee": 2,
       "mood": -1.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der Tag in der Geschwindigkeit eines Kleinkinds. Mit einem Kleinkind."
     },
     {
@@ -2387,7 +2387,7 @@
       "coffee": 4,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Aktiv Prokrastinieren mit Alex. / Warum Rosinen picken wenn man Nüsse haben kann?"
     },
     {
@@ -2457,7 +2457,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 71.82,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Zieleinfahrt, heute: Rice-Up."
     },
     {
@@ -2527,7 +2527,7 @@
       "coffee": 3,
       "mood": -0.5,
       "cycling_km": 72.35,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der Puls sieht rot."
     },
     {
@@ -2597,7 +2597,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 100.48,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Den Pass verpasst."
     },
     {
@@ -2667,7 +2667,7 @@
       "coffee": 2,
       "mood": 1.5,
       "cycling_km": 108.46,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Mit dem grossen Zeh in Deutschland."
     },
     {
@@ -2737,7 +2737,7 @@
       "coffee": 2,
       "mood": 1.5,
       "cycling_km": 119.56,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Die Panoramabrille aufgesetzt."
     },
     {
@@ -2807,7 +2807,7 @@
       "coffee": 2,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Blähungen bleiben in der Familie. / Souvenirshoppen unter Ossis."
     },
     {
@@ -2877,7 +2877,7 @@
       "coffee": 2,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der ICE 71, eine rollende Bühne, jedes Abteil sein eigenes Genre."
     },
     {
@@ -2947,7 +2947,7 @@
       "coffee": 3,
       "mood": 0.5,
       "cycling_km": 179.74,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Neue Brillengläser: Lichtstimmung Weltuntergang."
     },
     {
@@ -3017,7 +3017,7 @@
       "coffee": 1.5,
       "mood": -1,
       "cycling_km": 64.88,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -3087,7 +3087,7 @@
       "coffee": 2,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Ambro-Ambivalent"
     },
     {
@@ -3157,7 +3157,7 @@
       "coffee": 4,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Nasse Füsse als anhaltendes Gefühl."
     },
     {
@@ -3227,7 +3227,7 @@
       "coffee": 3,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Warum so casual heute, fragt sie."
     },
     {
@@ -3297,7 +3297,7 @@
       "coffee": 4,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Meine ersten Erfolge als Kontortionist."
     },
     {
@@ -3367,7 +3367,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Durch spazierengehende Pärchen renne ich mitten hindurch. / Der weinerliche Held."
     },
     {
@@ -3437,7 +3437,7 @@
       "coffee": 4,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -3507,7 +3507,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Skalieren für Anfänger."
     },
     {
@@ -3577,7 +3577,7 @@
       "coffee": 1,
       "mood": -0.5,
       "cycling_km": 42.08,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Die Agglo lieben lernen bei 27,6 km/h."
     },
     {
@@ -3647,7 +3647,7 @@
       "coffee": 1,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Alles in Ordnung sagt das Regal."
     }
   ]
