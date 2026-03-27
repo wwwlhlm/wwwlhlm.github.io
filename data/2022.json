@@ -17,7 +17,7 @@
       "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Bügel-Backlog"
     },
     {
@@ -87,7 +87,7 @@
       "coffee": 4,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der lange Weg heim (von daheim)."
     },
     {
@@ -157,7 +157,7 @@
       "coffee": 4,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Wer Licht sagt muss auch Schatten sagen. / Befristet, nicht befrustet."
     },
     {
@@ -227,7 +227,7 @@
       "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Diese Lippen sind ein Lippenbekenntnis."
     },
     {
@@ -297,7 +297,7 @@
       "coffee": 6,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Prädikat Tripple T: Tip-Top-Tested."
     },
     {
@@ -367,7 +367,7 @@
       "coffee": 5,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Besser verweht als durch den Wind."
     },
     {
@@ -437,7 +437,7 @@
       "coffee": 5,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Ein griechisches Good-bye, Feta inklusive."
     },
     {
@@ -507,7 +507,7 @@
       "coffee": 2,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Basel sehen, weil jemand die Käfigtür in Zürich offen gelassen hat."
     },
     {
@@ -577,7 +577,7 @@
       "coffee": 4,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -647,7 +647,7 @@
       "coffee": 6,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Porridge, the new frontier."
     },
     {
@@ -717,7 +717,7 @@
       "coffee": 5,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Aerosole der Freude."
     },
     {
@@ -787,7 +787,7 @@
       "coffee": 5,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Schlafwandeln durch den Tag."
     },
     {
@@ -857,7 +857,7 @@
       "coffee": 5,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -927,7 +927,7 @@
       "coffee": 5,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Temporär verlassen werden."
     },
     {
@@ -997,7 +997,7 @@
       "coffee": 5,
       "mood": -2,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der Konsumationszwang als Teil der Freundschaft mit mir."
     },
     {
@@ -1067,7 +1067,7 @@
       "coffee": 1,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Zu viele Stufen zum Paradies."
     },
     {
@@ -1137,7 +1137,7 @@
       "coffee": 3,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Ein bisschen Humor in der Kunst schadet nie."
     },
     {
@@ -1207,7 +1207,7 @@
       "coffee": 5,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Baby-Tasting-Menu: Ja zu Rhabarber, nein zu Kimchi."
     },
     {
@@ -1277,7 +1277,7 @@
       "coffee": 4,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der Mann seiner Träume."
     },
     {
@@ -1347,7 +1347,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Den Friedhof haben wir am Ende alle gemeinsam."
     },
     {
@@ -1417,7 +1417,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Züge halten auch in Lenzburg."
     },
     {
@@ -1487,7 +1487,7 @@
       "coffee": 3,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Sauberes Gewissen, sauberer Boden."
     },
     {
@@ -1557,7 +1557,7 @@
       "coffee": 3,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Croissant im Baby-Chino."
     },
     {
@@ -1627,7 +1627,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Multiverse der Eitelkeiten."
     },
     {
@@ -1697,7 +1697,7 @@
       "coffee": 3,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Uncouple my heart. / Ist das noch Privatgrund oder schon Stadt?"
     },
     {
@@ -1767,7 +1767,7 @@
       "coffee": 4,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Nichts überbietet einen Friedhof an Endgültigkeit."
     },
     {
@@ -1837,7 +1837,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Die Zeit zwischen den Zügen."
     },
     {
@@ -1907,7 +1907,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Mehr Emotional-Support-Animal als Party-Animal."
     },
     {
@@ -1977,7 +1977,7 @@
       "coffee": 3,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Heut wäre ein guter Tag gewesen um aus Scheisse Gold zu machen."
     },
     {
@@ -2047,7 +2047,7 @@
       "coffee": 2,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Treppensteigen mit unlauteren Gedanken. / Die Entdeckung eines Fetischen am Esstisch."
     },
     {
@@ -2117,7 +2117,7 @@
       "coffee": 1,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Eine Zugfahrt wie eine Therapiestunde."
     },
     {
@@ -2187,7 +2187,7 @@
       "coffee": 1,
       "mood": 0,
       "cycling_km": 100.65,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Wenn man den Moment umzukehren immer weiter hinausschiebt und ihn dann verpasst. / Gehöre ich jetzt zur Familie?"
     },
     {
@@ -2257,7 +2257,7 @@
       "coffee": 3,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Dry-Cleaning für das gebrochene Herz. / Ein tiefgründiger Gedanke pro Woche ist erlaubt."
     },
     {
@@ -2327,7 +2327,7 @@
       "coffee": 3,
       "mood": 0.5,
       "cycling_km": 97.39,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Wasserfall, Pommes und Inder."
     },
     {
@@ -2397,7 +2397,7 @@
       "coffee": 1,
       "mood": 1.5,
       "cycling_km": 132.01,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Elektrolyte erster Güte."
     },
     {
@@ -2467,7 +2467,7 @@
       "coffee": 3,
       "mood": 0.5,
       "cycling_km": 98.25,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Einmal Klosterbrunnen und zurück."
     },
     {
@@ -2537,7 +2537,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 122.74,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Und ewig lockt der Brezelkönig aus der Unterführung."
     },
     {
@@ -2607,7 +2607,7 @@
       "coffee": 3,
       "mood": 0,
       "cycling_km": 144.04,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Im Land des Kreisverkehrs. / Rote-Karte-Rotlicht."
     },
     {
@@ -2677,7 +2677,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Wo ist die Medium-Tempo-Bahn? / Prokrastinieren mit freundlicher Unterstützung der Hipster-Christen. / [[Tom]]: <span class=\"quote\">Du arbeitest zu viel.</span> [[Bill]]: <span class=\"quote\">Nein, ich bin nur nicht effizient genug.</span>"
     },
     {
@@ -2747,7 +2747,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Geteilter Weg, volle Schrittzahl."
     },
     {
@@ -2817,7 +2817,7 @@
       "coffee": 2,
       "mood": -1,
       "cycling_km": 38.8,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Luft raus in Othmarsingen."
     },
     {
@@ -2887,7 +2887,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 83.28,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Chlamydien am Nebentisch."
     },
     {
@@ -2957,7 +2957,7 @@
       "coffee": 3,
       "mood": 1,
       "cycling_km": 65.84,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Der Schmarotzer des Pelotons."
     },
     {
@@ -3027,7 +3027,7 @@
       "coffee": 2,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Jede Nacht sollte eine Stunde länger sein."
     },
     {
@@ -3097,7 +3097,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Gesegnet ist das Glas Wasser zur Tasse Kaffee."
     },
     {
@@ -3167,7 +3167,7 @@
       "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -3237,7 +3237,7 @@
       "coffee": 1,
       "mood": 0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Home-office-los"
     },
     {
@@ -3307,7 +3307,7 @@
       "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Kein Tofu und keine Internetverbindung um dies zu teilen."
     },
     {
@@ -3377,7 +3377,7 @@
       "coffee": 3,
       "mood": -1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
@@ -3447,7 +3447,7 @@
       "coffee": 4,
       "mood": 1,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "So viel Sonne auf einmal soll mein Herz erweichen."
     },
     {
@@ -3517,7 +3517,7 @@
       "coffee": 5,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "Sozialkontakt mit Kommunikationspflicht."
     },
     {
@@ -3587,7 +3587,7 @@
       "coffee": 2,
       "mood": -0.5,
       "cycling_km": 0,
-      "weekday_index": 7,
+      "weekday_index": 0,
       "text": "—"
     },
     {
