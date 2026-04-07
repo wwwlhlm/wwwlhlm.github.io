@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tag Cloud – Variante B</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; background: #111; overflow: hidden; }
+  #wrap { position: relative; width: 100vw; height: 100vh; overflow: hidden; cursor: grab; }
+  #wrap:active { cursor: grabbing; }
+  #toast {
+    position: absolute; bottom: 28px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #fff; color: #111;
+    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; padding: 8px 20px; border-radius: 99px;
+    opacity: 0; pointer-events: none; white-space: nowrap;
+    transition: opacity .2s, transform .2s;
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="c"></canvas>
+  <div id="toast"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script>
+const TAGS = [
+  'Geschlechtrollen','Feminismus','Klimawandel','Migration','Rassismus',
+  'Demokratie','Armut','Bildung','Gesundheit','Wohnen','Arbeit','Familie',
+  'Kultur','Religion','Digitalisierung','Gleichstellung','Integration',
+  'Nachhaltigkeit','Globalisierung','Identität','Solidarität','Vielfalt',
+  'Gerechtigkeit','Gemeinschaft','Zukunft'
+];
+
+const { Engine, Runner, Bodies, Body, World, Mouse, MouseConstraint, Events, Query } = Matter;
+const BG = '#111111', PILL = '#ffffff', PILL_HELD = '#64DDB0', RING = '#64DDB0', TEXT = '#111';
+const HOLD_MS = 650, SPEED = 0.55;
+const BASE_W = 1280, BASE_FS = 16, BASE_H_TAG = 44, BASE_PAD = 28;
+
+function init() {
+  const wrap = document.getElementById('wrap');
+  const c = document.getElementById('c');
+  const toast = document.getElementById('toast');
+  const DPR = window.devicePixelRatio || 1;
+  c.style.display = 'block';
+  const ctx = c.getContext('2d');
+
+  let W, H, scale, FS, H_TAG, PAD, FBASE, walls;
+
+  const engine = Engine.create({ gravity: { x: 0, y: 0 } });
+  const world = engine.world;
+
+  function setup() {
+    W = wrap.clientWidth;
+    H = wrap.clientHeight;
+    scale = Math.max(0.5, Math.min(1.6, W / BASE_W));
+    FS = Math.round(BASE_FS * scale);
+    H_TAG = Math.round(BASE_H_TAG * scale);
+    PAD = Math.round(BASE_PAD * scale);
+    FBASE = `500 ${FS}px "DM Sans","Helvetica Neue",Arial,sans-serif`;
+    c.width = W * DPR; c.height = H * DPR;
+    c.style.width = W + 'px'; c.style.height = H + 'px';
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    ctx.font = FBASE;
+  }
+
+  function buildWalls() {
+    if (walls) walls.forEach(w => World.remove(world, w));
+    const T = 80, WO = { isStatic: true, friction: 0, restitution: 1.0, frictionAir: 0 };
+    walls = [
+      Bodies.rectangle(W / 2, -T / 2, W + T * 2, T, WO),
+      Bodies.rectangle(W / 2, H + T / 2, W + T * 2, T, WO),
+      Bodies.rectangle(-T / 2, H / 2, T, H + T * 2, WO),
+      Bodies.rectangle(W + T / 2, H / 2, T, H + T * 2, WO),
+    ];
+    World.add(world, walls);
+  }
+
+  setup();
+  buildWalls();
+
+  const tags = TAGS.map(label => ({
+    label,
+    w: Math.ceil(ctx.measureText(label).width) + PAD * 2,
+    h: H_TAG
+  }));
+
+  const bods = [], placed = [];
+  tags.forEach(td => {
+    let x, y, tries = 0;
+    do {
+      x = td.w / 2 + Math.random() * (W - td.w);
+      y = td.h / 2 + Math.random() * (H - td.h);
+      tries++;
+    } while (tries < 40 && placed.some(p =>
+      Math.abs(p.x - x) < p.w / 2 + td.w / 2 + 8 &&
+      Math.abs(p.y - y) < H_TAG + 8
+    ));
+    placed.push({ x, y, w: td.w });
+    const dir = Math.random() * Math.PI * 2;
+    const spd = SPEED * (0.6 + Math.random() * 0.8);
+    const b = Bodies.rectangle(x, y, td.w, td.h, {
+      chamfer: { radius: H_TAG / 2 }, restitution: 1.0, friction: 0, frictionAir: 0,
+      angle: (Math.random() - .5) * .5
+    });
+    Body.setVelocity(b, { x: Math.cos(dir) * spd, y: Math.sin(dir) * spd });
+    Body.setAngularVelocity(b, (Math.random() - .5) * 0.012);
+    b._t = td; bods.push(b); World.add(world, b);
+  });
+
+  Events.on(engine, 'beforeUpdate', () => {
+    bods.forEach(b => {
+      const v = b.velocity, spd = Math.sqrt(v.x * v.x + v.y * v.y);
+      if (spd > 0.01) Body.setVelocity(b, { x: v.x * SPEED / spd, y: v.y * SPEED / spd });
+      Body.setAngularVelocity(b, b.angularVelocity * 0.985);
+    });
+  });
+
+  const mouse = Mouse.create(c);
+  mouse.pixelRatio = DPR;
+  const mc = MouseConstraint.create(engine, { mouse, constraint: { stiffness: .06, damping: .15 } });
+  World.add(world, mc);
+
+  Events.on(mc, 'enddrag', ({ body }) => {
+    if (!body || !body._t) return;
+    const v = body.velocity, spd = Math.sqrt(v.x * v.x + v.y * v.y);
+    if (spd < 0.1) {
+      const dir = Math.random() * Math.PI * 2;
+      Body.setVelocity(body, { x: Math.cos(dir) * SPEED, y: Math.sin(dir) * SPEED });
+    }
+  });
+
+  let press = { active: false, body: null, startX: 0, startY: 0, t: 0, progress: 0, fired: false };
+
+  function getBodyAt(x, y) {
+    const f = Query.point(bods, { x, y });
+    return f.length ? f[f.length - 1] : null;
+  }
+
+  function showToast(label) {
+    const slug = '/tags/' + label.toLowerCase()
+      .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue')
+      .replace(/\s+/g, '-');
+    toast.textContent = '→ ' + slug;
+    toast.style.opacity = '1'; toast.style.transform = 'translateX(-50%) translateY(0)';
+    setTimeout(() => {
+      toast.style.opacity = '0'; toast.style.transform = 'translateX(-50%) translateY(20px)';
+    }, 2200);
+  }
+
+  c.addEventListener('pointerdown', e => {
+    const r = c.getBoundingClientRect();
+    const x = e.clientX - r.left, y = e.clientY - r.top;
+    const b = getBodyAt(x, y);
+    if (b && b._t) press = { active: true, body: b, startX: x, startY: y, t: performance.now(), progress: 0, fired: false };
+  });
+  c.addEventListener('pointermove', e => {
+    const r = c.getBoundingClientRect();
+    if (press.active) {
+      const dx = (e.clientX - r.left) - press.startX, dy = (e.clientY - r.top) - press.startY;
+      if (Math.sqrt(dx * dx + dy * dy) > 9) { press.active = false; press.body = null; }
+    }
+  });
+  c.addEventListener('pointerup', () => { if (!press.fired) { press.active = false; press.body = null; } });
+
+  window.addEventListener('resize', () => { setup(); buildWalls(); });
+
+  Runner.run(Runner.create(), engine);
+
+  function pillPath(w, h) {
+    const r = h / 2, hw = w / 2, hh = h / 2;
+    ctx.beginPath();
+    ctx.moveTo(0, -hh);
+    ctx.lineTo(hw - r, -hh);
+    ctx.arc(hw - r, 0, r, -Math.PI / 2, Math.PI / 2);
+    ctx.lineTo(-(hw - r), hh);
+    ctx.arc(-(hw - r), 0, r, Math.PI / 2, 3 * Math.PI / 2);
+    ctx.closePath();
+    return 2 * (w - h) + Math.PI * h;
+  }
+
+  function pill(w, h) {
+    const r = h / 2, hw = w / 2, hh = h / 2;
+    ctx.beginPath();
+    ctx.moveTo(-hw + r, -hh);
+    ctx.lineTo(hw - r, -hh);
+    ctx.arc(hw - r, 0, r, -Math.PI / 2, Math.PI / 2);
+    ctx.lineTo(-hw + r, hh);
+    ctx.arc(-hw + r, 0, r, Math.PI / 2, 3 * Math.PI / 2);
+    ctx.closePath();
+  }
+
+  function drawProgressRing(b, progress) {
+    const { w, h } = b._t;
+    const perimeter = pillPath(w, h);
+    ctx.setLineDash([perimeter * progress, perimeter]);
+    ctx.strokeStyle = RING;
+    ctx.lineWidth = 2.5;
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  let hA = 1;
+  function frame() {
+    const now = performance.now();
+    if (press.active && press.body && !press.fired) {
+      press.progress = Math.min(1, (now - press.t) / HOLD_MS);
+      if (press.progress >= 1) {
+        press.fired = true; press.active = false;
+        const label = press.body._t.label;
+        showToast(label);
+        // → In Produktion: window.location.href = '/tags/' + slug;
+        setTimeout(() => { press.body = null; press.progress = 0; }, 300);
+      }
+    }
+
+    ctx.fillStyle = BG;
+    ctx.fillRect(0, 0, W, H);
+
+    const dragged = mc.body;
+    const sorted = bods.filter(b => b !== dragged).sort((a, b) => a.position.y - b.position.y);
+    if (dragged && dragged._t) sorted.push(dragged);
+
+    sorted.forEach(b => {
+      if (!b._t) return;
+      const { label, w, h } = b._t;
+      const isD = b === dragged;
+      const isHeld = press.body === b && (press.active || press.fired);
+      ctx.save();
+      ctx.translate(b.position.x, b.position.y);
+      ctx.rotate(b.angle);
+      ctx.shadowColor = isHeld ? 'rgba(100,221,176,0.35)' : 'rgba(255,255,255,0.06)';
+      ctx.shadowBlur = isD || isHeld ? 28 : 14;
+      ctx.shadowOffsetY = 0;
+      pill(w, h);
+      ctx.fillStyle = isHeld ? PILL_HELD : PILL;
+      ctx.fill();
+      ctx.shadowColor = 'transparent'; ctx.shadowBlur = 0;
+      if (isHeld && press.progress > 0) drawProgressRing(b, press.progress);
+      ctx.fillStyle = TEXT;
+      ctx.font = FBASE;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(label, 0, .5);
+      ctx.restore();
+    });
+
+    if (hA > 0) {
+      hA = Math.max(0, hA - .003);
+      ctx.save();
+      ctx.globalAlpha = hA * .3;
+      ctx.fillStyle = '#fff';
+      ctx.font = `400 ${Math.round(11 * scale)}px "DM Sans",sans-serif`;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'bottom';
+      ctx.fillText('Ziehen · Anstupsen · Gedrückt halten zum Öffnen', W / 2, H - 18);
+      ctx.restore();
+    }
+    requestAnimationFrame(frame);
+  }
+  frame();
+}
+
+document.fonts.ready.then(init).catch(init);
+</script>
+</body>
+</html>
