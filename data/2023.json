@@ -178,7 +178,7 @@
       "mood": -1,
       "cycling_km": 0,
       "weekday_index": 3,
-      "text": "[[Nath]]: Papier hat keine Gefühle."
+      "text": "[[Nath]]: <span class=\"quote\">Papier hat keine Gefühle.</span>"
     },
     {
       "date": "2023-01-19",
