@@ -3,65 +3,72 @@
     {
       "date": "2022-01-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Ein Quäntchen Lebensmüdigkeit schadet niemandem."
+      "text": "Ein Quäntchen Lebensmüdigkeit schadet niemandem.",
+      "weekday_index": 6
     },
     {
       "date": "2022-01-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Bügel-Backlog"
+      "text": "Bügel-Backlog",
+      "weekday_index": 0
     },
     {
       "date": "2022-01-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 0.5,
+      "coffee": 6,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Vaterbildnis / Von aussen gesehen und von innen."
+      "text": "Vaterbildnis / Von aussen gesehen und von innen.",
+      "weekday_index": 1
     },
     {
       "date": "2022-01-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 7,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Milchschaum lesen lernen. / Lustlose Bewerbungen werden immer belohnt."
+      "text": "Milchschaum lesen lernen. / Lustlose Bewerbungen werden immer belohnt.",
+      "weekday_index": 2
     },
     {
       "date": "2022-01-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Überzeugen, aber nicht zu sehr."
+      "text": "Überzeugen, aber nicht zu sehr.",
+      "weekday_index": 3
     },
     {
       "date": "2022-01-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Im Rabbit Hole hört man jeden Laut. / [[Nath]]: <span class=\"quote\">Ist die Schweiz das eigentliche Snowflake, verwöhnt und hypersensibel?</span>"
+      "text": "Im Rabbit Hole hört man jeden Laut. / [[Nath]]: <span class=\"quote\">Ist die Schweiz das eigentliche Snowflake, verwöhnt und hypersensibel?</span>",
+      "weekday_index": 4
     },
     {
       "date": "2022-01-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Penne All Rabiat."
+      "text": "Penne All Rabiat.",
+      "weekday_index": 5
     },
     {
       "date": "2022-01-08",
@@ -70,871 +77,968 @@
       "coffee": 0,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Ungeduld und Beistand. / Teddybär trägt schwarz."
+      "text": "Ungeduld und Beistand. / Teddybär trägt schwarz.",
+      "weekday_index": 6
     },
     {
       "date": "2022-01-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Der lange Weg heim (von daheim)."
+      "text": "Der lange Weg heim (von daheim).",
+      "weekday_index": 0
     },
     {
       "date": "2022-01-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Lassen wir die Heimat dort wo sie ist."
+      "text": "Lassen wir die Heimat dort wo sie ist.",
+      "weekday_index": 1
     },
     {
       "date": "2022-01-11",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 1,
       "coffee": 0,
-      "mood": 0,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Auf dem Grabbeltisch des Arbeitsmarktes."
+      "text": "Auf dem Grabbeltisch des Arbeitsmarktes.",
+      "weekday_index": 2
     },
     {
       "date": "2022-01-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Gegen die Zeit."
+      "text": "Gegen die Zeit.",
+      "weekday_index": 3
     },
     {
       "date": "2022-01-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Zu Schade für Prosecco. / Ja-Wort, einstimmig."
+      "text": "Zu Schade für Prosecco. / Ja-Wort, einstimmig.",
+      "weekday_index": 4
     },
     {
       "date": "2022-01-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 5
     },
     {
       "date": "2022-01-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Warten auf den Ansturm der nicht kommt."
+      "text": "Warten auf den Ansturm der nicht kommt.",
+      "weekday_index": 6
     },
     {
       "date": "2022-01-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Wer Licht sagt muss auch Schatten sagen. / Befristet, nicht befrustet."
+      "text": "Wer Licht sagt muss auch Schatten sagen. / Befristet, nicht befrustet.",
+      "weekday_index": 0
     },
     {
       "date": "2022-01-17",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5.5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Suppen sind ein Minusgeschäft."
+      "text": "Suppen sind ein Minusgeschäft.",
+      "weekday_index": 1
     },
     {
       "date": "2022-01-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "[[Bamna]]: <span class=\"quote\">Hier gratulieren die Leute wenn man kündigt.</span> / Alle Freunde, lange Leitung."
+      "text": "[[Bamna]]: <span class=\"quote\">Hier gratulieren die Leute wenn man kündigt.</span> / Alle Freunde, lange Leitung.",
+      "weekday_index": 2
     },
     {
       "date": "2022-01-19",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 1,
       "coffee": 0,
-      "mood": 0,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Embrace den emotionalen Hinterhalt."
+      "text": "Embrace den emotionalen Hinterhalt.",
+      "weekday_index": 3
     },
     {
       "date": "2022-01-20",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 1,
       "coffee": 0,
-      "mood": 0,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Erst finden, die Liebe sei nichts für einen, bis die Liebe fand, sie sei nichts für einen."
+      "text": "Erst finden, die Liebe sei nichts für einen, bis die Liebe fand, sie sei nichts für einen.",
+      "weekday_index": 4
     },
     {
       "date": "2022-01-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Schluss machen mit dem RAV."
+      "text": "Schluss machen mit dem RAV.",
+      "weekday_index": 5
     },
     {
       "date": "2022-01-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-01-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2.5,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Diese Lippen sind ein Lippenbekenntnis."
+      "text": "Diese Lippen sind ein Lippenbekenntnis.",
+      "weekday_index": 0
     },
     {
       "date": "2022-01-24",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 0.5,
       "coffee": 0,
-      "mood": 0,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-01-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Blind-Call"
+      "text": "Blind-Call",
+      "weekday_index": 2
     },
     {
       "date": "2022-01-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Barmann ohne Schanklizenz aber mit einem offenen Ohr. / Sir Richard Attenborough sollte unser Training narratieren."
+      "text": "Barmann ohne Schanklizenz aber mit einem offenen Ohr. / Sir Richard Attenborough sollte unser Training narratieren.",
+      "weekday_index": 3
     },
     {
       "date": "2022-01-27",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Wo soll nur das Geld herkommen?"
+      "text": "Wo soll nur das Geld herkommen?",
+      "weekday_index": 4
     },
     {
       "date": "2022-01-28",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Mad Men light."
+      "text": "Mad Men light.",
+      "weekday_index": 5
     },
     {
       "date": "2022-01-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Corona der Partyschreck."
+      "text": "Corona der Partyschreck.",
+      "weekday_index": 6
     },
     {
       "date": "2022-01-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Prädikat Tripple T: Tip-Top-Tested."
+      "text": "Prädikat Tripple T: Tip-Top-Tested.",
+      "weekday_index": 0
     },
     {
       "date": "2022-01-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Ein leerer Arbeitsplatz ist ein Neustart ohne Hindernisse."
+      "text": "Ein leerer Arbeitsplatz ist ein Neustart ohne Hindernisse.",
+      "weekday_index": 1
     },
     {
       "date": "2022-02-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Mango, 12 Franken."
+      "text": "Mango, 12 Franken.",
+      "weekday_index": 2
     },
     {
       "date": "2022-02-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Sam-Reflux"
+      "text": "Sam-Reflux",
+      "weekday_index": 3
     },
     {
       "date": "2022-02-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Den Absender emotional abfangen bevor er seine Nachricht platzieren kann."
+      "text": "Den Absender emotional abfangen bevor er seine Nachricht platzieren kann.",
+      "weekday_index": 4
     },
     {
       "date": "2022-02-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2.5,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Socken machen 10 Prozent meines Jahresbudgets aus."
+      "text": "Socken machen 10 Prozent meines Jahresbudgets aus.",
+      "weekday_index": 5
     },
     {
       "date": "2022-02-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Playlist für Softies I."
+      "text": "Playlist für Softies I.",
+      "weekday_index": 6
     },
     {
       "date": "2022-02-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Besser verweht als durch den Wind."
+      "text": "Besser verweht als durch den Wind.",
+      "weekday_index": 0
     },
     {
       "date": "2022-02-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-02-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Mr. Vain and Mr. Right."
+      "text": "Mr. Vain and Mr. Right.",
+      "weekday_index": 2
     },
     {
       "date": "2022-02-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1.5,
+      "coffee": 6,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Heute: Generischer Tier-Gang."
+      "text": "Heute: Generischer Tier-Gang.",
+      "weekday_index": 3
     },
     {
       "date": "2022-02-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1.5,
       "cycling_km": 0,
-      "text": "Beziehungen, nur Arbeit für ein bisschen Freude. / Ein früher Frühling ist schlecht für die Arbeitsmoral."
+      "text": "Beziehungen, nur Arbeit für ein bisschen Freude. / Ein früher Frühling ist schlecht für die Arbeitsmoral.",
+      "weekday_index": 4
     },
     {
       "date": "2022-02-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 5
     },
     {
       "date": "2022-02-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Vertrauen kommt später."
+      "text": "Vertrauen kommt später.",
+      "weekday_index": 6
     },
     {
       "date": "2022-02-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Ein griechisches Good-bye, Feta inklusive."
+      "text": "Ein griechisches Good-bye, Feta inklusive.",
+      "weekday_index": 0
     },
     {
       "date": "2022-02-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Hat jemand was von Regen gesagt?"
+      "text": "Hat jemand was von Regen gesagt?",
+      "weekday_index": 1
     },
     {
       "date": "2022-02-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 2
     },
     {
       "date": "2022-02-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-02-17",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 2,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Am Buffet meine ich es immer zu gut mit mir."
+      "text": "Am Buffet meine ich es immer zu gut mit mir.",
+      "weekday_index": 4
     },
     {
       "date": "2022-02-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Die Putzfrau fragt: <span class=\"quote\">Machen Sie Disko hier?</span>"
+      "text": "Die Putzfrau fragt: <span class=\"quote\">Machen Sie Disko hier?</span>",
+      "weekday_index": 5
     },
     {
       "date": "2022-02-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Schildbürger, Nummer Eins. / Licence to Kiss."
+      "text": "Schildbürger, Nummer Eins. / Licence to Kiss.",
+      "weekday_index": 6
     },
     {
       "date": "2022-02-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Basel sehen, weil jemand die Käfigtür in Zürich offen gelassen hat."
+      "text": "Basel sehen, weil jemand die Käfigtür in Zürich offen gelassen hat.",
+      "weekday_index": 0
     },
     {
       "date": "2022-02-21",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-02-22",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Indesign-Funktionen mit denen man beeindrucken kann."
+      "text": "Indesign-Funktionen mit denen man beeindrucken kann.",
+      "weekday_index": 2
     },
     {
       "date": "2022-02-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Spielt sich mein Sozialleben nur noch in Textnachrichten ab?"
+      "text": "Spielt sich mein Sozialleben nur noch in Textnachrichten ab?",
+      "weekday_index": 3
     },
     {
       "date": "2022-02-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Low-cost Leni Riefenstahl. / Färbe ich ab?"
+      "text": "Low-cost Leni Riefenstahl. / Färbe ich ab?",
+      "weekday_index": 4
     },
     {
       "date": "2022-02-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Müdigkeit als Einstellung."
+      "text": "Müdigkeit als Einstellung.",
+      "weekday_index": 5
     },
     {
       "date": "2022-02-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Lernen Hände zu schütteln."
+      "text": "Lernen Hände zu schütteln.",
+      "weekday_index": 6
     },
     {
       "date": "2022-02-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 0
     },
     {
       "date": "2022-02-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-03-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "[[Nath]]: <span class=\"quote\">Ich akzeptiere seine Existenz.</span>"
+      "text": "[[Nath]]: <span class=\"quote\">Ich akzeptiere seine Existenz.</span>",
+      "weekday_index": 2
     },
     {
       "date": "2022-03-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Das 600 Franken Sandwich."
+      "text": "Das 600 Franken Sandwich.",
+      "weekday_index": 3
     },
     {
       "date": "2022-03-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Liquidität ist wie Sauerstoff, sagt die Buchhalterin."
+      "text": "Liquidität ist wie Sauerstoff, sagt die Buchhalterin.",
+      "weekday_index": 4
     },
     {
       "date": "2022-03-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Einigkeit auf mehreren Kommunikationskanälen."
+      "text": "Einigkeit auf mehreren Kommunikationskanälen.",
+      "weekday_index": 5
     },
     {
       "date": "2022-03-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Die Sonne scheint dort, wo ich grad nicht steh."
+      "text": "Die Sonne scheint dort, wo ich grad nicht steh.",
+      "weekday_index": 6
     },
     {
       "date": "2022-03-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Porridge, the new frontier."
+      "text": "Porridge, the new frontier.",
+      "weekday_index": 0
     },
     {
       "date": "2022-03-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Stereotyp vs. Stereofrau / [[Nath]]: <span class=\"quote\">Mit meiner ersten Beziehung ging auch meine unerklärliche Faszination für Musicals den Bach runter.</span>"
+      "text": "Stereotyp vs. Stereofrau / [[Nath]]: <span class=\"quote\">Mit meiner ersten Beziehung ging auch meine unerklärliche Faszination für Musicals den Bach runter.</span>",
+      "weekday_index": 1
     },
     {
       "date": "2022-03-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Der Eingriff der Unterhose ist nicht zu unterschätzen."
+      "text": "Der Eingriff der Unterhose ist nicht zu unterschätzen.",
+      "weekday_index": 2
     },
     {
       "date": "2022-03-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 6,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-03-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Nicht zu lächeln ist mein eingebauter Portraitmodus."
+      "text": "Nicht zu lächeln ist mein eingebauter Portraitmodus.",
+      "weekday_index": 4
     },
     {
       "date": "2022-03-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Inkognito im Architektenturnen."
+      "text": "Inkognito im Architektenturnen.",
+      "weekday_index": 5
     },
     {
       "date": "2022-03-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-03-13",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Aerosole der Freude."
+      "text": "Aerosole der Freude.",
+      "weekday_index": 0
     },
     {
       "date": "2022-03-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "So billo."
+      "text": "So billo.",
+      "weekday_index": 1
     },
     {
       "date": "2022-03-15",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Ein Tag in Sepia. / Inder bis zum Anschlag."
+      "text": "Ein Tag in Sepia. / Inder bis zum Anschlag.",
+      "weekday_index": 2
     },
     {
       "date": "2022-03-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Der Mahner im Kinosessel."
+      "text": "Der Mahner im Kinosessel.",
+      "weekday_index": 3
     },
     {
       "date": "2022-03-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Pink-Lady-Influencer"
+      "text": "Pink-Lady-Influencer",
+      "weekday_index": 4
     },
     {
       "date": "2022-03-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 5
     },
     {
       "date": "2022-03-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Im dichten Nebel der Tanzfläche."
+      "text": "Im dichten Nebel der Tanzfläche.",
+      "weekday_index": 6
     },
     {
       "date": "2022-03-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Schlafwandeln durch den Tag."
+      "text": "Schlafwandeln durch den Tag.",
+      "weekday_index": 0
     },
     {
       "date": "2022-03-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Die moderne Frau von gestern."
+      "text": "Die moderne Frau von gestern.",
+      "weekday_index": 1
     },
     {
       "date": "2022-03-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Inkognito in der Bootyklasse."
+      "text": "Inkognito in der Bootyklasse.",
+      "weekday_index": 2
     },
     {
       "date": "2022-03-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Emotional-Support-Animals für die Toilettenpause."
+      "text": "Emotional-Support-Animals für die Toilettenpause.",
+      "weekday_index": 3
     },
     {
       "date": "2022-03-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Gott ist in der Zukunft angekommen. Der QR-Code führt direkt zu ihm."
+      "text": "Gott ist in der Zukunft angekommen. Der QR-Code führt direkt zu ihm.",
+      "weekday_index": 4
     },
     {
       "date": "2022-03-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Der Zustand des gedünsteten Broccolis gleicht dem meinen. / Stop-and-Go-Demo"
+      "text": "Der Zustand des gedünsteten Broccolis gleicht dem meinen. / Stop-and-Go-Demo",
+      "weekday_index": 5
     },
     {
       "date": "2022-03-26",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Männer weinen im Stillen."
+      "text": "Männer weinen im Stillen.",
+      "weekday_index": 6
     },
     {
       "date": "2022-03-27",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 0
     },
     {
       "date": "2022-03-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1.5,
       "cycling_km": 0,
-      "text": "A very punchable humor."
+      "text": "A very punchable humor.",
+      "weekday_index": 1
     },
     {
       "date": "2022-03-29",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 0.5,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1.5,
       "cycling_km": 0,
-      "text": "Zwei Berge für den Frieden."
+      "text": "Zwei Berge für den Frieden.",
+      "weekday_index": 2
     },
     {
       "date": "2022-03-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-03-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Besser «Späth» als nie."
+      "text": "Besser «Späth» als nie.",
+      "weekday_index": 4
     },
     {
       "date": "2022-04-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Passiv da sein."
+      "text": "Passiv da sein.",
+      "weekday_index": 5
     },
     {
       "date": "2022-04-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Sandwichmaker"
+      "text": "Sandwichmaker",
+      "weekday_index": 6
     },
     {
       "date": "2022-04-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Temporär verlassen werden."
+      "text": "Temporär verlassen werden.",
+      "weekday_index": 0
     },
     {
       "date": "2022-04-04",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-04-05",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Den inneren Monolog mit dem Rest der Welt teilen."
+      "text": "Den inneren Monolog mit dem Rest der Welt teilen.",
+      "weekday_index": 2
     },
     {
       "date": "2022-04-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-04-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Work-Work-Life-Balance"
+      "text": "Work-Work-Life-Balance",
+      "weekday_index": 4
     },
     {
       "date": "2022-04-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "No-No-COVID"
+      "text": "No-No-COVID",
+      "weekday_index": 5
     },
     {
       "date": "2022-04-09",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 0.5,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Kinderzirkus, wortwörtlich"
+      "text": "Kinderzirkus, wortwörtlich",
+      "weekday_index": 6
     },
     {
       "date": "2022-04-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -2,
       "cycling_km": 0,
-      "text": "Der Konsumationszwang als Teil der Freundschaft mit mir."
+      "text": "Der Konsumationszwang als Teil der Freundschaft mit mir.",
+      "weekday_index": 0
     },
     {
       "date": "2022-04-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -2,
       "cycling_km": 0,
-      "text": "Montagmorgen-Post-Meeting-Tief / Einmal alles testen bitte."
+      "text": "Montagmorgen-Post-Meeting-Tief / Einmal alles testen bitte.",
+      "weekday_index": 1
     },
     {
       "date": "2022-04-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Das kleine c."
+      "text": "Das kleine c.",
+      "weekday_index": 2
     },
     {
       "date": "2022-04-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-04-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -2,
       "cycling_km": 0,
-      "text": "Hast du einen Bill gesehen kennst du alle."
+      "text": "Hast du einen Bill gesehen kennst du alle.",
+      "weekday_index": 4
     },
     {
       "date": "2022-04-15",
@@ -943,2347 +1047,2608 @@
       "coffee": 0,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Wie ich die Form des Michelinmännchens annehme."
+      "text": "Wie ich die Form des Michelinmännchens annehme.",
+      "weekday_index": 5
     },
     {
       "date": "2022-04-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Jede Stufe eine kleine Qual."
+      "text": "Jede Stufe eine kleine Qual.",
+      "weekday_index": 6
     },
     {
       "date": "2022-04-17",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Zu viele Stufen zum Paradies."
+      "text": "Zu viele Stufen zum Paradies.",
+      "weekday_index": 0
     },
     {
       "date": "2022-04-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 0.5,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Echo der Liebschaften."
+      "text": "Echo der Liebschaften.",
+      "weekday_index": 1
     },
     {
       "date": "2022-04-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 2
     },
     {
       "date": "2022-04-20",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Ein Bouquet der schlechten Ideen."
+      "text": "Ein Bouquet der schlechten Ideen.",
+      "weekday_index": 3
     },
     {
       "date": "2022-04-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Mit dem Bier an der Ziellinie."
+      "text": "Mit dem Bier an der Ziellinie.",
+      "weekday_index": 4
     },
     {
       "date": "2022-04-22",
-      "apples": 0,
+      "apples": 2,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 6,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Warten auf den Ansturm zweier Bauarbeiter."
+      "text": "Warten auf den Ansturm zweier Bauarbeiter.",
+      "weekday_index": 5
     },
     {
       "date": "2022-04-23",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-04-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Ein bisschen Humor in der Kunst schadet nie."
+      "text": "Ein bisschen Humor in der Kunst schadet nie.",
+      "weekday_index": 0
     },
     {
       "date": "2022-04-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Mehr Kamele im öffentlichen Verkehr bitte."
+      "text": "Mehr Kamele im öffentlichen Verkehr bitte.",
+      "weekday_index": 1
     },
     {
       "date": "2022-04-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Jobwechsel leicht gemacht."
+      "text": "Jobwechsel leicht gemacht.",
+      "weekday_index": 2
     },
     {
       "date": "2022-04-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Autofokussiert vs. Unfokussiert"
+      "text": "Autofokussiert vs. Unfokussiert",
+      "weekday_index": 3
     },
     {
       "date": "2022-04-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Brücken schlagen."
+      "text": "Brücken schlagen.",
+      "weekday_index": 4
     },
     {
       "date": "2022-04-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Erst Gossip, dann Kaffee."
+      "text": "Erst Gossip, dann Kaffee.",
+      "weekday_index": 5
     },
     {
       "date": "2022-04-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-05-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Baby-Tasting-Menu: Ja zu Rhabarber, nein zu Kimchi."
+      "text": "Baby-Tasting-Menu: Ja zu Rhabarber, nein zu Kimchi.",
+      "weekday_index": 0
     },
     {
       "date": "2022-05-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Übung in Ineffektivität."
+      "text": "Übung in Ineffektivität.",
+      "weekday_index": 1
     },
     {
       "date": "2022-05-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Zusammen sind wir das Brennglas des Pessimismus."
+      "text": "Zusammen sind wir das Brennglas des Pessimismus.",
+      "weekday_index": 2
     },
     {
       "date": "2022-05-04",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-05-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Berge abtragen. / Glutenlicious"
+      "text": "Berge abtragen. / Glutenlicious",
+      "weekday_index": 4
     },
     {
       "date": "2022-05-06",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Liv, die praktische Prinzessin."
+      "text": "Liv, die praktische Prinzessin.",
+      "weekday_index": 5
     },
     {
       "date": "2022-05-07",
-      "apples": 0,
+      "apples": 2,
       "bananas": 0,
-      "coffee": 0,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Gelenke austesten."
+      "text": "Gelenke austesten.",
+      "weekday_index": 6
     },
     {
       "date": "2022-05-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Der Mann seiner Träume."
+      "text": "Der Mann seiner Träume.",
+      "weekday_index": 0
     },
     {
       "date": "2022-05-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-05-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Der unsichtbare dritte der Brieffreundschaft."
+      "text": "Der unsichtbare dritte der Brieffreundschaft.",
+      "weekday_index": 2
     },
     {
       "date": "2022-05-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Mehr als eine Zeitachse, ist eine Zeitachse zu viel."
+      "text": "Mehr als eine Zeitachse, ist eine Zeitachse zu viel.",
+      "weekday_index": 3
     },
     {
       "date": "2022-05-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Nicht viel los hier."
+      "text": "Nicht viel los hier.",
+      "weekday_index": 4
     },
     {
       "date": "2022-05-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Nicht jeder Kaffee findet ein Zuhaus."
+      "text": "Nicht jeder Kaffee findet ein Zuhaus.",
+      "weekday_index": 5
     },
     {
       "date": "2022-05-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Erklärvideos für jede Lebenslage."
+      "text": "Erklärvideos für jede Lebenslage.",
+      "weekday_index": 6
     },
     {
       "date": "2022-05-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Den Friedhof haben wir am Ende alle gemeinsam."
+      "text": "Den Friedhof haben wir am Ende alle gemeinsam.",
+      "weekday_index": 0
     },
     {
       "date": "2022-05-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "[[Tatjana]]: <span class=\"quote\">Noch einen Klick von der Lösung entfernt sein.</span>"
+      "text": "[[Tatjana]]: <span class=\"quote\">Noch einen Klick von der Lösung entfernt sein.</span>",
+      "weekday_index": 1
     },
     {
       "date": "2022-05-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Man lernt nie aus, mit Indesign und mit dem Leben, in dieser Reihenfolge. / Macht mich der mittägliche Gang zum Inder bereits zu einem?"
+      "text": "Man lernt nie aus, mit Indesign und mit dem Leben, in dieser Reihenfolge. / Macht mich der mittägliche Gang zum Inder bereits zu einem?",
+      "weekday_index": 2
     },
     {
       "date": "2022-05-18",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Ein Mutterfile to rule them all."
+      "text": "Ein Mutterfile to rule them all.",
+      "weekday_index": 3
     },
     {
       "date": "2022-05-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Ein leises, unhörbares, Goodbye."
+      "text": "Ein leises, unhörbares, Goodbye.",
+      "weekday_index": 4
     },
     {
       "date": "2022-05-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Des einen Zusage ist des anderen Abschied. / Drei Jahre des Schmachtens."
+      "text": "Des einen Zusage ist des anderen Abschied. / Drei Jahre des Schmachtens.",
+      "weekday_index": 5
     },
     {
       "date": "2022-05-21",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-05-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Züge halten auch in Lenzburg."
+      "text": "Züge halten auch in Lenzburg.",
+      "weekday_index": 0
     },
     {
       "date": "2022-05-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Der Donnerhall verleiht meinen Worten mehr Gewicht."
+      "text": "Der Donnerhall verleiht meinen Worten mehr Gewicht.",
+      "weekday_index": 1
     },
     {
       "date": "2022-05-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Von Kontrabass umhüllt. / Selbst den Gegenbeweis zu dem erbringen, was man noch kurz vorher behauptete."
+      "text": "Von Kontrabass umhüllt. / Selbst den Gegenbeweis zu dem erbringen, was man noch kurz vorher behauptete.",
+      "weekday_index": 2
     },
     {
       "date": "2022-05-25",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-05-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Frei ohne Zielsetzung."
+      "text": "Frei ohne Zielsetzung.",
+      "weekday_index": 4
     },
     {
       "date": "2022-05-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Fahrerflucht vorm Dosenbier."
+      "text": "Fahrerflucht vorm Dosenbier.",
+      "weekday_index": 5
     },
     {
       "date": "2022-05-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Mirren oder Dench?"
+      "text": "Mirren oder Dench?",
+      "weekday_index": 6
     },
     {
       "date": "2022-05-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Sauberes Gewissen, sauberer Boden."
+      "text": "Sauberes Gewissen, sauberer Boden.",
+      "weekday_index": 0
     },
     {
       "date": "2022-05-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Absatzformate sind für Streber, sagt sie."
+      "text": "Absatzformate sind für Streber, sagt sie.",
+      "weekday_index": 1
     },
     {
       "date": "2022-05-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Von der Teambuildingmassnahme ausgeschlossen."
+      "text": "Von der Teambuildingmassnahme ausgeschlossen.",
+      "weekday_index": 2
     },
     {
       "date": "2022-06-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Arbeitsvertrag mit Röstaroma. / Einmal um den Albisriederplatz."
+      "text": "Arbeitsvertrag mit Röstaroma. / Einmal um den Albisriederplatz.",
+      "weekday_index": 3
     },
     {
       "date": "2022-06-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 4
     },
     {
       "date": "2022-06-03",
-      "apples": 0,
+      "apples": 1,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Ronny war auch schon mal an der Langstrasse."
+      "text": "Ronny war auch schon mal an der Langstrasse.",
+      "weekday_index": 5
     },
     {
       "date": "2022-06-04",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 2,
+      "bananas": 2,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Stadtrundgang Seoul, remote."
+      "text": "Stadtrundgang Seoul, remote.",
+      "weekday_index": 6
     },
     {
       "date": "2022-06-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Croissant im Baby-Chino."
+      "text": "Croissant im Baby-Chino.",
+      "weekday_index": 0
     },
     {
       "date": "2022-06-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Der innere Kompass führt direkt zur Gartenlaube."
+      "text": "Der innere Kompass führt direkt zur Gartenlaube.",
+      "weekday_index": 1
     },
     {
       "date": "2022-06-07",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Hyänen am Buffet: Die Reste sind noch gut genug."
+      "text": "Hyänen am Buffet: Die Reste sind noch gut genug.",
+      "weekday_index": 2
     },
     {
       "date": "2022-06-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1.5,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-06-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Ein Umweg für einen Tropfen."
+      "text": "Ein Umweg für einen Tropfen.",
+      "weekday_index": 4
     },
     {
       "date": "2022-06-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "[[S]]: <span class=\"quote\">Ich bin Laktose-Intolerant.</span> [[Bill]]: <span class=\"quote\">Ich bin einfach nur intolerant.</span>"
+      "text": "[[S]]: <span class=\"quote\">Ich bin Laktose-Intolerant.</span> [[Bill]]: <span class=\"quote\">Ich bin einfach nur intolerant.</span>",
+      "weekday_index": 5
     },
     {
       "date": "2022-06-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "text": "[[Sam]]: <span class=\"quote\">Sporty above Forty.</span>"
+      "text": "[[Sam]]: <span class=\"quote\">Sporty above Forty.</span>",
+      "weekday_index": 6
     },
     {
       "date": "2022-06-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Multiverse der Eitelkeiten."
+      "text": "Multiverse der Eitelkeiten.",
+      "weekday_index": 0
     },
     {
       "date": "2022-06-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Vom Supermond kann ich mir auch nichts wünschen."
+      "text": "Vom Supermond kann ich mir auch nichts wünschen.",
+      "weekday_index": 1
     },
     {
       "date": "2022-06-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Kurzurlaub in der Mittagspause."
+      "text": "Kurzurlaub in der Mittagspause.",
+      "weekday_index": 2
     },
     {
       "date": "2022-06-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Déjà-Vu: Mehr Tränen im Anmarsch."
+      "text": "Déjà-Vu: Mehr Tränen im Anmarsch.",
+      "weekday_index": 3
     },
     {
       "date": "2022-06-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Jonas, meine Slack-Notification in Person. / Das Geld steckt alles im Apero. / Vor Ort vs. Verirrt"
+      "text": "Jonas, meine Slack-Notification in Person. / Das Geld steckt alles im Apero. / Vor Ort vs. Verirrt",
+      "weekday_index": 4
     },
     {
       "date": "2022-06-17",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Von welcher Personal-Vermittlung sind sie? Wir sind von hier. / Fürs Lächeln braucht man keine Ausschanklizenz."
+      "text": "Von welcher Personal-Vermittlung sind sie? Wir sind von hier. / Fürs Lächeln braucht man keine Ausschanklizenz.",
+      "weekday_index": 5
     },
     {
       "date": "2022-06-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Warum ist nur die Putzkraft für meinen Charme zu haben?"
+      "text": "Warum ist nur die Putzkraft für meinen Charme zu haben?",
+      "weekday_index": 6
     },
     {
       "date": "2022-06-19",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Uncouple my heart. / Ist das noch Privatgrund oder schon Stadt?"
+      "text": "Uncouple my heart. / Ist das noch Privatgrund oder schon Stadt?",
+      "weekday_index": 0
     },
     {
       "date": "2022-06-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-06-21",
       "apples": 0,
-      "bananas": 0,
+      "bananas": 0.5,
       "coffee": 0,
-      "mood": 0,
+      "mood": -2,
       "cycling_km": 0,
-      "text": "Total positiv."
+      "text": "Total positiv.",
+      "weekday_index": 2
     },
     {
       "date": "2022-06-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "In der Horizontalen schaut es sich gut."
+      "text": "In der Horizontalen schaut es sich gut.",
+      "weekday_index": 3
     },
     {
       "date": "2022-06-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Umtopfen im Fieberwahn."
+      "text": "Umtopfen im Fieberwahn.",
+      "weekday_index": 4
     },
     {
       "date": "2022-06-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Algorithmus-Hygiene"
+      "text": "Algorithmus-Hygiene",
+      "weekday_index": 5
     },
     {
       "date": "2022-06-25",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Tränen im Abwaschwasser II."
+      "text": "Tränen im Abwaschwasser II.",
+      "weekday_index": 6
     },
     {
       "date": "2022-06-26",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 2,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Nichts überbietet einen Friedhof an Endgültigkeit."
+      "text": "Nichts überbietet einen Friedhof an Endgültigkeit.",
+      "weekday_index": 0
     },
     {
       "date": "2022-06-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Geben die Löcher in der Socke bereits schon zu viel von mir preis?"
+      "text": "Geben die Löcher in der Socke bereits schon zu viel von mir preis?",
+      "weekday_index": 1
     },
     {
       "date": "2022-06-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Das Ideal in seine Einzelteile zerlegen."
+      "text": "Das Ideal in seine Einzelteile zerlegen.",
+      "weekday_index": 2
     },
     {
       "date": "2022-06-29",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 1,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Reverse-FedEx: Die Vorfreude ist immer grösser als der Weg zum FedEx-Depot lang ist."
+      "text": "Reverse-FedEx: Die Vorfreude ist immer grösser als der Weg zum FedEx-Depot lang ist.",
+      "weekday_index": 3
     },
     {
       "date": "2022-06-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Die Zugstrecke sieht aus der ersten Klasse heraus immer noch genauso aus. / Ich bin mir mein berechenbarster Reisebegleiter, aber auch mein langweiligster."
+      "text": "Die Zugstrecke sieht aus der ersten Klasse heraus immer noch genauso aus. / Ich bin mir mein berechenbarster Reisebegleiter, aber auch mein langweiligster.",
+      "weekday_index": 4
     },
     {
       "date": "2022-07-01",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Die falsche Sissi ist immer näher."
+      "text": "Die falsche Sissi ist immer näher.",
+      "weekday_index": 5
     },
     {
       "date": "2022-07-02",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
+      "coffee": 1,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Ad-hoc-Wohnzimmer / Nasendusche als Grundreinigung. / Als Fashion-Victim war ich schnell entlarvt."
+      "text": "Ad-hoc-Wohnzimmer / Nasendusche als Grundreinigung. / Als Fashion-Victim war ich schnell entlarvt.",
+      "weekday_index": 6
     },
     {
       "date": "2022-07-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Die Zeit zwischen den Zügen."
+      "text": "Die Zeit zwischen den Zügen.",
+      "weekday_index": 0
     },
     {
       "date": "2022-07-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Bis zum Ende der morgendlichen Nachrichtensendung vom letzten Abend liege ich meist gut im Zeitplan. / Diese Schuld ist nichts, was man einfach abbezahlen kann. / Einweg-Liebe"
+      "text": "Bis zum Ende der morgendlichen Nachrichtensendung vom letzten Abend liege ich meist gut im Zeitplan. / Diese Schuld ist nichts, was man einfach abbezahlen kann. / Einweg-Liebe",
+      "weekday_index": 1
     },
     {
       "date": "2022-07-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Pfadiweg, all the way. / Indische Väter haben keinen guten Ruf."
+      "text": "Pfadiweg, all the way. / Indische Väter haben keinen guten Ruf.",
+      "weekday_index": 2
     },
     {
       "date": "2022-07-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "—"
+      "bananas": 3,
+      "coffee": 4,
+      "mood": 0.5,
+      "cycling_km": 48.02,
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-07-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Ein Hundeleben, abgesagt."
+      "text": "Ein Hundeleben, abgesagt.",
+      "weekday_index": 4
     },
     {
       "date": "2022-07-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Eine Tanzfläche für die Ex-Arbeitskolleg*innen."
+      "text": "Eine Tanzfläche für die Ex-Arbeitskolleg*innen.",
+      "weekday_index": 5
     },
     {
       "date": "2022-07-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Da waren es nur noch vier."
+      "text": "Da waren es nur noch vier.",
+      "weekday_index": 6
     },
     {
       "date": "2022-07-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Mehr Emotional-Support-Animal als Party-Animal."
+      "text": "Mehr Emotional-Support-Animal als Party-Animal.",
+      "weekday_index": 0
     },
     {
       "date": "2022-07-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "—"
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
+      "cycling_km": 51.56,
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-07-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Wenn man die Ziellinie verschiebt, kann man immer Gewinner sein."
+      "text": "Wenn man die Ziellinie verschiebt, kann man immer Gewinner sein.",
+      "weekday_index": 2
     },
     {
       "date": "2022-07-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 6,
       "mood": 0,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-07-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Sie sind aber ein spezieller Mensch, sagt die Frau in der Textilreinigung nach der Inspektion meiner Hemden."
+      "text": "Sie sind aber ein spezieller Mensch, sagt die Frau in der Textilreinigung nach der Inspektion meiner Hemden.",
+      "weekday_index": 4
     },
     {
       "date": "2022-07-15",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Wer zieht hier wen beim Gassi-gehen?"
+      "text": "Wer zieht hier wen beim Gassi-gehen?",
+      "weekday_index": 5
     },
     {
       "date": "2022-07-16",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Ist ein Hundehaufen auf der teuersten Strasse der Stadt bereits Kapitalismuskritik?"
+      "text": "Ist ein Hundehaufen auf der teuersten Strasse der Stadt bereits Kapitalismuskritik?",
+      "weekday_index": 6
     },
     {
       "date": "2022-07-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Heut wäre ein guter Tag gewesen um aus Scheisse Gold zu machen."
+      "text": "Heut wäre ein guter Tag gewesen um aus Scheisse Gold zu machen.",
+      "weekday_index": 0
     },
     {
       "date": "2022-07-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Bring dein eigenes Haustier zur Arbeit."
+      "text": "Bring dein eigenes Haustier zur Arbeit.",
+      "weekday_index": 1
     },
     {
       "date": "2022-07-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Hundeabschied"
+      "text": "Hundeabschied",
+      "weekday_index": 2
     },
     {
       "date": "2022-07-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Geradebiegen für zwei Früchtekuchen. / Probleme, unsortiert."
+      "text": "Geradebiegen für zwei Früchtekuchen. / Probleme, unsortiert.",
+      "weekday_index": 3
     },
     {
       "date": "2022-07-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Die Velo-Gang die bei Rot hält. / Ein Tag lang auf Abschied eingestellt."
+      "text": "Die Velo-Gang die bei Rot hält. / Ein Tag lang auf Abschied eingestellt.",
+      "weekday_index": 4
     },
     {
       "date": "2022-07-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Der Ritt gen Süden."
+      "text": "Der Ritt gen Süden.",
+      "weekday_index": 5
     },
     {
       "date": "2022-07-23",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Die Last der Welt in Form einer äusserst schweren Platte."
+      "text": "Die Last der Welt in Form einer äusserst schweren Platte.",
+      "weekday_index": 6
     },
     {
       "date": "2022-07-24",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Treppensteigen mit unlauteren Gedanken. / Die Entdeckung eines Fetischen am Esstisch."
+      "text": "Treppensteigen mit unlauteren Gedanken. / Die Entdeckung eines Fetischen am Esstisch.",
+      "weekday_index": 0
     },
     {
       "date": "2022-07-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Kein Lycra-Tag heut. / Der Fluss bin ich."
+      "text": "Kein Lycra-Tag heut. / Der Fluss bin ich.",
+      "weekday_index": 1
     },
     {
       "date": "2022-07-26",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Die Erleuchtung fährt die Treppe hoch. / Der innere Kompass schlägt auch am falschen Ort richtig aus."
+      "text": "Die Erleuchtung fährt die Treppe hoch. / Der innere Kompass schlägt auch am falschen Ort richtig aus.",
+      "weekday_index": 2
     },
     {
       "date": "2022-07-27",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Arcade Fire haben den Ohrwurm perfektioniert, den man so lang hört bis man ihn plötzlich nicht mehr leiden mag. / Warum sollte ich der Plan B sein?"
+      "text": "Arcade Fire haben den Ohrwurm perfektioniert, den man so lang hört bis man ihn plötzlich nicht mehr leiden mag. / Warum sollte ich der Plan B sein?",
+      "weekday_index": 3
     },
     {
       "date": "2022-07-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2.5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Rudelkacken im Park. / Die Parkwächter auf ihren Motorrädern geben uns noch eine Gnadenfrist, schauen auf uns und den Sonnenuntergang, telefonieren, reden miteinander. Bevor sie uns unmissverständlich, aber ohne Druck zu machen, andeuteten: Jetzt müsst auch ihr gehen. Die Sonne mag bald untergegangen zu sein, der Tag lebt fort."
+      "text": "Rudelkacken im Park. / Die Parkwächter auf ihren Motorrädern geben uns noch eine Gnadenfrist, schauen auf uns und den Sonnenuntergang, telefonieren, reden miteinander. Bevor sie uns unmissverständlich, aber ohne Druck zu machen, andeuteten: Jetzt müsst auch ihr gehen. Die Sonne mag bald untergegangen zu sein, der Tag lebt fort.",
+      "weekday_index": 4
     },
     {
       "date": "2022-07-29",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Warum den kurzen Weg nehmen, wenn der Umweg auch schön ist. (Anmerkung: Wie sich herausstellte, war der kurze Weg am Ende noch schöner.)"
+      "text": "Warum den kurzen Weg nehmen, wenn der Umweg auch schön ist. (Anmerkung: Wie sich herausstellte, war der kurze Weg am Ende noch schöner.)",
+      "weekday_index": 5
     },
     {
       "date": "2022-07-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Die Kunst ein teures Outfit zu tragen, das nach nichts aussieht."
+      "text": "Die Kunst ein teures Outfit zu tragen, das nach nichts aussieht.",
+      "weekday_index": 6
     },
     {
       "date": "2022-07-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Eine Zugfahrt wie eine Therapiestunde."
+      "text": "Eine Zugfahrt wie eine Therapiestunde.",
+      "weekday_index": 0
     },
     {
       "date": "2022-08-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Den Tag verstreichen lassen."
+      "text": "Den Tag verstreichen lassen.",
+      "weekday_index": 1
     },
     {
       "date": "2022-08-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Arbeitsweg: 2:50 Minuten"
+      "text": "Arbeitsweg: 2:50 Minuten",
+      "weekday_index": 2
     },
     {
       "date": "2022-08-03",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
+      "coffee": 6,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Diese Krise beginnt nicht beim Klopapier, sondern beim Bettzeug."
+      "text": "Diese Krise beginnt nicht beim Klopapier, sondern beim Bettzeug.",
+      "weekday_index": 3
     },
     {
       "date": "2022-08-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 4
     },
     {
       "date": "2022-08-05",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Das Kind im Regen stehen lassen."
+      "text": "Das Kind im Regen stehen lassen.",
+      "weekday_index": 5
     },
     {
       "date": "2022-08-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 0.5,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
-      "text": "[[Bill]] ist ein Genieur sagt der kleine Junge. / Wenn das Kind interessehalber aus dem Katzenbrunnen trinkt. / Den Generationenvertrag hab ich beim Umzug verlegt."
+      "text": "[[Bill]] ist ein Genieur sagt der kleine Junge. / Wenn das Kind interessehalber aus dem Katzenbrunnen trinkt. / Den Generationenvertrag hab ich beim Umzug verlegt.",
+      "weekday_index": 6
     },
     {
       "date": "2022-08-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 3,
+      "coffee": 1,
       "mood": 0,
-      "cycling_km": 0,
-      "text": "Wenn man den Moment umzukehren immer weiter hinausschiebt und ihn dann verpasst. / Gehöre ich jetzt zur Familie?"
+      "cycling_km": 100.65,
+      "text": "Wenn man den Moment umzukehren immer weiter hinausschiebt und ihn dann verpasst. / Gehöre ich jetzt zur Familie?",
+      "weekday_index": 0
     },
     {
       "date": "2022-08-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-08-09",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Zwischen den zwei Zuhausen ist noch Platz für eine Träne."
+      "text": "Zwischen den zwei Zuhausen ist noch Platz für eine Träne.",
+      "weekday_index": 2
     },
     {
       "date": "2022-08-10",
-      "apples": 0,
+      "apples": 1,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "[[Bamna]]: <span class=\"quote\">Als hätte jemand ein Strandtuch über mein Herz gelegt.</span> / Ihr Haar, ein Vision-Apartment-Haus für Insekten."
+      "text": "[[Bamna]]: <span class=\"quote\">Als hätte jemand ein Strandtuch über mein Herz gelegt.</span> / Ihr Haar, ein Vision-Apartment-Haus für Insekten.",
+      "weekday_index": 3
     },
     {
       "date": "2022-08-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Bonus-Cookie"
+      "text": "Bonus-Cookie",
+      "weekday_index": 4
     },
     {
       "date": "2022-08-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Tap-to-pay funktioniert noch nicht an der Marx-Büste. / Wie bekommt man das Date wieder aus dem Haus?"
+      "text": "Tap-to-pay funktioniert noch nicht an der Marx-Büste. / Wie bekommt man das Date wieder aus dem Haus?",
+      "weekday_index": 5
     },
     {
       "date": "2022-08-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "—"
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1,
+      "cycling_km": 44.62,
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-08-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Dry-Cleaning für das gebrochene Herz. / Ein tiefgründiger Gedanke pro Woche ist erlaubt."
+      "text": "Dry-Cleaning für das gebrochene Herz. / Ein tiefgründiger Gedanke pro Woche ist erlaubt.",
+      "weekday_index": 0
     },
     {
       "date": "2022-08-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Hundedinner"
+      "text": "Hundedinner",
+      "weekday_index": 1
     },
     {
       "date": "2022-08-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Psychologisches Asyl."
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 1,
+      "cycling_km": 38.95,
+      "text": "Psychologisches Asyl.",
+      "weekday_index": 2
     },
     {
       "date": "2022-08-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 1.5,
       "cycling_km": 0,
-      "text": "Die Wahl zwischen zwei Übeln."
+      "text": "Die Wahl zwischen zwei Übeln.",
+      "weekday_index": 3
     },
     {
       "date": "2022-08-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Kitschnudeln tanzen im Takt."
+      "text": "Kitschnudeln tanzen im Takt.",
+      "weekday_index": 4
     },
     {
       "date": "2022-08-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 5
     },
     {
       "date": "2022-08-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Vermeidungsstrategien für alles und jeden."
+      "text": "Vermeidungsstrategien für alles und jeden.",
+      "weekday_index": 6
     },
     {
       "date": "2022-08-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Wasserfall, Pommes und Inder."
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
+      "cycling_km": 97.39,
+      "text": "Wasserfall, Pommes und Inder.",
+      "weekday_index": 0
     },
     {
       "date": "2022-08-22",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-08-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Das Amt besitzt die Wahrheitshoheit."
+      "bananas": 4,
+      "coffee": 3,
+      "mood": 0.5,
+      "cycling_km": 36.8,
+      "text": "Das Amt besitzt die Wahrheitshoheit.",
+      "weekday_index": 2
     },
     {
       "date": "2022-08-24",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 2,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Slow-Anstieg"
+      "text": "Slow-Anstieg",
+      "weekday_index": 3
     },
     {
       "date": "2022-08-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Bordstein-Apero"
+      "text": "Bordstein-Apero",
+      "weekday_index": 4
     },
     {
       "date": "2022-08-26",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 5
     },
     {
       "date": "2022-08-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Nach dem Kino sieht die Welt draussen immer noch gleich aus."
+      "text": "Nach dem Kino sieht die Welt draussen immer noch gleich aus.",
+      "weekday_index": 6
     },
     {
       "date": "2022-08-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Elektrolyte erster Güte."
+      "bananas": 3,
+      "coffee": 1,
+      "mood": 1.5,
+      "cycling_km": 132.01,
+      "text": "Elektrolyte erster Güte.",
+      "weekday_index": 0
     },
     {
       "date": "2022-08-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Ein kurzer Espresso oder langer Ristretto?"
+      "text": "Ein kurzer Espresso oder langer Ristretto?",
+      "weekday_index": 1
     },
     {
       "date": "2022-08-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Kinderschwinggruppe Piranha."
+      "text": "Kinderschwinggruppe Piranha.",
+      "weekday_index": 2
     },
     {
       "date": "2022-08-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Es braucht Platz für Neues auf diesem braungrauen Steckparkett. / Neue Haltung, alter Mann."
+      "text": "Es braucht Platz für Neues auf diesem braungrauen Steckparkett. / Neue Haltung, alter Mann.",
+      "weekday_index": 3
     },
     {
       "date": "2022-09-01",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 4
     },
     {
       "date": "2022-09-02",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 6,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Erst den Wein zum Probieren einschenken um dann zu sagen: «Entschuldigt, ihr wolltet ja den günstigen». / Drei Online-Formulare machen auch einen Abend."
+      "text": "Erst den Wein zum Probieren einschenken um dann zu sagen: «Entschuldigt, ihr wolltet ja den günstigen». / Drei Online-Formulare machen auch einen Abend.",
+      "weekday_index": 5
     },
     {
       "date": "2022-09-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-09-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Einmal Klosterbrunnen und zurück."
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
+      "cycling_km": 98.25,
+      "text": "Einmal Klosterbrunnen und zurück.",
+      "weekday_index": 0
     },
     {
       "date": "2022-09-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1.5,
       "cycling_km": 0,
-      "text": "Keine Grüsse die ich noch ausrichten könnte. / Sprachnachrichten sind nur ein Echo im Raum."
+      "text": "Keine Grüsse die ich noch ausrichten könnte. / Sprachnachrichten sind nur ein Echo im Raum.",
+      "weekday_index": 1
     },
     {
       "date": "2022-09-06",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Erst die Belohnung, dann die Arbeit."
+      "text": "Erst die Belohnung, dann die Arbeit.",
+      "weekday_index": 2
     },
     {
       "date": "2022-09-07",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 5,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Eine Suppe, nennen wir sie Gemüse."
+      "text": "Eine Suppe, nennen wir sie Gemüse.",
+      "weekday_index": 3
     },
     {
       "date": "2022-09-08",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Publireportage Gottes."
+      "text": "Publireportage Gottes.",
+      "weekday_index": 4
     },
     {
       "date": "2022-09-09",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Modernistischer Moon-Cake."
+      "text": "Modernistischer Moon-Cake.",
+      "weekday_index": 5
     },
     {
       "date": "2022-09-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Die Pizza als Resonanzkörper."
+      "text": "Die Pizza als Resonanzkörper.",
+      "weekday_index": 6
     },
     {
       "date": "2022-09-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Und ewig lockt der Brezelkönig aus der Unterführung."
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1,
+      "cycling_km": 122.74,
+      "text": "Und ewig lockt der Brezelkönig aus der Unterführung.",
+      "weekday_index": 0
     },
     {
       "date": "2022-09-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Zum Schweizer fehlt noch viel."
+      "text": "Zum Schweizer fehlt noch viel.",
+      "weekday_index": 1
     },
     {
       "date": "2022-09-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Nachricht von Sam. / Unsere Spontanität ist erschreckend."
+      "text": "Nachricht von Sam. / Unsere Spontanität ist erschreckend.",
+      "weekday_index": 2
     },
     {
       "date": "2022-09-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Absolution ist aus. / Das Ego an der langen Leitung."
+      "text": "Absolution ist aus. / Das Ego an der langen Leitung.",
+      "weekday_index": 3
     },
     {
       "date": "2022-09-15",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Der Respekt der Bademeister, die Skepsis der Katze."
+      "text": "Der Respekt der Bademeister, die Skepsis der Katze.",
+      "weekday_index": 4
     },
     {
       "date": "2022-09-16",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Nicht mein Geburtstag."
+      "text": "Nicht mein Geburtstag.",
+      "weekday_index": 5
     },
     {
       "date": "2022-09-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-09-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 4,
+      "coffee": 3,
       "mood": 0,
-      "cycling_km": 0,
-      "text": "Im Land des Kreisverkehrs. / Rote-Karte-Rotlicht."
+      "cycling_km": 144.04,
+      "text": "Im Land des Kreisverkehrs. / Rote-Karte-Rotlicht.",
+      "weekday_index": 0
     },
     {
       "date": "2022-09-19",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Wer hat mein Illustrator-Programm benutzt, fragt er."
+      "text": "Wer hat mein Illustrator-Programm benutzt, fragt er.",
+      "weekday_index": 1
     },
     {
       "date": "2022-09-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Der letzte lässt das Wasser aus dem Schwimmbecken."
+      "text": "Der letzte lässt das Wasser aus dem Schwimmbecken.",
+      "weekday_index": 2
     },
     {
       "date": "2022-09-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Mein ganz eigener Stresstest."
+      "text": "Mein ganz eigener Stresstest.",
+      "weekday_index": 3
     },
     {
       "date": "2022-09-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Das Ryan-Gosling-Outing vor den Arbeitskolleg*innen."
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -0.5,
+      "cycling_km": 44.55,
+      "text": "Das Ryan-Gosling-Outing vor den Arbeitskolleg*innen.",
+      "weekday_index": 4
     },
     {
       "date": "2022-09-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 6,
       "mood": 0,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 5
     },
     {
       "date": "2022-09-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Stroboskop für die Seele."
+      "text": "Stroboskop für die Seele.",
+      "weekday_index": 6
     },
     {
       "date": "2022-09-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Wo ist die Medium-Tempo-Bahn? / Prokrastinieren mit freundlicher Unterstützung der Hipster-Christen. / [[Tom]]: <span class=\"quote\">Du arbeitest zu viel.</span> [[Bill]]: <span class=\"quote\">Nein, ich bin nur nicht effizient genug.</span>"
+      "text": "Wo ist die Medium-Tempo-Bahn? / Prokrastinieren mit freundlicher Unterstützung der Hipster-Christen. / [[Tom]]: <span class=\"quote\">Du arbeitest zu viel.</span> [[Bill]]: <span class=\"quote\">Nein, ich bin nur nicht effizient genug.</span>",
+      "weekday_index": 0
     },
     {
       "date": "2022-09-26",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Dadaistisches Wort-Branding."
+      "text": "Dadaistisches Wort-Branding.",
+      "weekday_index": 1
     },
     {
       "date": "2022-09-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Spassmassnahme vs. Sparmassnahme"
+      "text": "Spassmassnahme vs. Sparmassnahme",
+      "weekday_index": 2
     },
     {
       "date": "2022-09-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Angst, Ärger, Mutter  / Colli in seinem Element."
+      "text": "Angst, Ärger, Mutter  / Colli in seinem Element.",
+      "weekday_index": 3
     },
     {
       "date": "2022-09-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Wie viel Bio braucht es zum Bio-Deutschen?"
+      "text": "Wie viel Bio braucht es zum Bio-Deutschen?",
+      "weekday_index": 4
     },
     {
       "date": "2022-09-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Wenn der Abend in der falschen Parkgarage endet."
+      "text": "Wenn der Abend in der falschen Parkgarage endet.",
+      "weekday_index": 5
     },
     {
       "date": "2022-10-01",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-10-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Geteilter Weg, volle Schrittzahl."
+      "text": "Geteilter Weg, volle Schrittzahl.",
+      "weekday_index": 0
     },
     {
       "date": "2022-10-03",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Im Telefon abnehmen bin ich eine Niete."
+      "text": "Im Telefon abnehmen bin ich eine Niete.",
+      "weekday_index": 1
     },
     {
       "date": "2022-10-04",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
       "mood": 0,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 2
     },
     {
       "date": "2022-10-05",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "—"
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
+      "cycling_km": 54.55,
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-10-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Beim Anruf vergessen warum man eigentlich sprechen wollte."
+      "text": "Beim Anruf vergessen warum man eigentlich sprechen wollte.",
+      "weekday_index": 4
     },
     {
       "date": "2022-10-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Exkludiert von der Exklusivität. / Kaloriendefizitär."
+      "text": "Exkludiert von der Exklusivität. / Kaloriendefizitär.",
+      "weekday_index": 5
     },
     {
       "date": "2022-10-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 4,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Putzen für den inneren Frieden."
+      "text": "Putzen für den inneren Frieden.",
+      "weekday_index": 6
     },
     {
       "date": "2022-10-09",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Luft raus in Othmarsingen."
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
+      "cycling_km": 38.8,
+      "text": "Luft raus in Othmarsingen.",
+      "weekday_index": 0
     },
     {
       "date": "2022-10-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Innerlich schwitze ich."
+      "text": "Innerlich schwitze ich.",
+      "weekday_index": 1
     },
     {
       "date": "2022-10-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Twinning for the broken hearted."
+      "text": "Twinning for the broken hearted.",
+      "weekday_index": 2
     },
     {
       "date": "2022-10-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Das Unbehagen nimmt vor mir Platz."
+      "text": "Das Unbehagen nimmt vor mir Platz.",
+      "weekday_index": 3
     },
     {
       "date": "2022-10-13",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 2,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 4
     },
     {
       "date": "2022-10-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Cocktail in der linken Arschbacke."
+      "text": "Cocktail in der linken Arschbacke.",
+      "weekday_index": 5
     },
     {
       "date": "2022-10-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 3,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "text": "[[Nath]]: <span class=\"quote\">Da hört der Spass auf: Wenn man wegen Kindern auf eine gute Pizza verzichten muss.</span> / Dienstleistung, 250 CHF."
+      "text": "[[Nath]]: <span class=\"quote\">Da hört der Spass auf: Wenn man wegen Kindern auf eine gute Pizza verzichten muss.</span> / Dienstleistung, 250 CHF.",
+      "weekday_index": 6
     },
     {
       "date": "2022-10-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Chlamydien am Nebentisch."
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
+      "cycling_km": 83.28,
+      "text": "Chlamydien am Nebentisch.",
+      "weekday_index": 0
     },
     {
       "date": "2022-10-17",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-10-18",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Diss-Dienstag"
+      "text": "Diss-Dienstag",
+      "weekday_index": 2
     },
     {
       "date": "2022-10-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Willkommen in Spreitenbach."
+      "bananas": 2,
+      "coffee": 6,
+      "mood": 1,
+      "cycling_km": 45.38,
+      "text": "Willkommen in Spreitenbach.",
+      "weekday_index": 3
     },
     {
       "date": "2022-10-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Dezimiert aber lustig."
+      "text": "Dezimiert aber lustig.",
+      "weekday_index": 4
     },
     {
       "date": "2022-10-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 5,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Dem Schlüsselbund auf der Spur."
+      "text": "Dem Schlüsselbund auf der Spur.",
+      "weekday_index": 5
     },
     {
       "date": "2022-10-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     },
     {
       "date": "2022-10-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
-      "cycling_km": 0,
-      "text": "Der Schmarotzer des Pelotons."
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
+      "cycling_km": 65.84,
+      "text": "Der Schmarotzer des Pelotons.",
+      "weekday_index": 0
     },
     {
       "date": "2022-10-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Wo nichts versteckt ist, gibts nichts zu entlarven."
+      "text": "Wo nichts versteckt ist, gibts nichts zu entlarven.",
+      "weekday_index": 1
     },
     {
       "date": "2022-10-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Integriert und ausgelacht."
+      "text": "Integriert und ausgelacht.",
+      "weekday_index": 2
     },
     {
       "date": "2022-10-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "PDF schreiben im Akkord."
+      "text": "PDF schreiben im Akkord.",
+      "weekday_index": 3
     },
     {
       "date": "2022-10-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Spinne im Glashaus."
+      "text": "Spinne im Glashaus.",
+      "weekday_index": 4
     },
     {
       "date": "2022-10-28",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 5
     },
     {
       "date": "2022-10-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Es steckt «Feier» in Feierabend. / Der Kater ist so gar nicht virtuell heut. / Die klassische Tüte-in-Vorderrad-Situation."
+      "text": "Es steckt «Feier» in Feierabend. / Der Kater ist so gar nicht virtuell heut. / Die klassische Tüte-in-Vorderrad-Situation.",
+      "weekday_index": 6
     },
     {
       "date": "2022-10-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Jede Nacht sollte eine Stunde länger sein."
+      "text": "Jede Nacht sollte eine Stunde länger sein.",
+      "weekday_index": 0
     },
     {
       "date": "2022-10-31",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 1
     },
     {
       "date": "2022-11-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 4,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Aus der Hecke springen ist eine Frage des Timings."
+      "text": "Aus der Hecke springen ist eine Frage des Timings.",
+      "weekday_index": 2
     },
     {
       "date": "2022-11-02",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-11-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Shoppen und hoffen, dass das Glücksgefühl tritt gleich ein."
+      "text": "Shoppen und hoffen, dass das Glücksgefühl tritt gleich ein.",
+      "weekday_index": 4
     },
     {
       "date": "2022-11-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 5
     },
     {
       "date": "2022-11-05",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Ich habe kein Schwimmbrillengesicht."
+      "text": "Ich habe kein Schwimmbrillengesicht.",
+      "weekday_index": 6
     },
     {
       "date": "2022-11-06",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Gesegnet ist das Glas Wasser zur Tasse Kaffee."
+      "text": "Gesegnet ist das Glas Wasser zur Tasse Kaffee.",
+      "weekday_index": 0
     },
     {
       "date": "2022-11-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Schlaf ich schlecht bei zu viel Übersatztext."
+      "text": "Schlaf ich schlecht bei zu viel Übersatztext.",
+      "weekday_index": 1
     },
     {
       "date": "2022-11-08",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 2
     },
     {
       "date": "2022-11-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": 1.5,
       "cycling_km": 0,
-      "text": "Ausgesprochen ausgeglichen. / Unsere Zyklen haben sich aneinander angepasst."
+      "text": "Ausgesprochen ausgeglichen. / Unsere Zyklen haben sich aneinander angepasst.",
+      "weekday_index": 3
     },
     {
       "date": "2022-11-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Warten auf die Toilettenspülung."
+      "text": "Warten auf die Toilettenspülung.",
+      "weekday_index": 4
     },
     {
       "date": "2022-11-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Wegen den Liedtexten ist niemand hier."
+      "text": "Wegen den Liedtexten ist niemand hier.",
+      "weekday_index": 5
     },
     {
       "date": "2022-11-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 1,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "vegan, inkonsequent"
+      "text": "vegan, inkonsequent",
+      "weekday_index": 6
     },
     {
       "date": "2022-11-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 0
     },
     {
       "date": "2022-11-14",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Porridge ist meine Charmeoffensive gegenüber älteren Damen, pflanzliche Sahne die Zauberformel."
+      "text": "Porridge ist meine Charmeoffensive gegenüber älteren Damen, pflanzliche Sahne die Zauberformel.",
+      "weekday_index": 1
     },
     {
       "date": "2022-11-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Doppelte Buchführung meines Gefühlslebens."
+      "text": "Doppelte Buchführung meines Gefühlslebens.",
+      "weekday_index": 2
     },
     {
       "date": "2022-11-16",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Zu sehr festhalten am loslassen."
+      "text": "Zu sehr festhalten am loslassen.",
+      "weekday_index": 3
     },
     {
       "date": "2022-11-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 1.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 4
     },
     {
       "date": "2022-11-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Aus dem Fenster schauen lohnt sich."
+      "text": "Aus dem Fenster schauen lohnt sich.",
+      "weekday_index": 5
     },
     {
       "date": "2022-11-19",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 5,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Putzfrauen muss man hofieren."
+      "text": "Putzfrauen muss man hofieren.",
+      "weekday_index": 6
     },
     {
       "date": "2022-11-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 1,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Home-office-los"
+      "text": "Home-office-los",
+      "weekday_index": 0
     },
     {
       "date": "2022-11-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Der letzte Pessimist in der Runde."
+      "text": "Der letzte Pessimist in der Runde.",
+      "weekday_index": 1
     },
     {
       "date": "2022-11-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Eine Träne für einen Schatten."
+      "text": "Eine Träne für einen Schatten.",
+      "weekday_index": 2
     },
     {
       "date": "2022-11-23",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 3
     },
     {
       "date": "2022-11-24",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Ich denke sie tindert nicht."
+      "text": "Ich denke sie tindert nicht.",
+      "weekday_index": 4
     },
     {
       "date": "2022-11-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 5
     },
     {
       "date": "2022-11-26",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Heut wird ohne mich gezügelt."
+      "text": "Heut wird ohne mich gezügelt.",
+      "weekday_index": 6
     },
     {
       "date": "2022-11-27",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Kein Tofu und keine Internetverbindung um dies zu teilen."
+      "text": "Kein Tofu und keine Internetverbindung um dies zu teilen.",
+      "weekday_index": 0
     },
     {
       "date": "2022-11-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 4,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Doppelte Emojis, doppelt so viel Bedeutung."
+      "text": "Doppelte Emojis, doppelt so viel Bedeutung.",
+      "weekday_index": 1
     },
     {
       "date": "2022-11-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 1,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Verspätung ist in dieser Nachrichtenlage inbegriffen."
+      "text": "Verspätung ist in dieser Nachrichtenlage inbegriffen.",
+      "weekday_index": 2
     },
     {
       "date": "2022-11-30",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Sich dort einladen wo die Heizung läuft."
+      "text": "Sich dort einladen wo die Heizung läuft.",
+      "weekday_index": 3
     },
     {
       "date": "2022-12-01",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 4
     },
     {
       "date": "2022-12-02",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Das Leben, als ob man eine Serie schaut und denkt, mit dieser Wendung hätte ich nicht gerechnet."
+      "text": "Das Leben, als ob man eine Serie schaut und denkt, mit dieser Wendung hätte ich nicht gerechnet.",
+      "weekday_index": 5
     },
     {
       "date": "2022-12-03",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Das Schmachten entzaubert sich langsam."
+      "text": "Das Schmachten entzaubert sich langsam.",
+      "weekday_index": 6
     },
     {
       "date": "2022-12-04",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 0
     },
     {
       "date": "2022-12-05",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Die Monocle-Challenge."
+      "text": "Die Monocle-Challenge.",
+      "weekday_index": 1
     },
     {
       "date": "2022-12-06",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Hier wurde konsequent gelöscht."
+      "text": "Hier wurde konsequent gelöscht.",
+      "weekday_index": 2
     },
     {
       "date": "2022-12-07",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Sonne, sagt man."
+      "text": "Sonne, sagt man.",
+      "weekday_index": 3
     },
     {
       "date": "2022-12-08",
       "apples": 0,
       "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "Mein U8-Moment."
+      "text": "Mein U8-Moment.",
+      "weekday_index": 4
     },
     {
       "date": "2022-12-09",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Die volle Ich-Perspektive."
+      "text": "Die volle Ich-Perspektive.",
+      "weekday_index": 5
     },
     {
       "date": "2022-12-10",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Höllenfahrt mit Zugansage."
+      "text": "Höllenfahrt mit Zugansage.",
+      "weekday_index": 6
     },
     {
       "date": "2022-12-11",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "So viel Sonne auf einmal soll mein Herz erweichen."
+      "text": "So viel Sonne auf einmal soll mein Herz erweichen.",
+      "weekday_index": 0
     },
     {
       "date": "2022-12-12",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Der Stumme im Konferenzraum."
+      "text": "Der Stumme im Konferenzraum.",
+      "weekday_index": 1
     },
     {
       "date": "2022-12-13",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 2
     },
     {
       "date": "2022-12-14",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Fast eine Aussprache."
+      "text": "Fast eine Aussprache.",
+      "weekday_index": 3
     },
     {
       "date": "2022-12-15",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Heut wird die liebevolle Boshaftigkeit gepflegt."
+      "text": "Heut wird die liebevolle Boshaftigkeit gepflegt.",
+      "weekday_index": 4
     },
     {
       "date": "2022-12-16",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 6,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Clash aus dem Augenwinkel heraus: Der Keller hat nur Platz für einen von uns beiden."
+      "text": "Clash aus dem Augenwinkel heraus: Der Keller hat nur Platz für einen von uns beiden.",
+      "weekday_index": 5
     },
     {
       "date": "2022-12-17",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 3,
+      "coffee": 2,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Heut beginnen wir den Zufall herauszufordern."
+      "text": "Heut beginnen wir den Zufall herauszufordern.",
+      "weekday_index": 6
     },
     {
       "date": "2022-12-18",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Sozialkontakt mit Kommunikationspflicht."
+      "text": "Sozialkontakt mit Kommunikationspflicht.",
+      "weekday_index": 0
     },
     {
       "date": "2022-12-19",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 0.5,
       "cycling_km": 0,
-      "text": "Zweirad-Bling-Bling"
+      "text": "Zweirad-Bling-Bling",
+      "weekday_index": 1
     },
     {
       "date": "2022-12-20",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 3,
+      "mood": 1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 2
     },
     {
       "date": "2022-12-21",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Wo ist die Feinmotorik wenn man sie braucht?"
+      "text": "Wo ist die Feinmotorik wenn man sie braucht?",
+      "weekday_index": 3
     },
     {
       "date": "2022-12-22",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 3,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Die Schonfrist ist vorbei sagt der Chef."
+      "text": "Die Schonfrist ist vorbei sagt der Chef.",
+      "weekday_index": 4
     },
     {
       "date": "2022-12-23",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 5,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "Schnuppertag im Schneidersitz."
+      "text": "Schnuppertag im Schneidersitz.",
+      "weekday_index": 5
     },
     {
       "date": "2022-12-24",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "apples": 1,
+      "bananas": 3,
+      "coffee": 3,
       "mood": 0,
       "cycling_km": 0,
-      "text": "Ich bin ein Weihnachtsfeier-Crasher."
+      "text": "Ich bin ein Weihnachtsfeier-Crasher.",
+      "weekday_index": 6
     },
     {
       "date": "2022-12-25",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 3,
+      "coffee": 2,
+      "mood": -0.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 0
     },
     {
       "date": "2022-12-26",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2,
+      "coffee": 6,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "Ich denke zu viel und entscheide zu wenig."
+      "text": "Ich denke zu viel und entscheide zu wenig.",
+      "weekday_index": 1
     },
     {
       "date": "2022-12-27",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 1,
+      "coffee": 4,
+      "mood": -1,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 2
     },
     {
       "date": "2022-12-28",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Die Barmherzigkeit der Toilettenfrau."
+      "text": "Die Barmherzigkeit der Toilettenfrau.",
+      "weekday_index": 3
     },
     {
       "date": "2022-12-29",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "bananas": 1,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Die Insel der Verdammten mit der Picknickdecke."
+      "text": "Die Insel der Verdammten mit der Picknickdecke.",
+      "weekday_index": 4
     },
     {
       "date": "2022-12-30",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 1,
+      "bananas": 2.5,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "Das grosse Panorama der Müdigkeit."
+      "text": "Das grosse Panorama der Müdigkeit.",
+      "weekday_index": 5
     },
     {
       "date": "2022-12-31",
-      "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
-      "mood": 0,
+      "apples": 0.5,
+      "bananas": 2,
+      "coffee": 2,
+      "mood": -1.5,
       "cycling_km": 0,
-      "text": "—"
+      "text": "—",
+      "weekday_index": 6
     }
   ]
 }
