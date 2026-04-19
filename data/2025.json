@@ -3643,11 +3643,12 @@
     {
       "date": "2025-12-31",
       "apples": 0,
-      "bananas": 0,
-      "coffee": 0,
+      "bananas": 2,
+      "coffee": 2,
       "mood": 0,
-      "cycling_km": 0,
-      "text": "Deine me-time-Zeit ist sozusagen mehr me-time für mich. / Der Hund liegt flach, vorbeugend."
+      "cycling_km": 61.72,
+      "text": "Deine me-time-Zeit ist sozusagen mehr me-time für mich. / Der Hund liegt flach, vorbeugend.",
+      "weekday_index": 3
     }
   ]
 }
